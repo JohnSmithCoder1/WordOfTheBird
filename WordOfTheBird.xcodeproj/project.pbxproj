@@ -35,6 +35,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		052E428520923DB6006F42E7 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		05CB8F672091165100AB7E13 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +61,7 @@
 		05CB8F722091165100AB7E13 /* WordOfTheBird */ = {
 			isa = PBXGroup;
 			children = (
+				052E428520923DB6006F42E7 /* Sounds */,
 				05CB8F732091165100AB7E13 /* AppDelegate.swift */,
 				05CB8F752091165100AB7E13 /* ViewController.swift */,
 				05CB8F772091165100AB7E13 /* Main.storyboard */,
