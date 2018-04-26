@@ -28,11 +28,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="205.33333333333334"/>
                                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button" image="american goldfinch placeholder"/>
+                                                <connections>
+                                                    <action selector="bird0Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4VB-WQ-cvZ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3M-ZJ-zeB">
                                                 <rect key="frame" x="202" y="0.0" width="172" height="205.33333333333334"/>
                                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button" image="bald eagle placeholder"/>
+                                                <connections>
+                                                    <action selector="bird1Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hOX-iT-B2b"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -43,11 +49,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="205.33333333333334"/>
                                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button" image="blue jay placeholder"/>
+                                                <connections>
+                                                    <action selector="bird2Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QFh-mk-2Dp"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfx-zn-0OD">
                                                 <rect key="frame" x="202" y="0.0" width="172" height="205.33333333333334"/>
                                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button" image="cardinal placeholder"/>
+                                                <connections>
+                                                    <action selector="bird3Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="two-Ab-fER"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -58,11 +70,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="205.33333333333334"/>
                                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button" image="house finch placeholder"/>
+                                                <connections>
+                                                    <action selector="bird4Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x6c-G7-9bb"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0V-0b-F6x">
                                                 <rect key="frame" x="202" y="0.0" width="172" height="205.33333333333334"/>
                                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button" image="red tailed hawk placeholder"/>
+                                                <connections>
+                                                    <action selector="bird5Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CkI-ol-iuL"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
