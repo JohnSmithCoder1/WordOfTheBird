@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var test2 = "?????"
+    var YEAH = "YEAH"
     
     override func viewDidLoad() {
         super.viewDidLoad()
