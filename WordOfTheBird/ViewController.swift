@@ -37,16 +37,6 @@ class ViewController: UIViewController {
         playBirdSound(forBird: "redTailedHawk")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     func playBirdSound(forBird: String) {
         guard let url = Bundle.main.url(forResource: forBird, withExtension: "wav") else {
             print("url not found")
