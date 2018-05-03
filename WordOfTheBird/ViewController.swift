@@ -12,6 +12,8 @@ import AVFoundation
 class ViewController: UIViewController {
     
     var player: AVAudioPlayer?
+    
+    var test = ""
 
     @IBAction func bird0Tapped(_ sender: UIButton) {
         playSound(forBird: "goldFinch")
