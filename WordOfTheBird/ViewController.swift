@@ -14,30 +14,30 @@ class ViewController: UIViewController {
     var player: AVAudioPlayer?
 
     @IBAction func bird0Tapped(_ sender: UIButton) {
-        playBirdSound(forBird: "goldFinch")
+        playSound(forBird: "goldFinch")
     }
     
     @IBAction func bird1Tapped(_ sender: UIButton) {
-        playBirdSound(forBird: "baldEagle")
+        playSound(forBird: "baldEagle")
     }
     
     @IBAction func bird2Tapped(_ sender: UIButton) {
-        playBirdSound(forBird: "blueJay")
+        playSound(forBird: "blueJay")
     }
     
     @IBAction func bird3Tapped(_ sender: UIButton) {
-        playBirdSound(forBird: "cardinal")
+        playSound(forBird: "cardinal")
     }
     
     @IBAction func bird4Tapped(_ sender: UIButton) {
-        playBirdSound(forBird: "houseFinch")
+        playSound(forBird: "houseFinch")
     }
     
     @IBAction func bird5Tapped(_ sender: UIButton) {
-        playBirdSound(forBird: "redTailedHawk")
+        playSound(forBird: "redTailedHawk")
     }
     
-    func playBirdSound(forBird: String) {
+    func playSound(forBird: String) {
         guard let url = Bundle.main.url(forResource: forBird, withExtension: "wav") else {
             print("url not found")
             return
