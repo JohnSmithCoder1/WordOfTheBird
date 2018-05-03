@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class BirdViewController: UIViewController {
+class SongBirdsViewController: UIViewController {
     
     var player: AVAudioPlayer?
 
