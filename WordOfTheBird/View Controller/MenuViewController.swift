@@ -9,7 +9,7 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-    
+    var test = ""
 }
 
 extension UIView {
