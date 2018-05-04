@@ -77,24 +77,24 @@
 				B0C48D2920925D8700A655AB /* birdCalls */,
 				05CB8F732091165100AB7E13 /* AppDelegate.swift */,
 				05CB8F772091165100AB7E13 /* Main.storyboard */,
-				05FF76E3209CF47F001F678C /* New Group */,
-				B0F86C01209B9A6900EAA456 /* WoodpeckersViewController.swift */,
-				B0F86C03209B9A7F00EAA456 /* BirdsOfPreyViewController.swift */,
-				05CB8F752091165100AB7E13 /* SongBirdsViewController.swift */,
-				B0C240F5209B8A8B00A63E83 /* MenuViewController.swift */,
 				05CB8F7A2091165200AB7E13 /* Assets.xcassets */,
 				05CB8F7C2091165200AB7E13 /* LaunchScreen.storyboard */,
 				05CB8F7F2091165200AB7E13 /* Info.plist */,
+				05FF76E3209CF47F001F678C /* View Controller */,
 			);
 			path = WordOfTheBird;
 			sourceTree = "<group>";
 		};
-		05FF76E3209CF47F001F678C /* New Group */ = {
+		05FF76E3209CF47F001F678C /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B0F86C03209B9A7F00EAA456 /* BirdsOfPreyViewController.swift */,
+				B0C240F5209B8A8B00A63E83 /* MenuViewController.swift */,
+				05CB8F752091165100AB7E13 /* SongBirdsViewController.swift */,
 				0550425B209CDF86008BF35C /* WebViewController.swift */,
+				B0F86C01209B9A6900EAA456 /* WoodpeckersViewController.swift */,
 			);
-			path = "New Group";
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 		B0C48D2920925D8700A655AB /* birdCalls */ = {

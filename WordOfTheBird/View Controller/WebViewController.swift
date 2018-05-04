@@ -25,7 +25,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
         super.viewDidLoad()
-        navigationController?.isToolbarHidden = false
+//        navigationController?.isToolbarHidden = false
         // Do any additional setup after loading the view, typically from a nib.
     }
     
