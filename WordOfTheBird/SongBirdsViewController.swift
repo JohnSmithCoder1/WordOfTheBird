@@ -13,10 +13,6 @@ class SongBirdsViewController: UIViewController {
     
     var player: AVAudioPlayer?
     
-    @IBAction func bird0InfoTapped(_ sender: UIButton) {
-    // http://eol.org/pages/1051032/overview
-    }
-    
     @IBAction func bird0Tapped(_ sender: UIButton) {
         playSound(forBird: "goldFinch")
     }

@@ -77,7 +77,7 @@
 				B0C48D2920925D8700A655AB /* birdCalls */,
 				05CB8F732091165100AB7E13 /* AppDelegate.swift */,
 				05CB8F772091165100AB7E13 /* Main.storyboard */,
-				0550425B209CDF86008BF35C /* WebViewController.swift */,
+				05FF76E3209CF47F001F678C /* New Group */,
 				B0F86C01209B9A6900EAA456 /* WoodpeckersViewController.swift */,
 				B0F86C03209B9A7F00EAA456 /* BirdsOfPreyViewController.swift */,
 				05CB8F752091165100AB7E13 /* SongBirdsViewController.swift */,
@@ -87,6 +87,14 @@
 				05CB8F7F2091165200AB7E13 /* Info.plist */,
 			);
 			path = WordOfTheBird;
+			sourceTree = "<group>";
+		};
+		05FF76E3209CF47F001F678C /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				0550425B209CDF86008BF35C /* WebViewController.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		B0C48D2920925D8700A655AB /* birdCalls */ = {
