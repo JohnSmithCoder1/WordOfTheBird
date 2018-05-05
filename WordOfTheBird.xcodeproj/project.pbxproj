@@ -59,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				05CB8F722091165100AB7E13 /* WordOfTheBird */,
+				B0C48D2920925D8700A655AB /* Sounds */,
 				05CB8F712091165100AB7E13 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,9 +75,8 @@
 		05CB8F722091165100AB7E13 /* WordOfTheBird */ = {
 			isa = PBXGroup;
 			children = (
-				B0C48D2920925D8700A655AB /* birdCalls */,
-				05CB8F732091165100AB7E13 /* AppDelegate.swift */,
 				05CB8F772091165100AB7E13 /* Main.storyboard */,
+				05CB8F732091165100AB7E13 /* AppDelegate.swift */,
 				05CB8F7A2091165200AB7E13 /* Assets.xcassets */,
 				05CB8F7C2091165200AB7E13 /* LaunchScreen.storyboard */,
 				05CB8F7F2091165200AB7E13 /* Info.plist */,
@@ -97,7 +97,7 @@
 			path = "View Controller";
 			sourceTree = "<group>";
 		};
-		B0C48D2920925D8700A655AB /* birdCalls */ = {
+		B0C48D2920925D8700A655AB /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
 				B0C48D2A20925D8700A655AB /* houseFinch.wav */,
@@ -107,7 +107,7 @@
 				B0C48D2E20925D8700A655AB /* baldEagle.wav */,
 				B0C48D2F20925D8700A655AB /* cardinal.wav */,
 			);
-			path = birdCalls;
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
