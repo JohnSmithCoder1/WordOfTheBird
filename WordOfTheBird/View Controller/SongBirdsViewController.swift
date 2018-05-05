@@ -13,28 +13,28 @@ class SongBirdsViewController: UIViewController {
     
     var player: AVAudioPlayer?
     
-    @IBAction func bird0Tapped(_ sender: UIButton) {
+    @IBAction func bird100Tapped(_ sender: UIButton) {
         playSound(forBird: "goldFinch")
     }
     
-    @IBAction func bird1Tapped(_ sender: UIButton) {
-        playSound(forBird: "baldEagle")
+    @IBAction func bird101Tapped(_ sender: UIButton) {
+        playSound(forBird: "tuftedTitmouse")
     }
     
-    @IBAction func bird2Tapped(_ sender: UIButton) {
+    @IBAction func bird102Tapped(_ sender: UIButton) {
         playSound(forBird: "blueJay")
     }
     
-    @IBAction func bird3Tapped(_ sender: UIButton) {
+    @IBAction func bird103Tapped(_ sender: UIButton) {
         playSound(forBird: "cardinal")
     }
     
-    @IBAction func bird4Tapped(_ sender: UIButton) {
+    @IBAction func bird104Tapped(_ sender: UIButton) {
         playSound(forBird: "houseFinch")
     }
     
-    @IBAction func bird5Tapped(_ sender: UIButton) {
-        playSound(forBird: "redTailedHawk")
+    @IBAction func bird105Tapped(_ sender: UIButton) {
+        playSound(forBird: "chickadee")
     }
     
     func playSound(forBird: String) {
