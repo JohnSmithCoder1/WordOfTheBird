@@ -57,7 +57,7 @@
                                                             <action selector="bird100Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ua-26-Wmk"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acX-I0-nhV">
+                                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acX-I0-nhV">
                                                         <rect key="frame" x="0.0" y="160" width="150" height="30"/>
                                                         <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -85,6 +85,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="Exit:" destination="PSu-5f-YU5" eventType="touchUpInside" id="Jc9-Yo-Whg"/>
+                                                            <action selector="loadWebView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qH0-o5-khY"/>
                                                             <action selector="test:" destination="PSu-5f-YU5" eventType="touchUpInside" id="u0q-p5-edp"/>
                                                             <segue destination="Mh1-9W-Ih0" kind="show" id="uU7-qK-YZW"/>
                                                         </connections>
@@ -120,7 +121,7 @@
                                                             <action selector="bird101Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5q4-k5-vKd"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzU-g7-VOw">
+                                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzU-g7-VOw">
                                                         <rect key="frame" x="0.0" y="160" width="150" height="30"/>
                                                         <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
