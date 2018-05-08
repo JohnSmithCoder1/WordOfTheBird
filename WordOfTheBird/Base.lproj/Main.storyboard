@@ -84,7 +84,9 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="Mh1-9W-Ih0" kind="show" id="Mc3-36-Exe"/>
+                                                            <action selector="Exit:" destination="PSu-5f-YU5" eventType="touchUpInside" id="Jc9-Yo-Whg"/>
+                                                            <action selector="test:" destination="PSu-5f-YU5" eventType="touchUpInside" id="u0q-p5-edp"/>
+                                                            <segue destination="Mh1-9W-Ih0" kind="show" id="uU7-qK-YZW"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -142,6 +144,9 @@
                                                                 <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="Mh1-9W-Ih0" kind="show" id="IXA-jT-K0m"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -399,6 +404,7 @@
                     <navigationItem key="navigationItem" title="Song Birds" id="Or5-fz-Pob"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="PSu-5f-YU5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1902.8985507246377" y="-258.42391304347831"/>
         </scene>
@@ -1314,4 +1320,7 @@
         <image name="red-headed woodpecker placeholder" width="1246" height="1280"/>
         <image name="tufted titmouse placeholder" width="1280" height="768"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="IXA-jT-K0m"/>
+    </inferredMetricsTieBreakers>
 </document>
