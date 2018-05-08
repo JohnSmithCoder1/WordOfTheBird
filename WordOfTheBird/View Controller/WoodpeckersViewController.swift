@@ -46,7 +46,7 @@ class WoodpeckersViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        player!.stop()
+        player?.stop()
     }
     
     func playSound(forBird: String) {
