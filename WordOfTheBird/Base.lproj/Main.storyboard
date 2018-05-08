@@ -57,12 +57,14 @@
                                                             <action selector="bird100Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ua-26-Wmk"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acX-I0-nhV">
+                                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acX-I0-nhV">
                                                         <rect key="frame" x="0.0" y="160" width="150" height="30"/>
                                                         <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <size key="titleShadowOffset" width="1" height="1"/>
                                                         <state key="normal" title="American Goldfinch">
-                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -82,7 +84,10 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="Mh1-9W-Ih0" kind="show" id="z98-rh-OdH"/>
+                                                            <action selector="Exit:" destination="PSu-5f-YU5" eventType="touchUpInside" id="Jc9-Yo-Whg"/>
+                                                            <action selector="loadWebView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qH0-o5-khY"/>
+                                                            <action selector="test:" destination="PSu-5f-YU5" eventType="touchUpInside" id="u0q-p5-edp"/>
+                                                            <segue destination="Mh1-9W-Ih0" kind="show" id="uU7-qK-YZW"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -116,7 +121,7 @@
                                                             <action selector="bird101Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5q4-k5-vKd"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzU-g7-VOw">
+                                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzU-g7-VOw">
                                                         <rect key="frame" x="0.0" y="160" width="150" height="30"/>
                                                         <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -140,6 +145,9 @@
                                                                 <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="Mh1-9W-Ih0" kind="show" id="IXA-jT-K0m"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -397,10 +405,11 @@
                     <navigationItem key="navigationItem" title="Song Birds" id="Or5-fz-Pob"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="PSu-5f-YU5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1902.8985507246377" y="-258.42391304347831"/>
         </scene>
-        <!--Menu View Controller-->
+        <!--Bird Types-->
         <scene sceneID="WGU-QM-PJm">
             <objects>
                 <viewController id="ICK-tg-p3N" customClass="MenuViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
@@ -420,8 +429,10 @@
                                         <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="5"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
                                         <state key="normal" title="Song Birds">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -507,7 +518,9 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="wF4-ic-enT"/>
+                    <navigationItem key="navigationItem" title="Bird Types" id="wF4-ic-enT">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="f0y-xb-Po9"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1WS-rE-jPi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1271,6 +1284,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eAV-C2-Iek">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1303,4 +1321,7 @@
         <image name="red-headed woodpecker placeholder" width="1246" height="1280"/>
         <image name="tufted titmouse placeholder" width="1280" height="768"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="IXA-jT-K0m"/>
+    </inferredMetricsTieBreakers>
 </document>

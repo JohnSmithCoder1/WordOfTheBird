@@ -6,12 +6,13 @@
 //  Copyright © 2018 Banana Viking. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import WebKit
 
 class WebViewController: UIViewController, WKNavigationDelegate {
+    
     var webView: WKWebView!
+    var url = URL(string: "https://en.wikipedia.org/wiki/American_goldfinch")!
     
     override func loadView() {
         webView = WKWebView()
@@ -21,11 +22,9 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     }
     
     override func viewDidLoad() {
-        let url = URL(string: "https://en.wikipedia.org/wiki/American_goldfinch")!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
         super.viewDidLoad()
-//        navigationController?.isToolbarHidden = false
         // Do any additional setup after loading the view, typically from a nib.
     }
     
