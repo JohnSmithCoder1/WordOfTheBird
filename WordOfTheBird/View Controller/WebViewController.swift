@@ -11,6 +11,7 @@ import UIKit
 import WebKit
 
 class WebViewController: UIViewController, WKNavigationDelegate {
+    
     var webView: WKWebView!
     
     override func loadView() {

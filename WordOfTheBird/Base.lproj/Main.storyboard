@@ -57,12 +57,14 @@
                                                             <action selector="bird100Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ua-26-Wmk"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acX-I0-nhV">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acX-I0-nhV">
                                                         <rect key="frame" x="0.0" y="160" width="150" height="30"/>
                                                         <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <size key="titleShadowOffset" width="1" height="1"/>
                                                         <state key="normal" title="American Goldfinch">
-                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -82,7 +84,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="Mh1-9W-Ih0" kind="show" id="z98-rh-OdH"/>
+                                                            <segue destination="Mh1-9W-Ih0" kind="show" id="Mc3-36-Exe"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -400,7 +402,7 @@
             </objects>
             <point key="canvasLocation" x="1902.8985507246377" y="-258.42391304347831"/>
         </scene>
-        <!--Menu View Controller-->
+        <!--Word of the Bird-->
         <scene sceneID="WGU-QM-PJm">
             <objects>
                 <viewController id="ICK-tg-p3N" customClass="MenuViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
@@ -420,8 +422,10 @@
                                         <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="5"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
                                         <state key="normal" title="Song Birds">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -507,7 +511,9 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="wF4-ic-enT"/>
+                    <navigationItem key="navigationItem" title="Word of the Bird" id="wF4-ic-enT">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="M3N-t9-hvy"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1WS-rE-jPi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

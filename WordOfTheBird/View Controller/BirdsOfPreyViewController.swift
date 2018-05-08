@@ -36,6 +36,20 @@ class BirdsOfPreyViewController: UIViewController {
         playSound(forBird: "redTailedHawk")
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(appDidEnterBackground), name: .UIApplicationDidEnterBackground, object: nil)
+    }
+    
+    @objc func appDidEnterBackground() {
+        player!.stop()
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        player?.stop()
+    }
+    
     func playSound(forBird: String) {
         guard let url = Bundle.main.url(forResource: forBird, withExtension: "wav") else {
             print("url not found")

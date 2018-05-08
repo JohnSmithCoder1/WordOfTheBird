@@ -8,8 +8,8 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
-
+class MenuViewController: UIViewController, UINavigationControllerDelegate {
+    
 }
 
 extension UIView {
