@@ -13,6 +13,50 @@ class SongBirdsViewController: UIViewController {
     
     var player: AVAudioPlayer?
     
+    @IBAction func birdLinkTapped(_ sender: AnyObject) {
+        guard let button = sender as? UIButton else {
+            return
+        }
+        
+        switch button.tag {
+        case 100:
+            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/American_goldfinch")!)
+        case 101:
+            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Tufted_titmouse")!)
+        case 102:
+            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Blue_jay")!)
+        case 103:
+            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Cardinal_(bird)")!)
+        case 104:
+            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/House_finch")!)
+        case 105:
+            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Black-capped_chickadee")!)
+        default:
+            print("BIRD K-KAWWWWW")
+            return
+        }
+    }
+    
+    
+    
+//    @IBAction changeLanguage(sender: AnyObject) {
+//    guard let button = sender as? UIButton else {
+//    return
+//    }
+//
+//    switch button.tag {
+//    case 1:
+//    // Change to English
+//    case 2:
+//    // Change to Spanish
+//    case 3:
+//    // Change to French, etc
+//    default:
+//    print("Unknown language")
+//    return
+//    }
+//    }
+    
     @IBAction func bird100Tapped(_ sender: UIButton) {
         playSound(forBird: "goldFinch")
     }
@@ -47,7 +91,7 @@ class SongBirdsViewController: UIViewController {
     }
     
     @objc func appDidEnterBackground() {
-        player!.stop()
+        player?.stop()
     }
     
     func playSound(forBird: String) {
