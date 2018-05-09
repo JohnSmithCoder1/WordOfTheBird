@@ -33,6 +33,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AppLoadingScreen" width="1024" height="1024"/>
+        <image name="AppLoadingScreen" width="270" height="480"/>
     </resources>
 </document>
