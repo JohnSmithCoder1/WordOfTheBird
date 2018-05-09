@@ -12,6 +12,30 @@ import AVFoundation
 class WoodpeckersViewController: UIViewController {
     var player: AVAudioPlayer?
     
+    @IBAction func birdLinkTapped(_ sender: AnyObject) {
+        guard let button = sender as? UIButton else {
+            return
+        }
+        
+        switch button.tag {
+        case 200:
+            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Downy_woodpecker")!)
+        case 201:
+            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Hairy_woodpecker")!)
+        case 202:
+            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Pileated_woodpecker")!)
+        case 203:
+            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Northern_flicker")!)
+        case 204:
+            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Red-bellied_woodpecker")!)
+        case 205:
+            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Red-headed_woodpecker")!)
+        default:
+            print("BIRD K-KAWWWWW")
+            return
+        }
+    }
+    
     @IBAction func bird200Tapped(_ sender: UIButton) {
         playSound(forBird: "downy")
     }

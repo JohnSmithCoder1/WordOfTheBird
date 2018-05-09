@@ -37,26 +37,6 @@ class SongBirdsViewController: UIViewController {
         }
     }
     
-    
-    
-//    @IBAction changeLanguage(sender: AnyObject) {
-//    guard let button = sender as? UIButton else {
-//    return
-//    }
-//
-//    switch button.tag {
-//    case 1:
-//    // Change to English
-//    case 2:
-//    // Change to Spanish
-//    case 3:
-//    // Change to French, etc
-//    default:
-//    print("Unknown language")
-//    return
-//    }
-//    }
-    
     @IBAction func bird100Tapped(_ sender: UIButton) {
         playSound(forBird: "goldFinch")
     }
