@@ -69,6 +69,7 @@ class SongBirdsViewController: UIViewController {
         super.viewDidLoad()
         let americanGoldfinchButton = self.view.viewWithTag(100) as? UIButton
         americanGoldfinchButton?.titleLabel?.adjustsFontSizeToFitWidth = true
+        americanGoldfinchButton?.cornerRadius = 4.5
         NotificationCenter.default.addObserver(self, selector: #selector(appDidEnterBackground), name: .UIApplicationDidEnterBackground, object: nil)
     }
     
