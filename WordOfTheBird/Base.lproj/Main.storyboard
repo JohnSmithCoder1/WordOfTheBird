@@ -93,7 +93,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3M-ZJ-zeB">
                                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150.66666666666666"/>
                                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.33000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" backgroundImage="cardinal"/>
+                                                        <state key="normal" backgroundImage="tufted titmouse"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                                                 <real key="value" value="4.5"/>
@@ -1240,7 +1240,7 @@
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8h-O1-kLa">
                                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.33000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" backgroundImage="cardinal"/>
+                                                        <state key="normal" backgroundImage="red-headed"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                                                 <real key="value" value="4.5"/>
@@ -1341,5 +1341,7 @@
         <image name="northern flicker" width="64" height="64"/>
         <image name="pileated" width="64" height="64"/>
         <image name="red-bellied" width="64" height="64"/>
+        <image name="red-headed" width="64" height="64"/>
+        <image name="tufted titmouse" width="64" height="64"/>
     </resources>
 </document>
