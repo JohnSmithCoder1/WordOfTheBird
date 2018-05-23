@@ -514,7 +514,7 @@
                                 <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="pVJ-kg-I4d">
-                                <rect key="frame" x="78.666666666666686" y="251.66666666666663" width="257" height="233"/>
+                                <rect key="frame" x="78.666666666666686" y="284.66666666666669" width="257" height="233.00000000000006"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chY-bh-9tD">
                                         <rect key="frame" x="0.0" y="0.0" width="257" height="51"/>
@@ -554,7 +554,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peq-ak-gm3">
-                                        <rect key="frame" x="0.0" y="91.000000000000028" width="257" height="51"/>
+                                        <rect key="frame" x="0.0" y="91" width="257" height="51"/>
                                         <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="38"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="5"/>
@@ -579,7 +579,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBF-Xz-QlV">
-                                        <rect key="frame" x="0.0" y="182.00000000000003" width="257" height="51"/>
+                                        <rect key="frame" x="0.0" y="182" width="257" height="51"/>
                                         <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="38"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="5"/>
@@ -619,7 +619,7 @@
                             </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="pVJ-kg-I4d" firstAttribute="centerY" secondItem="VcF-q6-s2P" secondAttribute="centerY" id="2Hy-CX-S1H"/>
+                            <constraint firstItem="pVJ-kg-I4d" firstAttribute="centerY" secondItem="VcF-q6-s2P" secondAttribute="centerY" constant="33" id="2Hy-CX-S1H"/>
                             <constraint firstItem="pVJ-kg-I4d" firstAttribute="centerX" secondItem="VcF-q6-s2P" secondAttribute="centerX" id="UkG-VU-fva"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZxI-Jd-Dzy"/>
