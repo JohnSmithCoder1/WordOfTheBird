@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 class WoodpeckerViewController: UITableViewController {
     
+    var player: AVAudioPlayer?
+
     // for UITableView data source protocol
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
@@ -42,5 +45,44 @@ class WoodpeckerViewController: UITableViewController {
         }
         
         return cell
+    }
+    
+    func playSound(forBird: String) {
+        guard let url = Bundle.main.url(forResource: forBird, withExtension: "wav") else {
+            print("url not found")
+            return
+        }
+        
+        do {
+            /// this codes for making this app ready to takeover the device audio
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
+            
+            player!.play()
+        } catch let error as NSError {
+            print("error: \(error.localizedDescription)")
+        }
+    }
+    
+    //without this, the cell stays selected after clicking
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == 0 {
+            playSound(forBird: "downy")
+        } else if indexPath.row == 1 {
+            playSound(forBird: "hairy")
+        } else if indexPath.row == 2 {
+            playSound(forBird: "pileated")
+        } else if indexPath.row == 3 {
+            playSound(forBird: "northernFlicker")
+        } else if indexPath.row == 4 {
+            playSound(forBird: "redBellied")
+        } else if indexPath.row == 5 {
+            playSound(forBird: "redHeaded")
+        }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

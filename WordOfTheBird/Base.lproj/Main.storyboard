@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Menu View Controller-->
+        <!--Menu-->
         <scene sceneID="L4m-en-KFa">
             <objects>
                 <tableViewController id="eJO-Cw-ZcT" customClass="MenuViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,7 +35,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="pFG-kG-e2P" kind="show" id="B9Z-QG-ItT"/>
+                                    <segue destination="pFG-kG-e2P" kind="show" identifier="woodpeckerSegue" id="B9Z-QG-ItT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -44,7 +44,7 @@
                             <outlet property="delegate" destination="eJO-Cw-ZcT" id="3W1-uy-RmV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="P2N-nl-qPH"/>
+                    <navigationItem key="navigationItem" title="Menu" id="P2N-nl-qPH"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQU-hR-kyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
