@@ -13,6 +13,30 @@ class WoodpeckerViewController: UITableViewController {
     
     var player: AVAudioPlayer?
 
+//    @IBAction func birdLinkTapped(_ sender: AnyObject) {
+//        guard let button = sender as? UIButton else {
+//            return
+//        }
+//
+//        switch button.tag {
+//        case indexPath.row == 0:
+//            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Downy_woodpecker")!)
+////        case 201:
+////            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Hairy_woodpecker")!)
+////        case 202:
+////            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Pileated_woodpecker")!)
+////        case 203:
+////            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Northern_flicker")!)
+////        case 204:
+////            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Red-bellied_woodpecker")!)
+////        case 205:
+////            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Red-headed_woodpecker")!)
+//        default:
+//            print("BIRD K-KAWWWWW")
+//            return
+//        }
+//    }
+    
     // for UITableView data source protocol
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
@@ -45,6 +69,22 @@ class WoodpeckerViewController: UITableViewController {
         }
         
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Downy_woodpecker")!)
+        } else if indexPath.row == 1 {
+            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Hairy_woodpecker")!)
+        } else if indexPath.row == 2 {
+            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Pileated_woodpecker")!)
+        } else if indexPath.row == 3 {
+            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Northern_flicker")!)
+        } else if indexPath.row == 4 {
+            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Red-bellied_woodpecker")!)
+        } else if indexPath.row == 5 {
+            UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Red-headed_woodpecker")!)
+        }
     }
     
     func playSound(forBird: String) {
