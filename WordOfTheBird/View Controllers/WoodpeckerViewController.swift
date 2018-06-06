@@ -23,6 +23,8 @@ class WoodpeckerViewController: UITableViewController {
         backgroundImage.frame = self.tableView.frame
         self.tableView.backgroundView = backgroundImage
     }
+
+/*
     
     // for UITableView data source protocol
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -68,6 +70,8 @@ class WoodpeckerViewController: UITableViewController {
             UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Red-headed_woodpecker")!)
         }
     }
+ 
+ */
     
     func playSound(forBird: String) {
         guard let url = Bundle.main.url(forResource: forBird, withExtension: "wav") else {

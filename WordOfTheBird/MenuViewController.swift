@@ -20,7 +20,10 @@ class MenuViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
-    
+}
+  
+/*
+ 
     // for UITableView data source protocol
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "birdType", for: indexPath)
@@ -38,3 +41,5 @@ class MenuViewController: UITableViewController {
         return cell
     }
 }
+
+*/
