@@ -13,6 +13,7 @@
 		05CB8F792091165100AB7E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8F772091165100AB7E13 /* Main.storyboard */; };
 		05CB8F7B2091165200AB7E13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8F7A2091165200AB7E13 /* Assets.xcassets */; };
 		05CB8F7E2091165200AB7E13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8F7C2091165200AB7E13 /* LaunchScreen.storyboard */; };
+		B0C0136220C8585900784C3B /* SongbirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0136120C8585900784C3B /* SongbirdViewController.swift */; };
 		B0C48D3020925D8700A655AB /* houseFinch.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0C48D2A20925D8700A655AB /* houseFinch.wav */; };
 		B0C48D3120925D8700A655AB /* blueJay.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0C48D2B20925D8700A655AB /* blueJay.wav */; };
 		B0C48D3220925D8700A655AB /* redTailedHawk.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0C48D2C20925D8700A655AB /* redTailedHawk.wav */; };
@@ -42,6 +43,7 @@
 		05CB8F7A2091165200AB7E13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05CB8F7D2091165200AB7E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05CB8F7F2091165200AB7E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0C0136120C8585900784C3B /* SongbirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongbirdViewController.swift; sourceTree = "<group>"; };
 		B0C48D2A20925D8700A655AB /* houseFinch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = houseFinch.wav; sourceTree = "<group>"; };
 		B0C48D2B20925D8700A655AB /* blueJay.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blueJay.wav; sourceTree = "<group>"; };
 		B0C48D2C20925D8700A655AB /* redTailedHawk.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = redTailedHawk.wav; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			children = (
 				0564938220BDD2A10019DA53 /* MenuViewController.swift */,
 				0564938020BDD1160019DA53 /* WoodpeckerViewController.swift */,
+				B0C0136120C8585900784C3B /* SongbirdViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			files = (
 				0564938120BDD1160019DA53 /* WoodpeckerViewController.swift in Sources */,
 				0564938320BDD2A10019DA53 /* MenuViewController.swift in Sources */,
+				B0C0136220C8585900784C3B /* SongbirdViewController.swift in Sources */,
 				05CB8F742091165100AB7E13 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
