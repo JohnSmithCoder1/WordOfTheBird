@@ -54,6 +54,8 @@ class WoodpeckerViewController: UITableViewController {
         
         return cell
     }
+     
+*/
 
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         if indexPath.row == 0 {
@@ -70,8 +72,6 @@ class WoodpeckerViewController: UITableViewController {
             UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Red-headed_woodpecker")!)
         }
     }
- 
- */
     
     func playSound(forBird: String) {
         guard let url = Bundle.main.url(forResource: forBird, withExtension: "wav") else {
