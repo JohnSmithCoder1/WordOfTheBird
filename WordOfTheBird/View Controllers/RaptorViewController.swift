@@ -73,7 +73,7 @@ class RaptorViewController: UITableViewController {
         } else if indexPath.row == 4 {
             playSound(forBird: "peregrineFalcon")
         } else if indexPath.row == 5 {
-            playSound(forBird: "redtailedHawk")
+            playSound(forBird: "redTailedHawk")
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
