@@ -23,6 +23,8 @@ class WoodpeckerViewController: UITableViewController {
         backgroundImage.frame = self.tableView.frame
         self.tableView.backgroundView = backgroundImage
     }
+
+/*
     
     // for UITableView data source protocol
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -52,6 +54,8 @@ class WoodpeckerViewController: UITableViewController {
         
         return cell
     }
+     
+*/
 
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         if indexPath.row == 0 {
