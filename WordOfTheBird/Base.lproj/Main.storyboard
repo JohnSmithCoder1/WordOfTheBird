@@ -131,7 +131,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="272" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tufted titmouse" translatesAutoresizingMaskIntoConstraints="NO" id="4Zj-3W-FaN" userLabel="americanGoldfinchImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="americanGoldFinch" translatesAutoresizingMaskIntoConstraints="NO" id="4Zj-3W-FaN" userLabel="americanGoldfinchImage">
                                                     <rect key="frame" x="0.0" y="-3" width="64" height="64"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
@@ -503,7 +503,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="272" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red-headed" translatesAutoresizingMaskIntoConstraints="NO" id="lFo-m2-NWq" userLabel="baldEagleImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="baldEagle" translatesAutoresizingMaskIntoConstraints="NO" id="lFo-m2-NWq" userLabel="baldEagleImage">
                                                     <rect key="frame" x="0.0" y="-3" width="64" height="64"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
@@ -599,7 +599,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="272" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red-headed" translatesAutoresizingMaskIntoConstraints="NO" id="PGF-iX-5WI" userLabel="redtailedHawkImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redTailedHawk" translatesAutoresizingMaskIntoConstraints="NO" id="PGF-iX-5WI" userLabel="redtailedHawkImage">
                                                     <rect key="frame" x="0.0" y="-3" width="64" height="64"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
@@ -654,6 +654,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="americanGoldFinch" width="64" height="64"/>
+        <image name="baldEagle" width="64" height="64"/>
         <image name="blackcappedChickadee" width="64" height="64"/>
         <image name="blue jay" width="64" height="64"/>
         <image name="cardinal" width="64" height="64"/>
@@ -664,6 +666,7 @@
         <image name="pileated" width="64" height="64"/>
         <image name="red-bellied" width="64" height="64"/>
         <image name="red-headed" width="64" height="64"/>
+        <image name="redTailedHawk" width="64" height="64"/>
         <image name="tufted titmouse" width="64" height="64"/>
     </resources>
 </document>
