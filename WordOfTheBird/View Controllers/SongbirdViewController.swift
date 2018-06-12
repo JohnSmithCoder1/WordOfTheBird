@@ -59,10 +59,31 @@ class SongbirdViewController: UITableViewController {
         }
     }
     
-    //without this, the cell stays selected after clicking
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+//        let alertController = UIAlertController(title: "Select a call:", message: nil, preferredStyle: .alert)
+//
+//        let oneAction = UIAlertAction(title: "Territorial call", style: .default) { _ in
+//            self.playSound(forBird: "goldFinch")
+//        }
+//        let twoAction = UIAlertAction(title: "Mating call", style: .default) { _ in
+//            self.playSound(forBird: "goldFinch")
+//
+//        }
+//        let threeAction = UIAlertAction(title: "Alarm call", style: .default) { _ in
+//            self.playSound(forBird: "goldFinch")
+//
+//        }
+//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in }
+//
+//        alertController.addAction(oneAction)
+//        alertController.addAction(twoAction)
+//        alertController.addAction(threeAction)
+//        alertController.addAction(cancelAction)
+        
+        
         if indexPath.row == 0 {
+//            self.present(alertController, animated: true)
             playSound(forBird: "goldFinch")
         } else if indexPath.row == 1 {
             playSound(forBird: "chickadee")
@@ -77,5 +98,6 @@ class SongbirdViewController: UITableViewController {
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
+
     }
 }
