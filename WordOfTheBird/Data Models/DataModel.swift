@@ -41,9 +41,9 @@ let barredOwl = Bird(name: "Barred Owl",
                      call: "barredOwlCall0",
                      link: "https://en.wikipedia.org/wiki/Barred_owl")
 
-let blackcappedChickadee = Bird(name: "Black-capped Chickadee",
-                                image: "blackcappedChickadeeImageSmall",
-                                call: "blackcappedChickadeeCall0",
+let blackCappedChickadee = Bird(name: "Black-capped Chickadee",
+                                image: "blackCappedChickadeeImageSmall",
+                                call: "blackCappedChickadeeCall0",
                                 link: "https://en.wikipedia.org/wiki/Black-capped_chickadee")
 
 let blueJay = Bird(name: "Blue Jay",
