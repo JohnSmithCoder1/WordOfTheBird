@@ -33,6 +33,7 @@
 		B0FAD126209E0C0300CD486B /* hairy.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0FAD11A209E0C0300CD486B /* hairy.wav */; };
 		B0FAD127209E0C0300CD486B /* peregrineFalcon.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0FAD11B209E0C0300CD486B /* peregrineFalcon.wav */; };
 		B0FAD128209E0C0300CD486B /* pileated.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0FAD11C209E0C0300CD486B /* pileated.wav */; };
+		B0FEA9F020D186F30061599D /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FEA9EF20D186F30061599D /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		B0FAD11A209E0C0300CD486B /* hairy.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hairy.wav; sourceTree = "<group>"; };
 		B0FAD11B209E0C0300CD486B /* peregrineFalcon.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = peregrineFalcon.wav; sourceTree = "<group>"; };
 		B0FAD11C209E0C0300CD486B /* pileated.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pileated.wav; sourceTree = "<group>"; };
+		B0FEA9EF20D186F30061599D /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				05CB8F7C2091165200AB7E13 /* LaunchScreen.storyboard */,
 				05CB8F7F2091165200AB7E13 /* Info.plist */,
 				05FF76E3209CF47F001F678C /* View Controllers */,
+				B0FEA9F120D186F90061599D /* Data Models */,
 			);
 			path = WordOfTheBird;
 			sourceTree = "<group>";
@@ -141,6 +144,14 @@
 				B0FAD114209E0C0200CD486B /* tuftedTitmouse.wav */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		B0FEA9F120D186F90061599D /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				B0FEA9EF20D186F30061599D /* DataModel.swift */,
+			);
+			path = "Data Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +248,7 @@
 				0564938320BDD2A10019DA53 /* MenuViewController.swift in Sources */,
 				B0C0136220C8585900784C3B /* SongbirdViewController.swift in Sources */,
 				05CB8F742091165100AB7E13 /* AppDelegate.swift in Sources */,
+				B0FEA9F020D186F30061599D /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
