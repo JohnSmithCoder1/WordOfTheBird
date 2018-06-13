@@ -15,7 +15,7 @@ class SongbirdViewController: UITableViewController {
     
     // for UITableView data source protocol
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 18
     }
     
     override func viewDidLoad() {
