@@ -69,7 +69,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4s9-Qa-djW" userLabel="songbirdTableView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <inset key="scrollIndicatorInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
                         <color key="separatorColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -115,10 +115,10 @@
                                                 <constraint firstItem="J1F-5N-eTh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4Zj-3W-FaN" secondAttribute="trailing" constant="8" symbolic="YES" id="tID-Ox-qPS"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="ige-WE-7Qy" kind="show" identifier="americanGoldfinchSegue" id="aov-DK-eSe"/>
+                                            <segue destination="ige-WE-7Qy" kind="show" identifier="americanGoldfinchSegue" id="gFr-bZ-PKx"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="J8J-YL-UW1" userLabel="americanKestrelCell">
@@ -152,7 +152,7 @@
                                                 <constraint firstItem="HTb-IK-4fY" firstAttribute="centerY" secondItem="k5y-P6-3LT" secondAttribute="centerY" id="uNp-Op-1ZM"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="Muo-tJ-EzL" userLabel="baldEagleCell">
@@ -186,7 +186,7 @@
                                                 <constraint firstItem="beC-Jm-Mq5" firstAttribute="leading" secondItem="lFo-m2-NWq" secondAttribute="trailing" constant="8" id="yJv-cg-Hhm"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="bbX-Xy-8CM" userLabel="barredOwlCell">
@@ -220,7 +220,7 @@
                                                 <constraint firstItem="y4z-2f-XvT" firstAttribute="leading" secondItem="odt-5W-bCn" secondAttribute="trailing" constant="8" id="rF5-yx-2l2"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="u1q-3v-kd9" userLabel="blackCappedChickadeeCell">
@@ -254,7 +254,7 @@
                                                 <constraint firstItem="Zb2-Qc-Bop" firstAttribute="top" secondItem="8Of-BU-Hrz" secondAttribute="top" id="zE7-Xz-GR5"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="Mei-oF-muP" userLabel="blueJayCell">
@@ -288,7 +288,7 @@
                                                 <constraint firstItem="LfF-2w-kSS" firstAttribute="top" secondItem="oe6-Oq-9wd" secondAttribute="top" id="z33-YD-Sew"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="1cq-6r-ZOv" userLabel="cardinalCell">
@@ -322,7 +322,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="SYU-UD-wfm" secondAttribute="bottom" id="sc1-lj-K7i"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="9Gj-DY-bQD" userLabel="downyWoodpeckerCell">
@@ -356,7 +356,7 @@
                                                 <constraint firstItem="Nlf-Lu-Ihd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Us2-Mc-2pV" secondAttribute="trailing" constant="8" symbolic="YES" id="sI9-yz-M4q"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="MR9-tG-hTU" userLabel="greatHornedOwlCell">
@@ -390,7 +390,7 @@
                                                 <constraint firstItem="wpc-la-rkT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0k1-LI-Zow" secondAttribute="trailing" constant="8" symbolic="YES" id="beY-D3-BB6"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="nFs-oj-E84" userLabel="hairyWoodpeckerCell">
@@ -424,7 +424,7 @@
                                                 <constraint firstItem="3Xy-vb-QjL" firstAttribute="centerY" secondItem="i7Z-RI-J4N" secondAttribute="centerY" id="yNh-2N-aDW"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="3h2-EM-Wve" userLabel="houseFinchCell">
@@ -458,7 +458,7 @@
                                                 <constraint firstItem="DhS-Rm-tF9" firstAttribute="leading" secondItem="GCC-8J-go7" secondAttribute="trailing" constant="8" id="wyJ-U1-x0n"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="Y7D-45-A9V" userLabel="northernFlickerCell">
@@ -492,7 +492,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="Ika-r4-tA9" secondAttribute="bottom" id="vo9-OA-prj"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="Nsj-SE-28m" userLabel="peregrineFalconCell">
@@ -526,7 +526,7 @@
                                                 <constraint firstItem="PY8-cj-WCx" firstAttribute="centerY" secondItem="cl5-I3-pHL" secondAttribute="centerY" id="y0y-JO-KU9"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="ufw-Tf-3ys" userLabel="pileatedCell">
@@ -560,7 +560,7 @@
                                                 <constraint firstItem="bPa-yF-1P2" firstAttribute="top" secondItem="EY0-EB-XnE" secondAttribute="top" id="oEa-xI-Rl4"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="csI-l6-FCv" userLabel="redbelliedCell">
@@ -594,7 +594,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="fr0-wA-SYa" secondAttribute="bottom" id="rZc-V1-qau"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="Mlh-a9-jOX" userLabel="redheadedCell">
@@ -628,7 +628,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="WpB-b7-Dur" secondAttribute="bottom" id="tSA-0R-Kah"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="RS8-Be-H0d" userLabel="redtailedHawkCell">
@@ -662,7 +662,7 @@
                                                 <constraint firstItem="PGF-iX-5WI" firstAttribute="leading" secondItem="eUz-HB-r44" secondAttribute="leading" id="YFW-jg-utK"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="F31-am-Wzd" userLabel="tuftedTitmouseCell">
@@ -696,7 +696,7 @@
                                                 <constraint firstItem="OwI-VK-AvW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mNz-so-FLG" secondAttribute="trailing" constant="8" symbolic="YES" id="smI-Fh-G5T"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
@@ -707,6 +707,7 @@
                             <outlet property="delegate" destination="srd-D6-GbF" id="rN4-xJ-rBZ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Birds" id="Chc-1y-m3P"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iui-Do-ATC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -782,8 +783,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3XM-eA-f6x"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Bird Detail" id="VJx-su-hUt">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="u0Q-uZ-4wg"/>
+                    <navigationItem key="navigationItem" title="Bird Detail" id="ckF-gx-Ytg">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="EJ7-2k-U3G"/>
                     </navigationItem>
                     <connections>
                         <outlet property="birdImageLarge" destination="Y6x-FZ-1M8" id="H0E-c1-oKz"/>

@@ -14,7 +14,7 @@
 		05CB8F7E2091165200AB7E13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8F7C2091165200AB7E13 /* LaunchScreen.storyboard */; };
 		B02FA39820D4477400172A65 /* BirdDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02FA39720D4477400172A65 /* BirdDetailViewController.swift */; };
 		B02FA39A20D4477E00172A65 /* BirdDetailDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02FA39920D4477E00172A65 /* BirdDetailDataViewController.swift */; };
-		B0C0136220C8585900784C3B /* BirdSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0136120C8585900784C3B /* BirdSearchViewController.swift */; };
+		B0C0136220C8585900784C3B /* BirdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0136120C8585900784C3B /* BirdsViewController.swift */; };
 		B0C9481620D3D5A2007E102A /* greatHornedOwlCall0.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0C9480420D3D5A1007E102A /* greatHornedOwlCall0.wav */; };
 		B0C9481720D3D5A2007E102A /* houseFinchCall0.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0C9480520D3D5A1007E102A /* houseFinchCall0.wav */; };
 		B0C9481820D3D5A2007E102A /* redBelliedWoodpeckerCall0.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0C9480620D3D5A1007E102A /* redBelliedWoodpeckerCall0.wav */; };
@@ -46,7 +46,7 @@
 		05CB8F7F2091165200AB7E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B02FA39720D4477400172A65 /* BirdDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdDetailViewController.swift; sourceTree = "<group>"; };
 		B02FA39920D4477E00172A65 /* BirdDetailDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdDetailDataViewController.swift; sourceTree = "<group>"; };
-		B0C0136120C8585900784C3B /* BirdSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdSearchViewController.swift; sourceTree = "<group>"; };
+		B0C0136120C8585900784C3B /* BirdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdsViewController.swift; sourceTree = "<group>"; };
 		B0C9480420D3D5A1007E102A /* greatHornedOwlCall0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = greatHornedOwlCall0.wav; sourceTree = "<group>"; };
 		B0C9480520D3D5A1007E102A /* houseFinchCall0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = houseFinchCall0.wav; sourceTree = "<group>"; };
 		B0C9480620D3D5A1007E102A /* redBelliedWoodpeckerCall0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = redBelliedWoodpeckerCall0.wav; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				0564938220BDD2A10019DA53 /* MenuViewController.swift */,
-				B0C0136120C8585900784C3B /* BirdSearchViewController.swift */,
+				B0C0136120C8585900784C3B /* BirdsViewController.swift */,
 				B02FA39720D4477400172A65 /* BirdDetailViewController.swift */,
 				B02FA39920D4477E00172A65 /* BirdDetailDataViewController.swift */,
 			);
@@ -245,7 +245,7 @@
 			files = (
 				B02FA39A20D4477E00172A65 /* BirdDetailDataViewController.swift in Sources */,
 				0564938320BDD2A10019DA53 /* MenuViewController.swift in Sources */,
-				B0C0136220C8585900784C3B /* BirdSearchViewController.swift in Sources */,
+				B0C0136220C8585900784C3B /* BirdsViewController.swift in Sources */,
 				B02FA39820D4477400172A65 /* BirdDetailViewController.swift in Sources */,
 				05CB8F742091165100AB7E13 /* AppDelegate.swift in Sources */,
 				B0FEA9F020D186F30061599D /* Bird.swift in Sources */,

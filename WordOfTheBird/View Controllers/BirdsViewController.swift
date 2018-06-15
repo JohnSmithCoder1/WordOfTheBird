@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BirdSearchViewController: UITableViewController {
+class BirdsViewController: UITableViewController {
     
     // for UITableView data source protocol
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,6 +24,26 @@ class BirdSearchViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "americanGoldfinchSegue" {
+            if let destination = segue.destination as? BirdDetailViewController {
+                destination.title = americanGoldfinch.name
+                destination.imageDetail = americanGoldfinch.imageLarge
+                destination.callDetail = americanGoldfinch.call
+                destination.linkDetail = americanGoldfinch.link
+            }
+        }
+        
+//        if segue.identifier == "cardinal" {
+//            if let destination = segue.destination as? BirdDetailViewController {
+//                destination.title = cardinal.name
+//                destination.detailImage = cardinal.imageLarge
+//                destination.call = cardinal.call
+//                destination.link = cardinal.link
+//            }
+//        }
     }
     
     let americanGoldfinch = Bird(name: "American Goldfinch",

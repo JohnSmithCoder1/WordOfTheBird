@@ -13,8 +13,8 @@ class MenuViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let backgroundImage = UIImageView(image: UIImage(named: "background.png"))
-            backgroundImage.frame = self.tableView.frame
-            self.tableView.backgroundView = backgroundImage
+        backgroundImage.frame = self.tableView.frame
+        self.tableView.backgroundView = backgroundImage
     }
 
     // for UITableView data source protocol
