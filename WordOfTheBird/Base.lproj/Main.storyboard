@@ -75,14 +75,14 @@
                         <sections>
                             <tableViewSection id="QVI-qp-L41">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="xbA-s8-iin" userLabel="americanGoldfinchCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="xbA-s8-iin" userLabel="americanGoldfinchCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xbA-s8-iin" id="ogG-Ad-caH">
-                                            <rect key="frame" x="0.0" y="0.0" width="272" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="americanGoldFinch" translatesAutoresizingMaskIntoConstraints="NO" id="4Zj-3W-FaN" userLabel="americanGoldfinchImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="americanGoldfinchImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="4Zj-3W-FaN" userLabel="americanGoldfinchImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -98,7 +98,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="American Goldfinch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1F-5N-eTh" userLabel="americanGoldfinchLabel">
-                                                    <rect key="frame" x="72" y="19.5" width="158" height="21"/>
+                                                    <rect key="frame" x="72" y="19.5" width="172" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -117,14 +117,14 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="J8J-YL-UW1" userLabel="americanKestrelCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="J8J-YL-UW1" userLabel="americanKestrelCell">
                                         <rect key="frame" x="0.0" y="60" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J8J-YL-UW1" id="k5y-P6-3LT">
-                                            <rect key="frame" x="0.0" y="0.0" width="272" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-headed" translatesAutoresizingMaskIntoConstraints="NO" id="Uq2-AI-BW0" userLabel="americanKestrelImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redHeadedWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="Uq2-AI-BW0" userLabel="americanKestrelImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -132,7 +132,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="American Kestrel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTb-IK-4fY" userLabel="americanKestrelLabel">
-                                                    <rect key="frame" x="72" y="19.5" width="137" height="21"/>
+                                                    <rect key="frame" x="72" y="19.5" width="151" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -151,14 +151,14 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="Muo-tJ-EzL" userLabel="baldEagleCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="Muo-tJ-EzL" userLabel="baldEagleCell">
                                         <rect key="frame" x="0.0" y="120" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Muo-tJ-EzL" id="d6w-4g-wj0">
-                                            <rect key="frame" x="0.0" y="0.0" width="272" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baldEagle" translatesAutoresizingMaskIntoConstraints="NO" id="lFo-m2-NWq" userLabel="baldEagleImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baldEagleImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="lFo-m2-NWq" userLabel="baldEagleImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -185,14 +185,14 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="bbX-Xy-8CM" userLabel="barredOwlCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="bbX-Xy-8CM" userLabel="barredOwlCell">
                                         <rect key="frame" x="0.0" y="180" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bbX-Xy-8CM" id="2y6-Dv-m9m">
-                                            <rect key="frame" x="0.0" y="0.0" width="272" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-headed" translatesAutoresizingMaskIntoConstraints="NO" id="odt-5W-bCn" userLabel="barredOwlImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redHeadedWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="odt-5W-bCn" userLabel="barredOwlImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -219,14 +219,14 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="u1q-3v-kd9" userLabel="blackCappedChickadeeCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="u1q-3v-kd9" userLabel="blackCappedChickadeeCell">
                                         <rect key="frame" x="0.0" y="240" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u1q-3v-kd9" id="8Of-BU-Hrz">
-                                            <rect key="frame" x="0.0" y="0.0" width="272" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackcappedChickadee" translatesAutoresizingMaskIntoConstraints="NO" id="Zb2-Qc-Bop" userLabel="blackcappedChickadeeImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackCappedChickadeeImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="Zb2-Qc-Bop" userLabel="blackcappedChickadeeImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -234,7 +234,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Black-capped Chickadee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8s-Ka-Oxc" userLabel="blackcappedChickadeeLabel">
-                                                    <rect key="frame" x="72" y="19.5" width="199" height="21"/>
+                                                    <rect key="frame" x="72" y="19.5" width="213" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -253,14 +253,14 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="Mei-oF-muP" userLabel="blueJayCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="Mei-oF-muP" userLabel="blueJayCell">
                                         <rect key="frame" x="0.0" y="300" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mei-oF-muP" id="oe6-Oq-9wd">
-                                            <rect key="frame" x="0.0" y="0.0" width="272" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue jay" translatesAutoresizingMaskIntoConstraints="NO" id="LfF-2w-kSS" userLabel="blueJayImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueJayImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="LfF-2w-kSS" userLabel="blueJayImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -287,14 +287,14 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="1cq-6r-ZOv" userLabel="cardinalCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="1cq-6r-ZOv" userLabel="cardinalCell">
                                         <rect key="frame" x="0.0" y="360" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1cq-6r-ZOv" id="TGN-zn-wMe">
-                                            <rect key="frame" x="0.0" y="0.0" width="272" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardinal" translatesAutoresizingMaskIntoConstraints="NO" id="SYU-UD-wfm" userLabel="cardinalImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardinalImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="SYU-UD-wfm" userLabel="cardinalImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -321,14 +321,14 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="9Gj-DY-bQD" userLabel="downyWoodpeckerCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="9Gj-DY-bQD" userLabel="downyWoodpeckerCell">
                                         <rect key="frame" x="0.0" y="420" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Gj-DY-bQD" id="c7A-iv-L2h">
-                                            <rect key="frame" x="0.0" y="0.0" width="272" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downy" translatesAutoresizingMaskIntoConstraints="NO" id="Us2-Mc-2pV" userLabel="downyImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downyWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="Us2-Mc-2pV" userLabel="downyImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -336,7 +336,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downy Woodpecker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlf-Lu-Ihd" userLabel="downyLabel">
-                                                    <rect key="frame" x="72" y="19.5" width="160" height="21"/>
+                                                    <rect key="frame" x="72" y="19.5" width="174" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -355,14 +355,14 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="MR9-tG-hTU" userLabel="greatHornedOwlCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="MR9-tG-hTU" userLabel="greatHornedOwlCell">
                                         <rect key="frame" x="0.0" y="480" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MR9-tG-hTU" id="OKD-Fk-hly">
-                                            <rect key="frame" x="0.0" y="0.0" width="272" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-headed" translatesAutoresizingMaskIntoConstraints="NO" id="0k1-LI-Zow" userLabel="greatHornedOwlImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redHeadedWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="0k1-LI-Zow" userLabel="greatHornedOwlImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -370,7 +370,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Great Horned Owl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpc-la-rkT" userLabel="greatHornedOwlLabel">
-                                                    <rect key="frame" x="72" y="19.5" width="143" height="21"/>
+                                                    <rect key="frame" x="72" y="19.5" width="157" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -389,14 +389,14 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="nFs-oj-E84" userLabel="hairyWoodpeckerCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="nFs-oj-E84" userLabel="hairyWoodpeckerCell">
                                         <rect key="frame" x="0.0" y="540" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nFs-oj-E84" id="i7Z-RI-J4N">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hairy" translatesAutoresizingMaskIntoConstraints="NO" id="zFZ-XT-OEi" userLabel="hairyImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hairyWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="zFZ-XT-OEi" userLabel="hairyImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -404,7 +404,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hairy Woodpecker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xy-vb-QjL" userLabel="hairyLabel">
-                                                    <rect key="frame" x="72" y="19.5" width="156" height="21"/>
+                                                    <rect key="frame" x="72" y="19.5" width="170" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -423,14 +423,14 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="3h2-EM-Wve" userLabel="houseFinchCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="3h2-EM-Wve" userLabel="houseFinchCell">
                                         <rect key="frame" x="0.0" y="600" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3h2-EM-Wve" id="Cr7-4a-mnT">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="houseFinch" translatesAutoresizingMaskIntoConstraints="NO" id="GCC-8J-go7" userLabel="houseFinchImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="houseFinchImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="GCC-8J-go7" userLabel="houseFinchImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -457,14 +457,14 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="Y7D-45-A9V" userLabel="northernFlickerCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="Y7D-45-A9V" userLabel="northernFlickerCell">
                                         <rect key="frame" x="0.0" y="660" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y7D-45-A9V" id="MFu-vR-JSB">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="northern flicker" translatesAutoresizingMaskIntoConstraints="NO" id="Ika-r4-tA9" userLabel="northernFlickerImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="northernFlickerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="Ika-r4-tA9" userLabel="northernFlickerImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -472,7 +472,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Northern Flicker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKc-oS-86W" userLabel="northernFlickerLabel">
-                                                    <rect key="frame" x="72" y="19.5" width="138" height="21"/>
+                                                    <rect key="frame" x="72" y="19.5" width="152" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -491,14 +491,14 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="Nsj-SE-28m" userLabel="peregrineFalconCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="Nsj-SE-28m" userLabel="peregrineFalconCell">
                                         <rect key="frame" x="0.0" y="720" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nsj-SE-28m" id="cl5-I3-pHL">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-headed" translatesAutoresizingMaskIntoConstraints="NO" id="dOS-Cj-v6x" userLabel="peregrineFalconImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redHeadedWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="dOS-Cj-v6x" userLabel="peregrineFalconImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -506,7 +506,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peregrine Falcon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PY8-cj-WCx" userLabel="peregrineFalconLabel">
-                                                    <rect key="frame" x="72" y="19.5" width="142" height="21"/>
+                                                    <rect key="frame" x="72" y="19.5" width="156" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -525,14 +525,14 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="ufw-Tf-3ys" userLabel="pileatedCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="ufw-Tf-3ys" userLabel="pileatedCell">
                                         <rect key="frame" x="0.0" y="780" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ufw-Tf-3ys" id="EY0-EB-XnE">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pileated" translatesAutoresizingMaskIntoConstraints="NO" id="bPa-yF-1P2" userLabel="pileatedImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pileatedWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="bPa-yF-1P2" userLabel="pileatedImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -540,7 +540,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pileated Woodpecker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YD6-ch-GiU" userLabel="pileatedLabel">
-                                                    <rect key="frame" x="72" y="19.5" width="178" height="21"/>
+                                                    <rect key="frame" x="72" y="19.5" width="192" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -559,14 +559,14 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="csI-l6-FCv" userLabel="redbelliedCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="csI-l6-FCv" userLabel="redbelliedCell">
                                         <rect key="frame" x="0.0" y="840" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="csI-l6-FCv" id="ezM-kb-EVn">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-bellied" translatesAutoresizingMaskIntoConstraints="NO" id="fr0-wA-SYa" userLabel="rebelliedImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redBelliedWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="fr0-wA-SYa" userLabel="rebelliedImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -574,7 +574,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red-bellied Woodpecker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMK-SG-aJY" userLabel="redbelliedLabel">
-                                                    <rect key="frame" x="72" y="19.5" width="205" height="21"/>
+                                                    <rect key="frame" x="72" y="19.5" width="219" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -593,14 +593,14 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="Mlh-a9-jOX" userLabel="redheadedCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="Mlh-a9-jOX" userLabel="redheadedCell">
                                         <rect key="frame" x="0.0" y="900" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mlh-a9-jOX" id="ed2-7r-lQB">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-headed" translatesAutoresizingMaskIntoConstraints="NO" id="WpB-b7-Dur" userLabel="redheadedImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redHeadedWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="WpB-b7-Dur" userLabel="redheadedImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -608,7 +608,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red-headed Woodpecker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDk-in-vOM" userLabel="redheadedLabel">
-                                                    <rect key="frame" x="72" y="19.5" width="212" height="21"/>
+                                                    <rect key="frame" x="72" y="19.5" width="226" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -627,14 +627,14 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="RS8-Be-H0d" userLabel="redtailedHawkCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="RS8-Be-H0d" userLabel="redtailedHawkCell">
                                         <rect key="frame" x="0.0" y="960" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RS8-Be-H0d" id="eUz-HB-r44">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redTailedHawk" translatesAutoresizingMaskIntoConstraints="NO" id="PGF-iX-5WI" userLabel="redtailedHawkImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redTailedHawkImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="PGF-iX-5WI" userLabel="redtailedHawkImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -642,7 +642,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red-tailed Hawk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0V-Uk-xMI" userLabel="redtailedHawkLabel">
-                                                    <rect key="frame" x="72" y="19.5" width="140" height="21"/>
+                                                    <rect key="frame" x="72" y="19.5" width="154" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -661,14 +661,14 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="F31-am-Wzd" userLabel="tuftedTitmouseCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="F31-am-Wzd" userLabel="tuftedTitmouseCell">
                                         <rect key="frame" x="0.0" y="1020" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F31-am-Wzd" id="Ffp-Zw-XSL">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tufted titmouse" translatesAutoresizingMaskIntoConstraints="NO" id="mNz-so-FLG" userLabel="tuftedTitmouseImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tuftedTitmouseImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="mNz-so-FLG" userLabel="tuftedTitmouseImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -676,7 +676,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tufted Titmouse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwI-VK-AvW" userLabel="tuftedTitmouseLabel">
-                                                    <rect key="frame" x="72" y="19.5" width="140" height="21"/>
+                                                    <rect key="frame" x="72" y="19.5" width="154" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -733,19 +733,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="americanGoldFinch" width="64" height="64"/>
-        <image name="baldEagle" width="64" height="64"/>
-        <image name="blackcappedChickadee" width="64" height="64"/>
-        <image name="blue jay" width="64" height="64"/>
-        <image name="cardinal" width="64" height="64"/>
-        <image name="downy" width="64" height="64"/>
-        <image name="hairy" width="64" height="64"/>
-        <image name="houseFinch" width="64" height="64"/>
-        <image name="northern flicker" width="64" height="64"/>
-        <image name="pileated" width="64" height="64"/>
-        <image name="red-bellied" width="64" height="64"/>
-        <image name="red-headed" width="64" height="64"/>
-        <image name="redTailedHawk" width="64" height="64"/>
-        <image name="tufted titmouse" width="64" height="64"/>
+        <image name="americanGoldfinchImageSmall" width="64" height="64"/>
+        <image name="baldEagleImageSmall" width="64" height="64"/>
+        <image name="blackCappedChickadeeImageSmall" width="64" height="64"/>
+        <image name="blueJayImageSmall" width="64" height="64"/>
+        <image name="cardinalImageSmall" width="64" height="64"/>
+        <image name="downyWoodpeckerImageSmall" width="64" height="64"/>
+        <image name="hairyWoodpeckerImageSmall" width="64" height="64"/>
+        <image name="houseFinchImageSmall" width="64" height="64"/>
+        <image name="northernFlickerImageSmall" width="64" height="64"/>
+        <image name="pileatedWoodpeckerImageSmall" width="64" height="64"/>
+        <image name="redBelliedWoodpeckerImageSmall" width="64" height="64"/>
+        <image name="redHeadedWoodpeckerImageSmall" width="64" height="64"/>
+        <image name="redTailedHawkImageSmall" width="64" height="64"/>
+        <image name="tuftedTitmouseImageSmall" width="64" height="64"/>
     </resources>
 </document>
