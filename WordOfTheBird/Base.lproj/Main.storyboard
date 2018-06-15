@@ -128,7 +128,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redHeadedWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="Uq2-AI-BW0" userLabel="americanKestrelImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="americanKestrelImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="Uq2-AI-BW0" userLabel="americanKestrelImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -154,6 +154,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="ige-WE-7Qy" kind="show" identifier="americanKestrelSegue" id="j3z-hb-Jel"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="Muo-tJ-EzL" userLabel="baldEagleCell">
                                         <rect key="frame" x="0.0" y="120" width="320" height="60"/>
@@ -188,6 +191,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="ige-WE-7Qy" kind="show" identifier="baldEagleSegue" id="rb8-dx-5Ut"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="bbX-Xy-8CM" userLabel="barredOwlCell">
                                         <rect key="frame" x="0.0" y="180" width="320" height="60"/>
@@ -222,6 +228,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="ige-WE-7Qy" kind="show" identifier="barredOwlSegue" id="mOu-5A-EG1"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="u1q-3v-kd9" userLabel="blackCappedChickadeeCell">
                                         <rect key="frame" x="0.0" y="240" width="320" height="60"/>
@@ -256,6 +265,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="ige-WE-7Qy" kind="show" identifier="blackCappedChickadeeSegue" id="HUK-PC-zV7"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="Mei-oF-muP" userLabel="blueJayCell">
                                         <rect key="frame" x="0.0" y="300" width="320" height="60"/>
@@ -290,6 +302,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="ige-WE-7Qy" kind="show" identifier="blueJaySegue" id="6A8-YY-8bV"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="1cq-6r-ZOv" userLabel="cardinalCell">
                                         <rect key="frame" x="0.0" y="360" width="320" height="60"/>
@@ -324,6 +339,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="ige-WE-7Qy" kind="show" identifier="cardinalSegue" id="0eq-9y-FpB"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="9Gj-DY-bQD" userLabel="downyWoodpeckerCell">
                                         <rect key="frame" x="0.0" y="420" width="320" height="60"/>
@@ -358,6 +376,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="ige-WE-7Qy" kind="show" identifier="downyWoodpeckerSegue" id="jmg-KF-EWI"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="MR9-tG-hTU" userLabel="greatHornedOwlCell">
                                         <rect key="frame" x="0.0" y="480" width="320" height="60"/>
@@ -392,12 +413,15 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="ige-WE-7Qy" kind="show" identifier="greatHornedOwlSegue" id="r6g-CP-p1b"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="nFs-oj-E84" userLabel="hairyWoodpeckerCell">
                                         <rect key="frame" x="0.0" y="540" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nFs-oj-E84" id="i7Z-RI-J4N">
-                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hairyWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="zFZ-XT-OEi" userLabel="hairyImage">
@@ -426,12 +450,15 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="ige-WE-7Qy" kind="show" identifier="hairyWoodpeckerSegue" id="3OK-md-dcw"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="3h2-EM-Wve" userLabel="houseFinchCell">
                                         <rect key="frame" x="0.0" y="600" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3h2-EM-Wve" id="Cr7-4a-mnT">
-                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="houseFinchImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="GCC-8J-go7" userLabel="houseFinchImage">
@@ -460,12 +487,15 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="ige-WE-7Qy" kind="show" identifier="houseFinchSegue" id="CW4-U1-1CC"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="Y7D-45-A9V" userLabel="northernFlickerCell">
                                         <rect key="frame" x="0.0" y="660" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y7D-45-A9V" id="MFu-vR-JSB">
-                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="northernFlickerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="Ika-r4-tA9" userLabel="northernFlickerImage">
@@ -494,12 +524,15 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="ige-WE-7Qy" kind="show" identifier="northernFlickerSegue" id="5gO-b3-LFh"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="Nsj-SE-28m" userLabel="peregrineFalconCell">
                                         <rect key="frame" x="0.0" y="720" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nsj-SE-28m" id="cl5-I3-pHL">
-                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redHeadedWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="dOS-Cj-v6x" userLabel="peregrineFalconImage">
@@ -528,12 +561,15 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="ige-WE-7Qy" kind="show" identifier="peregrineFalconSegue" id="XUc-sQ-95c"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="ufw-Tf-3ys" userLabel="pileatedCell">
                                         <rect key="frame" x="0.0" y="780" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ufw-Tf-3ys" id="EY0-EB-XnE">
-                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pileatedWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="bPa-yF-1P2" userLabel="pileatedImage">
@@ -562,12 +598,15 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="ige-WE-7Qy" kind="show" identifier="pileatedWoodpeckerSegue" id="R7N-kz-zux"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="csI-l6-FCv" userLabel="redbelliedCell">
                                         <rect key="frame" x="0.0" y="840" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="csI-l6-FCv" id="ezM-kb-EVn">
-                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redBelliedWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="fr0-wA-SYa" userLabel="rebelliedImage">
@@ -596,12 +635,15 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="ige-WE-7Qy" kind="show" identifier="redBelliedWoodpeckerSegue" id="tOW-FZ-PlN"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="Mlh-a9-jOX" userLabel="redheadedCell">
                                         <rect key="frame" x="0.0" y="900" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mlh-a9-jOX" id="ed2-7r-lQB">
-                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redHeadedWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="WpB-b7-Dur" userLabel="redheadedImage">
@@ -630,12 +672,15 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="ige-WE-7Qy" kind="show" identifier="redHeadedWoodpeckerSegue" id="kTL-fo-nDj"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="RS8-Be-H0d" userLabel="redtailedHawkCell">
                                         <rect key="frame" x="0.0" y="960" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RS8-Be-H0d" id="eUz-HB-r44">
-                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redTailedHawkImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="PGF-iX-5WI" userLabel="redtailedHawkImage">
@@ -664,12 +709,15 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="ige-WE-7Qy" kind="show" identifier="redTailedHawkSegue" id="T6A-VV-OPE"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="woodpecker" rowHeight="60" id="F31-am-Wzd" userLabel="tuftedTitmouseCell">
                                         <rect key="frame" x="0.0" y="1020" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F31-am-Wzd" id="Ffp-Zw-XSL">
-                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tuftedTitmouseImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="mNz-so-FLG" userLabel="tuftedTitmouseImage">
@@ -698,6 +746,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="ige-WE-7Qy" kind="show" identifier="tuftedTitmouseSegue" id="ZHk-DT-BBv"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -802,6 +853,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="252"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <sections>
                             <tableViewSection headerTitle="Bird Calls" id="ULX-do-OL9" userLabel="Bird Calls">
                                 <cells>
@@ -915,6 +967,7 @@
     </scenes>
     <resources>
         <image name="americanGoldfinchImageSmall" width="64" height="64"/>
+        <image name="americanKestrelImageSmall" width="64" height="64"/>
         <image name="background" width="270" height="480"/>
         <image name="baldEagleImageSmall" width="64" height="64"/>
         <image name="blackCappedChickadeeImageSmall" width="64" height="64"/>
@@ -931,4 +984,7 @@
         <image name="tuftedTitmouseImageLarge" width="1024" height="1024"/>
         <image name="tuftedTitmouseImageSmall" width="64" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZHk-DT-BBv"/>
+    </inferredMetricsTieBreakers>
 </document>
