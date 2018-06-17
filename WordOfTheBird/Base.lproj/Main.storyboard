@@ -535,7 +535,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redHeadedWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="dOS-Cj-v6x" userLabel="peregrineFalconImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="peregrineFalconImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="dOS-Cj-v6x" userLabel="peregrineFalconImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -977,6 +977,7 @@
         <image name="hairyWoodpeckerImageSmall" width="64" height="64"/>
         <image name="houseFinchImageSmall" width="64" height="64"/>
         <image name="northernFlickerImageSmall" width="64" height="64"/>
+        <image name="peregrineFalconImageSmall" width="64" height="64"/>
         <image name="pileatedWoodpeckerImageSmall" width="64" height="64"/>
         <image name="redBelliedWoodpeckerImageSmall" width="64" height="64"/>
         <image name="redHeadedWoodpeckerImageSmall" width="64" height="64"/>
