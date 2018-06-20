@@ -202,7 +202,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redHeadedWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="odt-5W-bCn" userLabel="barredOwlImage">
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barredOwlImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="odt-5W-bCn" userLabel="barredOwlImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="59.5"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -421,7 +421,7 @@
                                         <rect key="frame" x="0.0" y="540" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nFs-oj-E84" id="i7Z-RI-J4N">
-                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hairyWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="zFZ-XT-OEi" userLabel="hairyImage">
@@ -458,7 +458,7 @@
                                         <rect key="frame" x="0.0" y="600" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3h2-EM-Wve" id="Cr7-4a-mnT">
-                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="houseFinchImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="GCC-8J-go7" userLabel="houseFinchImage">
@@ -495,7 +495,7 @@
                                         <rect key="frame" x="0.0" y="660" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y7D-45-A9V" id="MFu-vR-JSB">
-                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="northernFlickerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="Ika-r4-tA9" userLabel="northernFlickerImage">
@@ -532,7 +532,7 @@
                                         <rect key="frame" x="0.0" y="720" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nsj-SE-28m" id="cl5-I3-pHL">
-                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="peregrineFalconImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="dOS-Cj-v6x" userLabel="peregrineFalconImage">
@@ -569,7 +569,7 @@
                                         <rect key="frame" x="0.0" y="780" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ufw-Tf-3ys" id="EY0-EB-XnE">
-                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pileatedWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="bPa-yF-1P2" userLabel="pileatedImage">
@@ -606,7 +606,7 @@
                                         <rect key="frame" x="0.0" y="840" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="csI-l6-FCv" id="ezM-kb-EVn">
-                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redBelliedWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="fr0-wA-SYa" userLabel="rebelliedImage">
@@ -643,7 +643,7 @@
                                         <rect key="frame" x="0.0" y="900" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mlh-a9-jOX" id="ed2-7r-lQB">
-                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redHeadedWoodpeckerImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="WpB-b7-Dur" userLabel="redheadedImage">
@@ -680,7 +680,7 @@
                                         <rect key="frame" x="0.0" y="960" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RS8-Be-H0d" id="eUz-HB-r44">
-                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redTailedHawkImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="PGF-iX-5WI" userLabel="redtailedHawkImage">
@@ -717,7 +717,7 @@
                                         <rect key="frame" x="0.0" y="1020" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F31-am-Wzd" id="Ffp-Zw-XSL">
-                                            <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tuftedTitmouseImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="mNz-so-FLG" userLabel="tuftedTitmouseImage">
@@ -970,6 +970,7 @@
         <image name="americanKestrelImageSmall" width="64" height="64"/>
         <image name="background" width="270" height="480"/>
         <image name="baldEagleImageSmall" width="64" height="64"/>
+        <image name="barredOwlImageSmall" width="64" height="64"/>
         <image name="blackCappedChickadeeImageSmall" width="64" height="64"/>
         <image name="blueJayImageSmall" width="64" height="64"/>
         <image name="cardinalImageSmall" width="64" height="64"/>
