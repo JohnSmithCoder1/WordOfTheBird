@@ -158,7 +158,7 @@ class BirdsViewController: UITableViewController {
     
     let americanGoldfinch = Bird(name: "American Goldfinch",
                                  imageSmall: UIImage(named: "americanGoldfinchImageSmall")!,
-                                 imageLarge: UIImage(named: "americanGoldfinchImageSmall")!,
+                                 imageLarge: UIImage(named: "americanGoldfinchImageLarge")!,
                                  call: "americanGoldfinchCall0",
                                  link: "https://en.wikipedia.org/wiki/American_goldfinch")
     
@@ -260,7 +260,7 @@ class BirdsViewController: UITableViewController {
     
     let tuftedTitmouse = Bird(name: "Tufted Titmouse",
                               imageSmall: UIImage(named: "tuftedTitmouseImageSmall")!,
-                              imageLarge: UIImage(named: "tuftedTitmouseImageSmall")!,
+                              imageLarge: UIImage(named: "tuftedTitmouseImageLarge")!,
                               call: "tuftedTitmouseCall0",
                               link: "https://en.wikipedia.org/wiki/Tufted_titmouse")
 
