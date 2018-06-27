@@ -15,6 +15,17 @@ class BirdDetailDataViewController: UITableViewController {
     var linkData: String!
     var player: AVAudioPlayer?
     
+    override func viewDidLoad() {
+        let backgroundImage = UIImageView(image: UIImage(named: "backgroundBottom.png"))
+        backgroundImage.frame = self.tableView.frame
+        self.tableView.backgroundView = backgroundImage
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.white
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             if indexPath.row == 0 {

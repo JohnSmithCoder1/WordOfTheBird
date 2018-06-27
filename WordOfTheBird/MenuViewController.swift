@@ -15,6 +15,8 @@ class MenuViewController: UITableViewController {
         let backgroundImage = UIImageView(image: UIImage(named: "background.png"))
         backgroundImage.frame = self.tableView.frame
         self.tableView.backgroundView = backgroundImage
+        
+        
     }
 
     // for UITableView data source protocol
