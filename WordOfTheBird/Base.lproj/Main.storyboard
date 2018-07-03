@@ -177,7 +177,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundTop" translatesAutoresizingMaskIntoConstraints="NO" id="Rvn-pG-mLh">
                                 <rect key="frame" x="0.0" y="64" width="320" height="252"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="400" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardinalImageSmall" translatesAutoresizingMaskIntoConstraints="NO" id="Y6x-FZ-1M8">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="400" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y6x-FZ-1M8">
                                 <rect key="frame" x="61" y="91" width="200" height="200"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.30412564212328769" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -338,6 +338,5 @@
     </scenes>
     <resources>
         <image name="backgroundTop" width="270" height="240"/>
-        <image name="cardinalImageSmall" width="64" height="64"/>
     </resources>
 </document>

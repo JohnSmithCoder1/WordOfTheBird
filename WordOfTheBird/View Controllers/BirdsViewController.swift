@@ -35,21 +35,18 @@ class BirdsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let birdDetailViewController = BirdDetailViewController()
-            birdDetailViewController.title = birdArray[indexPath.row].name
-            birdDetailViewController.imageDetail = birdArray[indexPath.row].imageSmall
-            birdDetailViewController.callDetail = birdArray[indexPath.row].call
-            birdDetailViewController.linkDetail = birdArray[indexPath.row].link
+//        self.performSegue(withIdentifier: "birdDetailSegue", sender: indexPath)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "birdDetailSegue" {
-//            if let destination = segue.destination as? BirdDetailViewController {
-//                destination.title = americanGoldfinch.name
-//                destination.imageDetail = americanGoldfinch.imageLarge
-//                destination.callDetail = americanGoldfinch.call
-//                destination.linkDetail = americanGoldfinch.link
-//            }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if let destination = segue.destination as? BirdDetailViewController {
+                let myIndexPath = self.tableView.indexPathForSelectedRow!
+                let row = myIndexPath.row
+                destination.title = birdArray[row].name
+                destination.imageDetail = birdArray[row].imageLarge
+                destination.callDetail = birdArray[row].call
+                destination.linkDetail = birdArray[row].link
+            }
 //        } else if segue.identifier == "americanKestrelSegue" {
 //            if let destination = segue.destination as? BirdDetailViewController {
 //                destination.title = americanKestrel.name
@@ -169,6 +166,6 @@ class BirdsViewController: UITableViewController {
 //                destination.callDetail = tuftedTitmouse.call
 //                destination.linkDetail = tuftedTitmouse.link
 //            }
-//        }
-//    }
+//     }
+        }
 }
