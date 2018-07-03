@@ -77,7 +77,7 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="xbA-s8-iin" userLabel="birdCell" customClass="BirdTableViewCell" customModule="WordOfTheBird" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xbA-s8-iin" id="ogG-Ad-caH" customClass="BirdTableViewCell" customModule="WordOfTheBird" customModuleProvider="target">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xbA-s8-iin" id="ogG-Ad-caH">
                                     <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
