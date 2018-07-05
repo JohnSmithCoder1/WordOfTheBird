@@ -13,18 +13,13 @@ class BirdTableViewCell: UITableViewCell {
     @IBOutlet var birdCellImage: UIImageView!
 }
 
-class BirdsViewController: UITableViewController {
+class BirdsViewController: UITableViewController,  UISearchBarDelegate {
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     // for UITableView data source protocol
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return birdArray.count
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let backgroundImage = UIImageView(image: UIImage(named: "background.png"))
-        backgroundImage.frame = self.tableView.frame
-        self.tableView.backgroundView = backgroundImage
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -34,8 +29,12 @@ class BirdsViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        searchBar.delegate = self
+        let backgroundImage = UIImageView(image: UIImage(named: "background.png"))
+        backgroundImage.frame = self.tableView.frame
+        self.tableView.backgroundView = backgroundImage
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
