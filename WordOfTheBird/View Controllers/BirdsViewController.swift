@@ -13,11 +13,23 @@ class BirdTableViewCell: UITableViewCell {
     @IBOutlet var birdCellImage: UIImageView!
 }
 
-class BirdsViewController: UITableViewController,  UISearchBarDelegate {
+class BirdsViewController: UITableViewController, UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text, !searchText.isEmpty {
+            filteredBirds = birdArray.filter { bird in
+                return bird.name.lowercased().contains(searchText.lowercased())
+            }
+        } else {
+            filteredBirds = birdArray
+        }
+        tableView.reloadData()
+    }
     
     var filteredBirds: [Bird]!
     
-    @IBOutlet weak var searchBar: UISearchBar!
+//    @IBOutlet weak var searchBar: UISearchBar!
+    
     
     // for UITableView data source protocol
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,7 +45,7 @@ class BirdsViewController: UITableViewController,  UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchBar.delegate = self
+//        searchBar.delegate = self
         let backgroundImage = UIImageView(image: UIImage(named: "background.png"))
         backgroundImage.frame = self.tableView.frame
         self.tableView.backgroundView = backgroundImage
@@ -45,6 +57,9 @@ class BirdsViewController: UITableViewController,  UISearchBarDelegate {
         let searchController = UISearchController(searchResultsController: nil)
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchResultsUpdater = self
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = false
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
