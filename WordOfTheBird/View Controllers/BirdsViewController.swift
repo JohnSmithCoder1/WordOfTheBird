@@ -57,9 +57,13 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
         let searchController = UISearchController(searchResultsController: nil)
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.tintColor = .white
+        searchController.searchBar.barStyle = .black
         searchController.searchResultsUpdater = self
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.returnKeyType = .done
+        searchController.searchBar.enablesReturnKeyAutomatically = false
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
