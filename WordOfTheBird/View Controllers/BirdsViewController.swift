@@ -38,6 +38,13 @@ class BirdsViewController: UITableViewController,  UISearchBarDelegate {
         backgroundImage.frame = self.tableView.frame
         self.tableView.backgroundView = backgroundImage
         filteredBirds = birdArray
+        setupSearchController()
+    }
+    
+    func setupSearchController() {
+        let searchController = UISearchController(searchResultsController: nil)
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
