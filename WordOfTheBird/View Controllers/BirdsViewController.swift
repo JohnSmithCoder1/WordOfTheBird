@@ -40,12 +40,12 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! BirdTableViewCell
         cell.birdCellLabel?.text = filteredBirds[indexPath.row].name
         cell.birdCellImage?.image = filteredBirds[indexPath.row].imageSmall
+        cell.birdCellLabel?.adjustsFontSizeToFitWidth = true
         return cell
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        searchBar.delegate = self
         let backgroundImage = UIImageView(image: UIImage(named: "background.png"))
         backgroundImage.frame = self.tableView.frame
         self.tableView.backgroundView = backgroundImage

@@ -97,7 +97,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1F-5N-eTh" userLabel="birdLabel">
-                                            <rect key="frame" x="72" y="30" width="172" height="0.0"/>
+                                            <rect key="frame" x="72" y="30" width="204" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -107,7 +107,7 @@
                                         <constraint firstAttribute="bottom" secondItem="4Zj-3W-FaN" secondAttribute="bottom" id="5Pv-bz-359"/>
                                         <constraint firstItem="4Zj-3W-FaN" firstAttribute="top" secondItem="ogG-Ad-caH" secondAttribute="top" id="Lo9-iP-Hxk"/>
                                         <constraint firstItem="J1F-5N-eTh" firstAttribute="leading" secondItem="4Zj-3W-FaN" secondAttribute="trailing" constant="8" id="Sn0-hp-qxc"/>
-                                        <constraint firstAttribute="trailing" secondItem="J1F-5N-eTh" secondAttribute="trailing" constant="42" id="cIX-U8-LvJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="J1F-5N-eTh" secondAttribute="trailing" constant="10" id="cIX-U8-LvJ"/>
                                         <constraint firstItem="4Zj-3W-FaN" firstAttribute="leading" secondItem="ogG-Ad-caH" secondAttribute="leading" id="haS-Al-lPa"/>
                                         <constraint firstItem="J1F-5N-eTh" firstAttribute="centerY" secondItem="ogG-Ad-caH" secondAttribute="centerY" id="qGS-Yg-Sp5"/>
                                         <constraint firstItem="J1F-5N-eTh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4Zj-3W-FaN" secondAttribute="trailing" constant="8" symbolic="YES" id="tID-Ox-qPS"/>
