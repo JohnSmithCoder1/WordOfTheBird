@@ -15,23 +15,19 @@ class BirdTableViewCell: UITableViewCell {
 
 class BirdsViewController: UITableViewController, UISearchResultsUpdating {
     
-    func updateSearchResults(for searchController: UISearchController) {
-        if let searchText = searchController.searchBar.text, !searchText.isEmpty {
-            filteredBirds = birdArray.filter { bird in
-                return bird.name.lowercased().contains(searchText.lowercased())
-            }
-        } else {
-            filteredBirds = birdArray
-        }
-        tableView.reloadData()
-    }
-    
     var filteredBirds: [Bird]!
     
-//    @IBOutlet weak var searchBar: UISearchBar!
-    
-    
-    // for UITableView data source protocol
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? BirdDetailViewController {
+            let myIndexPath = self.tableView.indexPathForSelectedRow!
+            let row = myIndexPath.row
+            destination.title = filteredBirds[row].name
+            destination.imageDetail = filteredBirds[row].imageLarge
+            destination.callDetail = filteredBirds[row].call
+            destination.linkDetail = filteredBirds[row].link
+        }
+    }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredBirds.count
     }
@@ -67,9 +63,7 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        // When user has entered text into the search box use the filter method to iterate over all items in the data array for each item, return true if the item should be included and false if the item should NOT be included
         filteredBirds = searchText.isEmpty ? birdArray : birdArray.filter { (item: Bird) -> Bool in
-            // If dataItem matches the searchText, return true to include it
             return item.name.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
         }
         tableView.reloadData()
@@ -79,14 +73,14 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
         searchBar.resignFirstResponder()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if let destination = segue.destination as? BirdDetailViewController {
-                let myIndexPath = self.tableView.indexPathForSelectedRow!
-                let row = myIndexPath.row
-                destination.title = filteredBirds[row].name
-                destination.imageDetail = filteredBirds[row].imageLarge
-                destination.callDetail = filteredBirds[row].call
-                destination.linkDetail = filteredBirds[row].link
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text, !searchText.isEmpty {
+            filteredBirds = birdArray.filter { bird in
+                return bird.name.lowercased().contains(searchText.lowercased())
             }
+        } else {
+            filteredBirds = birdArray
         }
+        tableView.reloadData()
     }
+}

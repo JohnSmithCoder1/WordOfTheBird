@@ -229,7 +229,7 @@
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <sections>
-                            <tableViewSection headerTitle="Bird Calls" id="ULX-do-OL9" userLabel="Bird Calls">
+                            <tableViewSection headerTitle="  Bird Calls" id="ULX-do-OL9" userLabel="Bird Calls">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ANa-YS-yuK">
                                         <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
@@ -287,7 +287,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Bird Information" id="A3w-Il-Cxg" userLabel="Bird Information">
+                            <tableViewSection headerTitle="  Bird Information" id="A3w-Il-Cxg" userLabel="Bird Information">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HaO-qO-xr7">
                                         <rect key="frame" x="0.0" y="243.5" width="320" height="44"/>
