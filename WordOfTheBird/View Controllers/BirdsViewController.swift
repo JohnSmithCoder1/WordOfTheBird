@@ -49,6 +49,10 @@ class BirdsViewController: UITableViewController,  UISearchBarDelegate {
         tableView.reloadData()
     }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if let destination = segue.destination as? BirdDetailViewController {
                 let myIndexPath = self.tableView.indexPathForSelectedRow!

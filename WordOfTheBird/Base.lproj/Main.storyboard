@@ -76,7 +76,7 @@
                         <searchBar key="tableHeaderView" contentMode="redraw" id="4N1-XV-UOb">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="xbA-s8-iin" userLabel="birdCell" customClass="BirdTableViewCell" customModule="WordOfTheBird" customModuleProvider="target">
