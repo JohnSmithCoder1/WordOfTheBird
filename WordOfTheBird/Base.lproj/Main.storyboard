@@ -168,19 +168,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSC-hl-8Pn">
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WSC-hl-8Pn" userLabel="Bottom Container View">
                                 <rect key="frame" x="0.0" y="316" width="320" height="252"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="4ux-Z1-eqg" kind="embed" identifier="embedSegue" id="WAc-Va-UDu"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KBQ-ka-MKa">
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KBQ-ka-MKa" userLabel="Top Container View">
                                 <rect key="frame" x="0.0" y="64" width="320" height="252"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </containerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundTop" translatesAutoresizingMaskIntoConstraints="NO" id="Rvn-pG-mLh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundTop" translatesAutoresizingMaskIntoConstraints="NO" id="Rvn-pG-mLh">
                                 <rect key="frame" x="0.0" y="64" width="320" height="252"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="400" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y6x-FZ-1M8">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="400" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y6x-FZ-1M8">
                                 <rect key="frame" x="61" y="91" width="200" height="200"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.30412564212328769" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -189,23 +192,6 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="WSC-hl-8Pn" firstAttribute="leading" secondItem="Rvn-pG-mLh" secondAttribute="leading" id="2JE-b0-h4y"/>
-                            <constraint firstItem="Rvn-pG-mLh" firstAttribute="bottom" secondItem="KBQ-ka-MKa" secondAttribute="bottom" id="6xL-75-B9F"/>
-                            <constraint firstItem="3XM-eA-f6x" firstAttribute="trailing" secondItem="Y6x-FZ-1M8" secondAttribute="trailing" constant="59" id="Gnm-FE-rn8"/>
-                            <constraint firstItem="WSC-hl-8Pn" firstAttribute="trailing" secondItem="Rvn-pG-mLh" secondAttribute="trailing" id="MHg-29-mbn"/>
-                            <constraint firstItem="WSC-hl-8Pn" firstAttribute="leading" secondItem="KBQ-ka-MKa" secondAttribute="leading" id="St7-sK-tTE"/>
-                            <constraint firstItem="Y6x-FZ-1M8" firstAttribute="top" secondItem="3XM-eA-f6x" secondAttribute="top" constant="27" id="T0R-DC-ixc"/>
-                            <constraint firstItem="Y6x-FZ-1M8" firstAttribute="leading" secondItem="3XM-eA-f6x" secondAttribute="leading" constant="61" id="Vl7-FI-Vhu"/>
-                            <constraint firstItem="WSC-hl-8Pn" firstAttribute="top" secondItem="KBQ-ka-MKa" secondAttribute="bottom" id="eOz-Xd-Wbb"/>
-                            <constraint firstItem="WSC-hl-8Pn" firstAttribute="bottom" secondItem="3XM-eA-f6x" secondAttribute="bottom" id="fMe-K1-V7y"/>
-                            <constraint firstItem="Rvn-pG-mLh" firstAttribute="top" secondItem="3XM-eA-f6x" secondAttribute="top" id="hNI-pe-ihg"/>
-                            <constraint firstItem="WSC-hl-8Pn" firstAttribute="trailing" secondItem="KBQ-ka-MKa" secondAttribute="trailing" id="jBo-mE-m1U"/>
-                            <constraint firstItem="WSC-hl-8Pn" firstAttribute="top" secondItem="Y6x-FZ-1M8" secondAttribute="bottom" constant="25" id="lCk-HV-3Wo"/>
-                            <constraint firstItem="WSC-hl-8Pn" firstAttribute="leading" secondItem="28h-fy-3eS" secondAttribute="leading" id="og3-TK-ioV"/>
-                            <constraint firstItem="Rvn-pG-mLh" firstAttribute="top" secondItem="KBQ-ka-MKa" secondAttribute="top" id="pPX-0y-gwT"/>
-                            <constraint firstAttribute="trailing" secondItem="WSC-hl-8Pn" secondAttribute="trailing" id="wXK-sA-RXW"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3XM-eA-f6x"/>
                     </view>
                     <navigationItem key="navigationItem" title="Bird Detail" id="ckF-gx-Ytg">
