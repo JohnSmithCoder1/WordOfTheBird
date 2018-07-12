@@ -177,11 +177,10 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KBQ-ka-MKa" userLabel="Top Container View">
                                 <rect key="frame" x="0.0" y="64" width="320" height="252"/>
                             </containerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundTop" translatesAutoresizingMaskIntoConstraints="NO" id="Rvn-pG-mLh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="backgroundTop" translatesAutoresizingMaskIntoConstraints="NO" id="Rvn-pG-mLh">
                                 <rect key="frame" x="0.0" y="64" width="320" height="252"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="400" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y6x-FZ-1M8">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="400" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y6x-FZ-1M8">
                                 <rect key="frame" x="61" y="91" width="200" height="200"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.30412564212328769" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -191,13 +190,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="WSC-hl-8Pn" firstAttribute="top" secondItem="Rvn-pG-mLh" secondAttribute="bottom" id="27B-Wk-1PL"/>
+                            <constraint firstItem="Rvn-pG-mLh" firstAttribute="leading" secondItem="3XM-eA-f6x" secondAttribute="leading" id="3z4-Ce-jtu"/>
                             <constraint firstItem="WSC-hl-8Pn" firstAttribute="leading" secondItem="3XM-eA-f6x" secondAttribute="leading" id="4QQ-eC-pwl"/>
+                            <constraint firstItem="Rvn-pG-mLh" firstAttribute="top" secondItem="3XM-eA-f6x" secondAttribute="top" id="BwG-ej-62q"/>
+                            <constraint firstItem="Y6x-FZ-1M8" firstAttribute="centerX" secondItem="KBQ-ka-MKa" secondAttribute="centerX" id="CrC-Z4-RcR"/>
                             <constraint firstItem="WSC-hl-8Pn" firstAttribute="trailing" secondItem="3XM-eA-f6x" secondAttribute="trailing" id="QK3-IU-C0Z"/>
                             <constraint firstItem="KBQ-ka-MKa" firstAttribute="leading" secondItem="3XM-eA-f6x" secondAttribute="leading" id="Uo3-xa-TlD"/>
                             <constraint firstItem="KBQ-ka-MKa" firstAttribute="trailing" secondItem="3XM-eA-f6x" secondAttribute="trailing" id="X16-os-e1y"/>
                             <constraint firstItem="WSC-hl-8Pn" firstAttribute="top" secondItem="KBQ-ka-MKa" secondAttribute="bottom" id="az9-Or-jtL"/>
                             <constraint firstItem="KBQ-ka-MKa" firstAttribute="top" secondItem="3XM-eA-f6x" secondAttribute="top" id="cFe-38-gwc"/>
+                            <constraint firstItem="Rvn-pG-mLh" firstAttribute="trailing" secondItem="3XM-eA-f6x" secondAttribute="trailing" id="e07-55-hd0"/>
                             <constraint firstItem="WSC-hl-8Pn" firstAttribute="height" secondItem="KBQ-ka-MKa" secondAttribute="height" id="hsp-P8-ais"/>
+                            <constraint firstItem="Y6x-FZ-1M8" firstAttribute="centerY" secondItem="KBQ-ka-MKa" secondAttribute="centerY" id="il9-vO-rhp"/>
                             <constraint firstItem="WSC-hl-8Pn" firstAttribute="bottom" secondItem="3XM-eA-f6x" secondAttribute="bottom" id="rq3-RL-tQR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3XM-eA-f6x"/>
