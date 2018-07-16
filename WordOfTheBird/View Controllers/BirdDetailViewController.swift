@@ -17,7 +17,6 @@ class BirdDetailViewController: UIViewController {
     
     override func viewDidLoad() { // these should go in viewWillAppear?
         super.viewDidLoad()
-        birdImageLarge.layer.cornerRadius = 10
         birdImageLarge.image = imageDetail
     }
     
