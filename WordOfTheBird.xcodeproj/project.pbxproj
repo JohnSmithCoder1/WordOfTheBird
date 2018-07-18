@@ -81,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0552618620FFD98500AB9CA5 /* First Launch View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0552618420FFCC5E00AB9CA5 /* FirstLaunchViewController.swift */,
+			);
+			path = "First Launch View Controllers";
+			sourceTree = "<group>";
+		};
 		05CB8F672091165100AB7E13 = {
 			isa = PBXGroup;
 			children = (
@@ -118,8 +126,8 @@
 				0564938220BDD2A10019DA53 /* MenuViewController.swift */,
 				B0C0136120C8585900784C3B /* BirdsViewController.swift */,
 				B02FA39720D4477400172A65 /* BirdDetailViewController.swift */,
-				0552618420FFCC5E00AB9CA5 /* FirstLaunchViewController.swift */,
 				B02FA39920D4477E00172A65 /* BirdDetailDataViewController.swift */,
+				0552618620FFD98500AB9CA5 /* First Launch View Controllers */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -397,7 +405,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZX39EC4S8M;
+				DEVELOPMENT_TEAM = 7YNF79H478;
 				INFOPLIST_FILE = WordOfTheBird/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -415,7 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZX39EC4S8M;
+				DEVELOPMENT_TEAM = 7YNF79H478;
 				INFOPLIST_FILE = WordOfTheBird/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
