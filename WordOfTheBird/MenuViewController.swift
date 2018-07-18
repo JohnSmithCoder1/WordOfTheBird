@@ -10,6 +10,8 @@ import UIKit
 
 class MenuViewController: UITableViewController {
     
+    var launchedBefore = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let backgroundImage = UIImageView(image: UIImage(named: "background.png"))
@@ -26,5 +28,13 @@ class MenuViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    
+    func setupFirstLaunch() {
+        launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        print("launched before: \(launchedBefore)")
+        if launchedBefore == false {
+            // put modally presented firstLaunch VC's here
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+        }
+    }
 }
+
