@@ -19,6 +19,7 @@ class BirdDetailDataViewController: UITableViewController {
         let backgroundImage = UIImageView(image: UIImage(named: "backgroundBottom.png"))
         backgroundImage.frame = self.tableView.frame
         self.tableView.backgroundView = backgroundImage
+        self.tableView.isScrollEnabled = false
     }
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
