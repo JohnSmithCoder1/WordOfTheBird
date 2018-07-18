@@ -10,4 +10,7 @@ import UIKit
 
 class FirstLaunchViewController: UIViewController {
     
+    @IBAction func buttonPushed(_ sender: UIButton) {
+        view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+    }
 }

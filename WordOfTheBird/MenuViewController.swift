@@ -17,6 +17,9 @@ class MenuViewController: UITableViewController {
         let backgroundImage = UIImageView(image: UIImage(named: "background.png"))
         backgroundImage.frame = self.tableView.frame
         self.tableView.backgroundView = backgroundImage
+        print("pissed on")
+        setupFirstLaunch()
+        print("pissed off")
     }
 
     // for UITableView data source protocol
@@ -32,7 +35,10 @@ class MenuViewController: UITableViewController {
         launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         print("launched before: \(launchedBefore)")
         if launchedBefore == false {
-            // put modally presented firstLaunch VC's here
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let firstLaunchViewController = storyBoard.instantiateViewController(withIdentifier: "firstLaunchViewController")
+            firstLaunchViewController.modalTransitionStyle = .crossDissolve
+            self.present(firstLaunchViewController, animated: true, completion: nil)
             UserDefaults.standard.set(true, forKey: "launchedBefore")
         }
     }

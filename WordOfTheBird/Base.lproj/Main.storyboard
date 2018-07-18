@@ -67,7 +67,7 @@
         <!--First Launch View Controller-->
         <scene sceneID="Kwj-We-Ui0">
             <objects>
-                <viewController id="YBX-i5-3Fg" customClass="FirstLaunchViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="firstLaunchViewController" id="YBX-i5-3Fg" customClass="FirstLaunchViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SAS-yP-32v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,6 +77,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80190496580000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="WELCOME TO WORDOFTHEBIRD"/>
+                                <connections>
+                                    <action selector="buttonPushed:" destination="YBX-i5-3Fg" eventType="touchUpInside" id="Cag-NA-o2x"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
