@@ -10,11 +10,17 @@ import UIKit
 
 class MenuViewController: UITableViewController {
     
+    var launchedBefore = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let backgroundImage = UIImageView(image: UIImage(named: "background.png"))
         backgroundImage.frame = self.tableView.frame
         self.tableView.backgroundView = backgroundImage
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setupFirstLaunch()
     }
 
     // for UITableView data source protocol
@@ -26,5 +32,16 @@ class MenuViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    
+    func setupFirstLaunch() {
+        launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        print("launched before: \(launchedBefore)")
+        if launchedBefore == false {
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let firstLaunchViewController = storyBoard.instantiateViewController(withIdentifier: "firstLaunchViewController")
+            firstLaunchViewController.modalTransitionStyle = .crossDissolve
+            self.parent?.present(firstLaunchViewController, animated: true, completion: nil)
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+        }
+    }
 }
+
