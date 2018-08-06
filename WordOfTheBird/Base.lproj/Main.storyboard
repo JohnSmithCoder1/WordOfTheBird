@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -208,21 +209,38 @@
                         <sections>
                             <tableViewSection headerTitle="  Bird Calls" id="ULX-do-OL9" userLabel="Bird Calls">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ANa-YS-yuK">
-                                        <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="ANa-YS-yuK">
+                                        <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ANa-YS-yuK" id="KdZ-Ge-paQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Territorial Call" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loo-JD-A3v">
-                                                    <rect key="frame" x="16" y="12" width="288" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="musicNote" translatesAutoresizingMaskIntoConstraints="NO" id="jnt-6F-juB">
+                                                    <rect key="frame" x="10" y="17.333333333333332" width="25" height="24.999999999999996"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="3s9-NW-gvb"/>
+                                                        <constraint firstAttribute="height" constant="25" id="skb-Wu-EVw"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loo-JD-A3v" userLabel="Call">
+                                                    <rect key="frame" x="35" y="19.333333333333332" width="349" height="20.999999999999996"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="loo-JD-A3v" firstAttribute="leading" secondItem="jnt-6F-juB" secondAttribute="trailing" id="5Dy-Pc-kKO"/>
+                                                <constraint firstAttribute="bottom" secondItem="jnt-6F-juB" secondAttribute="bottom" priority="500" id="75a-AF-0oh"/>
+                                                <constraint firstItem="jnt-6F-juB" firstAttribute="top" secondItem="KdZ-Ge-paQ" secondAttribute="top" priority="500" id="9bk-mv-biY"/>
+                                                <constraint firstItem="loo-JD-A3v" firstAttribute="leading" secondItem="jnt-6F-juB" secondAttribute="trailing" id="IDb-dX-l2b"/>
+                                                <constraint firstItem="jnt-6F-juB" firstAttribute="centerY" secondItem="KdZ-Ge-paQ" secondAttribute="centerY" id="NVU-xx-Feo"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="loo-JD-A3v" secondAttribute="trailing" constant="10" id="XmY-Ek-8pm"/>
+                                                <constraint firstItem="loo-JD-A3v" firstAttribute="centerY" secondItem="KdZ-Ge-paQ" secondAttribute="centerY" id="pRI-nM-079"/>
+                                                <constraint firstItem="jnt-6F-juB" firstAttribute="leading" secondItem="KdZ-Ge-paQ" secondAttribute="leading" constant="10" id="sgR-4B-mRv"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
@@ -231,7 +249,7 @@
                             <tableViewSection headerTitle="  Bird Information" id="A3w-Il-Cxg" userLabel="Bird Information">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HaO-qO-xr7">
-                                        <rect key="frame" x="0.0" y="155.33333333333334" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="171.33333333333334" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HaO-qO-xr7" id="DG4-I9-M6N">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
@@ -259,10 +277,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vjN-2d-yvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1238" y="585"/>
+            <point key="canvasLocation" x="1237.68115942029" y="584.51086956521749"/>
         </scene>
     </scenes>
     <resources>
         <image name="backgroundTop" width="270" height="240"/>
+        <image name="musicNote" width="192" height="192"/>
     </resources>
 </document>
