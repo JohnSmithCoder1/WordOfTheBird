@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0552618520FFCC5E00AB9CA5 /* FirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552618420FFCC5E00AB9CA5 /* FirstLaunchViewController.swift */; };
-		0564938320BDD2A10019DA53 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0564938220BDD2A10019DA53 /* MenuViewController.swift */; };
 		05CB8F742091165100AB7E13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8F732091165100AB7E13 /* AppDelegate.swift */; };
 		05CB8F792091165100AB7E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8F772091165100AB7E13 /* Main.storyboard */; };
 		05CB8F7B2091165200AB7E13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8F7A2091165200AB7E13 /* Assets.xcassets */; };
@@ -39,7 +38,6 @@
 
 /* Begin PBXFileReference section */
 		0552618420FFCC5E00AB9CA5 /* FirstLaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunchViewController.swift; sourceTree = "<group>"; };
-		0564938220BDD2A10019DA53 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = ../MenuViewController.swift; sourceTree = "<group>"; };
 		05CB8F702091165100AB7E13 /* WordOfTheBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordOfTheBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CB8F732091165100AB7E13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05CB8F782091165100AB7E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,7 +121,6 @@
 		05FF76E3209CF47F001F678C /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0564938220BDD2A10019DA53 /* MenuViewController.swift */,
 				B0C0136120C8585900784C3B /* BirdsViewController.swift */,
 				B02FA39720D4477400172A65 /* BirdDetailViewController.swift */,
 				B02FA39920D4477E00172A65 /* BirdDetailDataViewController.swift */,
@@ -256,7 +253,6 @@
 			files = (
 				0552618520FFCC5E00AB9CA5 /* FirstLaunchViewController.swift in Sources */,
 				B02FA39A20D4477E00172A65 /* BirdDetailDataViewController.swift in Sources */,
-				0564938320BDD2A10019DA53 /* MenuViewController.swift in Sources */,
 				B0C0136220C8585900784C3B /* BirdsViewController.swift in Sources */,
 				B02FA39820D4477400172A65 /* BirdDetailViewController.swift in Sources */,
 				05CB8F742091165100AB7E13 /* AppDelegate.swift in Sources */,

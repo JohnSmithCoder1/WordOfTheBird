@@ -16,6 +16,7 @@ class BirdTableViewCell: UITableViewCell {
 class BirdsViewController: UITableViewController, UISearchResultsUpdating {
     
     var filteredBirds: [Bird]!
+    var launchedBefore = false
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? BirdDetailViewController {
@@ -38,6 +39,10 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
         cell.birdCellImage?.image = filteredBirds[indexPath.row].imageSmall
         cell.birdCellLabel?.adjustsFontSizeToFitWidth = true
         return cell
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setupFirstLaunch()
     }
     
     override func viewDidLoad() {
@@ -82,5 +87,17 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
             filteredBirds = birdArray
         }
         tableView.reloadData()
+    }
+    
+    func setupFirstLaunch() {
+        launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        print("launched before: \(launchedBefore)")
+        if launchedBefore == false {
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let firstLaunchViewController = storyBoard.instantiateViewController(withIdentifier: "firstLaunchViewController")
+            firstLaunchViewController.modalTransitionStyle = .crossDissolve
+            self.parent?.present(firstLaunchViewController, animated: true, completion: nil)
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+        }
     }
 }
