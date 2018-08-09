@@ -94,9 +94,9 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
         print("launched before: \(launchedBefore)")
         if launchedBefore == false {
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let firstLaunchViewController = storyBoard.instantiateViewController(withIdentifier: "firstLaunchViewController")
-            firstLaunchViewController.modalTransitionStyle = .crossDissolve
-            self.parent?.present(firstLaunchViewController, animated: true, completion: nil)
+            let pageViewController = storyBoard.instantiateViewController(withIdentifier: "PageViewController")
+            pageViewController.modalTransitionStyle = .crossDissolve
+            self.parent?.present(pageViewController, animated: true, completion: nil)
             UserDefaults.standard.set(true, forKey: "launchedBefore")
         }
     }
