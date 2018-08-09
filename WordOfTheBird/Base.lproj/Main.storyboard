@@ -12,31 +12,58 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First Launch View Controller-->
-        <scene sceneID="Kwj-We-Ui0">
+        <!--Page View Controller-->
+        <scene sceneID="ON8-Sp-6bI">
             <objects>
-                <viewController storyboardIdentifier="firstLaunchViewController" id="YBX-i5-3Fg" customClass="FirstLaunchViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="SAS-yP-32v">
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="zbA-1c-qYH" customClass="PageViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WhS-Cf-1WP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-259" y="-673"/>
+        </scene>
+        <!--Help1 View Controller-->
+        <scene sceneID="zhY-1x-sAi">
+            <objects>
+                <viewController storyboardIdentifier="Help1VC" id="eY9-sS-slt" customClass="Help1ViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oin-YF-Jlh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTv-8R-bsj">
-                                <rect key="frame" x="92" y="353" width="230" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80190496580000004" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="WELCOME TO WORDOFTHEBIRD"/>
-                                <connections>
-                                    <action selector="buttonPushed:" destination="YBX-i5-3Fg" eventType="touchUpInside" id="Cag-NA-o2x"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="2r1-hK-dWm"/>
+                        <viewLayoutGuide key="safeArea" id="Haw-fe-rhp"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FbZ-YK-sUD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jbq-M4-pnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="494.20289855072468" y="-667.66304347826087"/>
+            <point key="canvasLocation" x="485" y="-671"/>
+        </scene>
+        <!--Help2 View Controller-->
+        <scene sceneID="BOl-su-PvX">
+            <objects>
+                <viewController storyboardIdentifier="Help2VC" id="Zli-n1-3Ma" customClass="Help2ViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zgL-fX-SaD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="G5u-Ah-4Wb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZD-cR-IJj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1238" y="-668"/>
+        </scene>
+        <!--Help3 View Controller-->
+        <scene sceneID="LfL-89-Wh0">
+            <objects>
+                <viewController storyboardIdentifier="Help3VC" id="TKn-1x-Fyi" customClass="Help3ViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XL6-Wt-Abt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6mX-c5-bCk"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wYu-no-U6U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1954" y="-672"/>
         </scene>
         <!--BirdSearch-->
         <scene sceneID="1fP-xg-JN2">
