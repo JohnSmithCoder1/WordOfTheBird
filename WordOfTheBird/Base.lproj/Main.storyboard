@@ -73,11 +73,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Birds" id="Chc-1y-m3P">
-                        <barButtonItem key="rightBarButtonItem" title="Help" id="L4f-jB-RZE">
-                            <connections>
-                                <segue destination="Zbh-Hz-nRk" kind="show" id="gcg-qf-qF6"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="L4f-jB-RZE"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="4s9-Qa-djW" id="mdH-II-qkr"/>
@@ -258,38 +254,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vjN-2d-yvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1237.68115942029" y="584.51086956521749"/>
-        </scene>
-        <!--PageViewController-->
-        <scene sceneID="5Gc-XB-FRp">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="PageViewController" storyboardName="Help" referencedIdentifier="PageViewController" id="Zbh-Hz-nRk" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Kd-Fe-PUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1048" y="-463"/>
-        </scene>
-        <!--Help2VC-->
-        <scene sceneID="AYu-00-Lda">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Help2VC" storyboardName="Help" referencedIdentifier="Help2VC" id="f7N-VH-Qtb" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aZC-5R-bll" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1388" y="-463"/>
-        </scene>
-        <!--Help1VC-->
-        <scene sceneID="oAB-gJ-4Cv">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Help1VC" storyboardName="Help" referencedIdentifier="Help1VC" id="oe1-QM-A8U" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="diz-4Q-hfy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1238" y="-463"/>
-        </scene>
-        <!--Help3VC-->
-        <scene sceneID="Vm5-gx-rHa">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Help3VC" storyboardName="Help" referencedIdentifier="Help3VC" id="IWu-w7-it5" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HJp-sp-rMP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1543" y="-463"/>
         </scene>
     </scenes>
     <resources>

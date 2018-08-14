@@ -41,10 +41,6 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
         return cell
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        setupFirstLaunch()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let backgroundImage = UIImageView(image: UIImage(named: "background.png"))
@@ -87,17 +83,5 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
             filteredBirds = birdArray
         }
         tableView.reloadData()
-    }
-    
-    func setupFirstLaunch() {
-        launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
-        print("launched before: \(launchedBefore)")
-        if launchedBefore == false {
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let pageViewController = storyBoard.instantiateViewController(withIdentifier: "PageViewController")
-            pageViewController.modalTransitionStyle = .crossDissolve
-            self.parent?.present(pageViewController, animated: true, completion: nil)
-            UserDefaults.standard.set(true, forKey: "launchedBefore")
-        }
     }
 }
