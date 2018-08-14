@@ -16,12 +16,6 @@ class BirdDetailDataViewController: UITableViewController {
     var wikiLink: String!
     var audioPlayer: AVAudioPlayer?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.backgroundView = UIImageView(image: UIImage(named: "backgroundBottom.png"))
-        tableView.isScrollEnabled = false
-    }
-    
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.white
@@ -41,6 +35,12 @@ class BirdDetailDataViewController: UITableViewController {
             }
         }
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.backgroundView = UIImageView(image: UIImage(named: "backgroundBottom.png"))
+        tableView.isScrollEnabled = false
     }
     
     func playSound(forObject: String) {
