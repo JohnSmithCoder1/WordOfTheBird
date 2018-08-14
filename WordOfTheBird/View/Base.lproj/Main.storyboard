@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -197,6 +198,8 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="loo-JD-A3v" firstAttribute="top" secondItem="KdZ-Ge-paQ" secondAttribute="topMargin" id="7ba-ai-MiP"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="loo-JD-A3v" secondAttribute="bottom" id="HZq-zb-S7D"/>
                                                 <constraint firstItem="loo-JD-A3v" firstAttribute="leading" secondItem="KdZ-Ge-paQ" secondAttribute="leading" constant="20" id="QT4-7c-K2J"/>
                                                 <constraint firstAttribute="trailing" secondItem="loo-JD-A3v" secondAttribute="trailing" constant="20" id="WAW-bs-mfU"/>
                                                 <constraint firstItem="loo-JD-A3v" firstAttribute="centerY" secondItem="KdZ-Ge-paQ" secondAttribute="centerY" id="pRI-nM-079"/>
@@ -219,6 +222,8 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="ZNg-qp-dIl" firstAttribute="top" secondItem="yKc-dI-JSU" secondAttribute="topMargin" id="73a-yP-e4V"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ZNg-qp-dIl" secondAttribute="bottom" id="HDd-m0-pNl"/>
                                                 <constraint firstAttribute="trailing" secondItem="ZNg-qp-dIl" secondAttribute="trailing" constant="20" id="f92-iP-QbQ"/>
                                                 <constraint firstItem="ZNg-qp-dIl" firstAttribute="centerY" secondItem="yKc-dI-JSU" secondAttribute="centerY" id="pCw-HY-M2q"/>
                                                 <constraint firstItem="ZNg-qp-dIl" firstAttribute="leading" secondItem="yKc-dI-JSU" secondAttribute="leading" constant="20" id="rZ7-SM-UuE"/>
@@ -238,7 +243,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wikipedia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMP-Qh-oby">
-                                                    <rect key="frame" x="20" y="12" width="374" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -247,7 +252,9 @@
                                             <constraints>
                                                 <constraint firstItem="hMP-Qh-oby" firstAttribute="leading" secondItem="DG4-I9-M6N" secondAttribute="leading" constant="20" id="0jy-az-piu"/>
                                                 <constraint firstAttribute="trailing" secondItem="hMP-Qh-oby" secondAttribute="trailing" constant="20" id="5gR-kJ-T7v"/>
+                                                <constraint firstItem="hMP-Qh-oby" firstAttribute="top" secondItem="DG4-I9-M6N" secondAttribute="topMargin" id="7Iq-Wf-mPl"/>
                                                 <constraint firstItem="hMP-Qh-oby" firstAttribute="centerY" secondItem="DG4-I9-M6N" secondAttribute="centerY" id="ILt-fL-7eF"/>
+                                                <constraint firstItem="hMP-Qh-oby" firstAttribute="bottom" secondItem="DG4-I9-M6N" secondAttribute="bottomMargin" id="K1i-b0-eAJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
