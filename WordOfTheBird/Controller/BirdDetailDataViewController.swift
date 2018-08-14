@@ -47,9 +47,9 @@ class BirdDetailDataViewController: UITableViewController {
         guard let url = Bundle.main.url(forResource: forObject, withExtension: "wav") else { return }
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
-            guard let player = audioPlayer else { return }
-            player.prepareToPlay()
-            player.play()
+            guard let audioPlayer = audioPlayer else { return }
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
         } catch let error as NSError {
             print("error: \(error.localizedDescription)")
         }
