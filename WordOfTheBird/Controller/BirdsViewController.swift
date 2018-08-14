@@ -17,6 +17,17 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
     
     var filteredBirds: [Bird]!
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? BirdDetailViewController,
+            let row = tableView.indexPathForSelectedRow?.row {
+            destination.title = filteredBirds[row].name
+            destination.birdImage = filteredBirds[row].imageLarge
+            destination.call1 = filteredBirds[row].call1
+            destination.call2 = filteredBirds[row].call2
+            destination.wikiLink = filteredBirds[row].wikiLink
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredBirds.count
     }
@@ -34,17 +45,6 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
         tableView.backgroundView = UIImageView(image: UIImage(named: "background.png"))
         filteredBirds = birdArray
         setupSearchController()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? BirdDetailViewController,
-            let row = tableView.indexPathForSelectedRow?.row {
-            destination.title = filteredBirds[row].name
-            destination.birdImage = filteredBirds[row].imageLarge
-            destination.call1 = filteredBirds[row].call1
-            destination.call2 = filteredBirds[row].call2
-            destination.wikiLink = filteredBirds[row].wikiLink
-        }
     }
     
     func setupSearchController() {
