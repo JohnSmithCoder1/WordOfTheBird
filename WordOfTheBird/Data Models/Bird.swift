@@ -62,11 +62,11 @@ let blueJay = Bird(name: "Blue Jay",
                    call: "blueJayCall0",
                    link: "https://en.wikipedia.org/wiki/Blue_jay")
 
-let cardinal = Bird(name: "Cardinal",
+let northernCardinal = Bird(name: "Northern Cardinal",
                     imageSmall: UIImage(named: "cardinalImageSmall")!,
                     imageLarge: UIImage(named: "cardinalImageLarge")!,
                     call: "cardinalCall0",
-                    link: "https://en.wikipedia.org/wiki/Cardinal_(bird)")
+                    link: "https://en.wikipedia.org/wiki/Northern_cardinal")
 
 let downyWoodpecker = Bird(name: "Downy Woodpecker",
                            imageSmall: UIImage(named: "downyWoodpeckerImageSmall")!,
@@ -134,7 +134,7 @@ let tuftedTitmouse = Bird(name: "Tufted Titmouse",
                           call: "tuftedTitmouseCall0",
                           link: "https://en.wikipedia.org/wiki/Tufted_titmouse")
 
-let birdArray = [americanGoldfinch, americanKestrel, baldEagle, barredOwl, blackCappedChickadee, blueJay, cardinal, downyWoodpecker, greatHornedOwl, hairyWoodpecker, houseFinch, northernFlicker, peregrineFalcon, pileatedWoodpecker, redBelliedWoodpecker, redHeadedWoodpecker, redTailedHawk, tuftedTitmouse]
+let birdArray = [americanGoldfinch, americanKestrel, baldEagle, barredOwl, blackCappedChickadee, blueJay, downyWoodpecker, greatHornedOwl, hairyWoodpecker, houseFinch, northernCardinal, northernFlicker, peregrineFalcon, pileatedWoodpecker, redBelliedWoodpecker, redHeadedWoodpecker, redTailedHawk, tuftedTitmouse]
 
 
 
