@@ -11,16 +11,14 @@ import AVFoundation
 
 class BirdDetailDataViewController: UITableViewController {
     
-    var callData1: String!
-    var callData2: String!
-    var linkData: String!
+    var call1: String!
+    var call2: String!
+    var wikiLink: String!
     var audioPlayer: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backgroundImage = UIImageView(image: UIImage(named: "backgroundBottom.png"))
-        backgroundImage.frame = self.tableView.frame
-        tableView.backgroundView = backgroundImage
+        tableView.backgroundView = UIImageView(image: UIImage(named: "backgroundBottom.png"))
         tableView.isScrollEnabled = false
     }
     
@@ -33,13 +31,13 @@ class BirdDetailDataViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             if indexPath.row == 0 {
-                playSound(forObject: callData1)
+                playSound(forObject: call1)
             } else if indexPath.row == 1{
-                playSound(forObject: callData2)
+                playSound(forObject: call2)
             }
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
-                UIApplication.shared.open(URL(string: linkData)!)
+                UIApplication.shared.open(URL(string: wikiLink)!)
             }
         }
         tableView.deselectRow(at: indexPath, animated: true)

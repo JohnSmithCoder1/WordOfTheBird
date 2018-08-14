@@ -9,24 +9,24 @@
 import UIKit
 
 class BirdDetailViewController: UIViewController {
-    @IBOutlet weak var birdImageLarge: UIImageView!
+    @IBOutlet weak var birdImageView: UIImageView!
     
-    var imageDetail: UIImage!
-    var callDetailOne: String!
-    var callDetailTwo: String!
-    var linkDetail: String!
+    var birdImage: UIImage!
+    var call1: String!
+    var call2: String!
+    var wikiLink: String!
     
     override func viewDidLoad() { // these should go in viewWillAppear?
         super.viewDidLoad()
-        birdImageLarge.image = imageDetail
+        birdImageView.image = birdImage
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "embedSegue" {
             if let destinationTable = segue.destination as? BirdDetailDataViewController {
-                destinationTable.callData1 = callDetailOne
-                destinationTable.callData2 = callDetailTwo
-                destinationTable.linkData = linkDetail
+                destinationTable.call1 = call1
+                destinationTable.call2 = call2
+                destinationTable.wikiLink = wikiLink
             }
         }
     }

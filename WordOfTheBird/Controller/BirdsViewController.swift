@@ -9,8 +9,8 @@
 import UIKit
 
 class BirdTableViewCell: UITableViewCell {
-    @IBOutlet var birdCellLabel: UILabel!
-    @IBOutlet var birdCellImage: UIImageView!
+    @IBOutlet var birdName: UILabel!
+    @IBOutlet var birdImageView: UIImageView!
 }
 
 class BirdsViewController: UITableViewController, UISearchResultsUpdating {
@@ -22,10 +22,10 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
             let myIndexPath = tableView.indexPathForSelectedRow!
             let row = myIndexPath.row
             destination.title = filteredBirds[row].name
-            destination.imageDetail = filteredBirds[row].imageLarge
-            destination.callDetailOne = filteredBirds[row].call1
-            destination.callDetailTwo = filteredBirds[row].call2
-            destination.linkDetail = filteredBirds[row].link
+            destination.birdImage = filteredBirds[row].imageLarge
+            destination.call1 = filteredBirds[row].call1
+            destination.call2 = filteredBirds[row].call2
+            destination.wikiLink = filteredBirds[row].wikiLink
         }
     }
 
@@ -35,9 +35,9 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! BirdTableViewCell
-        cell.birdCellLabel?.text = filteredBirds[indexPath.row].name
-        cell.birdCellImage?.image = filteredBirds[indexPath.row].imageSmall
-        cell.birdCellLabel?.adjustsFontSizeToFitWidth = true
+        cell.birdName?.text = filteredBirds[indexPath.row].name
+        cell.birdImageView?.image = filteredBirds[indexPath.row].imageSmall
+        cell.birdName?.adjustsFontSizeToFitWidth = true
         return cell
     }
     
