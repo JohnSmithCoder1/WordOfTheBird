@@ -15,7 +15,7 @@ class BirdTableViewCell: UITableViewCell {
 
 class BirdsViewController: UITableViewController, UISearchResultsUpdating {
     
-    var filteredBirds: [Bird]!
+    var filteredBirds = [Bird]()
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredBirds.count
