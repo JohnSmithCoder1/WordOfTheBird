@@ -16,7 +16,7 @@ class BirdDetailViewController: UIViewController {
     var call2: String!
     var wikiLink: String!
     
-    override func viewDidLoad() { // these should go in viewWillAppear?
+    override func viewDidLoad() {
         super.viewDidLoad()
         birdImageView.image = birdImage
     }
