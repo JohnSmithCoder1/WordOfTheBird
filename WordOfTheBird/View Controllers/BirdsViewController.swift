@@ -24,7 +24,8 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
             let row = myIndexPath.row
             destination.title = filteredBirds[row].name
             destination.imageDetail = filteredBirds[row].imageLarge
-            destination.callDetail = filteredBirds[row].call
+            destination.callDetailOne = filteredBirds[row].call1
+            destination.callDetailTwo = filteredBirds[row].call2
             destination.linkDetail = filteredBirds[row].link
         }
     }
@@ -39,10 +40,6 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
         cell.birdCellImage?.image = filteredBirds[indexPath.row].imageSmall
         cell.birdCellLabel?.adjustsFontSizeToFitWidth = true
         return cell
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        setupFirstLaunch()
     }
     
     override func viewDidLoad() {
@@ -87,17 +84,5 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
             filteredBirds = birdArray
         }
         tableView.reloadData()
-    }
-    
-    func setupFirstLaunch() {
-        launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
-        print("launched before: \(launchedBefore)")
-        if launchedBefore == false {
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let firstLaunchViewController = storyBoard.instantiateViewController(withIdentifier: "firstLaunchViewController")
-            firstLaunchViewController.modalTransitionStyle = .crossDissolve
-            self.parent?.present(firstLaunchViewController, animated: true, completion: nil)
-            UserDefaults.standard.set(true, forKey: "launchedBefore")
-        }
     }
 }

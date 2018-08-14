@@ -11,11 +11,13 @@ import AVFoundation
 
 class BirdDetailDataViewController: UITableViewController {
     
-    var callData: String!
+    var callData1: String!
+    var callData2: String!
     var linkData: String!
     var player: AVAudioPlayer?
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         let backgroundImage = UIImageView(image: UIImage(named: "backgroundBottom.png"))
         backgroundImage.frame = self.tableView.frame
         self.tableView.backgroundView = backgroundImage
@@ -30,7 +32,9 @@ class BirdDetailDataViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             if indexPath.row == 0 {
-                playSound(forCall: callData)
+                playSound(forCall: callData1)
+            } else if indexPath.row == 1{
+                playSound(forCall: callData2)
             }
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
