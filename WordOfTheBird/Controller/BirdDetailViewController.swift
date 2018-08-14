@@ -11,10 +11,10 @@ import UIKit
 class BirdDetailViewController: UIViewController {
     @IBOutlet weak var birdImageView: UIImageView!
     
-    var birdImage: UIImage!
-    var call1: String!
-    var call2: String!
-    var wikiLink: String!
+    var birdImage: UIImage?
+    var call1: String?
+    var call2: String?
+    var wikiLink: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
