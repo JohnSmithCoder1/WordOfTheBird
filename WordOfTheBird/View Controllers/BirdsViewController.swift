@@ -24,7 +24,8 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
             let row = myIndexPath.row
             destination.title = filteredBirds[row].name
             destination.imageDetail = filteredBirds[row].imageLarge
-            destination.callDetail = filteredBirds[row].call
+            destination.callDetailOne = filteredBirds[row].call1
+            destination.callDetailTwo = filteredBirds[row].call2
             destination.linkDetail = filteredBirds[row].link
         }
     }

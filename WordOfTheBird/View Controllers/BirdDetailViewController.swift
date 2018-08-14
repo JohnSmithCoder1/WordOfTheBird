@@ -12,7 +12,8 @@ class BirdDetailViewController: UIViewController {
     @IBOutlet weak var birdImageLarge: UIImageView!
     
     var imageDetail: UIImage!
-    var callDetail: String!
+    var callDetailOne: String!
+    var callDetailTwo: String!
     var linkDetail: String!
     
     override func viewDidLoad() { // these should go in viewWillAppear?
@@ -23,7 +24,8 @@ class BirdDetailViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "embedSegue" {
             if let destinationTable = segue.destination as? BirdDetailDataViewController {
-                destinationTable.callData = callDetail
+                destinationTable.callData1 = callDetailOne
+                destinationTable.callData2 = callDetailTwo
                 destinationTable.linkData = linkDetail
             }
         }
