@@ -72,9 +72,7 @@
                             <outlet property="delegate" destination="srd-D6-GbF" id="rN4-xJ-rBZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Birds" id="Chc-1y-m3P">
-                        <barButtonItem key="rightBarButtonItem" title="Help" id="L4f-jB-RZE"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Birds" id="Chc-1y-m3P"/>
                     <connections>
                         <outlet property="tableView" destination="4s9-Qa-djW" id="mdH-II-qkr"/>
                     </connections>
@@ -115,23 +113,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSC-hl-8Pn" userLabel="Bottom Container View">
-                                <rect key="frame" x="0.0" y="400" width="414" height="370"/>
+                                <rect key="frame" x="0.0" y="383" width="414" height="353"/>
                                 <connections>
                                     <segue destination="4ux-Z1-eqg" kind="embed" identifier="embedSegue" id="WAc-Va-UDu"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KBQ-ka-MKa" userLabel="Top Container View">
-                                <rect key="frame" x="0.0" y="64" width="414" height="336"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="319"/>
                             </containerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="backgroundTop" translatesAutoresizingMaskIntoConstraints="NO" id="Rvn-pG-mLh">
-                                <rect key="frame" x="0.0" y="64" width="414" height="336"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="319"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uzX-sc-jey" userLabel="backgroundTopWhite">
-                                <rect key="frame" x="0.0" y="64" width="414" height="336"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="319"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="400" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Y6x-FZ-1M8">
-                                <rect key="frame" x="39" y="64" width="336" height="336"/>
+                                <rect key="frame" x="47.666666666666657" y="64" width="319" height="319"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Y6x-FZ-1M8" secondAttribute="height" multiplier="1:1" id="e13-lo-8Vs"/>
@@ -157,7 +155,7 @@
                             <constraint firstItem="Rvn-pG-mLh" firstAttribute="trailing" secondItem="3XM-eA-f6x" secondAttribute="trailing" id="e07-55-hd0"/>
                             <constraint firstItem="WSC-hl-8Pn" firstAttribute="height" secondItem="KBQ-ka-MKa" secondAttribute="height" constant="34" id="hsp-P8-ais"/>
                             <constraint firstItem="uzX-sc-jey" firstAttribute="top" secondItem="KBQ-ka-MKa" secondAttribute="top" id="jlD-Q3-iQ9"/>
-                            <constraint firstItem="WSC-hl-8Pn" firstAttribute="bottom" secondItem="3XM-eA-f6x" secondAttribute="bottom" constant="34" id="rq3-RL-tQR"/>
+                            <constraint firstItem="WSC-hl-8Pn" firstAttribute="bottom" secondItem="28h-fy-3eS" secondAttribute="bottom" id="rq3-RL-tQR"/>
                             <constraint firstItem="Y6x-FZ-1M8" firstAttribute="top" secondItem="3XM-eA-f6x" secondAttribute="top" id="txR-BF-6Nj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3XM-eA-f6x"/>
@@ -178,7 +176,7 @@
             <objects>
                 <tableViewController id="4ux-Z1-eqg" customClass="BirdDetailDataViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="cDr-C9-lSz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="370"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="353"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
