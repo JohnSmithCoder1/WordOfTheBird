@@ -16,11 +16,10 @@ class BirdTableViewCell: UITableViewCell {
 class BirdsViewController: UITableViewController, UISearchResultsUpdating {
     
     var filteredBirds: [Bird]!
-    var launchedBefore = false
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? BirdDetailViewController {
-            let myIndexPath = self.tableView.indexPathForSelectedRow!
+            let myIndexPath = tableView.indexPathForSelectedRow!
             let row = myIndexPath.row
             destination.title = filteredBirds[row].name
             destination.imageDetail = filteredBirds[row].imageLarge
@@ -45,8 +44,8 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
     override func viewDidLoad() {
         super.viewDidLoad()
         let backgroundImage = UIImageView(image: UIImage(named: "background.png"))
-        backgroundImage.frame = self.tableView.frame
-        self.tableView.backgroundView = backgroundImage
+        backgroundImage.frame = tableView.frame
+        tableView.backgroundView = backgroundImage
         filteredBirds = birdArray
         setupSearchController()
     }

@@ -14,14 +14,14 @@ class BirdDetailDataViewController: UITableViewController {
     var callData1: String!
     var callData2: String!
     var linkData: String!
-    var player: AVAudioPlayer?
+    var audioPlayer: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let backgroundImage = UIImageView(image: UIImage(named: "backgroundBottom.png"))
         backgroundImage.frame = self.tableView.frame
-        self.tableView.backgroundView = backgroundImage
-        self.tableView.isScrollEnabled = false
+        tableView.backgroundView = backgroundImage
+        tableView.isScrollEnabled = false
     }
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
@@ -32,9 +32,9 @@ class BirdDetailDataViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             if indexPath.row == 0 {
-                playSound(forCall: callData1)
+                playSound(forObject: callData1)
             } else if indexPath.row == 1{
-                playSound(forCall: callData2)
+                playSound(forObject: callData2)
             }
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
@@ -44,11 +44,11 @@ class BirdDetailDataViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    func playSound(forCall: String) {
-        guard let url = Bundle.main.url(forResource: forCall, withExtension: "wav") else { return }
+    func playSound(forObject: String) {
+        guard let url = Bundle.main.url(forResource: forObject, withExtension: "wav") else { return }
         do {
-            player = try AVAudioPlayer(contentsOf: url)
-            guard let player = player else { return }
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            guard let player = audioPlayer else { return }
             player.prepareToPlay()
             player.play()
         } catch let error as NSError {
