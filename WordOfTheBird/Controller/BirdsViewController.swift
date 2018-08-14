@@ -36,16 +36,14 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! BirdTableViewCell
         cell.birdName?.text = filteredBirds[indexPath.row].name
-        cell.birdImageView?.image = filteredBirds[indexPath.row].imageSmall
         cell.birdName?.adjustsFontSizeToFitWidth = true
+        cell.birdImageView?.image = filteredBirds[indexPath.row].imageSmall
         return cell
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backgroundImage = UIImageView(image: UIImage(named: "background.png"))
-        backgroundImage.frame = tableView.frame
-        tableView.backgroundView = backgroundImage
+        tableView.backgroundView = UIImageView(image: UIImage(named: "background.png"))
         filteredBirds = birdArray
         setupSearchController()
     }
