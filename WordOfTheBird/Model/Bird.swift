@@ -11,13 +11,13 @@ import UIKit
 
 class Bird {
     var name: String
-    var imageSmall: UIImage!
-    var imageLarge: UIImage!
+    var imageSmall: String
+    var imageLarge: String
     var call1: String
     var call2: String
     var wikiLink: String
     
-    init(name: String, imageSmall: UIImage, imageLarge: UIImage, call1: String, call2: String, wikiLink: String) {
+    init(name: String, imageSmall: String, imageLarge: String, call1: String, call2: String, wikiLink: String) {
         self.name = name
         self.imageSmall = imageSmall
         self.imageLarge = imageLarge
@@ -28,127 +28,127 @@ class Bird {
 }
 
 let americanGoldfinch = Bird(name: "American Goldfinch",
-                             imageSmall: UIImage(named: "americanGoldfinchImageSmall")!,
-                             imageLarge: UIImage(named: "americanGoldfinchImageLarge")!,
+                             imageSmall: "americanGoldfinchImageSmall",
+                             imageLarge: "americanGoldfinchImageLarge",
                              call1: "americanGoldfinchCall1",
                              call2: "americanGoldfinchCall2",
                              wikiLink: "https://en.wikipedia.org/wiki/American_goldfinch")
 
 let americanKestrel = Bird(name: "American Kestrel",
-                           imageSmall: UIImage(named: "americanKestrelImageSmall")!,
-                           imageLarge: UIImage(named: "americanKestrelImageLarge")!,
+                           imageSmall: "americanKestrelImageSmall",
+                           imageLarge: "americanKestrelImageLarge",
                            call1: "americanKestrelCall1",
                            call2: "americanKestrelCall2",
                            wikiLink: "https://en.wikipedia.org/wiki/American_kestrel")
 
 let baldEagle = Bird(name: "Bald Eagle",
-                     imageSmall: UIImage(named: "baldEagleImageSmall")!,
-                     imageLarge: UIImage(named: "baldEagleImageLarge")!,
+                     imageSmall: "baldEagleImageSmall",
+                     imageLarge: "baldEagleImageLarge",
                      call1: "baldEagleCall1",
                      call2: "baldEagleCall2",
                      wikiLink: "https://en.wikipedia.org/wiki/Bald_eagle")
 
 let barredOwl = Bird(name: "Barred Owl",
-                     imageSmall: UIImage(named: "barredOwlImageSmall")!,
-                     imageLarge: UIImage(named: "barredOwlImageLarge")!,
+                     imageSmall: "barredOwlImageSmall",
+                     imageLarge: "barredOwlImageLarge",
                      call1: "barredOwlCall1",
                      call2: "barredOwlCall2",
                      wikiLink: "https://en.wikipedia.org/wiki/Barred_owl")
 
 let blackCappedChickadee = Bird(name: "Black-capped Chickadee",
-                                imageSmall: UIImage(named: "blackCappedChickadeeImageSmall")!,
-                                imageLarge: UIImage(named: "blackCappedChickadeeImageLarge")!,
+                                imageSmall: "blackCappedChickadeeImageSmall",
+                                imageLarge: "blackCappedChickadeeImageLarge",
                                 call1: "blackCappedChickadeeCall1",
                                 call2: "blackCappedChickadeeCall2",
                                 wikiLink: "https://en.wikipedia.org/wiki/Black-capped_chickadee")
 
 let blueJay = Bird(name: "Blue Jay",
-                   imageSmall: UIImage(named: "blueJayImageSmall")!,
-                   imageLarge: UIImage(named: "blueJayImageLarge")!,
+                   imageSmall: "blueJayImageSmall",
+                   imageLarge: "blueJayImageLarge",
                    call1: "blueJayCall1",
                    call2: "blueJayCall2",
                    wikiLink: "https://en.wikipedia.org/wiki/Blue_jay")
 
 let northernCardinal = Bird(name: "Northern Cardinal",
-                    imageSmall: UIImage(named: "cardinalImageSmall")!,
-                    imageLarge: UIImage(named: "cardinalImageLarge")!,
+                    imageSmall: "cardinalImageSmall",
+                    imageLarge: "cardinalImageLarge",
                     call1: "cardinalCall1",
                     call2: "cardinalCall2",
                     wikiLink: "https://en.wikipedia.org/wiki/Northern_cardinal")
 
 let downyWoodpecker = Bird(name: "Downy Woodpecker",
-                           imageSmall: UIImage(named: "downyWoodpeckerImageSmall")!,
-                           imageLarge: UIImage(named: "downyWoodpeckerImageLarge")!,
+                           imageSmall: "downyWoodpeckerImageSmall",
+                           imageLarge: "downyWoodpeckerImageLarge",
                            call1: "downyWoodpeckerCall1",
                            call2: "downyWoodpeckerCall2",
                            wikiLink: "https://en.wikipedia.org/wiki/Downy_woodpecker")
 
 let greatHornedOwl = Bird(name: "Great Horned Owl",
-                          imageSmall: UIImage(named: "greatHornedOwlImageSmall")!,
-                          imageLarge: UIImage(named: "greatHornedOwlImageLarge")!,
+                          imageSmall: "greatHornedOwlImageSmall",
+                          imageLarge: "greatHornedOwlImageLarge",
                           call1: "greatHornedOwlCall1",
                           call2: "greatHornedOwlCall2",
                           wikiLink: "https://en.wikipedia.org/wiki/Great_horned_owl")
 
 let hairyWoodpecker = Bird(name: "Hairy Woodpecker",
-                           imageSmall: UIImage(named: "hairyWoodpeckerImageSmall")!,
-                           imageLarge: UIImage(named: "hairyWoodpeckerImageLarge")!,
+                           imageSmall: "hairyWoodpeckerImageSmall",
+                           imageLarge: "hairyWoodpeckerImageLarge",
                            call1: "hairyWoodpeckerCall1",
                            call2: "hairyWoodpeckerCall2",
                            wikiLink: "https://en.wikipedia.org/wiki/Hairy_woodpecker")
 
 let houseFinch = Bird(name: "House Finch",
-                      imageSmall: UIImage(named: "houseFinchImageSmall")!,
-                      imageLarge: UIImage(named: "houseFinchImageLarge")!,
+                      imageSmall: "houseFinchImageSmall",
+                      imageLarge: "houseFinchImageLarge",
                       call1: "houseFinchCall1",
                       call2: "houseFinchCall2",
                       wikiLink: "https://en.wikipedia.org/wiki/House_finch")
 
 let northernFlicker = Bird(name: "Northern Flicker",
-                           imageSmall: UIImage(named: "northernFlickerImageSmall")!,
-                           imageLarge: UIImage(named: "northernFlickerImageLarge")!,
+                           imageSmall: "northernFlickerImageSmall",
+                           imageLarge: "northernFlickerImageLarge",
                            call1: "northernFlickerCall1",
                            call2: "northernFlickerCall2",
                            wikiLink: "https://en.wikipedia.org/wiki/Northern_flicker")
 
 let peregrineFalcon = Bird(name: "Peregrine Falcon",
-                           imageSmall: UIImage(named: "peregrineFalconImageSmall")!,
-                           imageLarge: UIImage(named: "peregrineFalconImageLarge")!,
+                           imageSmall: "peregrineFalconImageSmall",
+                           imageLarge: "peregrineFalconImageLarge",
                            call1: "peregrineFalconCall1",
                            call2: "peregrineFalconCall2",
                            wikiLink: "https://en.wikipedia.org/wiki/Peregrine_falcon")
 
 let pileatedWoodpecker = Bird(name: "Pileated Woodpecker",
-                              imageSmall: UIImage(named: "pileatedWoodpeckerImageSmall")!,
-                              imageLarge: UIImage(named: "pileatedWoodpeckerImageLarge")!,
+                              imageSmall: "pileatedWoodpeckerImageSmall",
+                              imageLarge: "pileatedWoodpeckerImageLarge",
                               call1: "pileatedWoodpeckerCall1",
                               call2: "pileatedWoodpeckerCall2",
                               wikiLink: "https://en.wikipedia.org/wiki/Pileated_woodpecker")
 
 let redBelliedWoodpecker = Bird(name: "Red-bellied Woodpecker",
-                                imageSmall: UIImage(named: "redBelliedWoodpeckerImageSmall")!,
-                                imageLarge: UIImage(named: "redBelliedWoodpeckerImageLarge")!,
+                                imageSmall: "redBelliedWoodpeckerImageSmall",
+                                imageLarge: "redBelliedWoodpeckerImageLarge",
                                 call1: "redBelliedWoodpeckerCall1",
                                 call2: "redBelliedWoodpeckerCall2",
                                 wikiLink: "https://en.wikipedia.org/wiki/Red-bellied_woodpecker")
 
 let redHeadedWoodpecker = Bird(name: "Red-headed Woodpecker",
-                               imageSmall: UIImage(named: "redHeadedWoodpeckerImageSmall")!,
-                               imageLarge: UIImage(named: "redHeadedWoodpeckerImageLarge")!,
+                               imageSmall: "redHeadedWoodpeckerImageSmall",
+                               imageLarge: "redHeadedWoodpeckerImageLarge",
                                call1: "redHeadedWoodpeckerCall1",
                                call2: "redHeadedWoodpeckerCall2",
                                wikiLink: "https://en.wikipedia.org/wiki/Red-headed_woodpecker")
 
 let redTailedHawk = Bird(name: "Red-tailed Hawk",
-                         imageSmall: UIImage(named: "redTailedHawkImageSmall")!,
-                         imageLarge: UIImage(named: "redTailedHawkImageLarge")!,
+                         imageSmall: "redTailedHawkImageSmall",
+                         imageLarge: "redTailedHawkImageLarge",
                          call1: "redTailedHawkCall1",
                          call2: "redTailedHawkCall2",
                          wikiLink: "https://en.wikipedia.org/wiki/Red-tailed_hawk")
 
 let tuftedTitmouse = Bird(name: "Tufted Titmouse",
-                          imageSmall: UIImage(named: "tuftedTitmouseImageSmall")!,
-                          imageLarge: UIImage(named: "tuftedTitmouseImageLarge")!,
+                          imageSmall: "tuftedTitmouseImageSmall",
+                          imageLarge: "tuftedTitmouseImageLarge",
                           call1: "tuftedTitmouseCall1",
                           call2: "tuftedTitmouseCall2",
                           wikiLink: "https://en.wikipedia.org/wiki/Tufted_titmouse")

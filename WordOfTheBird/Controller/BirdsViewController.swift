@@ -25,7 +25,7 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! BirdTableViewCell
         cell.birdNameLabel?.text = filteredBirds[indexPath.row].name
         cell.birdNameLabel?.adjustsFontSizeToFitWidth = true
-        cell.birdImageView?.image = filteredBirds[indexPath.row].imageSmall
+        cell.birdImageView?.image = UIImage(named: filteredBirds[indexPath.row].imageSmall)
         return cell
     }
     
@@ -40,7 +40,7 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
         if let destination = segue.destination as? BirdDetailViewController,
             let row = tableView.indexPathForSelectedRow?.row {
             destination.title = filteredBirds[row].name
-            destination.birdImage = filteredBirds[row].imageLarge
+            destination.birdImage = UIImage(named: filteredBirds[row].imageLarge)
             destination.call1 = filteredBirds[row].call1
             destination.call2 = filteredBirds[row].call2
             destination.wikiLink = filteredBirds[row].wikiLink
