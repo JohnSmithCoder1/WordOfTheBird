@@ -9,7 +9,7 @@
 import UIKit
 
 class BirdTableViewCell: UITableViewCell {
-    @IBOutlet var birdName: UILabel!
+    @IBOutlet var birdNameLabel: UILabel!
     @IBOutlet var birdImageView: UIImageView!
 }
 
@@ -35,8 +35,8 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! BirdTableViewCell
-        cell.birdName?.text = filteredBirds[indexPath.row].name
-        cell.birdName?.adjustsFontSizeToFitWidth = true
+        cell.birdNameLabel?.text = filteredBirds[indexPath.row].name
+        cell.birdNameLabel?.adjustsFontSizeToFitWidth = true
         cell.birdImageView?.image = filteredBirds[indexPath.row].imageSmall
         return cell
     }
