@@ -134,8 +134,3 @@ let birdArray = [Bird(name: "American Goldfinch",
                   call1: "tuftedTitmouseCall1",
                   call2: "tuftedTitmouseCall2",
                   wikiLink: "https://en.wikipedia.org/wiki/Tufted_titmouse")]
-
-
-
-
-
