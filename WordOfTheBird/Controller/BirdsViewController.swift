@@ -9,46 +9,41 @@
 import UIKit
 
 class BirdTableViewCell: UITableViewCell {
-    @IBOutlet var birdCellLabel: UILabel!
-    @IBOutlet var birdCellImage: UIImageView!
+    @IBOutlet var birdNameLabel: UILabel!
+    @IBOutlet var birdImageView: UIImageView!
 }
 
 class BirdsViewController: UITableViewController, UISearchResultsUpdating {
     
-    var filteredBirds: [Bird]!
-    var launchedBefore = false
+    var filteredBirds = birdArray
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? BirdDetailViewController {
-            let myIndexPath = self.tableView.indexPathForSelectedRow!
-            let row = myIndexPath.row
-            destination.title = filteredBirds[row].name
-            destination.imageDetail = filteredBirds[row].imageLarge
-            destination.callDetailOne = filteredBirds[row].call1
-            destination.callDetailTwo = filteredBirds[row].call2
-            destination.linkDetail = filteredBirds[row].link
-        }
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredBirds.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! BirdTableViewCell
-        cell.birdCellLabel?.text = filteredBirds[indexPath.row].name
-        cell.birdCellImage?.image = filteredBirds[indexPath.row].imageSmall
-        cell.birdCellLabel?.adjustsFontSizeToFitWidth = true
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! BirdTableViewCell
+        cell.birdNameLabel?.text = filteredBirds[indexPath.row].name
+        cell.birdNameLabel?.adjustsFontSizeToFitWidth = true
+        cell.birdImageView?.image = UIImage(named: filteredBirds[indexPath.row].imageSmall)
         return cell
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backgroundImage = UIImageView(image: UIImage(named: "background.png"))
-        backgroundImage.frame = self.tableView.frame
-        self.tableView.backgroundView = backgroundImage
-        filteredBirds = birdArray
+        tableView.backgroundView = UIImageView(image: UIImage(named: "background.png"))
         setupSearchController()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? BirdDetailViewController,
+            let row = tableView.indexPathForSelectedRow?.row {
+            destination.title = filteredBirds[row].name
+            destination.birdImage = UIImage(named: filteredBirds[row].imageLarge)
+            destination.call1 = filteredBirds[row].call1
+            destination.call2 = filteredBirds[row].call2
+            destination.wikiLink = filteredBirds[row].wikiLink
+        }
     }
     
     func setupSearchController() {

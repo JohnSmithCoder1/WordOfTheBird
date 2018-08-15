@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05A9951D21235AB8006CDBEA /* pileatedWoodpeckerCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9950B21235AB2006CDBEA /* pileatedWoodpeckerCall2.wav */; };
+		05A9951E21235AB8006CDBEA /* northernFlickerCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9950C21235AB3006CDBEA /* northernFlickerCall2.wav */; };
+		05A9951F21235AB8006CDBEA /* americanKestrelCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9950D21235AB3006CDBEA /* americanKestrelCall2.wav */; };
+		05A9952021235AB8006CDBEA /* peregrineFalconCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9950E21235AB4006CDBEA /* peregrineFalconCall2.wav */; };
+		05A9952121235AB8006CDBEA /* redTailedHawkCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9950F21235AB4006CDBEA /* redTailedHawkCall2.wav */; };
+		05A9952221235AB8006CDBEA /* northernCardinalCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9951021235AB4006CDBEA /* northernCardinalCall2.wav */; };
+		05A9952321235AB8006CDBEA /* barredOwlCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9951121235AB5006CDBEA /* barredOwlCall2.wav */; };
+		05A9952421235AB8006CDBEA /* redHeadedWoodpeckerCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9951221235AB5006CDBEA /* redHeadedWoodpeckerCall2.wav */; };
+		05A9952521235AB8006CDBEA /* baldEagleCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9951321235AB5006CDBEA /* baldEagleCall2.wav */; };
+		05A9952621235AB8006CDBEA /* houseFinchCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9951421235AB5006CDBEA /* houseFinchCall2.wav */; };
+		05A9952721235AB8006CDBEA /* americanGoldfinchCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9951521235AB6006CDBEA /* americanGoldfinchCall2.wav */; };
+		05A9952821235AB8006CDBEA /* blueJayCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9951621235AB6006CDBEA /* blueJayCall2.wav */; };
+		05A9952921235AB8006CDBEA /* tuftedTitmouseCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9951721235AB6006CDBEA /* tuftedTitmouseCall2.wav */; };
+		05A9952A21235AB8006CDBEA /* blackCappedChickadeeCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9951821235AB7006CDBEA /* blackCappedChickadeeCall2.wav */; };
+		05A9952B21235AB8006CDBEA /* downyWoodpeckerCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9951921235AB7006CDBEA /* downyWoodpeckerCall2.wav */; };
+		05A9952C21235AB8006CDBEA /* greatHornedOwlCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9951A21235AB7006CDBEA /* greatHornedOwlCall2.wav */; };
+		05A9952D21235AB8006CDBEA /* hairyWoodpeckerCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9951B21235AB8006CDBEA /* hairyWoodpeckerCall2.wav */; };
+		05A9952E21235AB8006CDBEA /* redBelliedWoodpeckerCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9951C21235AB8006CDBEA /* redBelliedWoodpeckerCall2.wav */; };
 		05CB8F742091165100AB7E13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8F732091165100AB7E13 /* AppDelegate.swift */; };
 		05CB8F792091165100AB7E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8F772091165100AB7E13 /* Main.storyboard */; };
 		05CB8F7B2091165200AB7E13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8F7A2091165200AB7E13 /* Assets.xcassets */; };
@@ -36,6 +54,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05A9950B21235AB2006CDBEA /* pileatedWoodpeckerCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pileatedWoodpeckerCall2.wav; sourceTree = "<group>"; };
+		05A9950C21235AB3006CDBEA /* northernFlickerCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = northernFlickerCall2.wav; sourceTree = "<group>"; };
+		05A9950D21235AB3006CDBEA /* americanKestrelCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = americanKestrelCall2.wav; sourceTree = "<group>"; };
+		05A9950E21235AB4006CDBEA /* peregrineFalconCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = peregrineFalconCall2.wav; sourceTree = "<group>"; };
+		05A9950F21235AB4006CDBEA /* redTailedHawkCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = redTailedHawkCall2.wav; sourceTree = "<group>"; };
+		05A9951021235AB4006CDBEA /* northernCardinalCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = northernCardinalCall2.wav; sourceTree = "<group>"; };
+		05A9951121235AB5006CDBEA /* barredOwlCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = barredOwlCall2.wav; sourceTree = "<group>"; };
+		05A9951221235AB5006CDBEA /* redHeadedWoodpeckerCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = redHeadedWoodpeckerCall2.wav; sourceTree = "<group>"; };
+		05A9951321235AB5006CDBEA /* baldEagleCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = baldEagleCall2.wav; sourceTree = "<group>"; };
+		05A9951421235AB5006CDBEA /* houseFinchCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = houseFinchCall2.wav; sourceTree = "<group>"; };
+		05A9951521235AB6006CDBEA /* americanGoldfinchCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = americanGoldfinchCall2.wav; sourceTree = "<group>"; };
+		05A9951621235AB6006CDBEA /* blueJayCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blueJayCall2.wav; sourceTree = "<group>"; };
+		05A9951721235AB6006CDBEA /* tuftedTitmouseCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tuftedTitmouseCall2.wav; sourceTree = "<group>"; };
+		05A9951821235AB7006CDBEA /* blackCappedChickadeeCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blackCappedChickadeeCall2.wav; sourceTree = "<group>"; };
+		05A9951921235AB7006CDBEA /* downyWoodpeckerCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = downyWoodpeckerCall2.wav; sourceTree = "<group>"; };
+		05A9951A21235AB7006CDBEA /* greatHornedOwlCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = greatHornedOwlCall2.wav; sourceTree = "<group>"; };
+		05A9951B21235AB8006CDBEA /* hairyWoodpeckerCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hairyWoodpeckerCall2.wav; sourceTree = "<group>"; };
+		05A9951C21235AB8006CDBEA /* redBelliedWoodpeckerCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = redBelliedWoodpeckerCall2.wav; sourceTree = "<group>"; };
 		05CB8F702091165100AB7E13 /* WordOfTheBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordOfTheBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CB8F732091165100AB7E13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05CB8F782091165100AB7E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,11 +113,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05A9950A212358DF006CDBEA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				05CB8F772091165100AB7E13 /* Main.storyboard */,
+				05CB8F7C2091165200AB7E13 /* LaunchScreen.storyboard */,
+				05CB8F7A2091165200AB7E13 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		05CB8F672091165100AB7E13 = {
 			isa = PBXGroup;
 			children = (
 				05CB8F722091165100AB7E13 /* WordOfTheBird */,
-				B0C48D2920925D8700A655AB /* Sounds */,
 				05CB8F712091165100AB7E13 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,58 +142,75 @@
 		05CB8F722091165100AB7E13 /* WordOfTheBird */ = {
 			isa = PBXGroup;
 			children = (
-				05CB8F772091165100AB7E13 /* Main.storyboard */,
 				05CB8F732091165100AB7E13 /* AppDelegate.swift */,
-				05CB8F7A2091165200AB7E13 /* Assets.xcassets */,
-				05CB8F7C2091165200AB7E13 /* LaunchScreen.storyboard */,
 				05CB8F7F2091165200AB7E13 /* Info.plist */,
-				05FF76E3209CF47F001F678C /* View Controllers */,
-				B0FEA9F120D186F90061599D /* Data Models */,
+				05A9950A212358DF006CDBEA /* View */,
+				B0FEA9F120D186F90061599D /* Model */,
+				05FF76E3209CF47F001F678C /* Controller */,
 			);
 			path = WordOfTheBird;
 			sourceTree = "<group>";
 		};
-		05FF76E3209CF47F001F678C /* View Controllers */ = {
+		05FF76E3209CF47F001F678C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				B0C0136120C8585900784C3B /* BirdsViewController.swift */,
 				B02FA39720D4477400172A65 /* BirdDetailViewController.swift */,
 				B02FA39920D4477E00172A65 /* BirdDetailDataViewController.swift */,
 			);
-			path = "View Controllers";
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		B0C48D2920925D8700A655AB /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
 				B0C9480820D3D5A1007E102A /* americanGoldfinchCall1.wav */,
+				05A9951521235AB6006CDBEA /* americanGoldfinchCall2.wav */,
 				B0C9480E20D3D5A2007E102A /* americanKestrelCall1.wav */,
+				05A9950D21235AB3006CDBEA /* americanKestrelCall2.wav */,
 				B0C9481120D3D5A2007E102A /* baldEagleCall1.wav */,
+				05A9951321235AB5006CDBEA /* baldEagleCall2.wav */,
 				B0C9481520D3D5A2007E102A /* barredOwlCall1.wav */,
+				05A9951121235AB5006CDBEA /* barredOwlCall2.wav */,
 				B0C9481020D3D5A2007E102A /* blackCappedChickadeeCall1.wav */,
+				05A9951821235AB7006CDBEA /* blackCappedChickadeeCall2.wav */,
 				B0C9481420D3D5A2007E102A /* blueJayCall1.wav */,
-				B0C9480D20D3D5A1007E102A /* northernCardinalCall1.wav */,
+				05A9951621235AB6006CDBEA /* blueJayCall2.wav */,
 				B0C9481220D3D5A2007E102A /* downyWoodpeckerCall1.wav */,
+				05A9951921235AB7006CDBEA /* downyWoodpeckerCall2.wav */,
 				B0C9480420D3D5A1007E102A /* greatHornedOwlCall1.wav */,
+				05A9951A21235AB7006CDBEA /* greatHornedOwlCall2.wav */,
 				B0C9480A20D3D5A1007E102A /* hairyWoodpeckerCall1.wav */,
+				05A9951B21235AB8006CDBEA /* hairyWoodpeckerCall2.wav */,
 				B0C9480520D3D5A1007E102A /* houseFinchCall1.wav */,
+				05A9951421235AB5006CDBEA /* houseFinchCall2.wav */,
+				B0C9480D20D3D5A1007E102A /* northernCardinalCall1.wav */,
+				05A9951021235AB4006CDBEA /* northernCardinalCall2.wav */,
 				B0C9481320D3D5A2007E102A /* northernFlickerCall1.wav */,
+				05A9950C21235AB3006CDBEA /* northernFlickerCall2.wav */,
 				B0C9480920D3D5A1007E102A /* peregrineFalconCall1.wav */,
+				05A9950E21235AB4006CDBEA /* peregrineFalconCall2.wav */,
 				B0C9480B20D3D5A1007E102A /* pileatedWoodpeckerCall1.wav */,
+				05A9950B21235AB2006CDBEA /* pileatedWoodpeckerCall2.wav */,
 				B0C9480620D3D5A1007E102A /* redBelliedWoodpeckerCall1.wav */,
+				05A9951C21235AB8006CDBEA /* redBelliedWoodpeckerCall2.wav */,
 				B0C9480F20D3D5A2007E102A /* redHeadedWoodpeckerCall1.wav */,
+				05A9951221235AB5006CDBEA /* redHeadedWoodpeckerCall2.wav */,
 				B0C9480C20D3D5A1007E102A /* redTailedHawkCall1.wav */,
+				05A9950F21235AB4006CDBEA /* redTailedHawkCall2.wav */,
 				B0C9480720D3D5A1007E102A /* tuftedTitmouseCall1.wav */,
+				05A9951721235AB6006CDBEA /* tuftedTitmouseCall2.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
 		};
-		B0FEA9F120D186F90061599D /* Data Models */ = {
+		B0FEA9F120D186F90061599D /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				B0FEA9EF20D186F30061599D /* Bird.swift */,
+				B0C48D2920925D8700A655AB /* Sounds */,
 			);
-			path = "Data Models";
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,20 +273,38 @@
 			files = (
 				B0C9482720D3D5A2007E102A /* barredOwlCall1.wav in Resources */,
 				B0C9482220D3D5A2007E102A /* blackCappedChickadeeCall1.wav in Resources */,
+				05A9952B21235AB8006CDBEA /* downyWoodpeckerCall2.wav in Resources */,
 				B0C9481F20D3D5A2007E102A /* northernCardinalCall1.wav in Resources */,
+				05A9951E21235AB8006CDBEA /* northernFlickerCall2.wav in Resources */,
+				05A9952A21235AB8006CDBEA /* blackCappedChickadeeCall2.wav in Resources */,
 				B0C9482420D3D5A2007E102A /* downyWoodpeckerCall1.wav in Resources */,
 				B0C9481B20D3D5A2007E102A /* peregrineFalconCall1.wav in Resources */,
 				B0C9481A20D3D5A2007E102A /* americanGoldfinchCall1.wav in Resources */,
+				05A9952521235AB8006CDBEA /* baldEagleCall2.wav in Resources */,
+				05A9952C21235AB8006CDBEA /* greatHornedOwlCall2.wav in Resources */,
 				B0C9481C20D3D5A2007E102A /* hairyWoodpeckerCall1.wav in Resources */,
+				05A9952921235AB8006CDBEA /* tuftedTitmouseCall2.wav in Resources */,
+				05A9952621235AB8006CDBEA /* houseFinchCall2.wav in Resources */,
 				B0C9482020D3D5A2007E102A /* americanKestrelCall1.wav in Resources */,
+				05A9952021235AB8006CDBEA /* peregrineFalconCall2.wav in Resources */,
 				B0C9482320D3D5A2007E102A /* baldEagleCall1.wav in Resources */,
 				B0C9482620D3D5A2007E102A /* blueJayCall1.wav in Resources */,
+				05A9952D21235AB8006CDBEA /* hairyWoodpeckerCall2.wav in Resources */,
+				05A9952221235AB8006CDBEA /* northernCardinalCall2.wav in Resources */,
+				05A9951D21235AB8006CDBEA /* pileatedWoodpeckerCall2.wav in Resources */,
+				05A9952421235AB8006CDBEA /* redHeadedWoodpeckerCall2.wav in Resources */,
+				05A9952E21235AB8006CDBEA /* redBelliedWoodpeckerCall2.wav in Resources */,
+				05A9951F21235AB8006CDBEA /* americanKestrelCall2.wav in Resources */,
+				05A9952821235AB8006CDBEA /* blueJayCall2.wav in Resources */,
+				05A9952721235AB8006CDBEA /* americanGoldfinchCall2.wav in Resources */,
 				B0C9481E20D3D5A2007E102A /* redTailedHawkCall1.wav in Resources */,
 				B0C9481620D3D5A2007E102A /* greatHornedOwlCall1.wav in Resources */,
 				05CB8F7E2091165200AB7E13 /* LaunchScreen.storyboard in Resources */,
 				B0C9481820D3D5A2007E102A /* redBelliedWoodpeckerCall1.wav in Resources */,
 				B0C9482520D3D5A2007E102A /* northernFlickerCall1.wav in Resources */,
+				05A9952121235AB8006CDBEA /* redTailedHawkCall2.wav in Resources */,
 				B0C9481D20D3D5A2007E102A /* pileatedWoodpeckerCall1.wav in Resources */,
+				05A9952321235AB8006CDBEA /* barredOwlCall2.wav in Resources */,
 				B0C9481720D3D5A2007E102A /* houseFinchCall1.wav in Resources */,
 				05CB8F7B2091165200AB7E13 /* Assets.xcassets in Resources */,
 				05CB8F792091165100AB7E13 /* Main.storyboard in Resources */,
