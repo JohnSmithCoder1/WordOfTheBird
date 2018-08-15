@@ -15,7 +15,7 @@ class BirdTableViewCell: UITableViewCell {
 
 class BirdsViewController: UITableViewController, UISearchResultsUpdating {
     
-    var filteredBirds = [Bird]()
+    var filteredBirds = birdArray
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredBirds.count
@@ -32,7 +32,6 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundView = UIImageView(image: UIImage(named: "background.png"))
-        filteredBirds = birdArray
         setupSearchController()
     }
     
