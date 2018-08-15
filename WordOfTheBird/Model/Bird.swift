@@ -6,7 +6,6 @@
 //  Copyright © 2018 Banana Viking. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class Bird {
