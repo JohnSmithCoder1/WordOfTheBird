@@ -11,9 +11,9 @@ import AVFoundation
 
 class BirdDetailDataViewController: UITableViewController {
     
-    var call1: String!
-    var call2: String!
-    var wikiLink: String!
+    var call1: String?
+    var call2: String?
+    var wikiLink: String?
     var audioPlayer: AVAudioPlayer?
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
@@ -25,13 +25,19 @@ class BirdDetailDataViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             if indexPath.row == 0 {
-                playSound(forObject: call1)
-            } else if indexPath.row == 1{
-                playSound(forObject: call2)
+                if let call1 = call1 {
+                    playSound(forObject: call1)
+                }
+            } else if indexPath.row == 1 {
+                if let call2 = call2 {
+                    playSound(forObject: call2)
+                }
             }
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
-                UIApplication.shared.open(URL(string: wikiLink)!)
+                if let wikiLink = wikiLink {
+                    UIApplication.shared.open(URL(string: wikiLink)!)
+                }
             }
         }
         tableView.deselectRow(at: indexPath, animated: true)
