@@ -19,7 +19,6 @@ class BirdDetailDataViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.white
-//        header.textLabel?.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
