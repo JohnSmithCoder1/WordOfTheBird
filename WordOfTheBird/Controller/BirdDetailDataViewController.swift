@@ -11,10 +11,10 @@ import AVFoundation
 
 class BirdDetailDataViewController: UITableViewController {
     
+    var audioPlayer: AVAudioPlayer?
     var call1: String?
     var call2: String?
     var wikiLink: String?
-    var audioPlayer: AVAudioPlayer?
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
@@ -47,6 +47,8 @@ class BirdDetailDataViewController: UITableViewController {
         super.viewDidLoad()
         tableView.backgroundView = UIImageView(image: UIImage(named: "backgroundBottom.png"))
         tableView.isScrollEnabled = false
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(didEnterBackground), name: .UIApplicationDidEnterBackground, object: nil)
     }
     
     func playSound(forObject: String) {
@@ -59,6 +61,10 @@ class BirdDetailDataViewController: UITableViewController {
         } catch let error as NSError {
             print("error: \(error.localizedDescription)")
         }
+    }
+    
+    @objc func didEnterBackground() {
+        audioPlayer?.stop()
     }
 }
 
