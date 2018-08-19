@@ -34,6 +34,7 @@ class BirdDetailDataViewController: UITableViewController {
             }
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
+                audioPlayer?.stop()
                 if let wikiLink = wikiLink {
                     UIApplication.shared.open(URL(string: wikiLink)!)
                 }
