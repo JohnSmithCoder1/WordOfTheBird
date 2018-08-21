@@ -34,7 +34,7 @@ class BirdDetailDataViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
-            for row in 0..<tableView.numberOfRows(inSection: 0) {
+            for row in 0..<rows {
                 if let calls = calls {
                     playSound(forObject: calls[row])
                 }
