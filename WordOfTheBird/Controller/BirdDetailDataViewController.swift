@@ -12,7 +12,7 @@ import AVFoundation
 class BirdDetailDataViewController: UITableViewController {
     
     var audioPlayer: AVAudioPlayer?
-    var calls: [String]?
+    var calls = [String]()
     var rows = 0
     var wikiLink: String?
     
@@ -23,9 +23,7 @@ class BirdDetailDataViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            if let calls = calls {
-                rows = calls.count
-            }
+            rows = calls.count
         } else if section == 1 {
             rows = 1
         }
@@ -35,9 +33,7 @@ class BirdDetailDataViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             for row in 0..<rows {
-                if let calls = calls {
-                    playSound(forObject: calls[row])
-                }
+                playSound(forObject: calls[row])
             }
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
@@ -53,7 +49,7 @@ class BirdDetailDataViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundView = UIImageView(image: UIImage(named: "backgroundBottom.png"))
-//        tableView.isScrollEnabled = false
+        //        tableView.isScrollEnabled = false
         NotificationCenter.default.addObserver(self, selector: #selector(didEnterBackground), name: .UIApplicationDidEnterBackground, object: nil)
     }
     
