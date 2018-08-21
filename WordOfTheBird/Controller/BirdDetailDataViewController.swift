@@ -12,7 +12,7 @@ import AVFoundation
 class BirdDetailDataViewController: UITableViewController {
     
     var audioPlayer: AVAudioPlayer?
-    var calls = [String]()
+    var calls: [String]?
     var rows = 0
     var wikiLink: String?
     
@@ -23,7 +23,9 @@ class BirdDetailDataViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            rows = calls.count
+            if let calls = calls {
+                rows = calls.count
+            }
         } else if section == 1 {
             rows = 1
         }
@@ -32,7 +34,11 @@ class BirdDetailDataViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
-            
+            for row in 0..<tableView.numberOfRows(inSection: 0) {
+                if let calls = calls {
+                    playSound(forObject: calls[row])
+                }
+            }
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
                 audioPlayer?.stop()

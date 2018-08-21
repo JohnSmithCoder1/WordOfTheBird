@@ -42,8 +42,7 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
             let row = tableView.indexPathForSelectedRow?.row {
             destination.title = filteredBirds[row].name
             destination.birdImage = UIImage(named: filteredBirds[row].imageLarge)
-            destination.call1 = filteredBirds[row].call1
-            destination.call2 = filteredBirds[row].call2
+            destination.calls = filteredBirds[row].calls
             destination.wikiLink = filteredBirds[row].wikiLink
         }
     }
