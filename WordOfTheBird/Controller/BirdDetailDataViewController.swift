@@ -53,7 +53,7 @@ class BirdDetailDataViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundView = UIImageView(image: UIImage(named: "backgroundBottom.png"))
-        tableView.isScrollEnabled = false
+//        tableView.isScrollEnabled = false
         NotificationCenter.default.addObserver(self, selector: #selector(didEnterBackground), name: .UIApplicationDidEnterBackground, object: nil)
     }
     
