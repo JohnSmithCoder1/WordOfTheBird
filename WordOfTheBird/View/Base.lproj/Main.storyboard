@@ -190,16 +190,32 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Call 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llq-9U-GCL">
-                                                    <rect key="frame" x="16" y="11" width="41" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llq-9U-GCL">
+                                                    <rect key="frame" x="20" y="0.0" width="302" height="43.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="musicNote" translatesAutoresizingMaskIntoConstraints="NO" id="OWt-wp-Jbu">
+                                                    <rect key="frame" x="342" y="9.5" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="OV2-uI-gow"/>
+                                                        <constraint firstAttribute="width" constant="25" id="eJp-HD-YRH"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Llq-9U-GCL" firstAttribute="top" secondItem="7RS-Dv-UmF" secondAttribute="top" id="00N-4L-1dK"/>
+                                                <constraint firstItem="OWt-wp-Jbu" firstAttribute="centerY" secondItem="7RS-Dv-UmF" secondAttribute="centerY" id="HfX-yT-6HU"/>
+                                                <constraint firstItem="OWt-wp-Jbu" firstAttribute="leading" secondItem="Llq-9U-GCL" secondAttribute="trailing" constant="20" id="NhX-dh-gRL"/>
+                                                <constraint firstAttribute="trailing" secondItem="OWt-wp-Jbu" secondAttribute="trailing" constant="8" id="Nze-mg-7ha"/>
+                                                <constraint firstItem="OWt-wp-Jbu" firstAttribute="leading" secondItem="Llq-9U-GCL" secondAttribute="trailing" constant="20" id="c96-Lq-mac"/>
+                                                <constraint firstAttribute="bottom" secondItem="Llq-9U-GCL" secondAttribute="bottom" id="ktr-P8-1px"/>
+                                                <constraint firstItem="Llq-9U-GCL" firstAttribute="centerY" secondItem="7RS-Dv-UmF" secondAttribute="centerY" id="wwU-dY-Jvb"/>
+                                                <constraint firstItem="Llq-9U-GCL" firstAttribute="leading" secondItem="7RS-Dv-UmF" secondAttribute="leading" constant="20" id="wwZ-YB-ahO"/>
+                                            </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -246,5 +262,6 @@
     </scenes>
     <resources>
         <image name="backgroundTop" width="270" height="240"/>
+        <image name="musicNote" width="32" height="32"/>
     </resources>
 </document>
