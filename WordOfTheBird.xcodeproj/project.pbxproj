@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0569DB602125D98D002E5377 /* BirdBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0569DB5F2125D98D002E5377 /* BirdBank.swift */; };
 		05A9951D21235AB8006CDBEA /* pileatedWoodpeckerCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9950B21235AB2006CDBEA /* pileatedWoodpeckerCall2.wav */; };
 		05A9951E21235AB8006CDBEA /* northernFlickerCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9950C21235AB3006CDBEA /* northernFlickerCall2.wav */; };
 		05A9951F21235AB8006CDBEA /* americanKestrelCall2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 05A9950D21235AB3006CDBEA /* americanKestrelCall2.wav */; };
@@ -54,6 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0569DB5F2125D98D002E5377 /* BirdBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdBank.swift; sourceTree = "<group>"; };
 		05A9950B21235AB2006CDBEA /* pileatedWoodpeckerCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pileatedWoodpeckerCall2.wav; sourceTree = "<group>"; };
 		05A9950C21235AB3006CDBEA /* northernFlickerCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = northernFlickerCall2.wav; sourceTree = "<group>"; };
 		05A9950D21235AB3006CDBEA /* americanKestrelCall2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = americanKestrelCall2.wav; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				B0FEA9EF20D186F30061599D /* Bird.swift */,
+				0569DB5F2125D98D002E5377 /* BirdBank.swift */,
 				B0C48D2920925D8700A655AB /* Sounds */,
 			);
 			path = Model;
@@ -322,6 +325,7 @@
 			files = (
 				B02FA39A20D4477E00172A65 /* BirdDetailDataViewController.swift in Sources */,
 				B0C0136220C8585900784C3B /* BirdsViewController.swift in Sources */,
+				0569DB602125D98D002E5377 /* BirdBank.swift in Sources */,
 				B02FA39820D4477400172A65 /* BirdDetailViewController.swift in Sources */,
 				05CB8F742091165100AB7E13 /* AppDelegate.swift in Sources */,
 				B0FEA9F020D186F30061599D /* Bird.swift in Sources */,

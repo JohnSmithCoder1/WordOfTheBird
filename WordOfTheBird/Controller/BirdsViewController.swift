@@ -15,7 +15,8 @@ class BirdTableViewCell: UITableViewCell {
 
 class BirdsViewController: UITableViewController, UISearchResultsUpdating {
     
-    var filteredBirds = birdArray
+    let birdBank = BirdBank()
+    var filteredBirds = [Bird]()
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredBirds.count
@@ -32,6 +33,7 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundView = UIImageView(image: UIImage(named: "background.png"))
+        filteredBirds = birdBank.birds
         setupSearchController()
     }
     
@@ -60,7 +62,7 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredBirds = searchText.isEmpty ? birdArray : birdArray.filter { (item: Bird) -> Bool in
+        filteredBirds = searchText.isEmpty ? birdBank.birds : birdBank.birds.filter { (item: Bird) -> Bool in
             return item.name.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
         }
         tableView.reloadData()
@@ -72,11 +74,11 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         if let searchText = searchController.searchBar.text, !searchText.isEmpty {
-            filteredBirds = birdArray.filter { bird in
+            filteredBirds = birdBank.birds.filter { bird in
                 return bird.name.lowercased().contains(searchText.lowercased())
             }
         } else {
-            filteredBirds = birdArray
+            filteredBirds = birdBank.birds
         }
         tableView.reloadData()
     }
