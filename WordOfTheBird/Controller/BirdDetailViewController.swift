@@ -12,8 +12,7 @@ class BirdDetailViewController: UIViewController {
     @IBOutlet weak var birdImageView: UIImageView!
     
     var birdImage: UIImage?
-    var call1: String?
-    var call2: String?
+    var calls = [String]()
     var wikiLink: String?
     
     override func viewDidLoad() {
@@ -24,8 +23,7 @@ class BirdDetailViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "embedSegue" {
             if let destinationTable = segue.destination as? BirdDetailDataViewController {
-                destinationTable.call1 = call1
-                destinationTable.call2 = call2
+                destinationTable.calls = calls
                 destinationTable.wikiLink = wikiLink
             }
         }
