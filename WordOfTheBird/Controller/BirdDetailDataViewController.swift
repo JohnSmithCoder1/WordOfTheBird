@@ -12,7 +12,7 @@ import AVFoundation
 class BirdDetailDataViewController: UITableViewController {
     var audioPlayer: AVAudioPlayer?
     var calls = [String]()
-    var wikiLink: String?
+    var infoLink: String?
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
@@ -35,8 +35,8 @@ class BirdDetailDataViewController: UITableViewController {
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
                 audioPlayer?.stop()
-                if let wikiLink = wikiLink {
-                    UIApplication.shared.open(URL(string: wikiLink)!)
+                if let infoLink = infoLink {
+                    UIApplication.shared.open(URL(string: infoLink)!)
                 }
             }
         }
