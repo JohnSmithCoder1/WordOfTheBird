@@ -13,7 +13,8 @@ class BirdDetailViewController: UIViewController {
     
     var birdImage: UIImage?
     var calls = [String]()
-    var wikiLink: String?
+    var infoLink: String?
+    var mapLink: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,8 @@ class BirdDetailViewController: UIViewController {
         if segue.identifier == "embedSegue" {
             if let destinationTable = segue.destination as? BirdDetailDataViewController {
                 destinationTable.calls = calls
-                destinationTable.wikiLink = wikiLink
+                destinationTable.infoLink = infoLink
+                destinationTable.mapLink = mapLink
             }
         }
     }

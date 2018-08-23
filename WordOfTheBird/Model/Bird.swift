@@ -13,13 +13,15 @@ class Bird {
     var imageSmall: String
     var imageLarge: String
     var calls: [String]
-    var wikiLink: String
+    var infoLink: String
+    var mapLink: String
     
-    init(name: String, imageSmall: String, imageLarge: String, calls: [String], wikiLink: String) {
+    init(name: String, imageSmall: String, imageLarge: String, calls: [String], infoLink: String, mapLink: String) {
         self.name = name
         self.imageSmall = imageSmall
         self.imageLarge = imageLarge
         self.calls = calls
-        self.wikiLink = wikiLink
+        self.infoLink = infoLink
+        self.mapLink = mapLink
     }
 }
