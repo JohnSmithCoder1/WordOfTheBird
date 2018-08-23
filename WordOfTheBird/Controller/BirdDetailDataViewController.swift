@@ -13,6 +13,7 @@ class BirdDetailDataViewController: UITableViewController {
     var audioPlayer: AVAudioPlayer?
     var calls = [String]()
     var infoLink: String?
+    var mapLink: String?
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
@@ -24,7 +25,7 @@ class BirdDetailDataViewController: UITableViewController {
         if section == 0 {
             rowCount = calls.count
         } else if section == 1 {
-            rowCount = 1
+            rowCount = 2
         }
         return rowCount
     }
@@ -37,6 +38,12 @@ class BirdDetailDataViewController: UITableViewController {
                 audioPlayer?.stop()
                 if let infoLink = infoLink {
                     UIApplication.shared.open(URL(string: infoLink)!)
+                }
+            }
+            if indexPath.row == 1 {
+                audioPlayer?.stop()
+                if let mapLink = mapLink {
+                    UIApplication.shared.open(URL(string: mapLink)!)
                 }
             }
         }
