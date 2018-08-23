@@ -14,7 +14,6 @@ class BirdTableViewCell: UITableViewCell {
 }
 
 class BirdsViewController: UITableViewController, UISearchResultsUpdating {
-    
     let birdBank = BirdBank()
     var filteredBirds = [Bird]()
     
