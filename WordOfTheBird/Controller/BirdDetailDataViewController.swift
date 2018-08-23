@@ -10,7 +10,6 @@ import UIKit
 import AVFoundation
 
 class BirdDetailDataViewController: UITableViewController {
-    
     var audioPlayer: AVAudioPlayer?
     var calls = [String]()
     var wikiLink: String?
