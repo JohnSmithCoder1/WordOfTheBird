@@ -42,7 +42,7 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
             destination.title = filteredBirds[row].name
             destination.birdImage = UIImage(named: filteredBirds[row].imageLarge)
             destination.calls = filteredBirds[row].calls
-            destination.wikiLink = filteredBirds[row].wikiLink
+            destination.wikiLink = filteredBirds[row].infoLink
         }
     }
     
