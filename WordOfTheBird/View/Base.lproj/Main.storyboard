@@ -188,32 +188,60 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="vNO-63-PwR">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="App By:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpw-vg-imB">
-                                <rect key="frame" x="30" y="145" width="315" height="492"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pT1-ag-77Y">
+                                <rect key="frame" x="20" y="84" width="335" height="563"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Programming by:
+Derek Little and John Smith
+
+Design by:
+Derek Little, Jessica Little, and John Smith
+
+Art by:
+Jessica Little
+
+Bird ecology and range maps by:
+Macaulay Library at the Cornell Lab of Ornithology
+
+Bird call recordings by:
+Wilbur L. Hershberger/Macaulay Library at the Cornell Lab of Ornithology (American goldfinch, downy woodpecker, northern cardinal, northern flicker, red headed woodpecker)
+
+Steven R. Pantle/Macaulay Library at the Cornell Lab of Ornithology (American kestrel)
+
+Gerrit Vyn/Macaulay Library at the Cornell Lab of Ornithology (bald eagle)
+
+Michael J. Andersen/Macaulay Library at the Cornell Lab of Ornithology (barred owl, peregrine falcon)
+
+Jay W. McGowan/Macaulay Library at the Cornell Lab of Ornithology (black capped chickadee)
+
+Randolph S. Little/Macaulay Library at the Cornell Lab of Ornithology (blue jay)
+
+George B. Reynard/Macaulay Library at the Cornell Lab of Ornithology (great horned owl)
+
+Kevin J. Colver/Macaulay Library at the Cornell Lab of Ornithology (hairy woodpecker)
+
+Geoffrey A. Keller/Macaulay Library at the Cornell Lab of Ornithology (house finch)
+
+Bob McGuire/Macaulay Library at the Cornell Lab of Ornithology (pileated woodpecker, tufted titmouse)
+
+Gregory F. Budney/Macaulay Library at the Cornell Lab of Ornithology (red bellied woodpecker)
+
+David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed hawk)</mutableString>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBw-bX-PcF">
-                                <rect key="frame" x="160" y="94" width="55" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vBw-bX-PcF" firstAttribute="centerX" secondItem="dWZ-3a-uu2" secondAttribute="centerX" id="590-ws-A2C"/>
-                            <constraint firstItem="5eC-oT-1BN" firstAttribute="bottom" secondItem="Vpw-vg-imB" secondAttribute="bottom" constant="30" id="CNr-DW-5Qi"/>
-                            <constraint firstItem="Vpw-vg-imB" firstAttribute="leading" secondItem="5eC-oT-1BN" secondAttribute="leading" constant="30" id="HD3-bQ-hl2"/>
-                            <constraint firstItem="5eC-oT-1BN" firstAttribute="trailing" secondItem="Vpw-vg-imB" secondAttribute="trailing" constant="30" id="HVe-RO-fj9"/>
+                            <constraint firstItem="pT1-ag-77Y" firstAttribute="leading" secondItem="5eC-oT-1BN" secondAttribute="leading" constant="20" id="0rg-Pq-aab"/>
+                            <constraint firstItem="5eC-oT-1BN" firstAttribute="trailing" secondItem="pT1-ag-77Y" secondAttribute="trailing" constant="20" id="1hJ-a5-4hY"/>
+                            <constraint firstItem="pT1-ag-77Y" firstAttribute="top" secondItem="5eC-oT-1BN" secondAttribute="top" constant="20" id="LDb-Yx-EYR"/>
                             <constraint firstItem="vNO-63-PwR" firstAttribute="trailing" secondItem="5eC-oT-1BN" secondAttribute="trailing" id="OfA-JK-7NX"/>
                             <constraint firstItem="vNO-63-PwR" firstAttribute="leading" secondItem="5eC-oT-1BN" secondAttribute="leading" id="aNp-sV-sjo"/>
+                            <constraint firstItem="5eC-oT-1BN" firstAttribute="bottom" secondItem="pT1-ag-77Y" secondAttribute="bottom" constant="20" id="bZC-41-1fj"/>
                             <constraint firstItem="vNO-63-PwR" firstAttribute="bottom" secondItem="5eC-oT-1BN" secondAttribute="bottom" id="bsc-ac-KfC"/>
-                            <constraint firstItem="Vpw-vg-imB" firstAttribute="top" secondItem="vBw-bX-PcF" secondAttribute="bottom" constant="30" id="o9s-vR-Frp"/>
                             <constraint firstItem="vNO-63-PwR" firstAttribute="top" secondItem="5eC-oT-1BN" secondAttribute="top" id="sOi-d1-DQ1"/>
-                            <constraint firstItem="Vpw-vg-imB" firstAttribute="top" secondItem="vBw-bX-PcF" secondAttribute="bottom" constant="30" id="yq6-5d-O4c"/>
-                            <constraint firstItem="vBw-bX-PcF" firstAttribute="top" secondItem="5eC-oT-1BN" secondAttribute="top" constant="30" id="zuw-jg-RgW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5eC-oT-1BN"/>
                     </view>
@@ -338,7 +366,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="  Bird Information" id="A3w-Il-Cxg" userLabel="Bird Information">
+                            <tableViewSection headerTitle="  Bird Data" id="A3w-Il-Cxg" userLabel="Bird Information">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="HaO-qO-xr7">
                                         <rect key="frame" x="0.0" y="243.5" width="375" height="44"/>
@@ -347,7 +375,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cornell Lab of Ornithology Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMP-Qh-oby">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ecology" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMP-Qh-oby">
                                                     <rect key="frame" x="20" y="11" width="301" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -372,7 +400,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cornell Lab of Ornithology Maps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAV-cs-Djm">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Range Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAV-cs-Djm">
                                                     <rect key="frame" x="20" y="11" width="301" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
