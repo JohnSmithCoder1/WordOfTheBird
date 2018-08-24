@@ -188,7 +188,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="vNO-63-PwR">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pT1-ag-77Y">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pT1-ag-77Y">
                                 <rect key="frame" x="20" y="84" width="335" height="563"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <mutableString key="text">Programming by:
@@ -240,7 +240,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                             <constraint firstItem="vNO-63-PwR" firstAttribute="trailing" secondItem="5eC-oT-1BN" secondAttribute="trailing" id="OfA-JK-7NX"/>
                             <constraint firstItem="vNO-63-PwR" firstAttribute="leading" secondItem="5eC-oT-1BN" secondAttribute="leading" id="aNp-sV-sjo"/>
                             <constraint firstItem="5eC-oT-1BN" firstAttribute="bottom" secondItem="pT1-ag-77Y" secondAttribute="bottom" constant="20" id="bZC-41-1fj"/>
-                            <constraint firstItem="vNO-63-PwR" firstAttribute="bottom" secondItem="5eC-oT-1BN" secondAttribute="bottom" id="bsc-ac-KfC"/>
+                            <constraint firstItem="vNO-63-PwR" firstAttribute="bottom" secondItem="dWZ-3a-uu2" secondAttribute="bottom" id="bsc-ac-KfC"/>
                             <constraint firstItem="vNO-63-PwR" firstAttribute="top" secondItem="5eC-oT-1BN" secondAttribute="top" id="sOi-d1-DQ1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5eC-oT-1BN"/>
