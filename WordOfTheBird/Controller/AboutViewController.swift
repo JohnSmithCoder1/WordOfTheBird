@@ -9,5 +9,10 @@
 import UIKit
 
 class AboutViewController: UIViewController {
+    @IBOutlet weak var aboutText: UITextView!
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        aboutText.setContentOffset(CGPoint.zero, animated: false)
+    }
 }

@@ -180,18 +180,18 @@
         <!--About-->
         <scene sceneID="dv6-to-I5S">
             <objects>
-                <viewController title="About" id="q8p-VQ-YJM" customClass="AboutViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" title="About" automaticallyAdjustsScrollViewInsets="NO" id="q8p-VQ-YJM" customClass="AboutViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dWZ-3a-uu2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="vNO-63-PwR">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pT1-ag-77Y">
-                                <rect key="frame" x="20" y="84" width="335" height="563"/>
+                                <rect key="frame" x="20" y="20" width="335" height="563"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Programming by:
+                                <string key="text">Programming by:
 Derek Little and John Smith
 
 Design by:
@@ -226,7 +226,7 @@ Bob McGuire/Macaulay Library at the Cornell Lab of Ornithology (pileated woodpec
 
 Gregory F. Budney/Macaulay Library at the Cornell Lab of Ornithology (red bellied woodpecker)
 
-David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed hawk)</mutableString>
+David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed hawk)</string>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -245,6 +245,10 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5eC-oT-1BN"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="aboutText" destination="pT1-ag-77Y" id="rbt-95-P1f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1tZ-61-0is" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
