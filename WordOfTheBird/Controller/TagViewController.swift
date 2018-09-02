@@ -26,7 +26,13 @@ class TagViewController: UIViewController, CLLocationManagerDelegate {
             showLocationServicesDeniedAlert()
             return
         }
-        startLocationManager()
+        if updatingLocation {
+            stopLocationManager()
+        } else {
+            location = nil
+            lastLocationError = nil
+            startLocationManager()
+        }
         updateLabels()
     }
     
@@ -34,6 +40,10 @@ class TagViewController: UIViewController, CLLocationManagerDelegate {
     var location: CLLocation?
     var updatingLocation = false
     var lastLocationError: Error?
+    let geocoder = CLGeocoder()
+    var placemark: CLPlacemark?
+    var performingReverseGeocoding = false
+    var lastGeocodingError: Error?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +85,7 @@ class TagViewController: UIViewController, CLLocationManagerDelegate {
             }
             messageLabel.text = statusMessage
         }
+        configureGetButton()
     }
     
     func startLocationManager() {
@@ -109,8 +120,53 @@ class TagViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let newLocation = locations.last!
         print("didUpdateLocations \(newLocation)")
-        location = newLocation
-        lastLocationError = nil
+        if newLocation.timestamp.timeIntervalSinceNow < -5 {
+            return
+        }
+        
+        if newLocation.horizontalAccuracy < 0 {
+            return
+        }
+        
+        if location == nil || location!.horizontalAccuracy > newLocation.horizontalAccuracy {
+            lastLocationError = nil
+            location = newLocation
+        }
+        
+        if newLocation.horizontalAccuracy <= locationManager.desiredAccuracy {
+            print("*** We're done!")
+            stopLocationManager()
+        }
         updateLabels()
+        if !performingReverseGeocoding {
+            print("*** Going to geocode")
+            performingReverseGeocoding = true
+            geocoder.reverseGeocodeLocation(newLocation, completionHandler: {
+                placemarks, error in
+                self.lastGeocodingError = error
+                if error == nil, let p = placemarks, !p.isEmpty {
+                    self.placemark = p.last!
+                } else {
+                    self.placemark = nil
+                }
+                self.performingReverseGeocoding = false
+                self.updateLabels()
+            })
+        }
+    }
+    
+    func configureGetButton() {
+        if updatingLocation {
+            getButton.setTitle("Stop", for: .normal)
+        } else {
+            getButton.setTitle("Get My Location", for: .normal)
+        }
     }
 }
+
+
+
+
+
+
+
