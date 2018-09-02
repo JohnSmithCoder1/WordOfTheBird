@@ -91,7 +91,7 @@
         <scene sceneID="Ybf-oq-lX5">
             <objects>
                 <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="QGn-9o-Lrb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Birds" id="V5t-Zu-zHt"/>
+                    <tabBarItem key="tabBarItem" title="Birds" selectedImage="Pin" id="V5t-Zu-zHt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XMk-iI-Kf0">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -118,11 +118,72 @@
                     <view key="view" contentMode="scaleToFill" id="32u-if-4JU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="tgc-oV-dIN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEG-bn-fBQ" userLabel="Latitude:">
+                                <rect key="frame" x="60" y="125" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Latitude goes here)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9D-Ua-tbx" userLabel="(Latitude goes here)">
+                                <rect key="frame" x="177" y="125" width="156" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWX-E5-veY" userLabel="Longitude:">
+                                <rect key="frame" x="60" y="175" width="82" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Message Label)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvu-uZ-FqN" userLabel="(Message Label)">
+                                <rect key="frame" x="0.0" y="82" width="375" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fS4-hE-dRl">
+                                <rect key="frame" x="131" y="550" width="112" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Get My Location"/>
+                                <connections>
+                                    <action selector="getLocation" destination="My2-VN-07b" eventType="touchUpInside" id="jrL-Fj-IYU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwN-DG-GE5">
+                                <rect key="frame" x="131" y="389" width="112" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Tag Location"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Longitude goes here)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HD4-aK-Ywb" userLabel="(Longitude goes here)">
+                                <rect key="frame" x="163" y="175" width="170" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ZnH-sa-QOi"/>
                     </view>
                     <navigationItem key="navigationItem" id="TEn-zu-M4x"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="getButton" destination="fS4-hE-dRl" id="3Ur-CK-TKP"/>
+                        <outlet property="latitudeLabel" destination="b9D-Ua-tbx" id="Rde-a2-bzo"/>
+                        <outlet property="longitudeLabel" destination="HD4-aK-Ywb" id="JIB-3u-1Fp"/>
+                        <outlet property="messageLabel" destination="xvu-uZ-FqN" id="4Wm-mK-giI"/>
+                        <outlet property="tagButton" destination="hwN-DG-GE5" id="UzN-4o-1yX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bw5-Ue-7Fa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,7 +244,7 @@
         <scene sceneID="0G9-NJ-Do7">
             <objects>
                 <navigationController id="x0t-N7-jnq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Locations" id="PDV-2Q-n6Z"/>
+                    <tabBarItem key="tabBarItem" title="Locations" selectedImage="Locations" id="PDV-2Q-n6Z"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hmG-ju-zUv">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -526,7 +587,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
         <scene sceneID="F5K-X9-hUx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WjK-Bp-ihv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tag" id="vUy-t0-Mus"/>
+                    <tabBarItem key="tabBarItem" title="Tag" selectedImage="Tag" id="vUy-t0-Mus"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K14-1L-IoM">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -545,7 +606,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
         <scene sceneID="Fme-PR-dbL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iD1-ac-rK8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" id="72t-bb-ZAV"/>
+                    <tabBarItem key="tabBarItem" title="Map" selectedImage="Map" id="72t-bb-ZAV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yez-EI-KgU">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -582,6 +643,10 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
         </scene>
     </scenes>
     <resources>
+        <image name="Locations" width="30" height="30"/>
+        <image name="Map" width="30" height="30"/>
+        <image name="Pin" width="24" height="24"/>
+        <image name="Tag" width="30" height="30"/>
         <image name="background" width="270" height="480"/>
         <image name="backgroundTop" width="270" height="240"/>
         <image name="musicNote" width="32" height="32"/>

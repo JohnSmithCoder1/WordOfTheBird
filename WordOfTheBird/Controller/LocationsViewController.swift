@@ -9,5 +9,8 @@
 import UIKit
 
 class LocationsViewController: UITableViewController {
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.backgroundView = UIImageView(image: UIImage(named: "background.png"))
+    }
 }
