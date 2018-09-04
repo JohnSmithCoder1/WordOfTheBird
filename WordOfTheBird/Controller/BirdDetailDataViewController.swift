@@ -34,14 +34,13 @@ class BirdDetailDataViewController: UITableViewController {
         if indexPath.section == 0 {
             playSound(forObject: calls[indexPath.row])
         } else if indexPath.section == 1 {
+            audioPlayer?.stop()
             if indexPath.row == 0 {
-                audioPlayer?.stop()
                 if let infoLink = infoLink {
                     UIApplication.shared.open(URL(string: infoLink)!)
                 }
             }
             if indexPath.row == 1 {
-                audioPlayer?.stop()
                 if let mapLink = mapLink {
                     UIApplication.shared.open(URL(string: mapLink)!)
                 }
