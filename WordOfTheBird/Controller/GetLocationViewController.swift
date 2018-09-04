@@ -10,6 +10,16 @@ import UIKit
 import CoreLocation
 
 class GetLocationViewController: UIViewController, CLLocationManagerDelegate {
+    let locationManager = CLLocationManager()
+    var location: CLLocation?
+    var updatingLocation = false
+    var lastLocationError: Error?
+    let geocoder = CLGeocoder()
+    var placemark: CLPlacemark?
+    var performingReverseGeocoding = false
+    var lastGeocodingError: Error?
+    var timer: Timer?
+    
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
@@ -40,19 +50,18 @@ class GetLocationViewController: UIViewController, CLLocationManagerDelegate {
         updateLabels()
     }
     
-    let locationManager = CLLocationManager()
-    var location: CLLocation?
-    var updatingLocation = false
-    var lastLocationError: Error?
-    let geocoder = CLGeocoder()
-    var placemark: CLPlacemark?
-    var performingReverseGeocoding = false
-    var lastGeocodingError: Error?
-    var timer: Timer?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateLabels()
+    }
+    
+    // MARK:- Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "TagLocation" {
+            let controller = segue.destination as! LocationDetailsViewController
+            controller.coordinate = location!.coordinate
+            controller.placemark = placemark
+        }
     }
 
     func showLocationServicesDeniedAlert() {
