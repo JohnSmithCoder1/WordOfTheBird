@@ -9,12 +9,14 @@
 import UIKit
 import CoreLocation
 
-class TagViewController: UIViewController, CLLocationManagerDelegate {
+class GetLocationViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var tagButton: UIButton!
     @IBOutlet weak var getButton: UIButton!
+    
     
     @IBAction func getLocation() {
         let authStatus = CLLocationManager.authorizationStatus()
@@ -31,6 +33,8 @@ class TagViewController: UIViewController, CLLocationManagerDelegate {
         } else {
             location = nil
             lastLocationError = nil
+            placemark = nil
+            lastGeocodingError = nil
             startLocationManager()
         }
         updateLabels()
@@ -44,12 +48,13 @@ class TagViewController: UIViewController, CLLocationManagerDelegate {
     var placemark: CLPlacemark?
     var performingReverseGeocoding = false
     var lastGeocodingError: Error?
+    var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateLabels()
     }
-    
+
     func showLocationServicesDeniedAlert() {
         let alert = UIAlertController(title: "Location Services Disabled",
                                       message: "Please enable location services for Word of the Bird in Settings.",
@@ -65,6 +70,14 @@ class TagViewController: UIViewController, CLLocationManagerDelegate {
             longitudeLabel.text = String(format: "%.8f", location.coordinate.longitude)
             tagButton.isHidden = false
             messageLabel.text = ""
+            addressLabel.text = ""
+            if let placemark = placemark {
+                addressLabel.text = string(from: placemark)
+            } else if performingReverseGeocoding {
+                addressLabel.text = "Searching for Address..."
+            } else if lastGeocodingError != nil {
+                addressLabel.text = "No Address Found"
+            }
         } else {
             latitudeLabel.text = ""
             longitudeLabel.text = ""
@@ -94,6 +107,7 @@ class TagViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
             updatingLocation = true
+            timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(didTimeOut), userInfo: nil, repeats: false)
         }
     }
     
@@ -102,6 +116,40 @@ class TagViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.stopUpdatingLocation()
             locationManager.delegate = nil
             updatingLocation = false
+            if let timer = timer {
+                timer.invalidate()
+            }
+        }
+    }
+    
+    func string(from placemark: CLPlacemark) -> String {
+        var line1 = ""
+        if let s = placemark.subThoroughfare {
+            line1 += s + " "
+        }
+        if let s = placemark.thoroughfare {
+            line1 += s
+        }
+        
+        var line2 = ""
+        if let s = placemark.locality {
+            line2 += s + " "
+        }
+        if let s = placemark.administrativeArea {
+            line2 += s + " "
+        }
+        if let s = placemark.postalCode {
+            line2 += s
+        }
+        return line1 + "\n" + line2
+    }
+    
+    @objc func didTimeOut() {
+        print("*** Time out")
+        if location == nil {
+            stopLocationManager()
+            lastLocationError = NSError(domain: "WordoftheBirdErrorDomain", code: 1, userInfo: nil)
+            updateLabels()
         }
     }
     
@@ -120,41 +168,60 @@ class TagViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let newLocation = locations.last!
         print("didUpdateLocations \(newLocation)")
+        
         if newLocation.timestamp.timeIntervalSinceNow < -5 {
             return
         }
-        
         if newLocation.horizontalAccuracy < 0 {
             return
         }
-        
+        var distance = CLLocationDistance(Double.greatestFiniteMagnitude)
+        if let location = location {
+            distance = newLocation.distance(from: location)
+        }
         if location == nil || location!.horizontalAccuracy > newLocation.horizontalAccuracy {
             lastLocationError = nil
             location = newLocation
-        }
-        
-        if newLocation.horizontalAccuracy <= locationManager.desiredAccuracy {
-            print("*** We're done!")
-            stopLocationManager()
-        }
-        updateLabels()
-        if !performingReverseGeocoding {
-            print("*** Going to geocode")
-            performingReverseGeocoding = true
-            geocoder.reverseGeocodeLocation(newLocation, completionHandler: {
-                placemarks, error in
-                self.lastGeocodingError = error
-                if error == nil, let p = placemarks, !p.isEmpty {
-                    self.placemark = p.last!
-                } else {
-                    self.placemark = nil
+            if newLocation.horizontalAccuracy <= locationManager.desiredAccuracy {
+                print("*** We're done!")
+                stopLocationManager()
+                if distance > 0 {
+                    performingReverseGeocoding = false
                 }
-                self.performingReverseGeocoding = false
-                self.updateLabels()
-            })
+            }
+            updateLabels()
+            if !performingReverseGeocoding {
+                print("*** Going to geocode")
+                
+                performingReverseGeocoding = true
+                
+                geocoder.reverseGeocodeLocation(newLocation, completionHandler: {
+                    placemarks, error in
+                    self.lastGeocodingError = error
+                    if error == nil, let p = placemarks, !p.isEmpty {
+                        if self.placemark == nil {
+                            print("FIRST TIME!")
+//                            self.playSoundEffect()
+                        }
+                        self.placemark = p.last!
+                    } else {
+                        self.placemark = nil
+                    }
+                    
+                    self.performingReverseGeocoding = false
+                    self.updateLabels()
+                })
+            }
+        } else if distance < 1 {
+            let timeInterval = newLocation.timestamp.timeIntervalSince(location!.timestamp)
+            if timeInterval > 10 {
+                print("*** Force done!")
+                stopLocationManager()
+                updateLabels()
+            }
         }
     }
-    
+
     func configureGetButton() {
         if updatingLocation {
             getButton.setTitle("Stop", for: .normal)
