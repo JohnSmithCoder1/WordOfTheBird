@@ -19,7 +19,7 @@ private let dateFormatter: DateFormatter = {
 class LocationDetailsViewController: UITableViewController {
     var coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     var placemark: CLPlacemark?
-    var categoryName = "No Category"
+    var categoryName = "Other Birds"
     
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var categoryLabel: UILabel!

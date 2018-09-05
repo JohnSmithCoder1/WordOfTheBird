@@ -12,6 +12,7 @@ class CategoryPickerViewController: UITableViewController {
     var selectedCategoryName = ""
     
     let categories = [
+        "Other Birds",
         "American Goldfinch",
         "American Kestrel",
         "Bald Eagle",
@@ -30,7 +31,7 @@ class CategoryPickerViewController: UITableViewController {
         "Red-headed Woodpecker",
         "Red-tailed Hawk",
         "Tufted Titmouse",
-        "Other Birds"]
+        ]
     
     var selectedIndexPath = IndexPath()
     
