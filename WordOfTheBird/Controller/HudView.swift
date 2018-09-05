@@ -48,7 +48,6 @@ class HudView: UIView {
         text.draw(at: textPoint, withAttributes: attribs)
     }
     
-    // MARK: - Public methods
     func show(animated: Bool) {
         if animated {
             alpha = 0
@@ -58,6 +57,11 @@ class HudView: UIView {
                 self.transform = CGAffineTransform.identity
             }, completion: nil)
         }
+    }
+    
+    func hide() {
+        superview?.isUserInteractionEnabled = true
+        removeFromSuperview()
     }
 }
 
