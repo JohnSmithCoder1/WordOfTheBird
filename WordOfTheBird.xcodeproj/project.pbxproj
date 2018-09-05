@@ -16,6 +16,7 @@
 		05CB8F792091165100AB7E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8F772091165100AB7E13 /* Main.storyboard */; };
 		05CB8F7B2091165200AB7E13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8F7A2091165200AB7E13 /* Assets.xcassets */; };
 		05CB8F7E2091165200AB7E13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8F7C2091165200AB7E13 /* LaunchScreen.storyboard */; };
+		05D1232E214059AE0036D19D /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D1232D214059AE0036D19D /* HudView.swift */; };
 		B02FA39820D4477400172A65 /* BirdDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02FA39720D4477400172A65 /* BirdDetailViewController.swift */; };
 		B02FA39A20D4477E00172A65 /* BirdDetailDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02FA39920D4477E00172A65 /* BirdDetailDataViewController.swift */; };
 		B03A9F30212F1C3100CA84E6 /* northernFlickerCall1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B03A9F13212F1C2F00CA84E6 /* northernFlickerCall1.wav */; };
@@ -65,6 +66,7 @@
 		05CB8F7A2091165200AB7E13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05CB8F7D2091165200AB7E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05CB8F7F2091165200AB7E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05D1232D214059AE0036D19D /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		B02FA39720D4477400172A65 /* BirdDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdDetailViewController.swift; sourceTree = "<group>"; };
 		B02FA39920D4477E00172A65 /* BirdDetailDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdDetailDataViewController.swift; sourceTree = "<group>"; };
 		B03A9F13212F1C2F00CA84E6 /* northernFlickerCall1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = northernFlickerCall1.wav; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				0546C67E212FA42300F6126A /* AboutViewController.swift */,
 				055F7AD4213C61FD0076F513 /* GetLocationViewController.swift */,
 				B087659D213F101800AA178F /* LocationDetailsViewController.swift */,
+				05D1232D214059AE0036D19D /* HudView.swift */,
 				B087659F213F1E2300AA178F /* CategoryPickerViewController.swift */,
 				055F7AD6213C64120076F513 /* LocationsViewController.swift */,
 			);
@@ -330,6 +333,7 @@
 				055F7AD5213C61FD0076F513 /* GetLocationViewController.swift in Sources */,
 				05CB8F742091165100AB7E13 /* AppDelegate.swift in Sources */,
 				B0FEA9F020D186F30061599D /* Bird.swift in Sources */,
+				05D1232E214059AE0036D19D /* HudView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
