@@ -19,6 +19,8 @@
 		05D1232E214059AE0036D19D /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D1232D214059AE0036D19D /* HudView.swift */; };
 		05D12330214062460036D19D /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D1232F214062460036D19D /* Functions.swift */; };
 		05D12333214063580036D19D /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05D12331214063580036D19D /* DataModel.xcdatamodeld */; };
+		05D12336214064900036D19D /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D12334214064900036D19D /* Location+CoreDataClass.swift */; };
+		05D12337214064900036D19D /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D12335214064900036D19D /* Location+CoreDataProperties.swift */; };
 		B02FA39820D4477400172A65 /* BirdDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02FA39720D4477400172A65 /* BirdDetailViewController.swift */; };
 		B02FA39A20D4477E00172A65 /* BirdDetailDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02FA39920D4477E00172A65 /* BirdDetailDataViewController.swift */; };
 		B03A9F30212F1C3100CA84E6 /* northernFlickerCall1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B03A9F13212F1C2F00CA84E6 /* northernFlickerCall1.wav */; };
@@ -71,6 +73,8 @@
 		05D1232D214059AE0036D19D /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		05D1232F214062460036D19D /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		05D12332214063580036D19D /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		05D12334214064900036D19D /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		05D12335214064900036D19D /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B02FA39720D4477400172A65 /* BirdDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdDetailViewController.swift; sourceTree = "<group>"; };
 		B02FA39920D4477E00172A65 /* BirdDetailDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdDetailDataViewController.swift; sourceTree = "<group>"; };
 		B03A9F13212F1C2F00CA84E6 /* northernFlickerCall1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = northernFlickerCall1.wav; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 		05CB8F672091165100AB7E13 = {
 			isa = PBXGroup;
 			children = (
+				05D12334214064900036D19D /* Location+CoreDataClass.swift */,
+				05D12335214064900036D19D /* Location+CoreDataProperties.swift */,
 				05CB8F722091165100AB7E13 /* WordOfTheBird */,
 				05CB8F712091165100AB7E13 /* Products */,
 			);
@@ -331,6 +337,7 @@
 				055F7AD7213C64120076F513 /* LocationsViewController.swift in Sources */,
 				B02FA39A20D4477E00172A65 /* BirdDetailDataViewController.swift in Sources */,
 				05D12330214062460036D19D /* Functions.swift in Sources */,
+				05D12336214064900036D19D /* Location+CoreDataClass.swift in Sources */,
 				B0C0136220C8585900784C3B /* BirdsViewController.swift in Sources */,
 				B087659E213F101800AA178F /* LocationDetailsViewController.swift in Sources */,
 				05D12333214063580036D19D /* DataModel.xcdatamodeld in Sources */,
@@ -338,6 +345,7 @@
 				0569DB602125D98D002E5377 /* BirdBank.swift in Sources */,
 				0546C67F212FA42300F6126A /* AboutViewController.swift in Sources */,
 				B02FA39820D4477400172A65 /* BirdDetailViewController.swift in Sources */,
+				05D12337214064900036D19D /* Location+CoreDataProperties.swift in Sources */,
 				055F7AD5213C61FD0076F513 /* GetLocationViewController.swift in Sources */,
 				05CB8F742091165100AB7E13 /* AppDelegate.swift in Sources */,
 				B0FEA9F020D186F30061599D /* Bird.swift in Sources */,
