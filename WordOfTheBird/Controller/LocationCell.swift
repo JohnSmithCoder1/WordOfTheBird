@@ -30,7 +30,7 @@ class LocationCell: UITableViewCell {
         } else {
             descriptionLabel.text = location.locationDescription
         }
-        
+        print("\(descriptionLabel.text)")
         if let placemark = location.placemark {
             var text = ""
             if let s = placemark.subThoroughfare {

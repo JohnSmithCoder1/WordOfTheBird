@@ -26,25 +26,6 @@ class LocationsViewController: UITableViewController {
         let location = locations[indexPath.row]
         cell.configure(for: location)
         
-        let descriptionLabel = cell.viewWithTag(100) as! UILabel
-        descriptionLabel.text = location.locationDescription
-        
-        let addressLabel = cell.viewWithTag(101) as! UILabel
-        if let placemark = location.placemark {
-            var text = ""
-            if let s = placemark.subThoroughfare {
-                text += s + " "
-            }
-            if let s = placemark.thoroughfare {
-                text += s + ", "
-            }
-            if let s = placemark.locality {
-                text += s
-            }
-            addressLabel.text = text
-        } else {
-            addressLabel.text = ""
-        }
         return cell
     }
     
