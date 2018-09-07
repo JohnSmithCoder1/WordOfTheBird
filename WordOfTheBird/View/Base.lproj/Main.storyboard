@@ -492,6 +492,7 @@
                                 <connections>
                                     <outlet property="addressLabel" destination="Wd5-1h-dkF" id="akS-kf-8rc"/>
                                     <outlet property="descriptionLabel" destination="skg-Ii-I56" id="UWh-Be-ezt"/>
+                                    <segue destination="6uE-nD-31L" kind="show" identifier="EditLocation" id="BKX-1q-dIW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -941,4 +942,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
         <image name="backgroundTop" width="270" height="240"/>
         <image name="musicNote" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="BKX-1q-dIW"/>
+    </inferredMetricsTieBreakers>
 </document>
