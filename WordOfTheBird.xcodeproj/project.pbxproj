@@ -54,6 +54,7 @@
 		B03A9F4C212F1C3100CA84E6 /* peregrineFalconCall1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B03A9F2F212F1C3100CA84E6 /* peregrineFalconCall1.wav */; };
 		B087659E213F101800AA178F /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087659D213F101800AA178F /* LocationDetailsViewController.swift */; };
 		B08765A0213F1E2300AA178F /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087659F213F1E2300AA178F /* CategoryPickerViewController.swift */; };
+		B08765A22142F21000AA178F /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08765A12142F21000AA178F /* LocationCell.swift */; };
 		B0C0136220C8585900784C3B /* BirdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0136120C8585900784C3B /* BirdsViewController.swift */; };
 		B0FEA9F020D186F30061599D /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FEA9EF20D186F30061599D /* Bird.swift */; };
 /* End PBXBuildFile section */
@@ -108,6 +109,7 @@
 		B03A9F2F212F1C3100CA84E6 /* peregrineFalconCall1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = peregrineFalconCall1.wav; sourceTree = "<group>"; };
 		B087659D213F101800AA178F /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		B087659F213F1E2300AA178F /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
+		B08765A12142F21000AA178F /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		B0C0136120C8585900784C3B /* BirdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdsViewController.swift; sourceTree = "<group>"; };
 		B0FEA9EF20D186F30061599D /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +168,7 @@
 		05FF76E3209CF47F001F678C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B08765A12142F21000AA178F /* LocationCell.swift */,
 				B0C0136120C8585900784C3B /* BirdsViewController.swift */,
 				B02FA39720D4477400172A65 /* BirdDetailViewController.swift */,
 				055F7AD8213C647B0076F513 /* MapViewController.swift */,
@@ -339,6 +342,7 @@
 				05D12330214062460036D19D /* Functions.swift in Sources */,
 				05D12336214064900036D19D /* Location+CoreDataClass.swift in Sources */,
 				B0C0136220C8585900784C3B /* BirdsViewController.swift in Sources */,
+				B08765A22142F21000AA178F /* LocationCell.swift in Sources */,
 				B087659E213F101800AA178F /* LocationDetailsViewController.swift in Sources */,
 				05D12333214063580036D19D /* DataModel.xcdatamodeld in Sources */,
 				055F7AD9213C647B0076F513 /* MapViewController.swift in Sources */,

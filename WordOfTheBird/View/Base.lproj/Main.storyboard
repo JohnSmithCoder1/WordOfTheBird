@@ -457,22 +457,42 @@
             </objects>
             <point key="canvasLocation" x="3803" y="763"/>
         </scene>
-        <!--Locations View Controller-->
+        <!--Locations-->
         <scene sceneID="zqW-Lr-EXP">
             <objects>
                 <tableViewController id="n5K-8Z-GtX" customClass="LocationsViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dn1-uJ-oos">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dn1-uJ-oos">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Bi3-tK-bCg">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="57" id="Bi3-tK-bCg" customClass="LocationCell" customModule="WordOfTheBird" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bi3-tK-bCg" id="POm-ix-LAQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="56.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skg-Ii-I56">
+                                            <rect key="frame" x="16" y="0.0" width="288" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wd5-1h-dkF">
+                                            <rect key="frame" x="16" y="25" width="288" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addressLabel" destination="Wd5-1h-dkF" id="akS-kf-8rc"/>
+                                    <outlet property="descriptionLabel" destination="skg-Ii-I56" id="UWh-Be-ezt"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -480,11 +500,11 @@
                             <outlet property="delegate" destination="n5K-8Z-GtX" id="5iE-P2-A8b"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="mE5-1G-trN"/>
+                    <navigationItem key="navigationItem" title="Locations" id="mE5-1G-trN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cT4-ce-jBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2372" y="1475"/>
+            <point key="canvasLocation" x="2371.875" y="1474.6478873239437"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="bUb-vE-MmF">
