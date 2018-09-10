@@ -280,6 +280,10 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wd1-gh-dlY">
+                                                    <rect key="frame" x="-30" y="-28" width="240" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -404,10 +408,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addPhotoLabel" destination="y6d-L8-q8k" id="ue9-1D-U56"/>
                         <outlet property="addressLabel" destination="hOb-fV-Xkc" id="IHG-Tn-5mq"/>
                         <outlet property="categoryLabel" destination="kad-t7-bL5" id="znd-0o-E0k"/>
                         <outlet property="dateLabel" destination="iAS-7O-Ic9" id="rIf-zL-A6h"/>
                         <outlet property="descriptionTextView" destination="koa-Is-K3Z" id="kYd-rw-46j"/>
+                        <outlet property="imageView" destination="Wd1-gh-dlY" id="S4S-8V-8HV"/>
                         <outlet property="latitudeLabel" destination="06Z-8h-Vdy" id="r7R-1d-ovf"/>
                         <outlet property="longitudeLabel" destination="qK2-X5-dgb" id="mED-OT-kyp"/>
                     </connections>
@@ -507,7 +513,7 @@
             </objects>
             <point key="canvasLocation" x="2371.875" y="1474.6478873239437"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Map-->
         <scene sceneID="bUb-vE-MmF">
             <objects>
                 <viewController id="k88-tV-ETd" customClass="MapViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
@@ -515,19 +521,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XJh-wZ-LSe">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XJh-wZ-LSe">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="WJd-Ln-mJe"/>
                     </view>
-                    <navigationItem key="navigationItem" id="r8z-zn-zt1"/>
+                    <navigationItem key="navigationItem" title="Map" id="r8z-zn-zt1">
+                        <barButtonItem key="leftBarButtonItem" title="Locations" id="5lJ-tZ-jZF">
+                            <connections>
+                                <action selector="showLocations" destination="k88-tV-ETd" id="SbY-dF-DqO"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="User" id="DKC-xn-BCY">
+                            <connections>
+                                <action selector="showUser" destination="k88-tV-ETd" id="emR-8r-Q3E"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="XJh-wZ-LSe" id="qku-1N-HOD"/>
+                        <segue destination="6uE-nD-31L" kind="show" identifier="EditLocation" id="50H-LU-PiF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzA-Bp-U3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2372" y="2190"/>
+            <point key="canvasLocation" x="2371.875" y="2189.7887323943664"/>
         </scene>
         <!--Locations-->
         <scene sceneID="0G9-NJ-Do7">

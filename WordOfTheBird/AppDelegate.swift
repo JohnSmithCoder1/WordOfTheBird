@@ -40,6 +40,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let controller2 = navController.viewControllers.first as! LocationsViewController
             controller2.managedObjectContext = managedObjectContext
             
+            navController = tabViewControllers[3] as! UINavigationController
+            let controller4 = navController.viewControllers.first as! MapViewController
+            controller4.managedObjectContext = managedObjectContext
+            
             print(applicationDocumentsDirectory)
         }
         listenForFatalCoreDataNotifications()
