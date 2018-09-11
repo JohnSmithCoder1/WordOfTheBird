@@ -56,6 +56,7 @@
 		B087659E213F101800AA178F /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087659D213F101800AA178F /* LocationDetailsViewController.swift */; };
 		B08765A0213F1E2300AA178F /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087659F213F1E2300AA178F /* CategoryPickerViewController.swift */; };
 		B08765A22142F21000AA178F /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08765A12142F21000AA178F /* LocationCell.swift */; };
+		B08AFD4821482A6600E73A58 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08AFD4721482A6600E73A58 /* TabBarViewController.swift */; };
 		B0C0136220C8585900784C3B /* BirdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0136120C8585900784C3B /* BirdsViewController.swift */; };
 		B0FEA9F020D186F30061599D /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FEA9EF20D186F30061599D /* Bird.swift */; };
 /* End PBXBuildFile section */
@@ -112,6 +113,7 @@
 		B087659D213F101800AA178F /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		B087659F213F1E2300AA178F /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 		B08765A12142F21000AA178F /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		B08AFD4721482A6600E73A58 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B0C0136120C8585900784C3B /* BirdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdsViewController.swift; sourceTree = "<group>"; };
 		B0FEA9EF20D186F30061599D /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,8 +142,6 @@
 		05CB8F672091165100AB7E13 = {
 			isa = PBXGroup;
 			children = (
-				05D12334214064900036D19D /* Location+CoreDataClass.swift */,
-				05D12335214064900036D19D /* Location+CoreDataProperties.swift */,
 				05CB8F722091165100AB7E13 /* WordOfTheBird */,
 				05CB8F712091165100AB7E13 /* Products */,
 			);
@@ -179,6 +179,7 @@
 				B087659D213F101800AA178F /* LocationDetailsViewController.swift */,
 				055F7AD6213C64120076F513 /* LocationsViewController.swift */,
 				055F7AD8213C647B0076F513 /* MapViewController.swift */,
+				B08AFD4721482A6600E73A58 /* TabBarViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -227,9 +228,11 @@
 				05D12331214063580036D19D /* DataModel.xcdatamodeld */,
 				05D1232F214062460036D19D /* Functions.swift */,
 				05D1232D214059AE0036D19D /* HudView.swift */,
+				05D12334214064900036D19D /* Location+CoreDataClass.swift */,
+				05D12335214064900036D19D /* Location+CoreDataProperties.swift */,
 				B08765A12142F21000AA178F /* LocationCell.swift */,
-				05621DA42146FA1900989922 /* UIImage+Resize.swift */,
 				B0C48D2920925D8700A655AB /* Sounds */,
+				05621DA42146FA1900989922 /* UIImage+Resize.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				0569DB602125D98D002E5377 /* BirdBank.swift in Sources */,
 				0546C67F212FA42300F6126A /* AboutViewController.swift in Sources */,
 				B02FA39820D4477400172A65 /* BirdDetailViewController.swift in Sources */,
+				B08AFD4821482A6600E73A58 /* TabBarViewController.swift in Sources */,
 				05D12337214064900036D19D /* Location+CoreDataProperties.swift in Sources */,
 				05621DA52146FA1900989922 /* UIImage+Resize.swift in Sources */,
 				055F7AD5213C61FD0076F513 /* GetLocationViewController.swift in Sources */,
