@@ -70,7 +70,7 @@ class GetLocationViewController: UIViewController, CLLocationManagerDelegate {
     // MARK:- Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "TagLocation" {
-            let controller = segue.destination as! LocationDetailsViewController
+            let controller = segue.destination as! TagLocationViewController
             controller.coordinate = location!.coordinate
             controller.placemark = placemark
             controller.managedObjectContext = managedObjectContext

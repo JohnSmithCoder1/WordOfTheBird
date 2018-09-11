@@ -53,7 +53,7 @@
 		B03A9F4A212F1C3100CA84E6 /* blackCappedChickadeeCall1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B03A9F2D212F1C3100CA84E6 /* blackCappedChickadeeCall1.wav */; };
 		B03A9F4B212F1C3100CA84E6 /* greatHornedOwlCall1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B03A9F2E212F1C3100CA84E6 /* greatHornedOwlCall1.wav */; };
 		B03A9F4C212F1C3100CA84E6 /* peregrineFalconCall1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B03A9F2F212F1C3100CA84E6 /* peregrineFalconCall1.wav */; };
-		B087659E213F101800AA178F /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087659D213F101800AA178F /* LocationDetailsViewController.swift */; };
+		B087659E213F101800AA178F /* TagLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087659D213F101800AA178F /* TagLocationViewController.swift */; };
 		B08765A0213F1E2300AA178F /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087659F213F1E2300AA178F /* CategoryPickerViewController.swift */; };
 		B08765A22142F21000AA178F /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08765A12142F21000AA178F /* LocationCell.swift */; };
 		B08AFD4821482A6600E73A58 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08AFD4721482A6600E73A58 /* TabBarViewController.swift */; };
@@ -110,7 +110,7 @@
 		B03A9F2D212F1C3100CA84E6 /* blackCappedChickadeeCall1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blackCappedChickadeeCall1.wav; sourceTree = "<group>"; };
 		B03A9F2E212F1C3100CA84E6 /* greatHornedOwlCall1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = greatHornedOwlCall1.wav; sourceTree = "<group>"; };
 		B03A9F2F212F1C3100CA84E6 /* peregrineFalconCall1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = peregrineFalconCall1.wav; sourceTree = "<group>"; };
-		B087659D213F101800AA178F /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
+		B087659D213F101800AA178F /* TagLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLocationViewController.swift; sourceTree = "<group>"; };
 		B087659F213F1E2300AA178F /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 		B08765A12142F21000AA178F /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		B08AFD4721482A6600E73A58 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 				B0C0136120C8585900784C3B /* BirdsViewController.swift */,
 				B087659F213F1E2300AA178F /* CategoryPickerViewController.swift */,
 				055F7AD4213C61FD0076F513 /* GetLocationViewController.swift */,
-				B087659D213F101800AA178F /* LocationDetailsViewController.swift */,
+				B087659D213F101800AA178F /* TagLocationViewController.swift */,
 				055F7AD6213C64120076F513 /* LocationsViewController.swift */,
 				055F7AD8213C647B0076F513 /* MapViewController.swift */,
 				B08AFD4721482A6600E73A58 /* TabBarViewController.swift */,
@@ -349,7 +349,7 @@
 				05D12336214064900036D19D /* Location+CoreDataClass.swift in Sources */,
 				B0C0136220C8585900784C3B /* BirdsViewController.swift in Sources */,
 				B08765A22142F21000AA178F /* LocationCell.swift in Sources */,
-				B087659E213F101800AA178F /* LocationDetailsViewController.swift in Sources */,
+				B087659E213F101800AA178F /* TagLocationViewController.swift in Sources */,
 				05D12333214063580036D19D /* DataModel.xcdatamodeld in Sources */,
 				055F7AD9213C647B0076F513 /* MapViewController.swift in Sources */,
 				0569DB602125D98D002E5377 /* BirdBank.swift in Sources */,

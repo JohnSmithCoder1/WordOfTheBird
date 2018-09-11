@@ -91,7 +91,7 @@ class MapViewController: UIViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EditLocation" {
-            let controller = segue.destination as! LocationDetailsViewController
+            let controller = segue.destination as! TagLocationViewController
             controller.managedObjectContext = managedObjectContext
             let button = sender as! UIButton
             let location = locations[button.tag]

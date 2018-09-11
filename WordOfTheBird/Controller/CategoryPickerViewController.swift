@@ -37,6 +37,7 @@ class CategoryPickerViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.backgroundView = UIImageView(image: UIImage(named: "background.png"))
         
         for i in 0..<categories.count {
             if categories[i] == selectedCategoryName {
