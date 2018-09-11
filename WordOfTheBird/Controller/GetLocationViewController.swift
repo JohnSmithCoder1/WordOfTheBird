@@ -54,6 +54,16 @@ class GetLocationViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getButton.layer.cornerRadius = 4.5
+        getButton.layer.shadowColor = UIColor.black.cgColor
+        getButton.layer.shadowOffset = CGSize(width: 4.5, height: 4.5)
+        getButton.layer.shadowRadius = 4.5
+        getButton.layer.shadowOpacity = 0.75
+        tagButton.layer.cornerRadius = 4.5
+        tagButton.layer.shadowColor = UIColor.black.cgColor
+        tagButton.layer.shadowOffset = CGSize(width: 4.5, height: 4.5)
+        tagButton.layer.shadowRadius = 4.5
+        tagButton.layer.shadowOpacity = 0.75
         updateLabels()
     }
     
