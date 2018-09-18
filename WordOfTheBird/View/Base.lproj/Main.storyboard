@@ -645,7 +645,7 @@
         <scene sceneID="0G9-NJ-Do7">
             <objects>
                 <navigationController title="Locations Navigation" id="x0t-N7-jnq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Locations" image="Locations" selectedImage="Locations" id="PDV-2Q-n6Z"/>
+                    <tabBarItem key="tabBarItem" title="Pin List" image="Locations" selectedImage="Locations" id="PDV-2Q-n6Z"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hmG-ju-zUv">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -993,7 +993,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
         <scene sceneID="F5K-X9-hUx">
             <objects>
                 <navigationController title="Tag Navigation" automaticallyAdjustsScrollViewInsets="NO" id="WjK-Bp-ihv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tag" image="Tag" selectedImage="Tag" id="vUy-t0-Mus"/>
+                    <tabBarItem key="tabBarItem" title="Pin Location" image="Pin" selectedImage="Pin" id="vUy-t0-Mus"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K14-1L-IoM">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -1017,7 +1017,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
         <scene sceneID="Fme-PR-dbL">
             <objects>
                 <navigationController title="Map Navigation" automaticallyAdjustsScrollViewInsets="NO" id="iD1-ac-rK8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" image="Map" selectedImage="Map" id="72t-bb-ZAV"/>
+                    <tabBarItem key="tabBarItem" title="Pin Map" image="Map" selectedImage="Map" id="72t-bb-ZAV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yez-EI-KgU">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -1065,7 +1065,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
     <resources>
         <image name="Locations" width="30" height="30"/>
         <image name="Map" width="30" height="30"/>
-        <image name="Tag" width="30" height="30"/>
+        <image name="Pin" width="24" height="24"/>
         <image name="background" width="270" height="480"/>
         <image name="backgroundTop" width="270" height="240"/>
         <image name="birdTabButton32" width="32" height="32"/>
