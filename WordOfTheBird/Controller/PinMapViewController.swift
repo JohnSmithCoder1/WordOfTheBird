@@ -147,9 +147,3 @@ extension PinMapViewController: MKMapViewDelegate {
         return annotationView
     }
 }
-
-
-
-
-
-
