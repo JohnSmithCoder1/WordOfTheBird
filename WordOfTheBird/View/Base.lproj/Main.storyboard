@@ -674,6 +674,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="5HQ-Br-8S4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSC-hl-8Pn" userLabel="Bottom Container View">
                                 <rect key="frame" x="0.0" y="299" width="320" height="269"/>
                                 <connections>
@@ -683,9 +687,6 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KBQ-ka-MKa" userLabel="Top Container View">
                                 <rect key="frame" x="0.0" y="64" width="320" height="235"/>
                             </containerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="backgroundTop" translatesAutoresizingMaskIntoConstraints="NO" id="Rvn-pG-mLh">
-                                <rect key="frame" x="0.0" y="64" width="320" height="235"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uzX-sc-jey" userLabel="backgroundTopWhite">
                                 <rect key="frame" x="0.0" y="64" width="320" height="235"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
@@ -701,12 +702,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Y6x-FZ-1M8" firstAttribute="centerX" secondItem="28h-fy-3eS" secondAttribute="centerX" id="1Be-9H-vtd"/>
-                            <constraint firstItem="WSC-hl-8Pn" firstAttribute="top" secondItem="Rvn-pG-mLh" secondAttribute="bottom" id="27B-Wk-1PL"/>
                             <constraint firstItem="WSC-hl-8Pn" firstAttribute="top" secondItem="Y6x-FZ-1M8" secondAttribute="bottom" id="2Dy-ge-0U4"/>
-                            <constraint firstItem="Rvn-pG-mLh" firstAttribute="leading" secondItem="3XM-eA-f6x" secondAttribute="leading" id="3z4-Ce-jtu"/>
                             <constraint firstItem="WSC-hl-8Pn" firstAttribute="leading" secondItem="3XM-eA-f6x" secondAttribute="leading" id="4QQ-eC-pwl"/>
                             <constraint firstItem="uzX-sc-jey" firstAttribute="leading" secondItem="KBQ-ka-MKa" secondAttribute="leading" id="6cK-1p-rPU"/>
-                            <constraint firstItem="Rvn-pG-mLh" firstAttribute="top" secondItem="3XM-eA-f6x" secondAttribute="top" id="BwG-ej-62q"/>
                             <constraint firstItem="uzX-sc-jey" firstAttribute="trailing" secondItem="KBQ-ka-MKa" secondAttribute="trailing" id="Ff0-tL-3fn"/>
                             <constraint firstItem="WSC-hl-8Pn" firstAttribute="top" secondItem="uzX-sc-jey" secondAttribute="bottom" id="Fmp-lm-YjG"/>
                             <constraint firstItem="WSC-hl-8Pn" firstAttribute="trailing" secondItem="3XM-eA-f6x" secondAttribute="trailing" id="QK3-IU-C0Z"/>
@@ -714,7 +712,6 @@
                             <constraint firstItem="KBQ-ka-MKa" firstAttribute="trailing" secondItem="3XM-eA-f6x" secondAttribute="trailing" id="X16-os-e1y"/>
                             <constraint firstItem="WSC-hl-8Pn" firstAttribute="top" secondItem="KBQ-ka-MKa" secondAttribute="bottom" id="az9-Or-jtL"/>
                             <constraint firstItem="KBQ-ka-MKa" firstAttribute="top" secondItem="3XM-eA-f6x" secondAttribute="top" id="cFe-38-gwc"/>
-                            <constraint firstItem="Rvn-pG-mLh" firstAttribute="trailing" secondItem="3XM-eA-f6x" secondAttribute="trailing" id="e07-55-hd0"/>
                             <constraint firstItem="WSC-hl-8Pn" firstAttribute="height" secondItem="KBQ-ka-MKa" secondAttribute="height" constant="34" id="hsp-P8-ais"/>
                             <constraint firstItem="uzX-sc-jey" firstAttribute="top" secondItem="KBQ-ka-MKa" secondAttribute="top" id="jlD-Q3-iQ9"/>
                             <constraint firstItem="WSC-hl-8Pn" firstAttribute="bottom" secondItem="28h-fy-3eS" secondAttribute="bottom" id="rq3-RL-tQR"/>
@@ -731,7 +728,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I2D-Rg-bHm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3116" y="27.436281859070466"/>
+            <point key="canvasLocation" x="3114.375" y="26.408450704225352"/>
         </scene>
         <!--About-->
         <scene sceneID="dv6-to-I5S">
@@ -1070,7 +1067,6 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
         <image name="Map" width="30" height="30"/>
         <image name="Pin" width="24" height="24"/>
         <image name="background" width="270" height="480"/>
-        <image name="backgroundTop" width="270" height="240"/>
         <image name="birdTabButton32" width="32" height="32"/>
         <image name="musicNote" width="32" height="32"/>
         <namedColor name="Color">
