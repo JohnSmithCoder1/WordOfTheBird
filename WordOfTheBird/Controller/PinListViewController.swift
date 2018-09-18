@@ -61,7 +61,7 @@ class PinListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.white
-        view.tintColor = UIColor.green
+        view.tintColor = UIColor(red: 79/255, green: 143/255, blue: 0/255, alpha: 0.8)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
