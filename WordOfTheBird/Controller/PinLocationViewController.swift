@@ -25,11 +25,13 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
-    @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var tagButton: UIButton!
-    @IBOutlet weak var getButton: UIButton!
     @IBOutlet weak var latitudeTextLabel: UILabel!
     @IBOutlet weak var longitudeTextLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var nearestAddressTextLabel: UILabel!
+    @IBOutlet weak var tagButton: UIButton!
+    @IBOutlet weak var getButton: UIButton!
+    
     
     
     @IBAction func getLocation() {
@@ -94,6 +96,8 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             longitudeLabel.text = String(format: "%.8f", location.coordinate.longitude)
             latitudeTextLabel.isHidden = false
             longitudeTextLabel.isHidden = false
+            nearestAddressTextLabel.isHidden = false
+            addressLabel.isHidden = false
             tagButton.isHidden = false
             messageLabel.text = ""
             addressLabel.text = ""
@@ -109,6 +113,8 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             longitudeLabel.text = ""
             latitudeTextLabel.isHidden = true
             longitudeTextLabel.isHidden = true
+            nearestAddressTextLabel.isHidden = true
+            addressLabel.isHidden = true
             tagButton.isHidden = true
             let statusMessage: String
             if let error = lastLocationError as NSError? {

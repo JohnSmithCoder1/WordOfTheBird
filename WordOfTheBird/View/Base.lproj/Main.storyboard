@@ -245,6 +245,7 @@
                         <outlet property="longitudeLabel" destination="HD4-aK-Ywb" id="JIB-3u-1Fp"/>
                         <outlet property="longitudeTextLabel" destination="iWX-E5-veY" id="TyL-59-QhY"/>
                         <outlet property="messageLabel" destination="xvu-uZ-FqN" id="4Wm-mK-giI"/>
+                        <outlet property="nearestAddressTextLabel" destination="qDP-gQ-fI2" id="LfJ-zL-BH7"/>
                         <outlet property="tagButton" destination="hwN-DG-GE5" id="UzN-4o-1yX"/>
                     </connections>
                 </viewController>
