@@ -250,7 +250,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         let spinnerTag = 1000
         
         if updatingLocation {
-//            getButton.widthAnchor = CGSize(width: 108, height: 38)
             getButton.setTitle("Stop", for: .normal)
             
             if view.viewWithTag(spinnerTag) == nil {
