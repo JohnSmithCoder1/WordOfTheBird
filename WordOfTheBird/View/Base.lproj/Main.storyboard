@@ -637,6 +637,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="XJh-wZ-LSe" id="qku-1N-HOD"/>
+                        <outlet property="segmentedControl" destination="Q9b-SW-fvh" id="KPv-wP-rla"/>
                         <segue destination="6uE-nD-31L" kind="show" identifier="EditLocation" id="50H-LU-PiF"/>
                     </connections>
                 </viewController>
@@ -1074,6 +1075,6 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KWq-gh-aGh"/>
+        <segue reference="50H-LU-PiF"/>
     </inferredMetricsTieBreakers>
 </document>

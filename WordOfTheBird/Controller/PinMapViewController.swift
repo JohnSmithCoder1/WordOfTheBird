@@ -12,6 +12,7 @@ import CoreData
 
 class PinMapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     @IBAction func segmentedControlAction(sender: UISegmentedControl!) {
         switch (sender.selectedSegmentIndex) {
@@ -38,6 +39,12 @@ class PinMapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        segmentedControl.layer.cornerRadius = 5
+        segmentedControl.layer.borderColor = UIColor.white.cgColor
+        segmentedControl.layer.borderWidth = 1.0
+        segmentedControl.layer.masksToBounds = true
+        
         updateLocations()
         if !locations.isEmpty {
             showLocations()
