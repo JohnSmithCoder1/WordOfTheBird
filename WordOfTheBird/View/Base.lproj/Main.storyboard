@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DSj-do-r7g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DSj-do-r7g">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--BirdSearch-->
+        <!--Birds-->
         <scene sceneID="1fP-xg-JN2">
             <objects>
-                <tableViewController title="Bird Search" id="srd-D6-GbF" userLabel="BirdSearch" customClass="BirdsViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Birds" id="srd-D6-GbF" customClass="BirdsViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4s9-Qa-djW" userLabel="songbirdTableView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,14 +30,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="4Zj-3W-FaN" userLabel="birdImage">
-                                            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="63.5" height="63.5"/>
                                             <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="4Zj-3W-FaN" secondAttribute="height" multiplier="1:1" id="fNd-X1-3V8"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1F-5N-eTh" userLabel="birdLabel">
-                                            <rect key="frame" x="72" y="0.0" width="204" height="63.5"/>
+                                            <rect key="frame" x="71.5" y="0.0" width="204.5" height="63.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -87,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="2372" y="27.436281859070466"/>
         </scene>
-        <!--Birds-->
+        <!--Birds Navigation-->
         <scene sceneID="Ybf-oq-lX5">
             <objects>
-                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="QGn-9o-Lrb" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" title="Birds Navigation" automaticallyAdjustsScrollViewInsets="NO" id="QGn-9o-Lrb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Birds" image="Pin" selectedImage="Pin" id="V5t-Zu-zHt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XMk-iI-Kf0">
@@ -621,10 +619,10 @@
             </objects>
             <point key="canvasLocation" x="2371.875" y="2189.7887323943664"/>
         </scene>
-        <!--Locations-->
+        <!--Locations Navigation-->
         <scene sceneID="0G9-NJ-Do7">
             <objects>
-                <navigationController id="x0t-N7-jnq" sceneMemberID="viewController">
+                <navigationController title="Locations Navigation" id="x0t-N7-jnq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Locations" image="Locations" selectedImage="Locations" id="PDV-2Q-n6Z"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hmG-ju-zUv">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -668,7 +666,7 @@
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="400" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Y6x-FZ-1M8">
-                                <rect key="frame" x="43" y="64" width="235" height="235"/>
+                                <rect key="frame" x="42.5" y="64" width="235" height="235"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Y6x-FZ-1M8" secondAttribute="height" multiplier="1:1" id="e13-lo-8Vs"/>
@@ -969,10 +967,10 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
             </objects>
             <point key="canvasLocation" x="3804" y="183.95802098950526"/>
         </scene>
-        <!--Tag-->
+        <!--Tag Navigation-->
         <scene sceneID="F5K-X9-hUx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WjK-Bp-ihv" sceneMemberID="viewController">
+                <navigationController title="Tag Navigation" automaticallyAdjustsScrollViewInsets="NO" id="WjK-Bp-ihv" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Tag" image="Tag" selectedImage="Tag" id="vUy-t0-Mus"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K14-1L-IoM">
@@ -993,10 +991,10 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
             </objects>
             <point key="canvasLocation" x="1668" y="763.26836581709154"/>
         </scene>
-        <!--Map-->
+        <!--Map Navigation-->
         <scene sceneID="Fme-PR-dbL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iD1-ac-rK8" sceneMemberID="viewController">
+                <navigationController title="Map Navigation" automaticallyAdjustsScrollViewInsets="NO" id="iD1-ac-rK8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="Map" selectedImage="Map" id="72t-bb-ZAV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yez-EI-KgU">
@@ -1052,6 +1050,6 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
         <image name="musicNote" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KWq-gh-aGh"/>
+        <segue reference="BKX-1q-dIW"/>
     </inferredMetricsTieBreakers>
 </document>
