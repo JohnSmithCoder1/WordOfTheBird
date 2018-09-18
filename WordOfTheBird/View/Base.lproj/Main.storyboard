@@ -89,7 +89,7 @@
         <scene sceneID="Ybf-oq-lX5">
             <objects>
                 <navigationController storyboardIdentifier="NavigationController" title="Birds Navigation" automaticallyAdjustsScrollViewInsets="NO" id="QGn-9o-Lrb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Birds" image="Pin" selectedImage="Pin" id="V5t-Zu-zHt"/>
+                    <tabBarItem key="tabBarItem" title="Birds" image="birdTabButton32" selectedImage="birdTabButton32" id="V5t-Zu-zHt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XMk-iI-Kf0">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -543,22 +543,23 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skg-Ii-I56">
-                                            <rect key="frame" x="76" y="0.0" width="230" height="21"/>
+                                            <rect key="frame" x="70" y="0.0" width="230" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wd5-1h-dkF">
-                                            <rect key="frame" x="76" y="25" width="230" height="17"/>
+                                            <rect key="frame" x="70" y="25" width="230" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hXh-U7-bfR">
-                                            <rect key="frame" x="16" y="2" width="52" height="52"/>
+                                            <rect key="frame" x="10" y="2" width="52" height="52"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -1046,13 +1047,13 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
     <resources>
         <image name="Locations" width="30" height="30"/>
         <image name="Map" width="30" height="30"/>
-        <image name="Pin" width="24" height="24"/>
         <image name="Tag" width="30" height="30"/>
         <image name="background" width="270" height="480"/>
         <image name="backgroundTop" width="270" height="240"/>
+        <image name="birdTabButton32" width="32" height="32"/>
         <image name="musicNote" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="50H-LU-PiF"/>
+        <segue reference="BKX-1q-dIW"/>
     </inferredMetricsTieBreakers>
 </document>
