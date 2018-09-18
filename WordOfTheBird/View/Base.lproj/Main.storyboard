@@ -621,7 +621,7 @@
                         <viewLayoutGuide key="safeArea" id="WJd-Ln-mJe"/>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="r8z-zn-zt1">
-                        <barButtonItem key="leftBarButtonItem" title="Locations" id="5lJ-tZ-jZF">
+                        <barButtonItem key="leftBarButtonItem" title="All Pins" id="5lJ-tZ-jZF">
                             <connections>
                                 <action selector="showLocations" destination="k88-tV-ETd" id="SbY-dF-DqO"/>
                             </connections>
