@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreData
 
-class MapViewController: UIViewController {
+class PinMapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     @IBAction func segmentedControlAction(sender: UISegmentedControl!) {
@@ -102,7 +102,7 @@ class MapViewController: UIViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EditLocation" {
-            let controller = segue.destination as! TagLocationViewController
+            let controller = segue.destination as! PinDetailsViewController
             controller.managedObjectContext = managedObjectContext
             let button = sender as! UIButton
             let location = locations[button.tag]
@@ -111,7 +111,7 @@ class MapViewController: UIViewController {
     }
 }
 
-extension MapViewController: MKMapViewDelegate {
+extension PinMapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard annotation is Location else {
             return nil

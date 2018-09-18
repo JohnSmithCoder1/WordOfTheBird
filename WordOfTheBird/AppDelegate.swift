@@ -33,15 +33,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let tabViewControllers = tabController.viewControllers {
             var navController = tabViewControllers[1] as! UINavigationController
             
-            let controller1 = navController.viewControllers.first as! GetLocationViewController
+            let controller1 = navController.viewControllers.first as! PinLocationViewController
             controller1.managedObjectContext = managedObjectContext
             navController = tabViewControllers[2] as! UINavigationController
             
-            let controller2 = navController.viewControllers.first as! LocationsViewController
+            let controller2 = navController.viewControllers.first as! PinListViewController
             controller2.managedObjectContext = managedObjectContext
             
             navController = tabViewControllers[3] as! UINavigationController
-            let controller4 = navController.viewControllers.first as! MapViewController
+            let controller4 = navController.viewControllers.first as! PinMapViewController
             controller4.managedObjectContext = managedObjectContext
             
             print(applicationDocumentsDirectory)

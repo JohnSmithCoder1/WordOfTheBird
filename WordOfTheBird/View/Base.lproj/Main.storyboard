@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="1668" y="28.335832083958024"/>
         </scene>
-        <!--Get Location-->
+        <!--Pin Location-->
         <scene sceneID="aj9-TM-neb">
             <objects>
-                <viewController id="My2-VN-07b" customClass="GetLocationViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Pin Location" id="My2-VN-07b" customClass="PinLocationViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="32u-if-4JU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,7 +235,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZnH-sa-QOi"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Get Location" id="TEn-zu-M4x"/>
+                    <navigationItem key="navigationItem" title="Pin Location" id="TEn-zu-M4x"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addressLabel" destination="Lau-s0-FzO" id="4pM-Vk-5D6"/>
@@ -250,10 +250,10 @@
             </objects>
             <point key="canvasLocation" x="2371.875" y="761.61971830985919"/>
         </scene>
-        <!--Tag Location-->
+        <!--Pin Details-->
         <scene sceneID="WiD-Sa-n0B">
             <objects>
-                <tableViewController id="6uE-nD-31L" customClass="TagLocationViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Pin Details" id="6uE-nD-31L" customClass="PinDetailsViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="PYo-ay-Qee">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -455,7 +455,7 @@
                             <outlet property="delegate" destination="6uE-nD-31L" id="YTB-y9-hXy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tag Location" id="xf0-jT-VwC">
+                    <navigationItem key="navigationItem" title="Pin Details" id="xf0-jT-VwC">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hGI-sM-GB5">
                             <connections>
                                 <action selector="cancel" destination="6uE-nD-31L" id="Opt-6m-m7W"/>
@@ -525,10 +525,10 @@
             </objects>
             <point key="canvasLocation" x="3803" y="763"/>
         </scene>
-        <!--Locations-->
+        <!--Pin List-->
         <scene sceneID="zqW-Lr-EXP">
             <objects>
-                <tableViewController id="n5K-8Z-GtX" customClass="LocationsViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Pin List" id="n5K-8Z-GtX" customClass="PinListViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dn1-uJ-oos">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -578,16 +578,16 @@
                             <outlet property="delegate" destination="n5K-8Z-GtX" id="5iE-P2-A8b"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Locations" id="mE5-1G-trN"/>
+                    <navigationItem key="navigationItem" title="Pin List" id="mE5-1G-trN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cT4-ce-jBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2371.875" y="1474.6478873239437"/>
         </scene>
-        <!--Map-->
+        <!--Pin Map-->
         <scene sceneID="bUb-vE-MmF">
             <objects>
-                <viewController id="k88-tV-ETd" customClass="MapViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Pin Map" id="k88-tV-ETd" customClass="PinMapViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7iv-DL-Fif">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -620,7 +620,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WJd-Ln-mJe"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Map" id="r8z-zn-zt1">
+                    <navigationItem key="navigationItem" title="Pin Map" id="r8z-zn-zt1">
                         <barButtonItem key="leftBarButtonItem" title="All Pins" id="5lJ-tZ-jZF">
                             <connections>
                                 <action selector="showLocations" destination="k88-tV-ETd" id="SbY-dF-DqO"/>

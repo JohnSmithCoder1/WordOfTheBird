@@ -17,7 +17,7 @@ private let dateFormatter: DateFormatter = {
     return formatter
 }()
 
-class TagLocationViewController: UITableViewController {
+class PinDetailsViewController: UITableViewController {
     var coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     var placemark: CLPlacemark?
     var categoryName = "Other Birds"
@@ -247,7 +247,7 @@ class TagLocationViewController: UITableViewController {
 }
 
 // move this into class body
-extension TagLocationViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension PinDetailsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func takePhotoWithCamera() {
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .camera

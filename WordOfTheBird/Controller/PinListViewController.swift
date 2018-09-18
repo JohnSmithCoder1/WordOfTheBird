@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import CoreLocation
 
-class LocationsViewController: UITableViewController {
+class PinListViewController: UITableViewController {
     
     var managedObjectContext: NSManagedObjectContext!
     lazy var fetchedResultsController: NSFetchedResultsController<Location> = {
@@ -76,7 +76,7 @@ class LocationsViewController: UITableViewController {
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EditLocation" {
-            let controller = segue.destination as! TagLocationViewController
+            let controller = segue.destination as! PinDetailsViewController
             controller.managedObjectContext = managedObjectContext
             
             if let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
@@ -107,7 +107,7 @@ class LocationsViewController: UITableViewController {
 }
 
 //MARK:- NSFetchedResultsController Delegate Extension
-extension LocationsViewController: NSFetchedResultsControllerDelegate {
+extension PinListViewController: NSFetchedResultsControllerDelegate {
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         print("*** controllerWillChangeContent")
         tableView.beginUpdates()

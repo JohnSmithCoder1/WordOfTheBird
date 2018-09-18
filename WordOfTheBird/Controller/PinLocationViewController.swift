@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import CoreData
 
-class GetLocationViewController: UIViewController, CLLocationManagerDelegate {
+class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     var location: CLLocation?
     var updatingLocation = false
@@ -70,7 +70,7 @@ class GetLocationViewController: UIViewController, CLLocationManagerDelegate {
     // MARK:- Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "TagLocation" {
-            let controller = segue.destination as! TagLocationViewController
+            let controller = segue.destination as! PinDetailsViewController
             controller.coordinate = location!.coordinate
             controller.placemark = placemark
             controller.managedObjectContext = managedObjectContext
