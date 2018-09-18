@@ -13,6 +13,17 @@ import CoreData
 class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBAction func segmentedControlAction(sender: UISegmentedControl!) {
+        switch (sender.selectedSegmentIndex) {
+        case 0:
+            mapView.mapType = .standard
+        case 1:
+            mapView.mapType = .satellite
+        default:
+            mapView.mapType = .hybrid
+        }
+    }
+    
     var managedObjectContext: NSManagedObjectContext! {
         didSet {
             NotificationCenter.default.addObserver(forName: Notification.Name.NSManagedObjectContextObjectsDidChange, object: managedObjectContext, queue: OperationQueue.main) { notification in
