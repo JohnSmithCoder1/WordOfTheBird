@@ -28,6 +28,8 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var tagButton: UIButton!
     @IBOutlet weak var getButton: UIButton!
+    @IBOutlet weak var latitudeTextLabel: UILabel!
+    @IBOutlet weak var longitudeTextLabel: UILabel!
     
     
     @IBAction func getLocation() {
@@ -90,6 +92,8 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         if let location = location {
             latitudeLabel.text = String(format: "%.8f", location.coordinate.latitude)
             longitudeLabel.text = String(format: "%.8f", location.coordinate.longitude)
+            latitudeTextLabel.isHidden = false
+            longitudeTextLabel.isHidden = false
             tagButton.isHidden = false
             messageLabel.text = ""
             addressLabel.text = ""
@@ -103,6 +107,8 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         } else {
             latitudeLabel.text = ""
             longitudeLabel.text = ""
+            latitudeTextLabel.isHidden = true
+            longitudeTextLabel.isHidden = true
             tagButton.isHidden = true
             let statusMessage: String
             if let error = lastLocationError as NSError? {
@@ -146,24 +152,16 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     
     func string(from placemark: CLPlacemark) -> String {
         var line1 = ""
-        if let s = placemark.subThoroughfare {
-            line1 += s + " "
-        }
-        if let s = placemark.thoroughfare {
-            line1 += s
-        }
+        line1.add(text: placemark.subThoroughfare)
+        line1.add(text: placemark.thoroughfare, separatedBy: " ")
         
         var line2 = ""
-        if let s = placemark.locality {
-            line2 += s + " "
-        }
-        if let s = placemark.administrativeArea {
-            line2 += s + " "
-        }
-        if let s = placemark.postalCode {
-            line2 += s
-        }
-        return line1 + "\n" + line2
+        line2.add(text: placemark.locality)
+        line2.add(text: placemark.administrativeArea, separatedBy: ", ")
+        line2.add(text: placemark.postalCode, separatedBy: " ")
+        
+        line1.add(text: line2, separatedBy: "\n")
+        return line1
     }
     
     @objc func didTimeOut() {
@@ -222,8 +220,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
                     self.lastGeocodingError = error
                     if error == nil, let p = placemarks, !p.isEmpty {
                         if self.placemark == nil {
-                            print("FIRST TIME!")
-//                            self.playSoundEffect()
                         }
                         self.placemark = p.last!
                     } else {
@@ -245,10 +241,26 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     }
 
     func configureGetButton() {
+        let spinnerTag = 1000
+        
         if updatingLocation {
+//            getButton.widthAnchor = CGSize(width: 108, height: 38)
             getButton.setTitle("Stop", for: .normal)
+            
+            if view.viewWithTag(spinnerTag) == nil {
+                let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+                spinner.center = messageLabel.center
+                spinner.center.y += spinner.bounds.size.height/2 + 20
+                spinner.startAnimating()
+                spinner.tag = spinnerTag
+                view.addSubview(spinner)
+            }
         } else {
             getButton.setTitle("Get My Location", for: .normal)
+            
+            if let spinner = view.viewWithTag(spinnerTag) {
+                spinner.removeFromSuperview()
+            }
         }
     }
 }

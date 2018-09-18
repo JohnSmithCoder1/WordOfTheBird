@@ -13,6 +13,7 @@
 		055F7AD9213C647B0076F513 /* PinMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F7AD8213C647B0076F513 /* PinMapViewController.swift */; };
 		05621DA52146FA1900989922 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05621DA42146FA1900989922 /* UIImage+Resize.swift */; };
 		0569DB602125D98D002E5377 /* BirdBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0569DB5F2125D98D002E5377 /* BirdBank.swift */; };
+		05AE7EE421518337003B6F36 /* String+AddText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AE7EE321518337003B6F36 /* String+AddText.swift */; };
 		05CB8F742091165100AB7E13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8F732091165100AB7E13 /* AppDelegate.swift */; };
 		05CB8F792091165100AB7E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8F772091165100AB7E13 /* Main.storyboard */; };
 		05CB8F7B2091165200AB7E13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8F7A2091165200AB7E13 /* Assets.xcassets */; };
@@ -68,6 +69,7 @@
 		055F7AD8213C647B0076F513 /* PinMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinMapViewController.swift; sourceTree = "<group>"; };
 		05621DA42146FA1900989922 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		0569DB5F2125D98D002E5377 /* BirdBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdBank.swift; sourceTree = "<group>"; };
+		05AE7EE321518337003B6F36 /* String+AddText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AddText.swift"; sourceTree = "<group>"; };
 		05CB8F702091165100AB7E13 /* WordOfTheBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordOfTheBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CB8F732091165100AB7E13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05CB8F782091165100AB7E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -175,9 +177,9 @@
 				B02FA39720D4477400172A65 /* BirdDetailViewController.swift */,
 				B0C0136120C8585900784C3B /* BirdsViewController.swift */,
 				B087659F213F1E2300AA178F /* CategoryPickerViewController.swift */,
-				055F7AD4213C61FD0076F513 /* PinLocationViewController.swift */,
 				B087659D213F101800AA178F /* PinDetailsViewController.swift */,
 				055F7AD6213C64120076F513 /* PinListViewController.swift */,
+				055F7AD4213C61FD0076F513 /* PinLocationViewController.swift */,
 				055F7AD8213C647B0076F513 /* PinMapViewController.swift */,
 				B08AFD4721482A6600E73A58 /* TabBarViewController.swift */,
 			);
@@ -229,6 +231,7 @@
 				05D1232F214062460036D19D /* Functions.swift */,
 				05D1232D214059AE0036D19D /* HudView.swift */,
 				05D12334214064900036D19D /* Location+CoreDataClass.swift */,
+				05AE7EE321518337003B6F36 /* String+AddText.swift */,
 				05D12335214064900036D19D /* Location+CoreDataProperties.swift */,
 				B08765A12142F21000AA178F /* LocationCell.swift */,
 				B0C48D2920925D8700A655AB /* Sounds */,
@@ -351,6 +354,7 @@
 				B08765A22142F21000AA178F /* LocationCell.swift in Sources */,
 				B087659E213F101800AA178F /* PinDetailsViewController.swift in Sources */,
 				05D12333214063580036D19D /* DataModel.xcdatamodeld in Sources */,
+				05AE7EE421518337003B6F36 /* String+AddText.swift in Sources */,
 				055F7AD9213C647B0076F513 /* PinMapViewController.swift in Sources */,
 				0569DB602125D98D002E5377 /* BirdBank.swift in Sources */,
 				0546C67F212FA42300F6126A /* AboutViewController.swift in Sources */,

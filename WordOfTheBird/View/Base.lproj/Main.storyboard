@@ -153,7 +153,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <size key="titleShadowOffset" width="0.5" height="0.5"/>
-                                <state key="normal" title="Tag Location">
+                                <state key="normal" title="Pin Location">
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -241,7 +241,9 @@
                         <outlet property="addressLabel" destination="Lau-s0-FzO" id="4pM-Vk-5D6"/>
                         <outlet property="getButton" destination="fS4-hE-dRl" id="3Ur-CK-TKP"/>
                         <outlet property="latitudeLabel" destination="b9D-Ua-tbx" id="Rde-a2-bzo"/>
+                        <outlet property="latitudeTextLabel" destination="FEG-bn-fBQ" id="1tC-tw-HW4"/>
                         <outlet property="longitudeLabel" destination="HD4-aK-Ywb" id="JIB-3u-1Fp"/>
+                        <outlet property="longitudeTextLabel" destination="iWX-E5-veY" id="TyL-59-QhY"/>
                         <outlet property="messageLabel" destination="xvu-uZ-FqN" id="4Wm-mK-giI"/>
                         <outlet property="tagButton" destination="hwN-DG-GE5" id="UzN-4o-1yX"/>
                     </connections>
@@ -1075,6 +1077,6 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="50H-LU-PiF"/>
+        <segue reference="KWq-gh-aGh"/>
     </inferredMetricsTieBreakers>
 </document>
