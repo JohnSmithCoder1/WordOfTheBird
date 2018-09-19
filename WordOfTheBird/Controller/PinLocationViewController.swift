@@ -99,7 +99,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             nearestAddressTextLabel.isHidden = false
             addressLabel.isHidden = false
             tagButton.isHidden = false
-            messageLabel.text = ""
+//            messageLabel.text = ""
             addressLabel.text = ""
             if let placemark = placemark {
                 addressLabel.text = string(from: placemark)
@@ -265,6 +265,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             
             if let spinner = view.viewWithTag(spinnerTag) {
                 spinner.removeFromSuperview()
+                messageLabel.text = ""
             }
         }
     }
