@@ -204,7 +204,6 @@ class PinDetailsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.white
-        //        view.tintColor = UIColor.clear
     }
     
     @objc func hideKeyboard(_ gestureRecognizer: UIGestureRecognizer) {
