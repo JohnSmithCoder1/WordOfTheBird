@@ -18,10 +18,9 @@ class BirdDetailDataViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.white
-        view.tintColor = UIColor(red: 79/255, green: 143/255, blue: 0/255, alpha: 0.8)
+        header.textLabel?.backgroundColor = UIColor(red: 79/255, green: 143/255, blue: 0/255, alpha: 0.8)
     }
 
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var rowCount = 0
         if section == 0 {
