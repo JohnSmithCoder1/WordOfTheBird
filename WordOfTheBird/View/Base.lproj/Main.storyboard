@@ -181,23 +181,6 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fS4-hE-dRl" userLabel="Get Location Button">
-                                <rect key="frame" x="106" y="480" width="108" height="38"/>
-                                <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="108" id="M04-sN-tJb"/>
-                                    <constraint firstAttribute="height" constant="38" id="fT6-Hk-n0H"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                <size key="titleShadowOffset" width="0.5" height="0.5"/>
-                                <state key="normal" title="Get Location">
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="getLocation" destination="My2-VN-07b" eventType="touchUpInside" id="jrL-Fj-IYU"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Latitude goes here)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9D-Ua-tbx" userLabel="(Latitude goes here)">
                                 <rect key="frame" x="122" y="174" width="170" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -207,14 +190,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="fS4-hE-dRl" secondAttribute="bottom" constant="50" id="6jO-cm-YX7"/>
                             <constraint firstItem="FEG-bn-fBQ" firstAttribute="top" secondItem="ZnH-sa-QOi" secondAttribute="top" constant="110" id="88z-6W-Npc"/>
                             <constraint firstItem="Lau-s0-FzO" firstAttribute="leading" secondItem="32u-if-4JU" secondAttribute="leading" constant="20" id="Afz-E6-som"/>
                             <constraint firstItem="qDP-gQ-fI2" firstAttribute="top" secondItem="iWX-E5-veY" secondAttribute="bottom" constant="30" id="Beo-Iw-rh5"/>
                             <constraint firstItem="Lau-s0-FzO" firstAttribute="top" secondItem="qDP-gQ-fI2" secondAttribute="bottom" constant="20" id="CQ6-Jb-pzN"/>
                             <constraint firstItem="Lau-s0-FzO" firstAttribute="top" secondItem="qDP-gQ-fI2" secondAttribute="bottom" constant="20" id="DRf-EK-tbd"/>
                             <constraint firstItem="HD4-aK-Ywb" firstAttribute="width" secondItem="b9D-Ua-tbx" secondAttribute="width" id="G5M-qx-hpf"/>
-                            <constraint firstItem="hwN-DG-GE5" firstAttribute="width" secondItem="fS4-hE-dRl" secondAttribute="width" id="IyT-Ri-EDi"/>
                             <constraint firstAttribute="trailing" secondItem="Lau-s0-FzO" secondAttribute="trailing" constant="20" id="Ku0-XH-0dd"/>
                             <constraint firstItem="b9D-Ua-tbx" firstAttribute="top" secondItem="ZnH-sa-QOi" secondAttribute="top" constant="110" id="LPU-nJ-6NB"/>
                             <constraint firstItem="hwN-DG-GE5" firstAttribute="centerX" secondItem="32u-if-4JU" secondAttribute="centerX" id="PKr-4Q-Vlh"/>
@@ -225,7 +206,6 @@
                             <constraint firstItem="qDP-gQ-fI2" firstAttribute="centerX" secondItem="32u-if-4JU" secondAttribute="centerX" id="d43-E9-PPu"/>
                             <constraint firstItem="iWX-E5-veY" firstAttribute="width" secondItem="FEG-bn-fBQ" secondAttribute="width" id="eB0-ZK-3Pf"/>
                             <constraint firstItem="b9D-Ua-tbx" firstAttribute="leading" secondItem="FEG-bn-fBQ" secondAttribute="trailing" constant="20" id="m6I-x8-hqK"/>
-                            <constraint firstItem="fS4-hE-dRl" firstAttribute="centerX" secondItem="32u-if-4JU" secondAttribute="centerX" id="noY-bg-Gd3"/>
                             <constraint firstItem="ZnH-sa-QOi" firstAttribute="bottom" secondItem="hwN-DG-GE5" secondAttribute="bottom" constant="60" id="oSU-91-6cV"/>
                             <constraint firstItem="HD4-aK-Ywb" firstAttribute="leading" secondItem="iWX-E5-veY" secondAttribute="trailing" constant="20" id="pwI-d9-Pr7"/>
                             <constraint firstItem="iWX-E5-veY" firstAttribute="top" secondItem="FEG-bn-fBQ" secondAttribute="bottom" constant="20" id="qVZ-Ok-2Jf"/>
@@ -239,14 +219,13 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addressLabel" destination="Lau-s0-FzO" id="4pM-Vk-5D6"/>
-                        <outlet property="getButton" destination="fS4-hE-dRl" id="3Ur-CK-TKP"/>
                         <outlet property="latitudeLabel" destination="b9D-Ua-tbx" id="Rde-a2-bzo"/>
                         <outlet property="latitudeTextLabel" destination="FEG-bn-fBQ" id="1tC-tw-HW4"/>
                         <outlet property="longitudeLabel" destination="HD4-aK-Ywb" id="JIB-3u-1Fp"/>
                         <outlet property="longitudeTextLabel" destination="iWX-E5-veY" id="TyL-59-QhY"/>
                         <outlet property="messageLabel" destination="xvu-uZ-FqN" id="4Wm-mK-giI"/>
                         <outlet property="nearestAddressTextLabel" destination="qDP-gQ-fI2" id="LfJ-zL-BH7"/>
-                        <outlet property="tagButton" destination="hwN-DG-GE5" id="UzN-4o-1yX"/>
+                        <outlet property="pinLocationButton" destination="hwN-DG-GE5" id="UzN-4o-1yX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bw5-Ue-7Fa" userLabel="First Responder" sceneMemberID="firstResponder"/>

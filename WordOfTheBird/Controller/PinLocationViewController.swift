@@ -29,12 +29,11 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var longitudeTextLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var nearestAddressTextLabel: UILabel!
-    @IBOutlet weak var tagButton: UIButton!
-    @IBOutlet weak var getButton: UIButton!
+    @IBOutlet weak var pinLocationButton: UIButton!
     
     
     
-    @IBAction func getLocation() {
+    func getLocation() {
         let authStatus = CLLocationManager.authorizationStatus()
         if authStatus == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
@@ -58,17 +57,16 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getButton.layer.cornerRadius = 4.5
-        getButton.layer.shadowColor = UIColor.black.cgColor
-        getButton.layer.shadowOffset = CGSize(width: 4.5, height: 4.5)
-        getButton.layer.shadowRadius = 4.5
-        getButton.layer.shadowOpacity = 0.75
-        tagButton.layer.cornerRadius = 4.5
-        tagButton.layer.shadowColor = UIColor.black.cgColor
-        tagButton.layer.shadowOffset = CGSize(width: 4.5, height: 4.5)
-        tagButton.layer.shadowRadius = 4.5
-        tagButton.layer.shadowOpacity = 0.75
+        pinLocationButton.layer.cornerRadius = 4.5
+        pinLocationButton.layer.shadowColor = UIColor.black.cgColor
+        pinLocationButton.layer.shadowOffset = CGSize(width: 4.5, height: 4.5)
+        pinLocationButton.layer.shadowRadius = 4.5
+        pinLocationButton.layer.shadowOpacity = 0.75
         updateLabels()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        getLocation()
     }
     
     // MARK:- Navigation
@@ -98,7 +96,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             longitudeTextLabel.isHidden = false
             nearestAddressTextLabel.isHidden = false
             addressLabel.isHidden = false
-            tagButton.isHidden = false
+            pinLocationButton.isHidden = false
 //            messageLabel.text = ""
             addressLabel.text = ""
             if let placemark = placemark {
@@ -115,7 +113,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             longitudeTextLabel.isHidden = true
             nearestAddressTextLabel.isHidden = true
             addressLabel.isHidden = true
-            tagButton.isHidden = true
+            pinLocationButton.isHidden = true
             let statusMessage: String
             if let error = lastLocationError as NSError? {
                 if error.domain == kCLErrorDomain && error.code == CLError.denied.rawValue {
@@ -126,9 +124,9 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             } else if !CLLocationManager.locationServicesEnabled() {
                 statusMessage = "Location Services disabled"
             } else if updatingLocation {
-                statusMessage = "Calculating accurate location..."
+                statusMessage = "Calculating nearest location..."
             } else {
-                statusMessage = "Tap 'Get My Location' to start"
+                statusMessage = ""
             }
             messageLabel.text = statusMessage
         }
@@ -250,7 +248,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         let spinnerTag = 1000
         
         if updatingLocation {
-            getButton.setTitle("Stop", for: .normal)
             
             if view.viewWithTag(spinnerTag) == nil {
                 let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
@@ -261,8 +258,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
                 view.addSubview(spinner)
             }
         } else {
-            getButton.setTitle("Get My Location", for: .normal)
-            
             if let spinner = view.viewWithTag(spinnerTag) {
                 spinner.removeFromSuperview()
                 if let error = lastLocationError as NSError? {
