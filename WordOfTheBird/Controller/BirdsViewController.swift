@@ -46,7 +46,7 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
             destination.mapLink = filteredBirds[row].mapLink
         }
     }
-    
+   
     func setupSearchController() {
         let searchController = UISearchController(searchResultsController: nil)
         navigationItem.searchController = searchController

@@ -31,18 +31,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var nearestAddressTextLabel: UILabel!
     @IBOutlet weak var pinLocationButton: UIButton!
     
-    
-    
     func getLocation() {
-        let authStatus = CLLocationManager.authorizationStatus()
-        if authStatus == .notDetermined {
-            locationManager.requestWhenInUseAuthorization()
-            return
-        }
-        if authStatus == .denied || authStatus == .restricted {
-            showLocationServicesDeniedAlert()
-            return
-        }
         if updatingLocation {
             stopLocationManager()
         } else {
@@ -53,6 +42,18 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             startLocationManager()
         }
         updateLabels()
+    }
+    
+    func getAuthorization() {
+        let authStatus = CLLocationManager.authorizationStatus()
+        if authStatus == .notDetermined {
+            locationManager.requestWhenInUseAuthorization()
+            return
+        }
+        if authStatus == .denied || authStatus == .restricted {
+            showLocationServicesDeniedAlert()
+            return
+        }
     }
     
     override func viewDidLoad() {
@@ -66,6 +67,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        getAuthorization()
         getLocation()
     }
     
