@@ -126,7 +126,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             } else if !CLLocationManager.locationServicesEnabled() {
                 statusMessage = "Location Services disabled"
             } else if updatingLocation {
-                statusMessage = "Searching..."
+                statusMessage = "Calculating accurate location..."
             } else {
                 statusMessage = "Tap 'Get My Location' to start"
             }
@@ -141,7 +141,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
             updatingLocation = true
-            timer = Timer.scheduledTimer(timeInterval: 20, target: self, selector: #selector(didTimeOut), userInfo: nil, repeats: false)
+            timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(didTimeOut), userInfo: nil, repeats: false)
         }
     }
     
@@ -265,7 +265,15 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             
             if let spinner = view.viewWithTag(spinnerTag) {
                 spinner.removeFromSuperview()
-                messageLabel.text = ""
+                if let error = lastLocationError as NSError? {
+                    if error.domain == kCLErrorDomain && error.code == CLError.denied.rawValue {
+                        messageLabel.text = "Location Services disabled"
+                    } else {
+                        messageLabel.text = "Error getting location"
+                    }
+                } else {
+                    messageLabel.text = ""
+                }
             }
         }
     }
