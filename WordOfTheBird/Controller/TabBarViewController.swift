@@ -10,7 +10,7 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
-        tabBar.unselectedItemTintColor = UIColor(red: 235, green: 235, blue: 235, alpha: 0.5)
+        tabBar.unselectedItemTintColor = UIColor(red: 192/255, green: 192/255, blue: 192/255, alpha: 0.9)
     }
 }
 

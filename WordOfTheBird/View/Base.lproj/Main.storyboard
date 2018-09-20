@@ -90,7 +90,7 @@
         <scene sceneID="Ybf-oq-lX5">
             <objects>
                 <navigationController storyboardIdentifier="NavigationController" title="Birds Navigation" automaticallyAdjustsScrollViewInsets="NO" id="QGn-9o-Lrb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Birds" image="birdTabButton32" selectedImage="birdTabButton32" id="V5t-Zu-zHt"/>
+                    <tabBarItem key="tabBarItem" title="Birds" image="birdsTabBarButton32" selectedImage="birdsTabBarButton32" id="V5t-Zu-zHt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XMk-iI-Kf0">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -629,7 +629,7 @@
         <scene sceneID="0G9-NJ-Do7">
             <objects>
                 <navigationController title="Locations Navigation" id="x0t-N7-jnq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Pin List" image="Locations" selectedImage="Locations" id="PDV-2Q-n6Z"/>
+                    <tabBarItem key="tabBarItem" title="Pin List" image="pinListTabBarButton32" selectedImage="pinListTabBarButton32" id="PDV-2Q-n6Z"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hmG-ju-zUv">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -977,7 +977,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
         <scene sceneID="F5K-X9-hUx">
             <objects>
                 <navigationController title="Tag Navigation" automaticallyAdjustsScrollViewInsets="NO" id="WjK-Bp-ihv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Pin Location" image="Pin" selectedImage="Pin" id="vUy-t0-Mus"/>
+                    <tabBarItem key="tabBarItem" title="Pin Location" image="pinLocationTabBarButton32" selectedImage="pinLocationTabBarButton32" id="vUy-t0-Mus"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K14-1L-IoM">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -1001,7 +1001,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
         <scene sceneID="Fme-PR-dbL">
             <objects>
                 <navigationController title="Map Navigation" automaticallyAdjustsScrollViewInsets="NO" id="iD1-ac-rK8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Pin Map" image="Map" selectedImage="Map" id="72t-bb-ZAV"/>
+                    <tabBarItem key="tabBarItem" title="Pin Map" image="pinMapTabBarButton32" selectedImage="pinMapTabBarButton32" id="72t-bb-ZAV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yez-EI-KgU">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -1047,12 +1047,12 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
         </scene>
     </scenes>
     <resources>
-        <image name="Locations" width="30" height="30"/>
-        <image name="Map" width="30" height="30"/>
-        <image name="Pin" width="24" height="24"/>
         <image name="background" width="270" height="480"/>
-        <image name="birdTabButton32" width="32" height="32"/>
+        <image name="birdsTabBarButton32" width="32" height="32"/>
         <image name="musicNote" width="32" height="32"/>
+        <image name="pinListTabBarButton32" width="32" height="32"/>
+        <image name="pinLocationTabBarButton32" width="32" height="32"/>
+        <image name="pinMapTabBarButton32" width="32" height="32"/>
         <namedColor name="Color">
             <color red="0.30980392156862746" green="0.5607843137254902" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
