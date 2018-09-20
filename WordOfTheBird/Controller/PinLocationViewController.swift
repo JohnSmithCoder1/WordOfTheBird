@@ -31,17 +31,48 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var nearestAddressTextLabel: UILabel!
     @IBOutlet weak var pinLocationButton: UIButton!
     
-    func getLocation() {
-        if updatingLocation {
-            stopLocationManager()
-        } else {
-            location = nil
-            lastLocationError = nil
-            placemark = nil
-            lastGeocodingError = nil
-            startLocationManager()
-        }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        locationManager.delegate = self
+        pinLocationButton.layer.cornerRadius = 4.5
+        pinLocationButton.layer.shadowColor = UIColor.black.cgColor
+        pinLocationButton.layer.shadowOffset = CGSize(width: 4.5, height: 4.5)
+        pinLocationButton.layer.shadowRadius = 4.5
+        pinLocationButton.layer.shadowOpacity = 0.75
         updateLabels()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        getAuthorization()
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            getLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .notDetermined:
+            // If status has not yet been determied, ask for authorization
+            manager.requestWhenInUseAuthorization()
+            break
+        case .authorizedWhenInUse:
+            // If authorized when in use
+            getLocation()
+            break
+        case .authorizedAlways:
+            // If always authorized
+            getLocation()
+            break
+        case .restricted:
+            // If restricted by e.g. parental controls. User can't enable Location Services
+            break
+        case .denied:
+            // If user denied your app access to Location Services, but can grant access from Settings.app
+            break
+        default:
+            break
+        }
     }
     
     func getAuthorization() {
@@ -56,19 +87,17 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        pinLocationButton.layer.cornerRadius = 4.5
-        pinLocationButton.layer.shadowColor = UIColor.black.cgColor
-        pinLocationButton.layer.shadowOffset = CGSize(width: 4.5, height: 4.5)
-        pinLocationButton.layer.shadowRadius = 4.5
-        pinLocationButton.layer.shadowOpacity = 0.75
+    func getLocation() {
+        if updatingLocation {
+            stopLocationManager()
+        } else {
+            location = nil
+            lastLocationError = nil
+            placemark = nil
+            lastGeocodingError = nil
+            startLocationManager()
+        }
         updateLabels()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        getAuthorization()
-        getLocation()
     }
     
     // MARK:- Navigation
@@ -137,7 +166,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     
     func startLocationManager() {
         if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
             updatingLocation = true
