@@ -50,31 +50,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch status {
-        case .notDetermined:
-            // If status has not yet been determied, ask for authorization
-            manager.requestWhenInUseAuthorization()
-            break
-        case .authorizedWhenInUse:
-            // If authorized when in use
-            getLocation()
-            break
-        case .authorizedAlways:
-            // If always authorized
-            getLocation()
-            break
-        case .restricted:
-            // If restricted by e.g. parental controls. User can't enable Location Services
-            break
-        case .denied:
-            // If user denied your app access to Location Services, but can grant access from Settings.app
-            break
-        default:
-            break
-        }
-    }
-    
     func getAuthorization() {
         let authStatus = CLLocationManager.authorizationStatus()
         if authStatus == .notDetermined {
@@ -99,20 +74,39 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         }
         updateLabels()
     }
-    
-    // MARK:- Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "TagLocation" {
-            let controller = segue.destination as! PinDetailsViewController
-            controller.coordinate = location!.coordinate
-            controller.placemark = placemark
-            controller.managedObjectContext = managedObjectContext
+
+    func startLocationManager() {
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+            updatingLocation = true
+            timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(didTimeOut), userInfo: nil, repeats: false)
         }
     }
-
+    
+    func stopLocationManager() {
+        if updatingLocation {
+            locationManager.stopUpdatingLocation()
+            locationManager.delegate = nil
+            updatingLocation = false
+            if let timer = timer {
+                timer.invalidate()
+            }
+        }
+    }
+    
+    @objc func didTimeOut() {
+        print("*** Time out")
+        if location == nil {
+            stopLocationManager()
+            lastLocationError = NSError(domain: "WordoftheBirdErrorDomain", code: 1, userInfo: nil)
+            updateLabels()
+        }
+    }
+    
     func showLocationServicesDeniedAlert() {
         let alert = UIAlertController(title: "Location Services Disabled",
-                                      message: "Please enable location services for Word of the Bird in Settings.",
+                                      message: "Please enable location services for Word of the Bird in phone Settings.",
                                       preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
@@ -130,10 +124,11 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             pinLocationButton.isHidden = false
 //            messageLabel.text = ""
             addressLabel.text = ""
+            
             if let placemark = placemark {
                 addressLabel.text = string(from: placemark)
             } else if performingReverseGeocoding {
-                addressLabel.text = "Searching for Address..."
+                addressLabel.text = "Calculating nearest location..."
             } else if lastGeocodingError != nil {
                 addressLabel.text = "No Address Found"
             }
@@ -164,26 +159,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         configureGetButton()
     }
     
-    func startLocationManager() {
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
-            updatingLocation = true
-            timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(didTimeOut), userInfo: nil, repeats: false)
-        }
-    }
-    
-    func stopLocationManager() {
-        if updatingLocation {
-            locationManager.stopUpdatingLocation()
-            locationManager.delegate = nil
-            updatingLocation = false
-            if let timer = timer {
-                timer.invalidate()
-            }
-        }
-    }
-    
     func string(from placemark: CLPlacemark) -> String {
         var line1 = ""
         line1.add(text: placemark.subThoroughfare)
@@ -198,16 +173,51 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         return line1
     }
     
-    @objc func didTimeOut() {
-        print("*** Time out")
-        if location == nil {
-            stopLocationManager()
-            lastLocationError = NSError(domain: "WordoftheBirdErrorDomain", code: 1, userInfo: nil)
-            updateLabels()
+    func configureGetButton() {
+        let spinnerTag = 1000
+        
+        if updatingLocation {
+            if view.viewWithTag(spinnerTag) == nil {
+                let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+                spinner.center = messageLabel.center
+                spinner.center.y = 140
+                spinner.startAnimating()
+                spinner.tag = spinnerTag
+                view.addSubview(spinner)
+            }
+        } else {
+            if let spinner = view.viewWithTag(spinnerTag) {
+                spinner.removeFromSuperview()
+                if let error = lastLocationError as NSError? {
+                    if error.domain == kCLErrorDomain && error.code == CLError.denied.rawValue {
+                        messageLabel.text = "Location Services disabled"
+                    } else {
+                        messageLabel.text = "Error getting location"
+                    }
+                } else {
+                    messageLabel.text = ""
+                }
+            }
         }
     }
     
     //MARK: - CLLocationManagerDelegate
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .notDetermined:
+            manager.requestWhenInUseAuthorization()
+            break
+        case .authorizedWhenInUse:
+            getLocation()
+            break
+        case .denied:
+            showLocationServicesDeniedAlert()
+            break
+        default:
+            break
+        }
+    }
+    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("didFailWithError \(error)")
         
@@ -273,33 +283,14 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             }
         }
     }
-
-    func configureGetButton() {
-        let spinnerTag = 1000
-        
-        if updatingLocation {
-            
-            if view.viewWithTag(spinnerTag) == nil {
-                let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
-                spinner.center = messageLabel.center
-                spinner.center.y = 140
-                spinner.startAnimating()
-                spinner.tag = spinnerTag
-                view.addSubview(spinner)
-            }
-        } else {
-            if let spinner = view.viewWithTag(spinnerTag) {
-                spinner.removeFromSuperview()
-                if let error = lastLocationError as NSError? {
-                    if error.domain == kCLErrorDomain && error.code == CLError.denied.rawValue {
-                        messageLabel.text = "Location Services disabled"
-                    } else {
-                        messageLabel.text = "Error getting location"
-                    }
-                } else {
-                    messageLabel.text = ""
-                }
-            }
+    
+    // MARK:- Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "TagLocation" {
+            let controller = segue.destination as! PinDetailsViewController
+            controller.coordinate = location!.coordinate
+            controller.placemark = placemark
+            controller.managedObjectContext = managedObjectContext
         }
     }
 }
