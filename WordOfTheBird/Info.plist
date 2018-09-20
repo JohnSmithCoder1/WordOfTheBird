@@ -2,8 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Add photos to your locations.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Add photos to your locations.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>In order to keep track of birds you&apos;ve found, Word of the Bird needs access to the GPS coordinates for your location.</string>
 	<key>CFBundleDisplayName</key>
 	<string>Word of the Bird</string>
 	<key>CFBundleExecutable</key>
@@ -29,6 +35,7 @@
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
+		<string>location-services</string>
 	</array>
 	<key>UIRequiresFullScreen</key>
 	<true/>
