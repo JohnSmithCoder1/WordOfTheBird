@@ -115,22 +115,32 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     
     func updateLabels() {
         if let location = location {
-            latitudeLabel.text = String(format: "%.8f", location.coordinate.latitude)
-            longitudeLabel.text = String(format: "%.8f", location.coordinate.longitude)
-            latitudeTextLabel.isHidden = false
-            longitudeTextLabel.isHidden = false
-            nearestAddressTextLabel.isHidden = false
-            addressLabel.isHidden = false
-            pinLocationButton.isHidden = false
-//            messageLabel.text = ""
-            addressLabel.text = ""
-            
-            if let placemark = placemark {
-                addressLabel.text = string(from: placemark)
-            } else if performingReverseGeocoding {
-                addressLabel.text = "Calculating nearest location..."
-            } else if lastGeocodingError != nil {
-                addressLabel.text = "No Address Found"
+            if updatingLocation == true {
+                latitudeLabel.text = ""
+                longitudeLabel.text = ""
+                latitudeTextLabel.isHidden = true
+                longitudeTextLabel.isHidden = true
+                nearestAddressTextLabel.isHidden = true
+                addressLabel.isHidden = true
+                pinLocationButton.isHidden = true
+            } else {
+                latitudeLabel.text = String(format: "%.8f", location.coordinate.latitude)
+                longitudeLabel.text = String(format: "%.8f", location.coordinate.longitude)
+                latitudeTextLabel.isHidden = false
+                longitudeTextLabel.isHidden = false
+                nearestAddressTextLabel.isHidden = false
+                addressLabel.isHidden = false
+                pinLocationButton.isHidden = false
+                //            messageLabel.text = ""
+                addressLabel.text = ""
+                
+                if let placemark = placemark {
+                    addressLabel.text = string(from: placemark)
+                } else if performingReverseGeocoding {
+                    addressLabel.text = "Calculating nearest location..."
+                } else if lastGeocodingError != nil {
+                    addressLabel.text = "No Address Found"
+                }
             }
         } else {
             latitudeLabel.text = ""
@@ -206,13 +216,14 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         switch status {
         case .notDetermined:
             manager.requestWhenInUseAuthorization()
-            break
         case .authorizedWhenInUse:
             getLocation()
-            break
+        case .authorizedAlways:
+            getLocation()
+        case .restricted:
+            showLocationServicesDeniedAlert()
         case .denied:
             showLocationServicesDeniedAlert()
-            break
         default:
             break
         }
