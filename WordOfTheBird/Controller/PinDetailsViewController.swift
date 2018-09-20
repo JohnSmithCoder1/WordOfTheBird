@@ -91,6 +91,11 @@ class PinDetailsViewController: UITableViewController {
         } catch {
             fatalCoreDataError(error)
         }
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let pageViewController = storyBoard.instantiateViewController(withIdentifier: "pageViewController")
+        pageViewController.modalTransitionStyle = .crossDissolve
+        parent?.present(pageViewController, animated: true, completion: nil)
     }
     
     @IBAction func cancel() {

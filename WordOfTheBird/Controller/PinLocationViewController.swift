@@ -56,7 +56,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.requestWhenInUseAuthorization()
             return
         }
-        if authStatus == .denied || authStatus == .restricted {
+        if authStatus == .denied || authStatus == .restricted { // change this to else if and add single return before end of func?
             showLocationServicesDeniedAlert()
             return
         }
