@@ -187,10 +187,24 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Mv-iS-QAT">
+                                <rect key="frame" x="106" y="363" width="108" height="38"/>
+                                <color key="backgroundColor" name="Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="9xc-Sg-9fu"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="108" id="ypj-yF-CdK"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Get Location"/>
+                                <connections>
+                                    <action selector="getLocation" destination="My2-VN-07b" eventType="touchUpInside" id="SZj-c2-A6L"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FEG-bn-fBQ" firstAttribute="top" secondItem="ZnH-sa-QOi" secondAttribute="top" constant="110" id="88z-6W-Npc"/>
+                            <constraint firstItem="hwN-DG-GE5" firstAttribute="top" secondItem="7Mv-iS-QAT" secondAttribute="bottom" constant="20" id="8i6-Ug-gg9"/>
                             <constraint firstItem="Lau-s0-FzO" firstAttribute="leading" secondItem="32u-if-4JU" secondAttribute="leading" constant="20" id="Afz-E6-som"/>
                             <constraint firstItem="qDP-gQ-fI2" firstAttribute="top" secondItem="iWX-E5-veY" secondAttribute="bottom" constant="30" id="Beo-Iw-rh5"/>
                             <constraint firstItem="Lau-s0-FzO" firstAttribute="top" secondItem="qDP-gQ-fI2" secondAttribute="bottom" constant="20" id="CQ6-Jb-pzN"/>
@@ -212,6 +226,7 @@
                             <constraint firstItem="xvu-uZ-FqN" firstAttribute="centerX" secondItem="32u-if-4JU" secondAttribute="centerX" id="s3E-BC-PuJ"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HD4-aK-Ywb" secondAttribute="trailing" constant="20" symbolic="YES" id="sDd-uO-K26"/>
                             <constraint firstItem="FEG-bn-fBQ" firstAttribute="leading" secondItem="ZnH-sa-QOi" secondAttribute="leading" constant="20" id="uvN-7Z-x4Z"/>
+                            <constraint firstItem="7Mv-iS-QAT" firstAttribute="centerX" secondItem="32u-if-4JU" secondAttribute="centerX" id="w9x-Fn-SzZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZnH-sa-QOi"/>
                     </view>
@@ -219,6 +234,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addressLabel" destination="Lau-s0-FzO" id="4pM-Vk-5D6"/>
+                        <outlet property="getLocationButton" destination="7Mv-iS-QAT" id="PFo-n1-l7s"/>
                         <outlet property="latitudeLabel" destination="b9D-Ua-tbx" id="Rde-a2-bzo"/>
                         <outlet property="latitudeTextLabel" destination="FEG-bn-fBQ" id="1tC-tw-HW4"/>
                         <outlet property="longitudeLabel" destination="HD4-aK-Ywb" id="JIB-3u-1Fp"/>

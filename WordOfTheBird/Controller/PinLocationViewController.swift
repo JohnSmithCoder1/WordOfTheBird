@@ -29,40 +29,22 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var longitudeTextLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var nearestAddressTextLabel: UILabel!
+    @IBOutlet weak var getLocationButton: UIButton!
     @IBOutlet weak var pinLocationButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        locationManager.delegate = self
-        pinLocationButton.layer.cornerRadius = 4.5
-        pinLocationButton.layer.shadowColor = UIColor.black.cgColor
-        pinLocationButton.layer.shadowOffset = CGSize(width: 4.5, height: 4.5)
-        pinLocationButton.layer.shadowRadius = 4.5
-        pinLocationButton.layer.shadowOpacity = 0.75
-        updateLabels()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        getAuthorization()
-        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-            getLocation()
-        }
-    }
-    
-    func getAuthorization() {
+    @IBAction func getLocation() {
         let authStatus = CLLocationManager.authorizationStatus()
+        
         if authStatus == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
             return
         }
-        if authStatus == .denied || authStatus == .restricted { // change this to else if and add single return before end of func?
+        
+        if authStatus == .denied || authStatus == .restricted {
             showLocationServicesDeniedAlert()
             return
         }
-    }
-    
-    func getLocation() {
+        
         if updatingLocation {
             stopLocationManager()
         } else {
@@ -72,11 +54,26 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             lastGeocodingError = nil
             startLocationManager()
         }
+        
+        updateLabels()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let buttons = [getLocationButton, pinLocationButton]
+        for button in buttons {
+            button?.layer.cornerRadius = 4.5
+            button?.layer.shadowColor = UIColor.black.cgColor
+            button?.layer.shadowOffset = CGSize(width: 4.5, height: 4.5)
+            button?.layer.shadowRadius = 4.5
+            button?.layer.shadowOpacity = 0.75
+        }
         updateLabels()
     }
 
     func startLocationManager() {
         if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
             updatingLocation = true
@@ -115,56 +112,45 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     
     func updateLabels() {
         if let location = location {
-            if updatingLocation == true {
-                latitudeLabel.text = ""
-                longitudeLabel.text = ""
-                latitudeTextLabel.isHidden = true
-                longitudeTextLabel.isHidden = true
-                nearestAddressTextLabel.isHidden = true
-                addressLabel.isHidden = true
-                pinLocationButton.isHidden = true
+            latitudeLabel.text = String(format: "%.8f", location.coordinate.latitude)
+            longitudeLabel.text = String(format: "%.8f", location.coordinate.longitude)
+            nearestAddressTextLabel.isHidden = false
+            pinLocationButton.isHidden = false
+            messageLabel.text = ""
+            if let placemark = placemark {
+                addressLabel.text = string(from: placemark)
+            } else if performingReverseGeocoding {
+                addressLabel.text = "Searching for Address..."
+            } else if lastGeocodingError != nil {
+                addressLabel.text = "Error Finding Address"
             } else {
-                latitudeLabel.text = String(format: "%.8f", location.coordinate.latitude)
-                longitudeLabel.text = String(format: "%.8f", location.coordinate.longitude)
-                latitudeTextLabel.isHidden = false
-                longitudeTextLabel.isHidden = false
-                nearestAddressTextLabel.isHidden = false
-                addressLabel.isHidden = false
-                pinLocationButton.isHidden = false
-                //            messageLabel.text = ""
-                addressLabel.text = ""
-                
-                if let placemark = placemark {
-                    addressLabel.text = string(from: placemark)
-                } else if performingReverseGeocoding {
-                    addressLabel.text = "Calculating nearest location..."
-                } else if lastGeocodingError != nil {
-                    addressLabel.text = "No Address Found"
-                }
+                addressLabel.text = "No Address Found"
             }
+            latitudeTextLabel.isHidden = false
+            longitudeTextLabel.isHidden = false
         } else {
             latitudeLabel.text = ""
             longitudeLabel.text = ""
-            latitudeTextLabel.isHidden = true
-            longitudeTextLabel.isHidden = true
+            addressLabel.text = ""
             nearestAddressTextLabel.isHidden = true
-            addressLabel.isHidden = true
             pinLocationButton.isHidden = true
             let statusMessage: String
             if let error = lastLocationError as NSError? {
                 if error.domain == kCLErrorDomain && error.code == CLError.denied.rawValue {
-                    statusMessage = "Location Services disabled"
+                    statusMessage = "Location Services Disabled"
                 } else {
-                    statusMessage = "Error getting location"
+                    statusMessage = "Error Getting Location"
                 }
             } else if !CLLocationManager.locationServicesEnabled() {
-                statusMessage = "Location Services disabled"
+                statusMessage = "Location Services Disabled"
             } else if updatingLocation {
-                statusMessage = "Calculating nearest location..."
+                statusMessage = "Searching..."
             } else {
                 statusMessage = ""
             }
             messageLabel.text = statusMessage
+            latitudeTextLabel.isHidden = true
+            longitudeTextLabel.isHidden = true
         }
         configureGetButton()
     }
@@ -187,6 +173,9 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         let spinnerTag = 1000
         
         if updatingLocation {
+            messageLabel.text = "Calculating nearest location..."
+            getLocationButton.setTitle("Stop", for: .normal)
+            
             if view.viewWithTag(spinnerTag) == nil {
                 let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
                 spinner.center = messageLabel.center
@@ -196,39 +185,15 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
                 view.addSubview(spinner)
             }
         } else {
+            getLocationButton.setTitle("Get Location", for: .normal)
+            
             if let spinner = view.viewWithTag(spinnerTag) {
                 spinner.removeFromSuperview()
-                if let error = lastLocationError as NSError? {
-                    if error.domain == kCLErrorDomain && error.code == CLError.denied.rawValue {
-                        messageLabel.text = "Location Services disabled"
-                    } else {
-                        messageLabel.text = "Error getting location"
-                    }
-                } else {
-                    messageLabel.text = ""
-                }
             }
         }
     }
     
     //MARK: - CLLocationManagerDelegate
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch status {
-        case .notDetermined:
-            manager.requestWhenInUseAuthorization()
-        case .authorizedWhenInUse:
-            getLocation()
-        case .authorizedAlways:
-            getLocation()
-        case .restricted:
-            showLocationServicesDeniedAlert()
-        case .denied:
-            showLocationServicesDeniedAlert()
-        default:
-            break
-        }
-    }
-    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("didFailWithError \(error)")
         
