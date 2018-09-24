@@ -924,7 +924,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="  Bird Data" id="A3w-Il-Cxg" userLabel="Bird Information">
+                            <tableViewSection headerTitle="  Bird Data" id="A3w-Il-Cxg" userLabel="Bird Data">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="HaO-qO-xr7">
                                         <rect key="frame" x="0.0" y="243.5" width="320" height="44"/>
@@ -950,12 +950,15 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="QXM-7V-Hht" kind="show" identifier="" id="DeQ-I1-5gW"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="1F6-0f-kii">
                                         <rect key="frame" x="0.0" y="287.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1F6-0f-kii" id="WsW-rX-LDr">
-                                            <rect key="frame" x="0.0" y="0.0" width="294" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Range Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAV-cs-Djm">
@@ -975,6 +978,9 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="QXM-7V-Hht" kind="show" identifier="" id="mCP-9z-YyR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -988,6 +994,21 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vjN-2d-yvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3804" y="183.95802098950526"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="7ly-I1-fsP">
+            <objects>
+                <viewController id="QXM-7V-Hht" customClass="WebViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="riy-5G-Tzo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="269"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="h0k-oa-Kic"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NAt-Au-vOP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4556" y="183"/>
         </scene>
         <!--Tag Navigation-->
         <scene sceneID="F5K-X9-hUx">
@@ -1074,6 +1095,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="DeQ-I1-5gW"/>
         <segue reference="KWq-gh-aGh"/>
     </inferredMetricsTieBreakers>
 </document>

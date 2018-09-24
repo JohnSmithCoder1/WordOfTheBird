@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         container.loadPersistentStores(completionHandler: {
             storeDescription, error in
             if let error = error {
-                fatalError("Could load data store: \(error)")
+                fatalError("Could load data store: \(error)") // could NOT load?
             }
         })
         return container
@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let controller2 = navController.viewControllers.first as! PinListViewController
             controller2.managedObjectContext = managedObjectContext
+            let _ = controller2.view
             
             navController = tabViewControllers[3] as! UINavigationController
             let controller4 = navController.viewControllers.first as! PinMapViewController

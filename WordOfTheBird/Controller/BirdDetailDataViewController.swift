@@ -34,25 +34,39 @@ class BirdDetailDataViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             playSound(forObject: calls[indexPath.row])
-        } else if indexPath.section == 1 {
-            audioPlayer?.stop()
-            if indexPath.row == 0 {
-                if let infoLink = infoLink {
-                    UIApplication.shared.open(URL(string: infoLink)!)
-                }
-            }
-            if indexPath.row == 1 {
-                if let mapLink = mapLink {
-                    UIApplication.shared.open(URL(string: mapLink)!)
-                }
-            }
         }
+//        } else if indexPath.section == 1 {
+//            audioPlayer?.stop()
+//            if indexPath.row == 0 {
+//                if let infoLink = infoLink {
+//                    UIApplication.shared.open(URL(string: infoLink)!)
+//                }
+//            }
+//            if indexPath.row == 1 {
+//                if let mapLink = mapLink {
+//                    UIApplication.shared.open(URL(string: mapLink)!)
+//                }
+//            }
+//        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(didEnterBackground), name: .UIApplicationDidEnterBackground, object: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? WebViewController,
+            let indexPath = tableView.indexPathForSelectedRow {
+            if indexPath.section == 1 && indexPath.row == 0 {
+                audioPlayer?.stop()
+                destination.link = infoLink
+            } else if indexPath.section == 1 && indexPath.row == 1 {
+                audioPlayer?.stop()
+                destination.link = mapLink
+            }
+        }
     }
     
     func playSound(forObject: String) {
