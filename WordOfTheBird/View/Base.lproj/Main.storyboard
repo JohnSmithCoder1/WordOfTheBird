@@ -561,26 +561,41 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="56.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skg-Ii-I56">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skg-Ii-I56">
                                             <rect key="frame" x="70" y="0.0" width="230" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="zRM-GR-jip"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wd5-1h-dkF">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wd5-1h-dkF">
                                             <rect key="frame" x="70" y="25" width="230" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="6ZA-Fw-qau"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hXh-U7-bfR">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hXh-U7-bfR">
                                             <rect key="frame" x="10" y="2" width="52" height="52"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hXh-U7-bfR" firstAttribute="top" secondItem="POm-ix-LAQ" secondAttribute="top" constant="2" id="6nF-a9-GAF"/>
+                                        <constraint firstItem="Wd5-1h-dkF" firstAttribute="leading" secondItem="hXh-U7-bfR" secondAttribute="trailing" constant="8" id="7wK-zo-b36"/>
+                                        <constraint firstItem="skg-Ii-I56" firstAttribute="top" secondItem="POm-ix-LAQ" secondAttribute="top" id="DJu-l3-91U"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Wd5-1h-dkF" secondAttribute="trailing" constant="4" id="Irz-bA-Je5"/>
+                                        <constraint firstAttribute="bottom" secondItem="hXh-U7-bfR" secondAttribute="bottom" constant="2.5" id="O1p-kY-sAw"/>
+                                        <constraint firstAttribute="trailing" secondItem="skg-Ii-I56" secondAttribute="trailing" constant="20" id="OH8-x7-G4w"/>
+                                        <constraint firstItem="skg-Ii-I56" firstAttribute="leading" secondItem="hXh-U7-bfR" secondAttribute="trailing" constant="8" id="k3F-fX-EhJ"/>
+                                        <constraint firstItem="hXh-U7-bfR" firstAttribute="leading" secondItem="POm-ix-LAQ" secondAttribute="leading" constant="10" id="q13-em-OXB"/>
+                                        <constraint firstItem="Wd5-1h-dkF" firstAttribute="top" secondItem="skg-Ii-I56" secondAttribute="bottom" constant="4" id="rkz-Xv-hDG"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Wd5-1h-dkF" secondAttribute="bottom" constant="4" id="xtr-lZ-pJG"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -1115,6 +1130,6 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DeQ-I1-5gW"/>
-        <segue reference="KWq-gh-aGh"/>
+        <segue reference="BKX-1q-dIW"/>
     </inferredMetricsTieBreakers>
 </document>
