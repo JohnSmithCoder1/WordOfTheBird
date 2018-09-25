@@ -23,11 +23,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>Add photos to your locations.</string>
+	<string>To add photos to saved pins of birds, Word of the Bird needs access to your camera.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>In order to keep track of birds you've found, Word of the Bird needs access to the GPS coordinates for your location.</string>
+	<string>To pin locations of birds, Word of the Bird needs access to your GPS coordinates.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Add photos to your locations.</string>
+	<string>To add existing photos to saved pins of birds, Word of the Bird needs access to your photo library.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
