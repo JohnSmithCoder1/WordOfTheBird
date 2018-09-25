@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 let applicationDocumentsDirectory: URL = {
     let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)

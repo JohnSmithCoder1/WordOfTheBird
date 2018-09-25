@@ -33,6 +33,11 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var pinLocationButton: UIButton!
     
     @IBAction func getLocation() {
+        let authStatus = CLLocationManager.authorizationStatus()
+        if authStatus == .denied || authStatus == .restricted {
+            showLocationServicesDeniedAlert()
+            return
+        }
         if updatingLocation {
             stopLocationManager()
         } else {
@@ -42,7 +47,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             lastGeocodingError = nil
             startLocationManager()
         }
-        
         updateLabels()
     }
     
@@ -80,6 +84,15 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    func showLocationServicesDeniedAlert() {
+        let alert = UIAlertController(title: "Location Services Disabled",
+                                      message: "Please enable location services for Word of the Bird in phone Settings.",
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
     @objc func didTimeOut() {
         print("*** Time out")
         if location == nil {
@@ -114,14 +127,8 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             nearestAddressTextLabel.isHidden = true
             pinLocationButton.isHidden = true
             let statusMessage: String
-            if let error = lastLocationError as NSError? {
-                if error.domain == kCLErrorDomain && error.code == CLError.denied.rawValue {
-                    statusMessage = "Location Services Disabled"
-                } else {
-                    statusMessage = "Error Getting Location"
-                }
-            } else if !CLLocationManager.locationServicesEnabled() {
-                statusMessage = "Location Services Disabled"
+            if lastLocationError as NSError? != nil {
+                statusMessage = "Error Getting Location"
             } else if updatingLocation {
                 statusMessage = "Searching..."
             } else {

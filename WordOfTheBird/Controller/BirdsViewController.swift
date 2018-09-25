@@ -57,11 +57,6 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
             locationManager.requestWhenInUseAuthorization()
             return
         }
-        
-        if authStatus == .denied || authStatus == .restricted {
-            showLocationServicesDeniedAlert()
-            return
-        }
     }
     
     func showLocationServicesDeniedAlert() {
@@ -72,7 +67,7 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
-   
+    
     func setupSearchController() {
         let searchController = UISearchController(searchResultsController: nil)
         navigationItem.searchController = searchController
