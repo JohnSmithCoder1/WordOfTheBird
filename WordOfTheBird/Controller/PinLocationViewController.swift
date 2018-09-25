@@ -34,17 +34,10 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func getLocation() {
         let authStatus = CLLocationManager.authorizationStatus()
-        
-        if authStatus == .notDetermined {
-            locationManager.requestWhenInUseAuthorization()
-            return
-        }
-        
         if authStatus == .denied || authStatus == .restricted {
             showLocationServicesDeniedAlert()
             return
         }
-        
         if updatingLocation {
             stopLocationManager()
         } else {
@@ -54,7 +47,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             lastGeocodingError = nil
             startLocationManager()
         }
-        
         updateLabels()
     }
     
@@ -92,15 +84,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    @objc func didTimeOut() {
-        print("*** Time out")
-        if location == nil {
-            stopLocationManager()
-            lastLocationError = NSError(domain: "WordoftheBirdErrorDomain", code: 1, userInfo: nil)
-            updateLabels()
-        }
-    }
-    
     func showLocationServicesDeniedAlert() {
         let alert = UIAlertController(title: "Location Services Disabled",
                                       message: "Please enable location services for Word of the Bird in phone Settings.",
@@ -108,6 +91,15 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func didTimeOut() {
+        print("*** Time out")
+        if location == nil {
+            stopLocationManager()
+            lastLocationError = NSError(domain: "WordoftheBirdErrorDomain", code: 1, userInfo: nil)
+            updateLabels()
+        }
     }
     
     func updateLabels() {
@@ -135,14 +127,8 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             nearestAddressTextLabel.isHidden = true
             pinLocationButton.isHidden = true
             let statusMessage: String
-            if let error = lastLocationError as NSError? {
-                if error.domain == kCLErrorDomain && error.code == CLError.denied.rawValue {
-                    statusMessage = "Location Services Disabled"
-                } else {
-                    statusMessage = "Error Getting Location"
-                }
-            } else if !CLLocationManager.locationServicesEnabled() {
-                statusMessage = "Location Services Disabled"
+            if lastLocationError as NSError? != nil {
+                statusMessage = "Error Getting Location"
             } else if updatingLocation {
                 statusMessage = "Searching..."
             } else {
@@ -179,7 +165,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             if view.viewWithTag(spinnerTag) == nil {
                 let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
                 spinner.center = messageLabel.center
-                spinner.center.y = 140
+                spinner.center.y = messageLabel.center.y + 40
                 spinner.startAnimating()
                 spinner.tag = spinnerTag
                 view.addSubview(spinner)

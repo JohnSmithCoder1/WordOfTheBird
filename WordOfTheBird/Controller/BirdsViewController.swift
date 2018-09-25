@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class BirdTableViewCell: UITableViewCell {
     @IBOutlet var birdNameLabel: UILabel!
@@ -16,6 +17,7 @@ class BirdTableViewCell: UITableViewCell {
 class BirdsViewController: UITableViewController, UISearchResultsUpdating {
     let birdBank = BirdBank()
     var filteredBirds = [Bird]()
+    let locationManager = CLLocationManager()
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredBirds.count
@@ -31,6 +33,7 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        determineAuthorization()
         tableView.backgroundView = UIImageView(image: UIImage(named: "background.png"))
         filteredBirds = birdBank.birds
         setupSearchController()
@@ -46,7 +49,25 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
             destination.mapLink = filteredBirds[row].mapLink
         }
     }
-   
+    
+    func determineAuthorization() {
+        let authStatus = CLLocationManager.authorizationStatus()
+        
+        if authStatus == .notDetermined {
+            locationManager.requestWhenInUseAuthorization()
+            return
+        }
+    }
+    
+    func showLocationServicesDeniedAlert() {
+        let alert = UIAlertController(title: "Location Services Disabled",
+                                      message: "Please enable location services for Word of the Bird in phone Settings.",
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
     func setupSearchController() {
         let searchController = UISearchController(searchResultsController: nil)
         navigationItem.searchController = searchController

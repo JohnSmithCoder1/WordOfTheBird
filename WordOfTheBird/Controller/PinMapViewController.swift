@@ -39,16 +39,28 @@ class PinMapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         segmentedControl.layer.cornerRadius = 5
         segmentedControl.layer.borderColor = UIColor.white.cgColor
         segmentedControl.layer.borderWidth = 1.0
         segmentedControl.layer.masksToBounds = true
-        
+        let authStatus = CLLocationManager.authorizationStatus()
+        if authStatus == .denied || authStatus == .restricted {
+            showLocationServicesDeniedAlert()
+            return
+        }
         updateLocations()
         if !locations.isEmpty {
             showLocations()
         }
+    }
+    
+    func showLocationServicesDeniedAlert() {
+        let alert = UIAlertController(title: "Location Services Disabled",
+                                      message: "Please enable location services for Word of the Bird in phone Settings.",
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
     }
     
     //MARK: - Actions
