@@ -179,7 +179,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             if view.viewWithTag(spinnerTag) == nil {
                 let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
                 spinner.center = messageLabel.center
-                spinner.center.y = 140
+                spinner.center.y = messageLabel.center.y + 40
                 spinner.startAnimating()
                 spinner.tag = spinnerTag
                 view.addSubview(spinner)
