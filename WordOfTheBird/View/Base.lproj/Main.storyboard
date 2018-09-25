@@ -340,9 +340,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6d-L8-q8k">
-                                                    <rect key="frame" x="16" y="12.685881685433742" width="81.000000000000227" height="20.999999999999886"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Photo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6d-L8-q8k">
+                                                    <rect key="frame" x="16" y="12.5" width="250" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -352,6 +351,12 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="y6d-L8-q8k" secondAttribute="bottom" constant="9.8100000000000005" id="EeA-qR-INy"/>
+                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="y6d-L8-q8k" secondAttribute="trailing" constant="20" id="Vp1-qd-oGv"/>
+                                                <constraint firstItem="y6d-L8-q8k" firstAttribute="leading" secondItem="8v5-nX-U5P" secondAttribute="leading" constant="16" id="aIv-5z-7eV"/>
+                                                <constraint firstItem="y6d-L8-q8k" firstAttribute="top" secondItem="8v5-nX-U5P" secondAttribute="top" constant="12.69" id="c89-My-w2m"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -419,21 +424,34 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbE-9k-4iZ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbE-9k-4iZ">
                                                     <rect key="frame" x="16" y="11" width="63" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="63" id="Rxa-WS-NW2"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOb-fV-Xkc">
-                                                    <rect key="frame" x="260" y="11" width="44" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOb-fV-Xkc">
+                                                    <rect key="frame" x="99" y="11" width="205" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="X0S-Zj-4aM"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AbE-9k-4iZ" firstAttribute="leading" secondItem="nVj-cT-Ybk" secondAttribute="leadingMargin" id="Vle-U2-eIZ"/>
+                                                <constraint firstItem="AbE-9k-4iZ" firstAttribute="top" secondItem="nVj-cT-Ybk" secondAttribute="topMargin" id="XH9-Ux-rks"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hOb-fV-Xkc" secondAttribute="bottom" constant="1" id="iHc-uh-8UR"/>
+                                                <constraint firstItem="hOb-fV-Xkc" firstAttribute="leading" relation="lessThanOrEqual" secondItem="AbE-9k-4iZ" secondAttribute="trailing" constant="20" id="l40-1E-A0B"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="AbE-9k-4iZ" secondAttribute="bottom" constant="1" id="pzk-Ud-eb1"/>
+                                                <constraint firstItem="hOb-fV-Xkc" firstAttribute="trailing" secondItem="nVj-cT-Ybk" secondAttribute="trailingMargin" id="qs3-UC-fuF"/>
+                                                <constraint firstItem="hOb-fV-Xkc" firstAttribute="top" secondItem="nVj-cT-Ybk" secondAttribute="topMargin" id="s29-IP-OQH"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -968,7 +986,10 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ecology" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMP-Qh-oby">
-                                                    <rect key="frame" x="20" y="11" width="246" height="22"/>
+                                                    <rect key="frame" x="20" y="11.5" width="246" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.5" id="5f0-Rt-2aE"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -977,9 +998,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                             <constraints>
                                                 <constraint firstItem="hMP-Qh-oby" firstAttribute="leading" secondItem="DG4-I9-M6N" secondAttribute="leading" constant="20" id="0jy-az-piu"/>
                                                 <constraint firstAttribute="trailing" secondItem="hMP-Qh-oby" secondAttribute="trailing" constant="20" id="5gR-kJ-T7v"/>
-                                                <constraint firstItem="hMP-Qh-oby" firstAttribute="top" secondItem="DG4-I9-M6N" secondAttribute="topMargin" id="7Iq-Wf-mPl"/>
                                                 <constraint firstItem="hMP-Qh-oby" firstAttribute="centerY" secondItem="DG4-I9-M6N" secondAttribute="centerY" id="ILt-fL-7eF"/>
-                                                <constraint firstItem="hMP-Qh-oby" firstAttribute="bottom" secondItem="DG4-I9-M6N" secondAttribute="bottomMargin" id="K1i-b0-eAJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -996,7 +1015,10 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Range Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAV-cs-Djm">
-                                                    <rect key="frame" x="20" y="8" width="254" height="27.5"/>
+                                                    <rect key="frame" x="20" y="11.5" width="254" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.5" id="bOT-s9-0oR"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1004,10 +1026,8 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="nAV-cs-Djm" secondAttribute="trailing" constant="20" id="1KL-xm-CM8"/>
-                                                <constraint firstItem="nAV-cs-Djm" firstAttribute="top" secondItem="WsW-rX-LDr" secondAttribute="topMargin" id="4Iy-Tt-rIa"/>
                                                 <constraint firstItem="nAV-cs-Djm" firstAttribute="leading" secondItem="WsW-rX-LDr" secondAttribute="leading" constant="20" id="SBP-Hj-2bV"/>
                                                 <constraint firstItem="nAV-cs-Djm" firstAttribute="centerY" secondItem="WsW-rX-LDr" secondAttribute="centerY" id="eSR-oN-8dk"/>
-                                                <constraint firstItem="nAV-cs-Djm" firstAttribute="bottom" secondItem="WsW-rX-LDr" secondAttribute="bottomMargin" id="kkl-YV-ddb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
