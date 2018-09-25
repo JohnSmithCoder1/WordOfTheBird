@@ -33,18 +33,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var pinLocationButton: UIButton!
     
     @IBAction func getLocation() {
-        let authStatus = CLLocationManager.authorizationStatus()
-        
-        if authStatus == .notDetermined {
-            locationManager.requestWhenInUseAuthorization()
-            return
-        }
-        
-        if authStatus == .denied || authStatus == .restricted {
-            showLocationServicesDeniedAlert()
-            return
-        }
-        
         if updatingLocation {
             stopLocationManager()
         } else {
@@ -99,15 +87,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             lastLocationError = NSError(domain: "WordoftheBirdErrorDomain", code: 1, userInfo: nil)
             updateLabels()
         }
-    }
-    
-    func showLocationServicesDeniedAlert() {
-        let alert = UIAlertController(title: "Location Services Disabled",
-                                      message: "Please enable location services for Word of the Bird in phone Settings.",
-                                      preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(okAction)
-        present(alert, animated: true, completion: nil)
     }
     
     func updateLabels() {
