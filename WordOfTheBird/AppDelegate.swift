@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let controller2 = navController.viewControllers.first as! PinListViewController
             controller2.managedObjectContext = managedObjectContext
-            let _ = controller2.view
+            let _ = controller2.view // loads view automatically to work around IOS bug, option-click .view for details
             
             navController = tabViewControllers[3] as! UINavigationController
             let controller4 = navController.viewControllers.first as! PinMapViewController

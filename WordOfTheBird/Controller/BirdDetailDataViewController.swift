@@ -57,13 +57,12 @@ class BirdDetailDataViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        audioPlayer?.stop()
         if let destination = segue.destination as? WebViewController,
             let indexPath = tableView.indexPathForSelectedRow {
             if indexPath.section == 1 && indexPath.row == 0 {
-                audioPlayer?.stop()
                 destination.link = infoLink
             } else if indexPath.section == 1 && indexPath.row == 1 {
-                audioPlayer?.stop()
                 destination.link = mapLink
             }
         }
