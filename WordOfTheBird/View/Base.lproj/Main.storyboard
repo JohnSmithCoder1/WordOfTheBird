@@ -122,17 +122,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jcr-Lf-fua" userLabel="LatLonLabelStackView">
-                                <rect key="frame" x="10" y="155" width="300" height="21"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="jcr-Lf-fua" userLabel="LatLonLabelStackView">
+                                <rect key="frame" x="10" y="175" width="300" height="21"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEG-bn-fBQ" userLabel="Latitude:">
-                                        <rect key="frame" x="0.0" y="0.0" width="140" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEG-bn-fBQ" userLabel="Latitude:">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWX-E5-veY" userLabel="Longitude:">
-                                        <rect key="frame" x="160" y="0.0" width="140" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWX-E5-veY" userLabel="Longitude:">
+                                        <rect key="frame" x="170" y="0.0" width="130" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -170,7 +170,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDP-gQ-fI2" userLabel="AddressLabel">
-                                <rect key="frame" x="10" y="217" width="300" height="21"/>
+                                <rect key="frame" x="10" y="247" width="300" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="gt5-n8-xOT"/>
                                 </constraints>
@@ -193,7 +193,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CIg-qV-wWg" userLabel="LatLonValueStackView">
-                                <rect key="frame" x="10" y="186" width="300" height="21"/>
+                                <rect key="frame" x="10" y="206" width="300" height="21"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(latitude)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9D-Ua-tbx" userLabel="Latitude Value">
                                         <rect key="frame" x="0.0" y="0.0" width="145" height="21"/>
@@ -213,7 +213,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lau-s0-FzO" userLabel="AddressValue">
-                                <rect key="frame" x="10" y="243" width="300" height="44"/>
+                                <rect key="frame" x="10" y="273" width="300" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Ypy-YB-DkV"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="zZL-om-7fu"/>
@@ -234,7 +234,7 @@
                             <constraint firstItem="jcr-Lf-fua" firstAttribute="leading" secondItem="ZnH-sa-QOi" secondAttribute="leading" constant="10" id="PGY-dq-aPz"/>
                             <constraint firstItem="ZnH-sa-QOi" firstAttribute="trailing" secondItem="hwN-DG-GE5" secondAttribute="trailing" constant="106" id="PMY-vC-ywM"/>
                             <constraint firstItem="hwN-DG-GE5" firstAttribute="leading" secondItem="ZnH-sa-QOi" secondAttribute="leading" constant="106" id="Pja-vD-hWT"/>
-                            <constraint firstItem="qDP-gQ-fI2" firstAttribute="top" secondItem="CIg-qV-wWg" secondAttribute="bottom" constant="10" id="Q8M-5Z-syc"/>
+                            <constraint firstItem="qDP-gQ-fI2" firstAttribute="top" secondItem="CIg-qV-wWg" secondAttribute="bottom" constant="20" id="Q8M-5Z-syc"/>
                             <constraint firstItem="ZnH-sa-QOi" firstAttribute="trailing" secondItem="jcr-Lf-fua" secondAttribute="trailing" constant="10" id="VM5-BW-hBr"/>
                             <constraint firstItem="xvu-uZ-FqN" firstAttribute="top" secondItem="ZnH-sa-QOi" secondAttribute="top" constant="10" id="XY9-4M-Iuj"/>
                             <constraint firstItem="Lau-s0-FzO" firstAttribute="top" secondItem="qDP-gQ-fI2" secondAttribute="bottom" constant="5" id="ZFs-pz-Ze8"/>
@@ -244,7 +244,7 @@
                             <constraint firstItem="ZnH-sa-QOi" firstAttribute="bottom" secondItem="hwN-DG-GE5" secondAttribute="bottom" constant="60" id="hQc-4L-eM9"/>
                             <constraint firstItem="Lau-s0-FzO" firstAttribute="leading" secondItem="ZnH-sa-QOi" secondAttribute="leading" constant="10" id="k8i-68-eS5"/>
                             <constraint firstItem="ZnH-sa-QOi" firstAttribute="trailing" secondItem="xvu-uZ-FqN" secondAttribute="trailing" constant="10" id="lVf-vK-w1t"/>
-                            <constraint firstItem="jcr-Lf-fua" firstAttribute="top" secondItem="xvu-uZ-FqN" secondAttribute="bottom" constant="60" id="pIM-TT-ced"/>
+                            <constraint firstItem="jcr-Lf-fua" firstAttribute="top" secondItem="xvu-uZ-FqN" secondAttribute="bottom" constant="80" id="pIM-TT-ced"/>
                             <constraint firstItem="ZnH-sa-QOi" firstAttribute="trailing" secondItem="qDP-gQ-fI2" secondAttribute="trailing" constant="10" id="vYp-DR-dpQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZnH-sa-QOi"/>
