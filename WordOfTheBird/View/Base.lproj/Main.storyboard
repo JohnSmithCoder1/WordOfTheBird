@@ -38,7 +38,10 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1F-5N-eTh" userLabel="birdLabel">
-                                            <rect key="frame" x="71.5" y="0.0" width="204.5" height="63.5"/>
+                                            <rect key="frame" x="71.5" y="21.5" width="204.5" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="0a1-XM-RBs"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -47,10 +50,8 @@
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="4Zj-3W-FaN" secondAttribute="bottom" id="5Pv-bz-359"/>
                                         <constraint firstItem="4Zj-3W-FaN" firstAttribute="top" secondItem="ogG-Ad-caH" secondAttribute="top" id="Lo9-iP-Hxk"/>
-                                        <constraint firstAttribute="bottom" secondItem="J1F-5N-eTh" secondAttribute="bottom" id="ONX-BK-kwC"/>
                                         <constraint firstItem="J1F-5N-eTh" firstAttribute="leading" secondItem="4Zj-3W-FaN" secondAttribute="trailing" constant="8" id="Sn0-hp-qxc"/>
                                         <constraint firstAttribute="trailing" secondItem="J1F-5N-eTh" secondAttribute="trailing" constant="10" id="cIX-U8-LvJ"/>
-                                        <constraint firstItem="J1F-5N-eTh" firstAttribute="top" secondItem="ogG-Ad-caH" secondAttribute="top" id="caO-jK-qCC"/>
                                         <constraint firstItem="4Zj-3W-FaN" firstAttribute="leading" secondItem="ogG-Ad-caH" secondAttribute="leading" id="haS-Al-lPa"/>
                                         <constraint firstItem="J1F-5N-eTh" firstAttribute="centerY" secondItem="ogG-Ad-caH" secondAttribute="centerY" id="qGS-Yg-Sp5"/>
                                         <constraint firstItem="J1F-5N-eTh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4Zj-3W-FaN" secondAttribute="trailing" constant="8" symbolic="YES" id="tID-Ox-qPS"/>
@@ -744,6 +745,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Y6x-FZ-1M8" secondAttribute="height" multiplier="1:1" id="e13-lo-8Vs"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="235" id="k0z-eT-jGB"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -880,7 +882,10 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llq-9U-GCL">
-                                                    <rect key="frame" x="20" y="0.0" width="247" height="43.5"/>
+                                                    <rect key="frame" x="20" y="11.5" width="247" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.5" id="pDs-K8-R7i"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -894,12 +899,10 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Llq-9U-GCL" firstAttribute="top" secondItem="7RS-Dv-UmF" secondAttribute="top" id="00N-4L-1dK"/>
                                                 <constraint firstItem="OWt-wp-Jbu" firstAttribute="centerY" secondItem="7RS-Dv-UmF" secondAttribute="centerY" id="HfX-yT-6HU"/>
                                                 <constraint firstItem="OWt-wp-Jbu" firstAttribute="leading" secondItem="Llq-9U-GCL" secondAttribute="trailing" constant="20" id="NhX-dh-gRL"/>
                                                 <constraint firstAttribute="trailing" secondItem="OWt-wp-Jbu" secondAttribute="trailing" constant="8" id="Nze-mg-7ha"/>
                                                 <constraint firstItem="OWt-wp-Jbu" firstAttribute="leading" secondItem="Llq-9U-GCL" secondAttribute="trailing" constant="20" id="c96-Lq-mac"/>
-                                                <constraint firstAttribute="bottom" secondItem="Llq-9U-GCL" secondAttribute="bottom" id="ktr-P8-1px"/>
                                                 <constraint firstItem="Llq-9U-GCL" firstAttribute="centerY" secondItem="7RS-Dv-UmF" secondAttribute="centerY" id="wwU-dY-Jvb"/>
                                                 <constraint firstItem="Llq-9U-GCL" firstAttribute="leading" secondItem="7RS-Dv-UmF" secondAttribute="leading" constant="20" id="wwZ-YB-ahO"/>
                                             </constraints>
@@ -914,7 +917,10 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGe-do-ZUK" userLabel="Call 2">
-                                                    <rect key="frame" x="20" y="0.0" width="247" height="43.5"/>
+                                                    <rect key="frame" x="20" y="11.5" width="247" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.5" id="bPX-HX-jRs"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -928,14 +934,12 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="nGe-do-ZUK" secondAttribute="bottom" id="3xT-9O-EVZ"/>
                                                 <constraint firstItem="sVR-xH-XVZ" firstAttribute="centerY" secondItem="y1v-9r-m7q" secondAttribute="centerY" id="H9e-5j-r1p"/>
                                                 <constraint firstItem="sVR-xH-XVZ" firstAttribute="leading" secondItem="nGe-do-ZUK" secondAttribute="trailing" constant="20" id="fAE-ZO-ymz"/>
                                                 <constraint firstItem="nGe-do-ZUK" firstAttribute="centerY" secondItem="y1v-9r-m7q" secondAttribute="centerY" id="gYz-8x-CNp"/>
                                                 <constraint firstItem="sVR-xH-XVZ" firstAttribute="leading" secondItem="nGe-do-ZUK" secondAttribute="trailing" constant="20" id="tXy-fJ-kcZ"/>
                                                 <constraint firstAttribute="trailing" secondItem="sVR-xH-XVZ" secondAttribute="trailing" constant="8" id="uKu-Ad-4km"/>
                                                 <constraint firstItem="nGe-do-ZUK" firstAttribute="leading" secondItem="y1v-9r-m7q" secondAttribute="leading" constant="20" id="uts-Fg-Rnh"/>
-                                                <constraint firstItem="nGe-do-ZUK" firstAttribute="top" secondItem="y1v-9r-m7q" secondAttribute="top" id="yHA-r5-Dpb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -948,7 +952,10 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfB-fp-JHk" userLabel="Call 3">
-                                                    <rect key="frame" x="20" y="0.0" width="247" height="43.5"/>
+                                                    <rect key="frame" x="20" y="11.5" width="247" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.5" id="m1D-gg-6Go"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -965,10 +972,8 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                                 <constraint firstAttribute="trailing" secondItem="FQm-Ay-oJ4" secondAttribute="trailing" constant="8" id="DVX-UO-NaB"/>
                                                 <constraint firstItem="FQm-Ay-oJ4" firstAttribute="centerY" secondItem="KWl-9e-cF7" secondAttribute="centerY" id="EUz-VP-hYJ"/>
                                                 <constraint firstItem="FQm-Ay-oJ4" firstAttribute="leading" secondItem="gfB-fp-JHk" secondAttribute="trailing" constant="20" id="I75-Fv-KcC"/>
-                                                <constraint firstAttribute="bottom" secondItem="gfB-fp-JHk" secondAttribute="bottom" id="Jcy-NN-d39"/>
                                                 <constraint firstItem="FQm-Ay-oJ4" firstAttribute="leading" secondItem="gfB-fp-JHk" secondAttribute="trailing" constant="20" id="Tvm-TD-LFj"/>
                                                 <constraint firstItem="gfB-fp-JHk" firstAttribute="centerY" secondItem="KWl-9e-cF7" secondAttribute="centerY" id="Zm7-XM-sFQ"/>
-                                                <constraint firstItem="gfB-fp-JHk" firstAttribute="top" secondItem="KWl-9e-cF7" secondAttribute="top" id="j0h-As-cT2"/>
                                                 <constraint firstItem="gfB-fp-JHk" firstAttribute="leading" secondItem="KWl-9e-cF7" secondAttribute="leading" constant="20" id="nbl-oc-fQR"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1011,7 +1016,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                         <rect key="frame" x="0.0" y="287.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1F6-0f-kii" id="WsW-rX-LDr">
-                                            <rect key="frame" x="0.0" y="0.0" width="294" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Range Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAV-cs-Djm">
