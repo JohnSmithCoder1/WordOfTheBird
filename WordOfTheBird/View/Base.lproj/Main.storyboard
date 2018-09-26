@@ -153,7 +153,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwN-DG-GE5" userLabel="Pin Location Button">
-                                <rect key="frame" x="106" y="421" width="108" height="38"/>
+                                <rect key="frame" x="106" y="431" width="108" height="38"/>
                                 <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="PIF-kG-TQh"/>
@@ -229,7 +229,7 @@
                             <constraint firstItem="xvu-uZ-FqN" firstAttribute="leading" secondItem="ZnH-sa-QOi" secondAttribute="leading" constant="10" id="B47-XL-8eu"/>
                             <constraint firstItem="qDP-gQ-fI2" firstAttribute="leading" secondItem="ZnH-sa-QOi" secondAttribute="leading" constant="10" id="Bxq-cR-bd3"/>
                             <constraint firstItem="ZnH-sa-QOi" firstAttribute="trailing" secondItem="CIg-qV-wWg" secondAttribute="trailing" constant="10" id="Foc-x7-0HF"/>
-                            <constraint firstItem="hwN-DG-GE5" firstAttribute="top" secondItem="7Mv-iS-QAT" secondAttribute="bottom" constant="20" id="G6H-mV-lgJ"/>
+                            <constraint firstItem="hwN-DG-GE5" firstAttribute="top" secondItem="7Mv-iS-QAT" secondAttribute="bottom" constant="30" id="G6H-mV-lgJ"/>
                             <constraint firstItem="jcr-Lf-fua" firstAttribute="leading" secondItem="ZnH-sa-QOi" secondAttribute="leading" constant="10" id="PGY-dq-aPz"/>
                             <constraint firstItem="qDP-gQ-fI2" firstAttribute="top" secondItem="CIg-qV-wWg" secondAttribute="bottom" constant="20" id="Q8M-5Z-syc"/>
                             <constraint firstItem="ZnH-sa-QOi" firstAttribute="trailing" secondItem="jcr-Lf-fua" secondAttribute="trailing" constant="10" id="VM5-BW-hBr"/>
@@ -238,7 +238,7 @@
                             <constraint firstItem="ZnH-sa-QOi" firstAttribute="trailing" secondItem="Lau-s0-FzO" secondAttribute="trailing" constant="10" id="aKb-D1-kyg"/>
                             <constraint firstItem="7Mv-iS-QAT" firstAttribute="centerX" secondItem="32u-if-4JU" secondAttribute="centerX" id="aRn-jo-2Jp"/>
                             <constraint firstItem="CIg-qV-wWg" firstAttribute="leading" secondItem="ZnH-sa-QOi" secondAttribute="leading" constant="10" id="hGi-nl-xXv"/>
-                            <constraint firstItem="ZnH-sa-QOi" firstAttribute="bottom" secondItem="hwN-DG-GE5" secondAttribute="bottom" constant="60" id="hQc-4L-eM9"/>
+                            <constraint firstItem="ZnH-sa-QOi" firstAttribute="bottom" secondItem="hwN-DG-GE5" secondAttribute="bottom" constant="50" id="hQc-4L-eM9"/>
                             <constraint firstItem="Lau-s0-FzO" firstAttribute="leading" secondItem="ZnH-sa-QOi" secondAttribute="leading" constant="10" id="k8i-68-eS5"/>
                             <constraint firstItem="ZnH-sa-QOi" firstAttribute="trailing" secondItem="xvu-uZ-FqN" secondAttribute="trailing" constant="10" id="lVf-vK-w1t"/>
                             <constraint firstItem="jcr-Lf-fua" firstAttribute="top" secondItem="xvu-uZ-FqN" secondAttribute="bottom" constant="80" id="pIM-TT-ced"/>
@@ -1155,6 +1155,6 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DeQ-I1-5gW"/>
-        <segue reference="BKX-1q-dIW"/>
+        <segue reference="KWq-gh-aGh"/>
     </inferredMetricsTieBreakers>
 </document>
