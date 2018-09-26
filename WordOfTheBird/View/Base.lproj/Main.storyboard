@@ -156,9 +156,8 @@
                                 <rect key="frame" x="106" y="421" width="108" height="38"/>
                                 <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="73t-tv-0pZ"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="108" id="GdT-7Z-rYu"/>
                                     <constraint firstAttribute="height" constant="38" id="PIF-kG-TQh"/>
+                                    <constraint firstAttribute="width" secondItem="hwN-DG-GE5" secondAttribute="height" multiplier="54:19" id="vRx-i7-N04"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
@@ -183,9 +182,8 @@
                                 <rect key="frame" x="106" y="363" width="108" height="38"/>
                                 <color key="backgroundColor" name="Color"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="7Mv-iS-QAT" secondAttribute="height" multiplier="54:19" id="3SM-gP-A97"/>
                                     <constraint firstAttribute="height" constant="38" id="9xc-Sg-9fu"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="DI8-tY-3Je"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="108" id="ypj-yF-CdK"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Get Location"/>
@@ -227,20 +225,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CIg-qV-wWg" firstAttribute="top" secondItem="jcr-Lf-fua" secondAttribute="bottom" constant="10" id="8Dv-gC-YW8"/>
+                            <constraint firstItem="hwN-DG-GE5" firstAttribute="centerX" secondItem="32u-if-4JU" secondAttribute="centerX" id="8p9-xu-WYZ"/>
                             <constraint firstItem="xvu-uZ-FqN" firstAttribute="leading" secondItem="ZnH-sa-QOi" secondAttribute="leading" constant="10" id="B47-XL-8eu"/>
                             <constraint firstItem="qDP-gQ-fI2" firstAttribute="leading" secondItem="ZnH-sa-QOi" secondAttribute="leading" constant="10" id="Bxq-cR-bd3"/>
                             <constraint firstItem="ZnH-sa-QOi" firstAttribute="trailing" secondItem="CIg-qV-wWg" secondAttribute="trailing" constant="10" id="Foc-x7-0HF"/>
                             <constraint firstItem="hwN-DG-GE5" firstAttribute="top" secondItem="7Mv-iS-QAT" secondAttribute="bottom" constant="20" id="G6H-mV-lgJ"/>
-                            <constraint firstItem="7Mv-iS-QAT" firstAttribute="leading" secondItem="ZnH-sa-QOi" secondAttribute="leading" constant="106" id="MJN-10-QAH"/>
                             <constraint firstItem="jcr-Lf-fua" firstAttribute="leading" secondItem="ZnH-sa-QOi" secondAttribute="leading" constant="10" id="PGY-dq-aPz"/>
-                            <constraint firstItem="ZnH-sa-QOi" firstAttribute="trailing" secondItem="hwN-DG-GE5" secondAttribute="trailing" constant="106" id="PMY-vC-ywM"/>
-                            <constraint firstItem="hwN-DG-GE5" firstAttribute="leading" secondItem="ZnH-sa-QOi" secondAttribute="leading" constant="106" id="Pja-vD-hWT"/>
                             <constraint firstItem="qDP-gQ-fI2" firstAttribute="top" secondItem="CIg-qV-wWg" secondAttribute="bottom" constant="20" id="Q8M-5Z-syc"/>
                             <constraint firstItem="ZnH-sa-QOi" firstAttribute="trailing" secondItem="jcr-Lf-fua" secondAttribute="trailing" constant="10" id="VM5-BW-hBr"/>
                             <constraint firstItem="xvu-uZ-FqN" firstAttribute="top" secondItem="ZnH-sa-QOi" secondAttribute="top" constant="20" id="XY9-4M-Iuj"/>
                             <constraint firstItem="Lau-s0-FzO" firstAttribute="top" secondItem="qDP-gQ-fI2" secondAttribute="bottom" constant="5" id="ZFs-pz-Ze8"/>
-                            <constraint firstItem="ZnH-sa-QOi" firstAttribute="trailing" secondItem="7Mv-iS-QAT" secondAttribute="trailing" constant="106" id="ZTU-cm-R4b"/>
                             <constraint firstItem="ZnH-sa-QOi" firstAttribute="trailing" secondItem="Lau-s0-FzO" secondAttribute="trailing" constant="10" id="aKb-D1-kyg"/>
+                            <constraint firstItem="7Mv-iS-QAT" firstAttribute="centerX" secondItem="32u-if-4JU" secondAttribute="centerX" id="aRn-jo-2Jp"/>
                             <constraint firstItem="CIg-qV-wWg" firstAttribute="leading" secondItem="ZnH-sa-QOi" secondAttribute="leading" constant="10" id="hGi-nl-xXv"/>
                             <constraint firstItem="ZnH-sa-QOi" firstAttribute="bottom" secondItem="hwN-DG-GE5" secondAttribute="bottom" constant="60" id="hQc-4L-eM9"/>
                             <constraint firstItem="Lau-s0-FzO" firstAttribute="leading" secondItem="ZnH-sa-QOi" secondAttribute="leading" constant="10" id="k8i-68-eS5"/>
@@ -601,6 +597,10 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hXh-U7-bfR">
                                             <rect key="frame" x="10" y="2" width="52" height="52"/>
                                             <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="52" id="mY5-pM-63z"/>
+                                                <constraint firstAttribute="height" constant="52" id="uQS-lO-QlS"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -1016,7 +1016,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                         <rect key="frame" x="0.0" y="287.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1F6-0f-kii" id="WsW-rX-LDr">
-                                            <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Range Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAV-cs-Djm">
