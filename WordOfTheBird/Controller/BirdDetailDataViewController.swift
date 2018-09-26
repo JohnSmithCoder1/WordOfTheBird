@@ -17,8 +17,15 @@ class BirdDetailDataViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
+        header.backgroundView?.backgroundColor = UIColor(red: 79/255, green: 143/255, blue: 0/255, alpha: 0.8)
         header.textLabel?.textColor = UIColor.white
-//        header.textLabel?.backgroundColor = UIColor(red: 79/255, green: 143/255, blue: 0/255, alpha: 0.8)
+        header.textLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        if section == 0 {
+            header.textLabel?.text = "  Bird Calls"
+        } else if section == 1 {
+            header.textLabel?.text = "  Bird Data"
+        }
+        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,23 +38,14 @@ class BirdDetailDataViewController: UITableViewController {
         return rowCount
     }
     
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 28
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             playSound(forObject: calls[indexPath.row])
         }
-//        } else if indexPath.section == 1 {
-//            audioPlayer?.stop()
-//            if indexPath.row == 0 {
-//                if let infoLink = infoLink {
-//                    UIApplication.shared.open(URL(string: infoLink)!)
-//                }
-//            }
-//            if indexPath.row == 1 {
-//                if let mapLink = mapLink {
-//                    UIApplication.shared.open(URL(string: mapLink)!)
-//                }
-//            }
-//        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
