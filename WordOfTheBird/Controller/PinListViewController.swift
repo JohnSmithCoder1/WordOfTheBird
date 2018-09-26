@@ -64,6 +64,11 @@ class PinListViewController: UITableViewController {
         view.tintColor = UIColor(red: 79/255, green: 143/255, blue: 0/255, alpha: 0.8)
     }
     
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return fetchedResultsController.sections!.count
     }
