@@ -17,7 +17,7 @@ private let dateFormatter: DateFormatter = {
     return formatter
 }()
 
-class PinDetailsViewController: UITableViewController {
+class PinDetailsViewController: UITableViewController, UITextViewDelegate {
     var coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     var placemark: CLPlacemark?
     var categoryName = "Other Birds"
@@ -34,7 +34,7 @@ class PinDetailsViewController: UITableViewController {
             }
         }
     }
-    var descriptionText = ""
+    var descriptionText = "Add a description here..."
     var image: UIImage?
     var observer: Any!
     
@@ -62,7 +62,11 @@ class PinDetailsViewController: UITableViewController {
             location.photoID = nil
         }
         
-        location.locationDescription = descriptionTextView.text
+        if descriptionTextView.text == "Add a description here..." {
+            location.locationDescription = ""
+        } else {
+            location.locationDescription = descriptionTextView.text
+        }
         location.category = categoryName
         location.latitude = coordinate.latitude
         location.longitude = coordinate.longitude
@@ -106,6 +110,9 @@ class PinDetailsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundView = UIImageView(image: UIImage(named: "background.png"))
+        descriptionTextView.delegate = self
+        descriptionTextView.text = "Add a description here..."
+        descriptionTextView.textColor = UIColor.lightGray
         
         if let location = locationToEdit {
             title = "Edit Location"
@@ -133,6 +140,20 @@ class PinDetailsViewController: UITableViewController {
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         gestureRecognizer.cancelsTouchesInView = false
         tableView.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if descriptionTextView.textColor == UIColor.lightGray {
+            descriptionTextView.text = nil
+            descriptionTextView.textColor = UIColor.white
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if descriptionTextView.text.isEmpty {
+            descriptionTextView.text = "Add a description here..."
+            descriptionTextView.textColor = UIColor.lightGray
+        }
     }
     
     func show(image: UIImage) {
