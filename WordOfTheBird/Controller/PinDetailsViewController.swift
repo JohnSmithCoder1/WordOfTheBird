@@ -116,6 +116,13 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
         
         if let location = locationToEdit {
             title = "Edit Location"
+            if location.locationDescription == "" {
+                descriptionTextView.textColor = UIColor.lightGray
+                descriptionTextView.text = "Add a description here..."
+            } else {
+                descriptionTextView.textColor = UIColor.white
+                descriptionTextView.text = location.locationDescription
+            }
             if location.hasPhoto {
                 if let theImage = location.photoImage {
                     show(image: theImage)
