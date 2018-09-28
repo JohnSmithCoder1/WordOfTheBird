@@ -27,7 +27,10 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if let host = navigationAction.request.url?.host {
-            if host.contains("allaboutbirds.org") {
+            if host.contains("wikipedia") {
+                decisionHandler(.allow)
+                return
+            } else if host.contains("wikimedia") {
                 decisionHandler(.allow)
                 return
             }
