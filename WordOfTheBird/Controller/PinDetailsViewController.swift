@@ -116,7 +116,7 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
         
         if let location = locationToEdit {
             title = "Edit Location"
-            if location.locationDescription == "" {
+            if descriptionText == "" {
                 descriptionTextView.textColor = UIColor.lightGray
                 descriptionTextView.text = "Add a description here..."
             } else {
