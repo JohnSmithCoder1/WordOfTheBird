@@ -155,7 +155,7 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        // Dispatch block puts cursor placement code on next run cycle so doesn't get called at same time as the rest of code in textViewDidBeginEditing
+        // Dispatch block puts cursor placement code on next run cycle so doesn't get called at same time as the rest of function
         DispatchQueue.main.async {
             let newPosition = self.descriptionTextView.endOfDocument
             self.descriptionTextView.selectedTextRange = self.descriptionTextView.textRange(from: newPosition, to: newPosition)

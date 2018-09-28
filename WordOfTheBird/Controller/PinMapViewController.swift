@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreData
+import CoreLocation
 
 class PinMapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
@@ -25,6 +26,10 @@ class PinMapViewController: UIViewController {
         }
     }
     
+    let authStatus = CLLocationManager.authorizationStatus()
+    let locationManager = CLLocationManager()
+    var locations = [Location]()
+    
     var managedObjectContext: NSManagedObjectContext! {
         didSet {
             NotificationCenter.default.addObserver(forName: Notification.Name.NSManagedObjectContextObjectsDidChange, object: managedObjectContext, queue: OperationQueue.main) { notification in
@@ -35,22 +40,30 @@ class PinMapViewController: UIViewController {
         }
     }
     
-    var locations = [Location]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         segmentedControl.layer.cornerRadius = 5
         segmentedControl.layer.borderColor = UIColor.white.cgColor
         segmentedControl.layer.borderWidth = 1.0
         segmentedControl.layer.masksToBounds = true
-        let authStatus = CLLocationManager.authorizationStatus()
-        if authStatus == .denied || authStatus == .restricted {
-            showLocationServicesDeniedAlert()
-            return
-        }
         updateLocations()
         if !locations.isEmpty {
             showLocations()
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        determineAuthorization()
+    }
+    
+    func determineAuthorization() {
+        if authStatus == .notDetermined {
+            locationManager.requestWhenInUseAuthorization()
+            return
+        } else if authStatus == .denied || authStatus == .restricted {
+            showLocationServicesDeniedAlert()
+            return
         }
     }
     
