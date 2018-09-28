@@ -113,12 +113,11 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
         descriptionTextView.delegate = self
         descriptionTextView.text = "Add a description here..."
         descriptionTextView.textColor = UIColor.lightGray
+//        let newPosition = descriptionTextView.endOfDocument
+//        descriptionTextView.selectedTextRange = descriptionTextView.textRange(from: newPosition, to: newPosition)
         
         if let location = locationToEdit {
             title = "Edit Location"
-            // descriptionText == "" NO
-            // descriptionTextView.text == "" NO
-            // location.locationDescription == ""
             if location.locationDescription.isEmpty {
                 descriptionTextView.textColor = UIColor.lightGray
                 descriptionTextView.text = "Add a description here..."
@@ -156,6 +155,12 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
+        // Dispatch block puts cursor placement code on next run cycle so doesn't get called at same time as the rest of code in textViewDidBeginEditing
+        DispatchQueue.main.async {
+            let newPosition = self.descriptionTextView.endOfDocument
+            self.descriptionTextView.selectedTextRange = self.descriptionTextView.textRange(from: newPosition, to: newPosition)
+        }
+        
         if descriptionTextView.textColor == UIColor.lightGray {
             descriptionTextView.text = nil
             descriptionTextView.textColor = UIColor.white
