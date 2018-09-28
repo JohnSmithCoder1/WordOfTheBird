@@ -113,8 +113,6 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
         descriptionTextView.delegate = self
         descriptionTextView.text = "Add a description here..."
         descriptionTextView.textColor = UIColor.lightGray
-//        let newPosition = descriptionTextView.endOfDocument
-//        descriptionTextView.selectedTextRange = descriptionTextView.textRange(from: newPosition, to: newPosition)
         
         if let location = locationToEdit {
             title = "Edit Location"
@@ -134,7 +132,7 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
         
         //
         //
-        // I commented out the next line to make our default text for description work (show the default text when editing existing location with no description), but it might break something else, haven't had time to check yet
+        // I commented out the next line to make our default text for description work (show the default text when editing existing location with no description), maybe we don't need descriptionText anymore
 //        descriptionTextView.text = descriptionText
         categoryLabel.text = categoryName
         latitudeLabel.text = String(format: "%.8f", coordinate.latitude)
