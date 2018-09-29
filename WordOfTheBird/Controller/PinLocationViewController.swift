@@ -34,9 +34,9 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var pinLocationButton: UIButton!
     
     @IBAction func getLocation() {
-        if authStatus == .denied || authStatus == .restricted {
+        if authStatus != .authorizedWhenInUse {
             showLocationServicesDeniedAlert()
-            return
+            print("********** authStatus: \(authStatus.rawValue)")
         }
         if updatingLocation {
             stopLocationManager()
@@ -71,10 +71,12 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     func determineAuthorization() {
         if authStatus == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
-            return
-        } else if authStatus == .denied || authStatus == .restricted {
+            print("********** authStatus: \(authStatus.rawValue)")
+        }
+        
+        if authStatus != .authorizedWhenInUse {
             showLocationServicesDeniedAlert()
-            return
+            print("********** authStatus: \(authStatus.rawValue)")
         }
     }
     

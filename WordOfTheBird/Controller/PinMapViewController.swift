@@ -60,10 +60,12 @@ class PinMapViewController: UIViewController {
     func determineAuthorization() {
         if authStatus == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
-            return
-        } else if authStatus == .denied || authStatus == .restricted {
+            print("********** authStatus: \(authStatus)")
+        }
+        
+        if authStatus != .authorizedWhenInUse {
             showLocationServicesDeniedAlert()
-            return
+            print("********** authStatus: \(authStatus)")
         }
     }
     
