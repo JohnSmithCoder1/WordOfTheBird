@@ -257,7 +257,7 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
         var line = ""
         line.add(text: placemark.subThoroughfare)
         line.add(text: placemark.thoroughfare, separatedBy: " ")
-        line.add(text: placemark.locality, separatedBy: " ")
+        line.add(text: placemark.locality, separatedBy: "\n")
         line.add(text: placemark.administrativeArea, separatedBy: ", ")
         line.add(text: placemark.postalCode, separatedBy: " ")
         return line
