@@ -430,7 +430,6 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbE-9k-4iZ">
                                                     <rect key="frame" x="16" y="11" width="63" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="63" id="30Y-dh-dH2"/>
                                                         <constraint firstAttribute="height" constant="21" id="MUd-7i-Bhl"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -443,7 +442,7 @@
                                                 <constraint firstItem="hOb-fV-Xkc" firstAttribute="left" secondItem="AbE-9k-4iZ" secondAttribute="right" constant="60" id="Nre-hT-5KI"/>
                                                 <constraint firstItem="AbE-9k-4iZ" firstAttribute="top" secondItem="nVj-cT-Ybk" secondAttribute="topMargin" id="TfV-42-yTh"/>
                                                 <constraint firstItem="hOb-fV-Xkc" firstAttribute="top" secondItem="nVj-cT-Ybk" secondAttribute="topMargin" id="bTW-6u-uQh"/>
-                                                <constraint firstItem="AbE-9k-4iZ" firstAttribute="leading" secondItem="nVj-cT-Ybk" secondAttribute="leadingMargin" id="l2E-7F-k9C"/>
+                                                <constraint firstItem="AbE-9k-4iZ" firstAttribute="left" secondItem="nVj-cT-Ybk" secondAttribute="leftMargin" id="l2E-7F-k9C"/>
                                                 <constraint firstItem="hOb-fV-Xkc" firstAttribute="trailing" secondItem="nVj-cT-Ybk" secondAttribute="trailingMargin" id="vSf-65-lg2"/>
                                             </constraints>
                                         </tableViewCellContentView>
