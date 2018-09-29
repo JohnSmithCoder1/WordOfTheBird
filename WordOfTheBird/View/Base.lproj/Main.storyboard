@@ -795,7 +795,7 @@
                                 <rect key="frame" x="20" y="0.0" width="280" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="30" maxY="0.0"/>
-                                <string key="text">Programming by:
+                                <mutableString key="text">Programming by:
 Derek Little and John Smith
 
 Design by:
@@ -803,9 +803,6 @@ Derek Little, Jessica Little, and John Smith
 
 Art by:
 Jessica Little
-
-Bird ecology and range maps by:
-Macaulay Library at the Cornell Lab of Ornithology
 
 Bird call recordings by:
 Wilbur L. Hershberger/Macaulay Library at the Cornell Lab of Ornithology (American goldfinch, downy woodpecker, northern cardinal, northern flicker, red headed woodpecker)
@@ -830,7 +827,7 @@ Bob McGuire/Macaulay Library at the Cornell Lab of Ornithology (pileated woodpec
 
 Gregory F. Budney/Macaulay Library at the Cornell Lab of Ornithology (red bellied woodpecker)
 
-David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed hawk)</string>
+David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed hawk)</mutableString>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
