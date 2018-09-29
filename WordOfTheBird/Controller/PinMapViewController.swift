@@ -26,7 +26,6 @@ class PinMapViewController: UIViewController {
         }
     }
     
-    let authStatus = CLLocationManager.authorizationStatus()
     let locationManager = CLLocationManager()
     var locations = [Location]()
     
@@ -58,14 +57,13 @@ class PinMapViewController: UIViewController {
     }
     
     func determineAuthorization() {
-        if authStatus == .notDetermined {
+        if CLLocationManager.authorizationStatus() == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
-            print("********** authStatus: \(authStatus)")
-        }
-        
-        if authStatus != .authorizedWhenInUse {
+            print("********** authStatus: \(CLLocationManager.authorizationStatus().rawValue)")
+            return
+        } else if CLLocationManager.authorizationStatus() != .authorizedWhenInUse {
             showLocationServicesDeniedAlert()
-            print("********** authStatus: \(authStatus)")
+            print("********** authStatus: \(CLLocationManager.authorizationStatus().rawValue)")
         }
     }
     

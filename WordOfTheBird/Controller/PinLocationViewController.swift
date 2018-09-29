@@ -12,7 +12,6 @@ import CoreData
 
 class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
-    let authStatus = CLLocationManager.authorizationStatus()
     var location: CLLocation?
     var updatingLocation = false
     var lastLocationError: Error?
@@ -34,9 +33,9 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var pinLocationButton: UIButton!
     
     @IBAction func getLocation() {
-        if authStatus != .authorizedWhenInUse {
+        if CLLocationManager.authorizationStatus() != .authorizedWhenInUse {
             showLocationServicesDeniedAlert()
-            print("********** authStatus: \(authStatus.rawValue)")
+            print("********** authStatus: \(CLLocationManager.authorizationStatus().rawValue)")
         }
         if updatingLocation {
             stopLocationManager()
@@ -69,14 +68,13 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func determineAuthorization() {
-        if authStatus == .notDetermined {
+        if CLLocationManager.authorizationStatus() == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
-            print("********** authStatus: \(authStatus.rawValue)")
-        }
-        
-        if authStatus != .authorizedWhenInUse {
+            print("********** authStatus: \(CLLocationManager.authorizationStatus().rawValue)")
+            return
+        } else if CLLocationManager.authorizationStatus() != .authorizedWhenInUse {
             showLocationServicesDeniedAlert()
-            print("********** authStatus: \(authStatus.rawValue)")
+            print("********** authStatus: \(CLLocationManager.authorizationStatus().rawValue)")
         }
     }
     
