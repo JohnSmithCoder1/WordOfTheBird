@@ -11,7 +11,6 @@ import UIKit
 class CategoryPickerViewController: UITableViewController {
     var selectedCategoryName = ""
     var selectedIndexPath = IndexPath()
-    
     let categories = [
         "Other Birds",
         "American Goldfinch",
@@ -77,7 +76,7 @@ class CategoryPickerViewController: UITableViewController {
         }
     }
     
-    // MARK: - Navigation
+    //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PickedCategory" {
             let cell = sender as! UITableViewCell

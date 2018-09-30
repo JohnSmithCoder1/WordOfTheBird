@@ -13,17 +13,17 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     var webView: WKWebView!
     var link: String?
     
-    override func loadView() {
-        webView = WKWebView()
-        webView.navigationDelegate = self
-        view = webView
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let url = URL(string: link!)!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
+    }
+    
+    override func loadView() {
+        webView = WKWebView()
+        webView.navigationDelegate = self
+        view = webView
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {

@@ -227,7 +227,6 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
     }
     
     deinit {
-        print("*** deinit \(self)")
         NotificationCenter.default.removeObserver(observer)
     }
     

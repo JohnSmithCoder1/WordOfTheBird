@@ -14,17 +14,16 @@ class PinListViewController: UITableViewController {
     var managedObjectContext: NSManagedObjectContext!
     lazy var fetchedResultsController: NSFetchedResultsController<Location> = {
         let fetchRequest = NSFetchRequest<Location>()
-        
         let entity = Location.entity()
         fetchRequest.entity = entity
-        
         let sort1 = NSSortDescriptor(key: "category", ascending: true)
         let sort2 = NSSortDescriptor(key: "date", ascending: true)
         fetchRequest.sortDescriptors = [sort1, sort2]
         fetchRequest.fetchBatchSize = 20
-        
-        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: "category", cacheName: "Locations")
-        
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
+                                                                  managedObjectContext: self.managedObjectContext,
+                                                                  sectionNameKeyPath: "category",
+                                                                  cacheName: "Locations")
         fetchedResultsController.delegate = self
         return fetchedResultsController
     }()
@@ -111,7 +110,6 @@ class PinListViewController: UITableViewController {
 
 extension PinListViewController: NSFetchedResultsControllerDelegate {
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        print("*** controllerWillChangeContent")
         tableView.beginUpdates()
     }
     
@@ -119,7 +117,6 @@ extension PinListViewController: NSFetchedResultsControllerDelegate {
         
         switch type {
         case .insert:
-            print("*** NSFetchedResultsChangeInsert (object)")
             tableView.insertRows(at: [newIndexPath!], with: .fade)
 
         case .delete:

@@ -14,7 +14,6 @@ import CoreLocation
 class PinMapViewController: UIViewController {
     let locationManager = CLLocationManager()
     var locations = [Location]()
-    
     var managedObjectContext: NSManagedObjectContext! {
         didSet {
             NotificationCenter.default.addObserver(forName: Notification.Name.NSManagedObjectContextObjectsDidChange, object: managedObjectContext, queue: OperationQueue.main) { notification in
@@ -69,11 +68,9 @@ class PinMapViewController: UIViewController {
     func determineAuthorization() {
         if CLLocationManager.authorizationStatus() == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
-            print("********** authStatus: \(CLLocationManager.authorizationStatus().rawValue)")
             return
         } else if CLLocationManager.authorizationStatus() != .authorizedWhenInUse {
             showLocationServicesDeniedAlert()
-            print("********** authStatus: \(CLLocationManager.authorizationStatus().rawValue)")
         }
     }
     

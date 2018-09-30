@@ -35,7 +35,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func getLocation() {
         if CLLocationManager.authorizationStatus() != .authorizedWhenInUse {
             showLocationServicesDeniedAlert()
-            print("********** authStatus: \(CLLocationManager.authorizationStatus().rawValue)")
         }
         if updatingLocation {
             stopLocationManager()
@@ -70,11 +69,9 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     func determineAuthorization() {
         if CLLocationManager.authorizationStatus() == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
-            print("********** authStatus: \(CLLocationManager.authorizationStatus().rawValue)")
             return
         } else if CLLocationManager.authorizationStatus() != .authorizedWhenInUse {
             showLocationServicesDeniedAlert()
-            print("********** authStatus: \(CLLocationManager.authorizationStatus().rawValue)")
         }
     }
     
@@ -109,7 +106,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @objc func didTimeOut() {
-        print("*** Time out")
         if location == nil {
             stopLocationManager()
             lastLocationError = NSError(domain: "WordoftheBirdErrorDomain", code: 1, userInfo: nil)
@@ -196,8 +192,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     
     //MARK: - CLLocationManagerDelegate
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("didFailWithError \(error)")
-        
         if (error as NSError).code == CLError.locationUnknown.rawValue {
             return
         }
@@ -208,7 +202,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let newLocation = locations.last!
-        print("didUpdateLocations \(newLocation)")
         
         if newLocation.timestamp.timeIntervalSinceNow < -5 {
             return
@@ -224,7 +217,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             lastLocationError = nil
             location = newLocation
             if newLocation.horizontalAccuracy <= locationManager.desiredAccuracy {
-                print("*** We're done!")
                 stopLocationManager()
                 if distance > 0 {
                     performingReverseGeocoding = false
@@ -232,8 +224,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             }
             updateLabels()
             if !performingReverseGeocoding {
-                print("*** Going to geocode")
-                
                 performingReverseGeocoding = true
                 
                 geocoder.reverseGeocodeLocation(newLocation, completionHandler: {
@@ -254,7 +244,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         } else if distance < 1 {
             let timeInterval = newLocation.timestamp.timeIntervalSince(location!.timestamp)
             if timeInterval > 10 {
-                print("*** Force done!")
                 stopLocationManager()
                 updateLabels()
             }
