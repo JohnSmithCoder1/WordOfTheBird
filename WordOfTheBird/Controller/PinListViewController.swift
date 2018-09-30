@@ -11,7 +11,6 @@ import CoreData
 import CoreLocation
 
 class PinListViewController: UITableViewController {
-    
     var managedObjectContext: NSManagedObjectContext!
     lazy var fetchedResultsController: NSFetchedResultsController<Location> = {
         let fetchRequest = NSFetchRequest<Location>()
@@ -30,7 +29,28 @@ class PinListViewController: UITableViewController {
         return fetchedResultsController
     }()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.backgroundView = UIImageView(image: UIImage(named: "background.png"))
+        performFetch()
+    }
+    
     //MARK: - Table View Delegates
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.white
+        view.tintColor = UIColor(red: 79/255, green: 143/255, blue: 0/255, alpha: 0.5)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 38
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let sectionInfo = fetchedResultsController.sections![section]
+        return sectionInfo.name
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sectionInfo = fetchedResultsController.sections![section]
         return sectionInfo.numberOfObjects
@@ -43,6 +63,10 @@ class PinListViewController: UITableViewController {
         cell.configure(for: location)
         
         return cell
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return fetchedResultsController.sections!.count
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -58,24 +82,17 @@ class PinListViewController: UITableViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        let header = view as! UITableViewHeaderFooterView
-        header.textLabel?.textColor = UIColor.white
-        view.tintColor = UIColor(red: 79/255, green: 143/255, blue: 0/255, alpha: 0.5)
+    //MARK: - Other Functions
+    func performFetch() {
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            fatalCoreDataError(error)
+        }
     }
     
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 38
-    }
-
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return fetchedResultsController.sections!.count
-    }
-    
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let sectionInfo = fetchedResultsController.sections![section]
-        return sectionInfo.name
+    deinit {
+        fetchedResultsController.delegate = nil
     }
     
     //MARK: - Navigation
@@ -90,28 +107,8 @@ class PinListViewController: UITableViewController {
             }
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.backgroundView = UIImageView(image: UIImage(named: "background.png"))
-        performFetch()
-    }
-    
-//    MARK:- Private Methods
-    func performFetch() {
-        do {
-            try fetchedResultsController.performFetch()
-        } catch {
-            fatalCoreDataError(error)
-        }
-    }
-    
-    deinit {
-        fetchedResultsController.delegate = nil
-    }
 }
 
-//MARK:- NSFetchedResultsController Delegate Extension
 extension PinListViewController: NSFetchedResultsControllerDelegate {
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         print("*** controllerWillChangeContent")
@@ -124,7 +121,7 @@ extension PinListViewController: NSFetchedResultsControllerDelegate {
         case .insert:
             print("*** NSFetchedResultsChangeInsert (object)")
             tableView.insertRows(at: [newIndexPath!], with: .fade)
-            
+
         case .delete:
             tableView.deleteRows(at: [indexPath!], with: .fade)
             
@@ -160,4 +157,3 @@ extension PinListViewController: NSFetchedResultsControllerDelegate {
         tableView.endUpdates()
     }
 }
-

@@ -10,6 +10,7 @@ import UIKit
 
 class CategoryPickerViewController: UITableViewController {
     var selectedCategoryName = ""
+    var selectedIndexPath = IndexPath()
     
     let categories = [
         "Other Birds",
@@ -33,8 +34,6 @@ class CategoryPickerViewController: UITableViewController {
         "Tufted Titmouse",
         ]
     
-    var selectedIndexPath = IndexPath()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundView = UIImageView(image: UIImage(named: "background.png"))
@@ -47,7 +46,7 @@ class CategoryPickerViewController: UITableViewController {
         }
     }
     
-//    MARK:- Table View Delegates
+    //MARK: - TableView Delegates
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
     }

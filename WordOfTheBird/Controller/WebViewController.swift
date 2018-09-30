@@ -20,6 +20,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         let url = URL(string: link!)!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true

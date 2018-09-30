@@ -180,11 +180,11 @@
 				B0C0136120C8585900784C3B /* BirdsViewController.swift */,
 				B087659F213F1E2300AA178F /* CategoryPickerViewController.swift */,
 				B087659D213F101800AA178F /* PinDetailsViewController.swift */,
-				05F029E9215975780081E2AC /* WebViewController.swift */,
 				055F7AD6213C64120076F513 /* PinListViewController.swift */,
 				055F7AD4213C61FD0076F513 /* PinLocationViewController.swift */,
 				055F7AD8213C647B0076F513 /* PinMapViewController.swift */,
 				B08AFD4721482A6600E73A58 /* TabBarViewController.swift */,
+				05F029E9215975780081E2AC /* WebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -230,15 +230,15 @@
 			children = (
 				B0FEA9EF20D186F30061599D /* Bird.swift */,
 				0569DB5F2125D98D002E5377 /* BirdBank.swift */,
-				05D12331214063580036D19D /* DataModel.xcdatamodeld */,
 				05D1232F214062460036D19D /* Functions.swift */,
 				05D1232D214059AE0036D19D /* HudView.swift */,
 				05D12334214064900036D19D /* Location+CoreDataClass.swift */,
-				05AE7EE321518337003B6F36 /* String+AddText.swift */,
 				05D12335214064900036D19D /* Location+CoreDataProperties.swift */,
 				B08765A12142F21000AA178F /* LocationCell.swift */,
-				B0C48D2920925D8700A655AB /* Sounds */,
+				05AE7EE321518337003B6F36 /* String+AddText.swift */,
 				05621DA42146FA1900989922 /* UIImage+Resize.swift */,
+				05D12331214063580036D19D /* DataModel.xcdatamodeld */,
+				B0C48D2920925D8700A655AB /* Sounds */,
 			);
 			path = Model;
 			sourceTree = "<group>";

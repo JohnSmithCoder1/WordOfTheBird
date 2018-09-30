@@ -9,18 +9,19 @@
 import UIKit
 
 class BirdDetailViewController: UIViewController {
-    @IBOutlet weak var birdImageView: UIImageView!
-    
     var birdImage: UIImage?
     var calls = [String]()
     var infoLink: String?
     var mapLink: String?
+    
+    @IBOutlet weak var birdImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         birdImageView.image = birdImage
     }
     
+    //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "embedSegue" {
             if let destinationTable = segue.destination as? BirdDetailDataViewController {
@@ -31,4 +32,3 @@ class BirdDetailViewController: UIViewController {
         }
     }
 }
-

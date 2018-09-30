@@ -64,8 +64,3 @@ class HudView: UIView {
         removeFromSuperview()
     }
 }
-
-
-
-
-

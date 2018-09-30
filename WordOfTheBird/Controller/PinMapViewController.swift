@@ -12,20 +12,6 @@ import CoreData
 import CoreLocation
 
 class PinMapViewController: UIViewController {
-    @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
-    
-    @IBAction func segmentedControlAction(sender: UISegmentedControl!) {
-        switch (sender.selectedSegmentIndex) {
-        case 0:
-            mapView.mapType = .standard
-        case 1:
-            mapView.mapType = .satellite
-        default:
-            mapView.mapType = .hybrid
-        }
-    }
-    
     let locationManager = CLLocationManager()
     var locations = [Location]()
     
@@ -36,6 +22,30 @@ class PinMapViewController: UIViewController {
                     self.updateLocations()
                 }
             }
+        }
+    }
+    
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    @IBAction func showUser() {
+        let region = MKCoordinateRegionMakeWithDistance(mapView.userLocation.coordinate, 1000, 1000)
+        mapView.setRegion(mapView.regionThatFits(region), animated: true)
+    }
+    
+    @IBAction func showLocations() {
+        let theRegion = region(for: locations)
+        mapView.setRegion(theRegion, animated: true)
+    }
+    
+    @IBAction func segmentedControlAction(sender: UISegmentedControl!) {
+        switch (sender.selectedSegmentIndex) {
+        case 0:
+            mapView.mapType = .standard
+        case 1:
+            mapView.mapType = .satellite
+        default:
+            mapView.mapType = .hybrid
         }
     }
     
@@ -76,17 +86,6 @@ class PinMapViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    //MARK: - Actions
-    @IBAction func showUser() {
-        let region = MKCoordinateRegionMakeWithDistance(mapView.userLocation.coordinate, 1000, 1000)
-        mapView.setRegion(mapView.regionThatFits(region), animated: true)
-    }
-    
-    @IBAction func showLocations() {
-        let theRegion = region(for: locations)
-        mapView.setRegion(theRegion, animated: true)
-    }
-    
     func region(for annotations: [MKAnnotation]) -> MKCoordinateRegion {
         let region: MKCoordinateRegion
         
@@ -120,7 +119,6 @@ class PinMapViewController: UIViewController {
         performSegue(withIdentifier: "EditLocation", sender: sender)
     }
     
-    // MARK: - Private methods
     func updateLocations() {
         mapView.removeAnnotations(locations)
         let entity = Location.entity()
@@ -131,7 +129,7 @@ class PinMapViewController: UIViewController {
         mapView.addAnnotations(locations)
     }
     
-    // MARK: - Navigation
+    //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EditLocation" {
             let controller = segue.destination as! PinDetailsViewController
@@ -148,6 +146,7 @@ extension PinMapViewController: MKMapViewDelegate {
         guard annotation is Location else {
             return nil
         }
+        
         let identifier = "Location"
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
         if annotationView == nil {
@@ -162,6 +161,7 @@ extension PinMapViewController: MKMapViewDelegate {
             pinView.rightCalloutAccessoryView = rightButton
             annotationView = pinView
         }
+        
         if let annotationView = annotationView {
             annotationView.annotation = annotation
             let button = annotationView.rightCalloutAccessoryView as! UIButton
@@ -169,6 +169,7 @@ extension PinMapViewController: MKMapViewDelegate {
                 button.tag = index
             }
         }
+        
         return annotationView
     }
 }

@@ -9,20 +9,16 @@
 import UIKit
 
 class LocationCell: UITableViewCell {
-    
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func configure(for location: Location) {
@@ -31,7 +27,7 @@ class LocationCell: UITableViewCell {
         } else {
             descriptionLabel.text = location.locationDescription
         }
-//        print("\(descriptionLabel.text)")
+
         if let placemark = location.placemark {
             var text = ""
             text.add(text: placemark.subThoroughfare)
@@ -51,8 +47,3 @@ class LocationCell: UITableViewCell {
         return UIImage(named: "defaultImage")!
     }
 }
-
-
-
-
-

@@ -23,6 +23,9 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
     var categoryName = "Other Birds"
     var managedObjectContext: NSManagedObjectContext!
     var date = Date()
+    var descriptionText = "Add a description here..."
+    var image: UIImage?
+    var observer: Any!
     var locationToEdit: Location? {
         didSet {
             if let location = locationToEdit {
@@ -34,9 +37,6 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
             }
         }
     }
-    var descriptionText = "Add a description here..."
-    var image: UIImage?
-    var observer: Any!
     
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var categoryLabel: UILabel!
@@ -46,8 +46,7 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var addPhotoLabel: UILabel!
-    
-    // MARK:- Actions
+
     @IBAction func done() {
         let hudView = HudView.hud(inView: navigationController!.view, animated: true)
         hudView.text = "Tagged"
@@ -67,6 +66,7 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
         } else {
             location.locationDescription = descriptionTextView.text
         }
+        
         location.category = categoryName
         location.latitude = coordinate.latitude
         location.longitude = coordinate.longitude
@@ -130,10 +130,6 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
             }
         }
         
-        //
-        //
-        // I commented out the next line to make our default text for description work (show the default text when editing existing location with no description), maybe we don't need descriptionText anymore
-//        descriptionTextView.text = descriptionText
         categoryLabel.text = categoryName
         latitudeLabel.text = String(format: "%.8f", coordinate.latitude)
         longitudeLabel.text = String(format: "%.8f", coordinate.longitude)
@@ -143,68 +139,15 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
         } else {
             addressLabel.text = "No Address Found"
         }
-        dateLabel.text = format(date: date)
         
+        dateLabel.text = format(date: date)
         listenForBackgroundNotification()
-        // hide keyboard
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         gestureRecognizer.cancelsTouchesInView = false
         tableView.addGestureRecognizer(gestureRecognizer)
     }
     
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        // Dispatch block puts cursor placement code on next run cycle so doesn't get called at same time as the rest of function
-        DispatchQueue.main.async {
-            let newPosition = self.descriptionTextView.endOfDocument
-            self.descriptionTextView.selectedTextRange = self.descriptionTextView.textRange(from: newPosition, to: newPosition)
-        }
-        
-        if descriptionTextView.textColor == UIColor.lightGray {
-            descriptionTextView.text = nil
-            descriptionTextView.textColor = UIColor.white
-        }
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if descriptionTextView.text.isEmpty {
-            descriptionTextView.text = "Add a description here..."
-            descriptionTextView.textColor = UIColor.lightGray
-        }
-    }
-    
-    func show(image: UIImage) {
-        imageView.image = image
-        imageView.isHidden = false
-        imageView.frame = CGRect(x: 10, y: 10, width: 260, height: 260)
-        addPhotoLabel.isHidden = true
-    }
-    
-    func listenForBackgroundNotification() {
-        observer = NotificationCenter.default.addObserver(forName: Notification.Name.UIApplicationDidEnterBackground, object: nil, queue: OperationQueue.main) { [weak self] _ in
-            
-            if let weakSelf = self {
-                if weakSelf.presentedViewController != nil {
-                    weakSelf.dismiss(animated: false, completion: nil)
-                }
-                weakSelf.descriptionTextView.resignFirstResponder()
-            }
-        }
-    }
-    
-    deinit {
-        print("*** deinit \(self)")
-        NotificationCenter.default.removeObserver(observer)
-    }
-    
-    //    MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "PickCategory" {
-            let controller = segue.destination as! CategoryPickerViewController
-            controller.selectedCategoryName = categoryName
-        }
-    }
-    
-    // MARK: - Table View Delegates
+    //MARK: - Table View Delegates
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch (indexPath.section, indexPath.row) {
         case (0, 0):
@@ -243,16 +186,51 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
         header.textLabel?.textColor = UIColor.white
     }
     
-    @objc func hideKeyboard(_ gestureRecognizer: UIGestureRecognizer) {
-        let point = gestureRecognizer.location(in: tableView)
-        let indexPath = tableView.indexPathForRow(at: point)
-        if indexPath != nil && indexPath!.section == 0 && indexPath!.row == 0 {
-            return
+    //MARK: - Other Functions
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        // Dispatch block puts cursor placement code on next run cycle so doesn't get called at same time as the rest of function
+        DispatchQueue.main.async {
+            let newPosition = self.descriptionTextView.endOfDocument
+            self.descriptionTextView.selectedTextRange = self.descriptionTextView.textRange(from: newPosition, to: newPosition)
         }
-        descriptionTextView.resignFirstResponder()
+        
+        if descriptionTextView.textColor == UIColor.lightGray {
+            descriptionTextView.text = nil
+            descriptionTextView.textColor = UIColor.white
+        }
     }
     
-    // MARK:- Private Methods
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if descriptionTextView.text.isEmpty {
+            descriptionTextView.text = "Add a description here..."
+            descriptionTextView.textColor = UIColor.lightGray
+        }
+    }
+    
+    func show(image: UIImage) {
+        imageView.image = image
+        imageView.isHidden = false
+        imageView.frame = CGRect(x: 10, y: 10, width: 260, height: 260)
+        addPhotoLabel.isHidden = true
+    }
+    
+    func listenForBackgroundNotification() {
+        observer = NotificationCenter.default.addObserver(forName: Notification.Name.UIApplicationDidEnterBackground,
+                                                          object: nil, queue: OperationQueue.main) { [weak self] _ in
+            if let weakSelf = self {
+                if weakSelf.presentedViewController != nil {
+                    weakSelf.dismiss(animated: false, completion: nil)
+                }
+                weakSelf.descriptionTextView.resignFirstResponder()
+            }
+        }
+    }
+    
+    deinit {
+        print("*** deinit \(self)")
+        NotificationCenter.default.removeObserver(observer)
+    }
+    
     func string(from placemark: CLPlacemark) -> String {
         var line = ""
         line.add(text: placemark.subThoroughfare)
@@ -266,9 +244,25 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
     func format(date: Date) -> String {
         return dateFormatter.string(from: date)
     }
+    
+    @objc func hideKeyboard(_ gestureRecognizer: UIGestureRecognizer) {
+        let point = gestureRecognizer.location(in: tableView)
+        let indexPath = tableView.indexPathForRow(at: point)
+        if indexPath != nil && indexPath!.section == 0 && indexPath!.row == 0 {
+            return
+        }
+        descriptionTextView.resignFirstResponder()
+    }
+    
+    //MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PickCategory" {
+            let controller = segue.destination as! CategoryPickerViewController
+            controller.selectedCategoryName = categoryName
+        }
+    }
 }
 
-// move this into class body
 extension PinDetailsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func takePhotoWithCamera() {
         let imagePicker = UIImagePickerController()
@@ -278,7 +272,6 @@ extension PinDetailsViewController: UIImagePickerControllerDelegate, UINavigatio
         present(imagePicker, animated: true, completion: nil)
     }
     
-    // MARK: - Image Picker Delegates
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         image = info[UIImagePickerControllerEditedImage] as? UIImage
         if let theImage = image {
@@ -326,10 +319,3 @@ extension PinDetailsViewController: UIImagePickerControllerDelegate, UINavigatio
         present(alert, animated: true, completion: nil)
     }
 }
-
-
-
-
-
-
-

@@ -6,15 +6,14 @@
 //  Copyright © 2018 Banana Viking. All rights reserved.
 //
 
-import Foundation
 import UIKit
+
+let CoreDataSaveFailedNotification = Notification.Name(rawValue: "CoreDataSaveFailedNotification")
 
 let applicationDocumentsDirectory: URL = {
     let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
     return paths[0]
 }()
-
-let CoreDataSaveFailedNotification = Notification.Name(rawValue: "CoreDataSaveFailedNotification")
 
 func fatalCoreDataError(_ error: Error) {
     print("*** Fatal error: \(error)")
@@ -24,5 +23,3 @@ func fatalCoreDataError(_ error: Error) {
 func afterDelay(_ seconds: Double, run: @escaping () -> Void) {
     DispatchQueue.main.asyncAfter(deadline: .now() + seconds, execute: run)
 }
-
-

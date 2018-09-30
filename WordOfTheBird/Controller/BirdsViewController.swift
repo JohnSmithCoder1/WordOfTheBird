@@ -17,6 +17,14 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
     let birdBank = BirdBank()
     var filteredBirds = [Bird]()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.backgroundView = UIImageView(image: UIImage(named: "background.png"))
+        filteredBirds = birdBank.birds
+        setupSearchController()
+    }
+    
+    //MARK: - TableView Delegates
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredBirds.count
     }
@@ -29,24 +37,7 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
         return cell
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.backgroundView = UIImageView(image: UIImage(named: "background.png"))
-        filteredBirds = birdBank.birds
-        setupSearchController()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? BirdDetailViewController,
-            let row = tableView.indexPathForSelectedRow?.row {
-            destination.title = filteredBirds[row].name
-            destination.birdImage = UIImage(named: filteredBirds[row].imageLarge)
-            destination.calls = filteredBirds[row].calls
-            destination.infoLink = filteredBirds[row].infoLink
-            destination.mapLink = filteredBirds[row].mapLink
-        }
-    }
-    
+    //MARK: - Other Functions
     func setupSearchController() {
         let searchController = UISearchController(searchResultsController: nil)
         navigationItem.searchController = searchController
@@ -80,5 +71,17 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
             filteredBirds = birdBank.birds
         }
         tableView.reloadData()
+    }
+    
+    //MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? BirdDetailViewController,
+            let row = tableView.indexPathForSelectedRow?.row {
+            destination.title = filteredBirds[row].name
+            destination.birdImage = UIImage(named: filteredBirds[row].imageLarge)
+            destination.calls = filteredBirds[row].calls
+            destination.infoLink = filteredBirds[row].infoLink
+            destination.mapLink = filteredBirds[row].mapLink
+        }
     }
 }

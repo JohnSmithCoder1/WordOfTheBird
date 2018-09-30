@@ -7,7 +7,6 @@
 //
 //
 
-import Foundation
 import MapKit
 import CoreData
 
@@ -61,8 +60,3 @@ public class Location: NSManagedObject, MKAnnotation {
         }
     }
 }
-
-
-
-
-

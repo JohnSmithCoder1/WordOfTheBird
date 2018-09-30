@@ -261,7 +261,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    // MARK:- Navigation
+    //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "TagLocation" {
             let controller = segue.destination as! PinDetailsViewController
@@ -271,10 +271,3 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
 }
-
-
-
-
-
-
-

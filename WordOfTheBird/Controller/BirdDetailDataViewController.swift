@@ -15,6 +15,12 @@ class BirdDetailDataViewController: UITableViewController {
     var infoLink: String?
     var mapLink: String?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(didEnterBackground), name: .UIApplicationDidEnterBackground, object: nil)
+    }
+    
+    //MARK: - TableView Delegates
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
         header.backgroundView?.backgroundColor = UIColor(red: 79/255, green: 143/255, blue: 0/255, alpha: 0.5)
@@ -25,9 +31,12 @@ class BirdDetailDataViewController: UITableViewController {
         } else if section == 1 {
             header.textLabel?.text = "  Bird Data"
         }
-        
     }
 
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 38
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var rowCount = 0
         if section == 0 {
@@ -38,34 +47,14 @@ class BirdDetailDataViewController: UITableViewController {
         return rowCount
     }
     
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 38
-    }
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             playSound(forObject: calls[indexPath.row])
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(didEnterBackground), name: .UIApplicationDidEnterBackground, object: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        audioPlayer?.stop()
-        if let destination = segue.destination as? WebViewController,
-            let indexPath = tableView.indexPathForSelectedRow {
-            if indexPath.section == 1 && indexPath.row == 0 {
-                destination.link = infoLink
-            } else if indexPath.section == 1 && indexPath.row == 1 {
-                destination.link = mapLink
-            }
-        }
-    }
-    
+
+    //MARK: - Other Functions
     func playSound(forObject: String) {
         guard let url = Bundle.main.url(forResource: forObject, withExtension: "wav") else { return }
         do {
@@ -81,5 +70,17 @@ class BirdDetailDataViewController: UITableViewController {
     @objc func didEnterBackground() {
         audioPlayer?.stop()
     }
+    
+    //MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        audioPlayer?.stop()
+        if let destination = segue.destination as? WebViewController,
+            let indexPath = tableView.indexPathForSelectedRow {
+            if indexPath.section == 1 && indexPath.row == 0 {
+                destination.link = infoLink
+            } else if indexPath.section == 1 && indexPath.row == 1 {
+                destination.link = mapLink
+            }
+        }
+    }
 }
-
