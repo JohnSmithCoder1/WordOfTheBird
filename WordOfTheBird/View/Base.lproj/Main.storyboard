@@ -421,19 +421,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbE-9k-4iZ">
-                                                    <rect key="frame" x="16" y="11" width="63" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="63" id="Rxa-WS-NW2"/>
-                                                    </constraints>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOb-fV-Xkc">
+                                                    <rect key="frame" x="139" y="11" width="165" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOb-fV-Xkc">
-                                                    <rect key="frame" x="99" y="11" width="205" height="21"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbE-9k-4iZ">
+                                                    <rect key="frame" x="16" y="11" width="63" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="X0S-Zj-4aM"/>
+                                                        <constraint firstAttribute="height" constant="21" id="MUd-7i-Bhl"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -441,13 +438,12 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="AbE-9k-4iZ" firstAttribute="leading" secondItem="nVj-cT-Ybk" secondAttribute="leadingMargin" id="Vle-U2-eIZ"/>
-                                                <constraint firstItem="AbE-9k-4iZ" firstAttribute="top" secondItem="nVj-cT-Ybk" secondAttribute="topMargin" id="XH9-Ux-rks"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="hOb-fV-Xkc" secondAttribute="bottom" constant="1" id="iHc-uh-8UR"/>
-                                                <constraint firstItem="hOb-fV-Xkc" firstAttribute="leading" relation="lessThanOrEqual" secondItem="AbE-9k-4iZ" secondAttribute="trailing" constant="20" id="l40-1E-A0B"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="AbE-9k-4iZ" secondAttribute="bottom" constant="1" id="pzk-Ud-eb1"/>
-                                                <constraint firstItem="hOb-fV-Xkc" firstAttribute="trailing" secondItem="nVj-cT-Ybk" secondAttribute="trailingMargin" id="qs3-UC-fuF"/>
-                                                <constraint firstItem="hOb-fV-Xkc" firstAttribute="top" secondItem="nVj-cT-Ybk" secondAttribute="topMargin" id="s29-IP-OQH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hOb-fV-Xkc" secondAttribute="bottom" constant="1" id="955-Th-oDv"/>
+                                                <constraint firstItem="hOb-fV-Xkc" firstAttribute="left" secondItem="AbE-9k-4iZ" secondAttribute="right" constant="60" id="Nre-hT-5KI"/>
+                                                <constraint firstItem="AbE-9k-4iZ" firstAttribute="top" secondItem="nVj-cT-Ybk" secondAttribute="topMargin" id="TfV-42-yTh"/>
+                                                <constraint firstItem="hOb-fV-Xkc" firstAttribute="top" secondItem="nVj-cT-Ybk" secondAttribute="topMargin" id="bTW-6u-uQh"/>
+                                                <constraint firstItem="AbE-9k-4iZ" firstAttribute="left" secondItem="nVj-cT-Ybk" secondAttribute="leftMargin" id="l2E-7F-k9C"/>
+                                                <constraint firstItem="hOb-fV-Xkc" firstAttribute="trailing" secondItem="nVj-cT-Ybk" secondAttribute="trailingMargin" id="vSf-65-lg2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -799,7 +795,7 @@
                                 <rect key="frame" x="20" y="0.0" width="280" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="30" maxY="0.0"/>
-                                <string key="text">Programming by:
+                                <mutableString key="text">Programming by:
 Derek Little and John Smith
 
 Design by:
@@ -807,9 +803,6 @@ Derek Little, Jessica Little, and John Smith
 
 Art by:
 Jessica Little
-
-Bird ecology and range maps by:
-Macaulay Library at the Cornell Lab of Ornithology
 
 Bird call recordings by:
 Wilbur L. Hershberger/Macaulay Library at the Cornell Lab of Ornithology (American goldfinch, downy woodpecker, northern cardinal, northern flicker, red headed woodpecker)
@@ -834,7 +827,7 @@ Bob McGuire/Macaulay Library at the Cornell Lab of Ornithology (pileated woodpec
 
 Gregory F. Budney/Macaulay Library at the Cornell Lab of Ornithology (red bellied woodpecker)
 
-David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed hawk)</string>
+David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed hawk)</mutableString>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
