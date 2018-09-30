@@ -40,10 +40,10 @@ class LocationCell: UITableViewCell {
         photoImageView.image = thumbnail(for: location)
     }
     
-    func thumbnail(for location: Location) -> UIImage {
+    func thumbnail(for location: Location) -> UIImage? {
         if location.hasPhoto, let image = location.photoImage {
             return image.resized(withBounds: CGSize(width: 52, height: 52))
         }
-        return UIImage(named: "defaultImage")!
+        return UIImage(named: "defaultImage")
     }
 }

@@ -15,9 +15,10 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL(string: link!)!
-        webView.load(URLRequest(url: url))
-        webView.allowsBackForwardNavigationGestures = true
+        if let link = link, let url = URL(string: link) {
+            webView.load(URLRequest(url: url))
+            webView.allowsBackForwardNavigationGestures = true
+        }
     }
     
     override func loadView() {
@@ -33,6 +34,6 @@ class WebViewController: UIViewController, WKNavigationDelegate {
                 return
             }
         }
-        decisionHandler(.cancel) // should put this 2 lines up as an else statement?
+        decisionHandler(.cancel)
     }
 }
