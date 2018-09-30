@@ -22,10 +22,6 @@ Word of the Bird lets you talk to birds! Including calls for 18 different specie
 
 * **Jessica Little**
 
-## Bird Ecology and Range Maps
-
-* Macaulay Library at the Cornell Lab of Ornithology
-
 ## Bird Call Recordings
 
 * Wilbur L. Hershberger/Macaulay Library at the Cornell Lab of Ornithology (American goldfinch, downy woodpecker, northern cardinal, northern flicker, red headed woodpecker)
