@@ -54,7 +54,7 @@ class CategoryPickerViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         let categoryName = categories[indexPath.row]
-        cell.textLabel!.text = categoryName
+        cell.textLabel?.text = categoryName
         
         if categoryName == selectedCategoryName {
             cell.accessoryType = .checkmark
