@@ -114,6 +114,7 @@
         <!--Pin Location-->
         <scene sceneID="aj9-TM-neb">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bw5-Ue-7Fa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Pin Location" id="My2-VN-07b" customClass="PinLocationViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="32u-if-4JU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -180,7 +181,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Mv-iS-QAT">
                                 <rect key="frame" x="106" y="363" width="108" height="38"/>
-                                <color key="backgroundColor" name="Color"/>
+                                <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7Mv-iS-QAT" secondAttribute="height" multiplier="54:19" id="3SM-gP-A97"/>
                                     <constraint firstAttribute="height" constant="38" id="9xc-Sg-9fu"/>
@@ -260,7 +261,6 @@
                         <outlet property="pinLocationButton" destination="hwN-DG-GE5" id="UzN-4o-1yX"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bw5-Ue-7Fa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2371.875" y="761.61971830985919"/>
         </scene>
@@ -795,7 +795,7 @@
                                 <rect key="frame" x="20" y="0.0" width="280" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="30" maxY="0.0"/>
-                                <mutableString key="text">Programming by:
+                                <string key="text">Programming by:
 Derek Little and John Smith
 
 Design by:
@@ -827,7 +827,7 @@ Bob McGuire/Macaulay Library at the Cornell Lab of Ornithology (pileated woodpec
 
 Gregory F. Budney/Macaulay Library at the Cornell Lab of Ornithology (red bellied woodpecker)
 
-David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed hawk)</mutableString>
+David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed hawk)</string>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1148,6 +1148,6 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DeQ-I1-5gW"/>
-        <segue reference="BKX-1q-dIW"/>
+        <segue reference="KWq-gh-aGh"/>
     </inferredMetricsTieBreakers>
 </document>
