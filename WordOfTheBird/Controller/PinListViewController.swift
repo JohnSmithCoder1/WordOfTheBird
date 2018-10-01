@@ -34,7 +34,7 @@ class PinListViewController: UITableViewController {
         performFetch()
     }
     
-    //MARK: - Table View Delegates
+    //MARK: - TableView Delegates
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.white

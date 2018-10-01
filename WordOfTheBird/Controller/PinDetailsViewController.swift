@@ -147,7 +147,7 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
         tableView.addGestureRecognizer(gestureRecognizer)
     }
     
-    //MARK: - Table View Delegates
+    //MARK: - TableView Delegates
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch (indexPath.section, indexPath.row) {
         case (0, 0):
