@@ -90,7 +90,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
             updatingLocation = true
-            timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(didTimeOut), userInfo: nil, repeats: false)
+            timer = Timer.scheduledTimer(timeInterval: 20, target: self, selector: #selector(didTimeOut), userInfo: nil, repeats: false)
         }
     }
     
@@ -218,6 +218,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             location = newLocation
             if newLocation.horizontalAccuracy <= locationManager.desiredAccuracy {
                 stopLocationManager()
+                print("newLocationAccuracy <= locationDesiredAccuracy")
                 if distance > 0 {
                     performingReverseGeocoding = false
                 }
@@ -241,10 +242,12 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
                     self.updateLabels()
                 })
             }
-        } else if distance < 1 {
+        } else if distance < 10 {
             let timeInterval = newLocation.timestamp.timeIntervalSince(location!.timestamp)
-            if timeInterval > 10 {
+            if timeInterval > 5 {
                 stopLocationManager()
+                print("distance < 10, timeInterval > 5")
+                print("timeInterval: \(timeInterval)")
                 updateLabels()
             }
         }
