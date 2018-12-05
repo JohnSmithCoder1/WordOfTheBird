@@ -23,6 +23,8 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
     var categoryName = "Other Birds"
     var managedObjectContext: NSManagedObjectContext!
     var date = Date()
+    var temp: Int?
+    var condition: String?
     var descriptionText = "Add a description here..."
     var image: UIImage?
     var observer: Any!
@@ -135,7 +137,7 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
         latitudeLabel.text = String(format: "%.8f", coordinate.latitude)
         longitudeLabel.text = String(format: "%.8f", coordinate.longitude)
         dateLabel.text = format(date: date)
-//        weatherLabel.text = 
+        weatherLabel.text = String(temp!) + "° " + condition!
         
         if let placemark = placemark {
             addressLabel.text = string(from: placemark)
