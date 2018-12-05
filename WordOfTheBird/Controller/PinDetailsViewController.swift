@@ -46,7 +46,8 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var addPhotoLabel: UILabel!
-
+    @IBOutlet weak var weatherLabel: UILabel!
+    
     @IBAction func done() {
         let hudView = HudView.hud(inView: navigationController!.view, animated: true)
         hudView.text = "Tagged"
@@ -133,6 +134,8 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
         categoryLabel.text = categoryName
         latitudeLabel.text = String(format: "%.8f", coordinate.latitude)
         longitudeLabel.text = String(format: "%.8f", coordinate.longitude)
+        dateLabel.text = format(date: date)
+//        weatherLabel.text = 
         
         if let placemark = placemark {
             addressLabel.text = string(from: placemark)
@@ -140,7 +143,7 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
             addressLabel.text = "No Address Found"
         }
         
-        dateLabel.text = format(date: date)
+        
         listenForBackgroundNotification()
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         gestureRecognizer.cancelsTouchesInView = false

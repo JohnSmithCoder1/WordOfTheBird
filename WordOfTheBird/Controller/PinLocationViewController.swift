@@ -9,6 +9,8 @@
 import UIKit
 import CoreLocation
 import CoreData
+import Alamofire
+import SwiftyJSON
 
 class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
@@ -21,6 +23,9 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     var lastGeocodingError: Error?
     var timer: Timer?
     var managedObjectContext: NSManagedObjectContext!
+    let weatherURL = "http://api.openweathermap.org/data/2.5/forecast"
+    let appID = "63b1578537bf98519c346221f7f4efda"
+    let weatherData = WeatherData()
     
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var latitudeLabel: UILabel!
@@ -245,9 +250,40 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             let timeInterval = newLocation.timestamp.timeIntervalSince(location!.timestamp)
             if timeInterval > 10 {
                 stopLocationManager()
+                
+                let latitude = String(location!.coordinate.latitude)
+                let longitude = String(location!.coordinate.longitude)
+                let parameters = ["lat": latitude, "lon": longitude, "appid": appID]
+                
+                getWeatherData(url: weatherURL, parameters: parameters)
+                print("longitude = \(longitude), latitude = \(latitude)")
+                
                 updateLabels()
             }
         }
+    }
+    
+    //MARK: - Networking
+    func getWeatherData(url: String, parameters: [String: String]) {
+        Alamofire.request(url, method: .get, parameters: parameters).responseJSON { response in
+            if response.result.isSuccess {
+                print("Success! Got the weather data.")
+                let weatherJSON = JSON(response.result.value!)
+                self.updateWeatherData(json: weatherJSON)
+            } else {
+                print("Error: \(response.result.error!)")
+            }
+        }
+    }
+    
+    //MARK: - JSON Parsing
+    func updateWeatherData(json: JSON) {
+        let tempResult = json["main"]["temp"].doubleValue
+        weatherData.temperature = Int(9/5 * (tempResult - 273) + 32)
+        weatherData.city = json["name"].stringValue
+        weatherData.condition = json["weather"][0]["id"].intValue
+//        weatherData.weatherIconName = weatherDataModel.updateWeatherIcon(condition: weatherDataModel.condition)
+        print(json)
     }
     
     //MARK: - Navigation
