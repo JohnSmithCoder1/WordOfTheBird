@@ -9,6 +9,8 @@
 import UIKit
 import CoreLocation
 import CoreData
+import Alamofire
+import SwiftyJSON
 
 private let dateFormatter: DateFormatter = {
     let formatter = DateFormatter()
@@ -23,8 +25,9 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
     var categoryName = "Other Birds"
     var managedObjectContext: NSManagedObjectContext!
     var date = Date()
-    var temp: Int?
-    var condition: String?
+    let weatherURL = "http://api.openweathermap.org/data/2.5/weather"
+    let appID = "63b1578537bf98519c346221f7f4efda"
+    let weatherData = WeatherData()
     var descriptionText = "Add a description here..."
     var image: UIImage?
     var observer: Any!
@@ -133,18 +136,23 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
             }
         }
         
+        let latitude = String(coordinate.latitude)
+        let longitude = String(coordinate.longitude)
+        let parameters = ["lat": latitude, "lon": longitude, "appid": appID]
+        
+        getWeatherData(url: weatherURL, parameters: parameters)
+        print("longitude = \(longitude), latitude = \(latitude)")
+        
         categoryLabel.text = categoryName
         latitudeLabel.text = String(format: "%.8f", coordinate.latitude)
         longitudeLabel.text = String(format: "%.8f", coordinate.longitude)
         dateLabel.text = format(date: date)
-        weatherLabel.text = String(temp!) + "° " + condition!
         
         if let placemark = placemark {
             addressLabel.text = string(from: placemark)
         } else {
             addressLabel.text = "No Address Found"
         }
-        
         
         listenForBackgroundNotification()
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
@@ -256,6 +264,28 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
             return
         }
         descriptionTextView.resignFirstResponder()
+    }
+    
+    //MARK: - Networking
+    func getWeatherData(url: String, parameters: [String: String]) {
+        Alamofire.request(url, method: .get, parameters: parameters).responseJSON { response in
+            if response.result.isSuccess {
+                print("Success! Got the weather data.")
+                let weatherJSON = JSON(response.result.value!)
+                self.updateWeatherData(json: weatherJSON)
+            } else {
+                print("Error: \(response.result.error!)")
+            }
+        }
+    }
+    
+    //MARK: - JSON Parsing
+    func updateWeatherData(json: JSON) {
+        let tempResult = json["main"]["temp"].doubleValue
+        weatherData.temperature = Int(9/5 * (tempResult - 273) + 32)
+        weatherData.condition = json["weather"][0]["description"].stringValue
+        weatherLabel.text = String(weatherData.temperature) + "° " + weatherData.condition
+        print(json)
     }
     
     //MARK: - Navigation
