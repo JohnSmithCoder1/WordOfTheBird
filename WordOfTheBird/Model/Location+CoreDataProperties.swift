@@ -17,6 +17,7 @@ extension Location {
     @NSManaged public var locationDescription: String
     @NSManaged public var category: String
     @NSManaged public var placemark: CLPlacemark?
+    @NSManaged public var weather: String?
     @NSManaged public var photoID: NSNumber?
     
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Location> {

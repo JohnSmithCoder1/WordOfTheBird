@@ -76,6 +76,7 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
         location.category = categoryName
         location.latitude = coordinate.latitude
         location.longitude = coordinate.longitude
+        location.weather = weatherLabel.text 
         location.date = date
         location.placemark = placemark
         
