@@ -76,7 +76,7 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
         location.category = categoryName
         location.latitude = coordinate.latitude
         location.longitude = coordinate.longitude
-        location.weather = weatherLabel.text 
+        location.weather = weatherLabel.text
         location.date = date
         location.placemark = placemark
         
@@ -141,8 +141,12 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
         let longitude = String(coordinate.longitude)
         let parameters = ["lat": latitude, "lon": longitude, "appid": appID]
         
-        getWeatherData(url: weatherURL, parameters: parameters)
-        print("longitude = \(longitude), latitude = \(latitude)")
+        print("weatherLabel: \(weatherLabel.text)")
+        if weatherLabel.text == "No weather data" {
+            getWeatherData(url: weatherURL, parameters: parameters)
+            print("longitude = \(longitude), latitude = \(latitude)")
+            print("weatherLabel: \(weatherLabel.text)")
+        }
         
         categoryLabel.text = categoryName
         latitudeLabel.text = String(format: "%.8f", coordinate.latitude)
