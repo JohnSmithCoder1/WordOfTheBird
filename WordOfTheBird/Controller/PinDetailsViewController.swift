@@ -9,8 +9,6 @@
 import UIKit
 import CoreLocation
 import CoreData
-import Alamofire
-import SwiftyJSON
 
 private let dateFormatter: DateFormatter = {
     let formatter = DateFormatter()
@@ -23,11 +21,9 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
     var coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     var placemark: CLPlacemark?
     var categoryName = "Other Birds"
+    var weatherString = "No weather data"
     var managedObjectContext: NSManagedObjectContext!
     var date = Date()
-    let weatherURL = "http://api.openweathermap.org/data/2.5/weather"
-    let appID = "63b1578537bf98519c346221f7f4efda"
-    let weatherData = WeatherData()
     var descriptionText = "Add a description here..."
     var image: UIImage?
     var observer: Any!
@@ -39,6 +35,7 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
                 date = location.date
                 coordinate = CLLocationCoordinate2DMake(location.latitude, location.longitude)
                 placemark = location.placemark
+                weatherString = location.weather
             }
         }
     }
@@ -76,7 +73,7 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
         location.category = categoryName
         location.latitude = coordinate.latitude
         location.longitude = coordinate.longitude
-        location.weather = weatherLabel.text
+        location.weather = weatherString
         location.date = date
         location.placemark = placemark
         
@@ -137,21 +134,11 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
             }
         }
         
-        let latitude = String(coordinate.latitude)
-        let longitude = String(coordinate.longitude)
-        let parameters = ["lat": latitude, "lon": longitude, "appid": appID]
-        
-        print("weatherLabel: \(weatherLabel.text)")
-        if weatherLabel.text == "No weather data" {
-            getWeatherData(url: weatherURL, parameters: parameters)
-            print("longitude = \(longitude), latitude = \(latitude)")
-            print("weatherLabel: \(weatherLabel.text)")
-        }
-        
         categoryLabel.text = categoryName
         latitudeLabel.text = String(format: "%.8f", coordinate.latitude)
         longitudeLabel.text = String(format: "%.8f", coordinate.longitude)
         dateLabel.text = format(date: date)
+        weatherLabel.text = weatherString
         
         if let placemark = placemark {
             addressLabel.text = string(from: placemark)
@@ -269,28 +256,6 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
             return
         }
         descriptionTextView.resignFirstResponder()
-    }
-    
-    //MARK: - Networking
-    func getWeatherData(url: String, parameters: [String: String]) {
-        Alamofire.request(url, method: .get, parameters: parameters).responseJSON { response in
-            if response.result.isSuccess {
-                print("Success! Got the weather data.")
-                let weatherJSON = JSON(response.result.value!)
-                self.updateWeatherData(json: weatherJSON)
-            } else {
-                print("Error: \(response.result.error!)")
-            }
-        }
-    }
-    
-    //MARK: - JSON Parsing
-    func updateWeatherData(json: JSON) {
-        let tempResult = json["main"]["temp"].doubleValue
-        weatherData.temperature = Int(9/5 * (tempResult - 273) + 32)
-        weatherData.condition = json["weather"][0]["description"].stringValue
-        weatherLabel.text = String(weatherData.temperature) + "° " + weatherData.condition
-        print(json)
     }
     
     //MARK: - Navigation
