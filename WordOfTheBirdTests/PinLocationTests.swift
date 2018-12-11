@@ -39,6 +39,7 @@ class PinLocationTests: XCTestCase {
     
     func testGetLocationButtonStartsShown() {
         XCTAssertFalse(pinLocationVC.getLocationButton.isHidden)
+        XCTAssertEqual(pinLocationVC.getLocationButton.titleLabel?.text, "Get Location")
     }
     
     func testPinLocationButtonStartsHidden() {
