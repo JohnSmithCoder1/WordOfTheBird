@@ -54,8 +54,17 @@ class PinLocationTests: XCTestCase {
     
     func testGetLocationButtonSaysStopWhileUpdating() {
         pinLocationVC.updatingLocation = true
-        pinLocationVC.configureGetButton()
+        pinLocationVC.updateLabels()
         
         XCTAssertEqual(pinLocationVC.getLocationButton.titleLabel?.text, "Stop")
+    }
+    
+    func testLatLongAddressLabelsHiddenWhileUpdating() {
+        pinLocationVC.updatingLocation = true
+        pinLocationVC.updateLabels()
+        
+        XCTAssertTrue(pinLocationVC.latitudeTextLabel.isHidden)
+        XCTAssertTrue(pinLocationVC.longitudeTextLabel.isHidden)
+        XCTAssertTrue(pinLocationVC.nearestAddressTextLabel.isHidden)
     }
 }
