@@ -49,45 +49,4 @@ class WordOfTheBirdTests: XCTestCase {
         XCTAssertEqual(bird?.infoLink, "https://en.wikipedia.org/wiki/Tufted_titmouse")
         XCTAssertEqual(bird?.mapLink, "https://upload.wikimedia.org/wikipedia/commons/3/39/Tufted_Titmouse-rangemap.gif")
     }
-    
-    func testGetLocationButtonStartsShown() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let pinLocationVC = storyboard.instantiateViewController(withIdentifier: "PinLocationViewController") as! PinLocationViewController
-        pinLocationVC.loadViewIfNeeded()
-        
-        XCTAssertFalse(pinLocationVC.getLocationButton.isHidden)
-    }
-    
-    func testPinLocationButtonStartsHidden() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let pinLocationVC = storyboard.instantiateViewController(withIdentifier: "PinLocationViewController") as! PinLocationViewController
-        pinLocationVC.loadViewIfNeeded()
-        
-        XCTAssertTrue(pinLocationVC.pinLocationButton.isHidden)
-    }
-    
-    func testPinLocationButtonShowsAfterUpdateLabels() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let pinLocationVC = storyboard.instantiateViewController(withIdentifier: "PinLocationViewController") as! PinLocationViewController
-        pinLocationVC.loadViewIfNeeded()
-        
-        pinLocationVC.updateLabels()
-        pinLocationVC.loadView()
-        
-        XCTAssertFalse(pinLocationVC.pinLocationButton.isHidden)
-    }
-    
-    func testGetLocationButtonSaysStopWhileUpdating() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let pinLocationVC = storyboard.instantiateViewController(withIdentifier: "PinLocationViewController") as! PinLocationViewController
-        pinLocationVC.loadViewIfNeeded()
-        
-        pinLocationVC.updatingLocation = true
-        pinLocationVC.configureGetButton()
-        
-        XCTAssertEqual(pinLocationVC.getLocationButton.titleLabel?.text, "Stop")
-    }
-    
-    
-    
 }

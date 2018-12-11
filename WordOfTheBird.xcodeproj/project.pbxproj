@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0103A8BF9AF2D0BC6B1F086E /* Pods_WordOfTheBird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5B6EEA551D38F864CE07FE /* Pods_WordOfTheBird.framework */; };
 		0527B83F21C0431F00B37F5D /* WordOfTheBirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0527B83E21C0431F00B37F5D /* WordOfTheBirdTests.swift */; };
+		0527B84721C065E100B37F5D /* PinLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0527B84621C065E100B37F5D /* PinLocationTests.swift */; };
 		0546C67F212FA42300F6126A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546C67E212FA42300F6126A /* AboutViewController.swift */; };
 		055F7AD5213C61FD0076F513 /* PinLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F7AD4213C61FD0076F513 /* PinLocationViewController.swift */; };
 		055F7AD7213C64120076F513 /* PinListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F7AD6213C64120076F513 /* PinListViewController.swift */; };
@@ -80,6 +81,7 @@
 		0527B83C21C0431F00B37F5D /* WordOfTheBirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordOfTheBirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0527B83E21C0431F00B37F5D /* WordOfTheBirdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordOfTheBirdTests.swift; sourceTree = "<group>"; };
 		0527B84021C0431F00B37F5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0527B84621C065E100B37F5D /* PinLocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinLocationTests.swift; sourceTree = "<group>"; };
 		0546C67E212FA42300F6126A /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		055F7AD4213C61FD0076F513 /* PinLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinLocationViewController.swift; sourceTree = "<group>"; };
 		055F7AD6213C64120076F513 /* PinListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinListViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		0527B83D21C0431F00B37F5D /* WordOfTheBirdTests */ = {
 			isa = PBXGroup;
 			children = (
+				0527B84621C065E100B37F5D /* PinLocationTests.swift */,
 				0527B83E21C0431F00B37F5D /* WordOfTheBirdTests.swift */,
 				0527B84021C0431F00B37F5D /* Info.plist */,
 			);
@@ -480,6 +483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0527B84721C065E100B37F5D /* PinLocationTests.swift in Sources */,
 				0527B83F21C0431F00B37F5D /* WordOfTheBirdTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
