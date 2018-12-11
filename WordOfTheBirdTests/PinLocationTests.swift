@@ -42,6 +42,13 @@ class PinLocationTests: XCTestCase {
         XCTAssertEqual(pinLocationVC.getLocationButton.titleLabel?.text, "Get Location")
     }
     
+    func testGetLocationButtonSaysStopWhileUpdating() {
+        pinLocationVC.updatingLocation = true
+        pinLocationVC.updateLabels()
+        
+        XCTAssertEqual(pinLocationVC.getLocationButton.titleLabel?.text, "Stop")
+    }
+    
     func testPinLocationButtonStartsHidden() {
         XCTAssertTrue(pinLocationVC.pinLocationButton.isHidden)
     }
@@ -53,11 +60,10 @@ class PinLocationTests: XCTestCase {
         XCTAssertFalse(pinLocationVC.pinLocationButton.isHidden)
     }
     
-    func testGetLocationButtonSaysStopWhileUpdating() {
-        pinLocationVC.updatingLocation = true
-        pinLocationVC.updateLabels()
-        
-        XCTAssertEqual(pinLocationVC.getLocationButton.titleLabel?.text, "Stop")
+    func testLatLongAddressLabelsStartHidden() {
+        XCTAssertTrue(pinLocationVC.latitudeTextLabel.isHidden)
+        XCTAssertTrue(pinLocationVC.longitudeTextLabel.isHidden)
+        XCTAssertTrue(pinLocationVC.nearestAddressTextLabel.isHidden)
     }
     
     func testLatLongAddressLabelsHiddenWhileUpdating() {
