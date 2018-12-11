@@ -31,20 +31,26 @@ class WordOfTheBirdTests: XCTestCase {
         }
     }
     
-    func testBird17IsTuftedTitmouse() {
+    func testNumberOfBirdsIs18() {
+        let birdBank = BirdBank()
+        
+        XCTAssertTrue(birdBank.birds.count == 18)
+    }
+    
+    func testLastBirdIsTuftedTitmouse() {
         // given
         let birdBank = BirdBank()
         
         // when
-        let bird = birdBank.birds[17]
+        let bird = birdBank.birds.last
         
         // then
-        XCTAssertEqual(bird.name, "Tufted Titmouse")
-        XCTAssertEqual(bird.imageSmall, "tuftedTitmouseImageSmall")
-        XCTAssertEqual(bird.imageLarge, "tuftedTitmouseImageLarge")
-        XCTAssertEqual(bird.calls, ["tuftedTitmouseCall1"])
-        XCTAssertEqual(bird.infoLink, "https://en.wikipedia.org/wiki/Tufted_titmouse")
-        XCTAssertEqual(bird.mapLink, "https://upload.wikimedia.org/wikipedia/commons/3/39/Tufted_Titmouse-rangemap.gif")
+        XCTAssertEqual(bird?.name, "Tufted Titmouse")
+        XCTAssertEqual(bird?.imageSmall, "tuftedTitmouseImageSmall")
+        XCTAssertEqual(bird?.imageLarge, "tuftedTitmouseImageLarge")
+        XCTAssertEqual(bird?.calls, ["tuftedTitmouseCall1"])
+        XCTAssertEqual(bird?.infoLink, "https://en.wikipedia.org/wiki/Tufted_titmouse")
+        XCTAssertEqual(bird?.mapLink, "https://upload.wikimedia.org/wikipedia/commons/3/39/Tufted_Titmouse-rangemap.gif")
     }
     
     
