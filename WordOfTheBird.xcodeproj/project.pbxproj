@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0103A8BF9AF2D0BC6B1F086E /* Pods_WordOfTheBird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5B6EEA551D38F864CE07FE /* Pods_WordOfTheBird.framework */; };
+		0527B83F21C0431F00B37F5D /* WordOfTheBirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0527B83E21C0431F00B37F5D /* WordOfTheBirdTests.swift */; };
 		0546C67F212FA42300F6126A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546C67E212FA42300F6126A /* AboutViewController.swift */; };
 		055F7AD5213C61FD0076F513 /* PinLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F7AD4213C61FD0076F513 /* PinLocationViewController.swift */; };
 		055F7AD7213C64120076F513 /* PinListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F7AD6213C64120076F513 /* PinListViewController.swift */; };
@@ -65,7 +66,20 @@
 		B0FEA9F020D186F30061599D /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FEA9EF20D186F30061599D /* Bird.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0527B84121C0431F00B37F5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05CB8F682091165100AB7E13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05CB8F6F2091165100AB7E13;
+			remoteInfo = WordOfTheBird;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0527B83C21C0431F00B37F5D /* WordOfTheBirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordOfTheBirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0527B83E21C0431F00B37F5D /* WordOfTheBirdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordOfTheBirdTests.swift; sourceTree = "<group>"; };
+		0527B84021C0431F00B37F5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0546C67E212FA42300F6126A /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		055F7AD4213C61FD0076F513 /* PinLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinLocationViewController.swift; sourceTree = "<group>"; };
 		055F7AD6213C64120076F513 /* PinListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinListViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +143,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0527B83921C0431F00B37F5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05CB8F6D2091165100AB7E13 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -140,6 +161,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0527B83D21C0431F00B37F5D /* WordOfTheBirdTests */ = {
+			isa = PBXGroup;
+			children = (
+				0527B83E21C0431F00B37F5D /* WordOfTheBirdTests.swift */,
+				0527B84021C0431F00B37F5D /* Info.plist */,
+			);
+			path = WordOfTheBirdTests;
+			sourceTree = "<group>";
+		};
 		05A9950A212358DF006CDBEA /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				05CB8F722091165100AB7E13 /* WordOfTheBird */,
+				0527B83D21C0431F00B37F5D /* WordOfTheBirdTests */,
 				05CB8F712091165100AB7E13 /* Products */,
 				6D3E08E261F9E78DE1ED664B /* Pods */,
 				EDA220DD17FE24118B53F37C /* Frameworks */,
@@ -164,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				05CB8F702091165100AB7E13 /* WordOfTheBird.app */,
+				0527B83C21C0431F00B37F5D /* WordOfTheBirdTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -273,6 +305,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0527B83B21C0431F00B37F5D /* WordOfTheBirdTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0527B84521C0431F00B37F5D /* Build configuration list for PBXNativeTarget "WordOfTheBirdTests" */;
+			buildPhases = (
+				0527B83821C0431F00B37F5D /* Sources */,
+				0527B83921C0431F00B37F5D /* Frameworks */,
+				0527B83A21C0431F00B37F5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0527B84221C0431F00B37F5D /* PBXTargetDependency */,
+			);
+			name = WordOfTheBirdTests;
+			productName = WordOfTheBirdTests;
+			productReference = 0527B83C21C0431F00B37F5D /* WordOfTheBirdTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		05CB8F6F2091165100AB7E13 /* WordOfTheBird */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05CB8F822091165200AB7E13 /* Build configuration list for PBXNativeTarget "WordOfTheBird" */;
@@ -298,10 +348,14 @@
 		05CB8F682091165100AB7E13 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Banana Viking";
 				TargetAttributes = {
+					0527B83B21C0431F00B37F5D = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 05CB8F6F2091165100AB7E13;
+					};
 					05CB8F6F2091165100AB7E13 = {
 						CreatedOnToolsVersion = 9.3;
 						SystemCapabilities = {
@@ -326,11 +380,19 @@
 			projectRoot = "";
 			targets = (
 				05CB8F6F2091165100AB7E13 /* WordOfTheBird */,
+				0527B83B21C0431F00B37F5D /* WordOfTheBirdTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0527B83A21C0431F00B37F5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05CB8F6E2091165100AB7E13 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -414,6 +476,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0527B83821C0431F00B37F5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0527B83F21C0431F00B37F5D /* WordOfTheBirdTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05CB8F6C2091165100AB7E13 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -446,6 +516,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0527B84221C0431F00B37F5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05CB8F6F2091165100AB7E13 /* WordOfTheBird */;
+			targetProxy = 0527B84121C0431F00B37F5D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		05CB8F772091165100AB7E13 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -466,6 +544,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0527B84321C0431F00B37F5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7YNF79H478;
+				INFOPLIST_FILE = WordOfTheBirdTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bananaviking.WordOfTheBirdTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordOfTheBird.app/WordOfTheBird";
+			};
+			name = Debug;
+		};
+		0527B84421C0431F00B37F5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7YNF79H478;
+				INFOPLIST_FILE = WordOfTheBirdTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bananaviking.WordOfTheBirdTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordOfTheBird.app/WordOfTheBird";
+			};
+			name = Release;
+		};
 		05CB8F802091165200AB7E13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -621,6 +744,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0527B84521C0431F00B37F5D /* Build configuration list for PBXNativeTarget "WordOfTheBirdTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0527B84321C0431F00B37F5D /* Debug */,
+				0527B84421C0431F00B37F5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		05CB8F6B2091165100AB7E13 /* Build configuration list for PBXProject "WordOfTheBird" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
