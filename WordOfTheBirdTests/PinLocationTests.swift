@@ -74,4 +74,13 @@ class PinLocationTests: XCTestCase {
         XCTAssertTrue(pinLocationVC.longitudeTextLabel.isHidden)
         XCTAssertTrue(pinLocationVC.nearestAddressTextLabel.isHidden)
     }
+    
+    func testLatLongAddressLabelsShowAfterUpdateLabels() {
+        pinLocationVC.updateLabels()
+        pinLocationVC.loadView()
+        
+        XCTAssertFalse(pinLocationVC.latitudeTextLabel.isHidden)
+        XCTAssertFalse(pinLocationVC.longitudeTextLabel.isHidden)
+        XCTAssertFalse(pinLocationVC.nearestAddressTextLabel.isHidden)
+    }
 }
