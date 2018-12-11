@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0103A8BF9AF2D0BC6B1F086E /* Pods_WordOfTheBird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5B6EEA551D38F864CE07FE /* Pods_WordOfTheBird.framework */; };
 		0546C67F212FA42300F6126A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546C67E212FA42300F6126A /* AboutViewController.swift */; };
 		055F7AD5213C61FD0076F513 /* PinLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F7AD4213C61FD0076F513 /* PinLocationViewController.swift */; };
 		055F7AD7213C64120076F513 /* PinListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F7AD6213C64120076F513 /* PinListViewController.swift */; };
 		055F7AD9213C647B0076F513 /* PinMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F7AD8213C647B0076F513 /* PinMapViewController.swift */; };
 		05621DA52146FA1900989922 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05621DA42146FA1900989922 /* UIImage+Resize.swift */; };
 		0569DB602125D98D002E5377 /* BirdBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0569DB5F2125D98D002E5377 /* BirdBank.swift */; };
+		057F9A2121B85D5A003B0075 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057F9A2021B85D5A003B0075 /* WeatherData.swift */; };
 		05AE7EE421518337003B6F36 /* String+AddText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AE7EE321518337003B6F36 /* String+AddText.swift */; };
 		05CB8F742091165100AB7E13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8F732091165100AB7E13 /* AppDelegate.swift */; };
 		05CB8F792091165100AB7E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8F772091165100AB7E13 /* Main.storyboard */; };
@@ -70,6 +72,7 @@
 		055F7AD8213C647B0076F513 /* PinMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinMapViewController.swift; sourceTree = "<group>"; };
 		05621DA42146FA1900989922 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		0569DB5F2125D98D002E5377 /* BirdBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdBank.swift; sourceTree = "<group>"; };
+		057F9A2021B85D5A003B0075 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		05AE7EE321518337003B6F36 /* String+AddText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AddText.swift"; sourceTree = "<group>"; };
 		05CB8F702091165100AB7E13 /* WordOfTheBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordOfTheBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CB8F732091165100AB7E13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +86,9 @@
 		05D12334214064900036D19D /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
 		05D12335214064900036D19D /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		05F029E9215975780081E2AC /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		122FDFB4A27BC25AF547B5E8 /* Pods-WordOfTheBird.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordOfTheBird.release.xcconfig"; path = "Pods/Target Support Files/Pods-WordOfTheBird/Pods-WordOfTheBird.release.xcconfig"; sourceTree = "<group>"; };
+		20F38E92734CB33C3DCFE93A /* Pods-WordOfTheBird.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordOfTheBird.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WordOfTheBird/Pods-WordOfTheBird.debug.xcconfig"; sourceTree = "<group>"; };
+		9E5B6EEA551D38F864CE07FE /* Pods_WordOfTheBird.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordOfTheBird.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B02FA39720D4477400172A65 /* BirdDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdDetailViewController.swift; sourceTree = "<group>"; };
 		B02FA39920D4477E00172A65 /* BirdDetailDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdDetailDataViewController.swift; sourceTree = "<group>"; };
 		B03A9F13212F1C2F00CA84E6 /* northernFlickerCall1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = northernFlickerCall1.wav; sourceTree = "<group>"; };
@@ -127,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0103A8BF9AF2D0BC6B1F086E /* Pods_WordOfTheBird.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +155,8 @@
 			children = (
 				05CB8F722091165100AB7E13 /* WordOfTheBird */,
 				05CB8F712091165100AB7E13 /* Products */,
+				6D3E08E261F9E78DE1ED664B /* Pods */,
+				EDA220DD17FE24118B53F37C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,6 +196,15 @@
 				05F029E9215975780081E2AC /* WebViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		6D3E08E261F9E78DE1ED664B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20F38E92734CB33C3DCFE93A /* Pods-WordOfTheBird.debug.xcconfig */,
+				122FDFB4A27BC25AF547B5E8 /* Pods-WordOfTheBird.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		B0C48D2920925D8700A655AB /* Sounds */ = {
@@ -230,17 +248,26 @@
 			children = (
 				B0FEA9EF20D186F30061599D /* Bird.swift */,
 				0569DB5F2125D98D002E5377 /* BirdBank.swift */,
+				05D12331214063580036D19D /* DataModel.xcdatamodeld */,
 				05D1232F214062460036D19D /* Functions.swift */,
 				05D1232D214059AE0036D19D /* HudView.swift */,
 				05D12334214064900036D19D /* Location+CoreDataClass.swift */,
 				05D12335214064900036D19D /* Location+CoreDataProperties.swift */,
 				B08765A12142F21000AA178F /* LocationCell.swift */,
+				B0C48D2920925D8700A655AB /* Sounds */,
 				05AE7EE321518337003B6F36 /* String+AddText.swift */,
 				05621DA42146FA1900989922 /* UIImage+Resize.swift */,
-				05D12331214063580036D19D /* DataModel.xcdatamodeld */,
-				B0C48D2920925D8700A655AB /* Sounds */,
+				057F9A2021B85D5A003B0075 /* WeatherData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EDA220DD17FE24118B53F37C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E5B6EEA551D38F864CE07FE /* Pods_WordOfTheBird.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +277,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05CB8F822091165200AB7E13 /* Build configuration list for PBXNativeTarget "WordOfTheBird" */;
 			buildPhases = (
+				7471BB97AAED3E60A3B2B5A8 /* [CP] Check Pods Manifest.lock */,
 				05CB8F6C2091165100AB7E13 /* Sources */,
 				05CB8F6D2091165100AB7E13 /* Frameworks */,
 				05CB8F6E2091165100AB7E13 /* Resources */,
+				89DF5715F78E719889CCCCE8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -343,6 +372,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7471BB97AAED3E60A3B2B5A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WordOfTheBird-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89DF5715F78E719889CCCCE8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WordOfTheBird/Pods-WordOfTheBird-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WordOfTheBird/Pods-WordOfTheBird-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		05CB8F6C2091165100AB7E13 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -360,6 +430,7 @@
 				05D12333214063580036D19D /* DataModel.xcdatamodeld in Sources */,
 				05AE7EE421518337003B6F36 /* String+AddText.swift in Sources */,
 				055F7AD9213C647B0076F513 /* PinMapViewController.swift in Sources */,
+				057F9A2121B85D5A003B0075 /* WeatherData.swift in Sources */,
 				0569DB602125D98D002E5377 /* BirdBank.swift in Sources */,
 				0546C67F212FA42300F6126A /* AboutViewController.swift in Sources */,
 				B02FA39820D4477400172A65 /* BirdDetailViewController.swift in Sources */,
@@ -511,6 +582,7 @@
 		};
 		05CB8F832091165200AB7E13 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20F38E92734CB33C3DCFE93A /* Pods-WordOfTheBird.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -529,6 +601,7 @@
 		};
 		05CB8F842091165200AB7E13 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 122FDFB4A27BC25AF547B5E8 /* Pods-WordOfTheBird.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

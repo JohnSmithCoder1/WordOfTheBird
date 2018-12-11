@@ -21,6 +21,7 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
     var coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     var placemark: CLPlacemark?
     var categoryName = "Other Birds"
+    var weatherString = "No weather data"
     var managedObjectContext: NSManagedObjectContext!
     var date = Date()
     var descriptionText = "Add a description here..."
@@ -34,6 +35,7 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
                 date = location.date
                 coordinate = CLLocationCoordinate2DMake(location.latitude, location.longitude)
                 placemark = location.placemark
+                weatherString = location.weather
             }
         }
     }
@@ -46,7 +48,8 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var addPhotoLabel: UILabel!
-
+    @IBOutlet weak var weatherLabel: UILabel!
+    
     @IBAction func done() {
         let hudView = HudView.hud(inView: navigationController!.view, animated: true)
         hudView.text = "Tagged"
@@ -70,6 +73,7 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
         location.category = categoryName
         location.latitude = coordinate.latitude
         location.longitude = coordinate.longitude
+        location.weather = weatherString
         location.date = date
         location.placemark = placemark
         
@@ -133,6 +137,8 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
         categoryLabel.text = categoryName
         latitudeLabel.text = String(format: "%.8f", coordinate.latitude)
         longitudeLabel.text = String(format: "%.8f", coordinate.longitude)
+        dateLabel.text = format(date: date)
+        weatherLabel.text = weatherString
         
         if let placemark = placemark {
             addressLabel.text = string(from: placemark)
@@ -140,7 +146,6 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
             addressLabel.text = "No Address Found"
         }
         
-        dateLabel.text = format(date: date)
         listenForBackgroundNotification()
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         gestureRecognizer.cancelsTouchesInView = false
