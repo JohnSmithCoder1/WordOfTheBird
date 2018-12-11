@@ -66,7 +66,7 @@ class WordOfTheBirdTests: XCTestCase {
         XCTAssertTrue(pinLocationVC.pinLocationButton.isHidden)
     }
     
-    func testPinLocationButtonShowsOnUpdate() {
+    func testPinLocationButtonShowsAfterUpdateLabels() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let pinLocationVC = storyboard.instantiateViewController(withIdentifier: "PinLocationViewController") as! PinLocationViewController
         pinLocationVC.loadViewIfNeeded()
