@@ -37,14 +37,11 @@ class WordOfTheBirdTests: XCTestCase {
         XCTAssertTrue(birdBank.birds.count == 18)
     }
     
-    func testLastBirdIsTuftedTitmouse() {
-        // given
+    func testLastBirdPropertiesAreTuftedTitmouses() {
         let birdBank = BirdBank()
         
-        // when
         let bird = birdBank.birds.last
         
-        // then
         XCTAssertEqual(bird?.name, "Tufted Titmouse")
         XCTAssertEqual(bird?.imageSmall, "tuftedTitmouseImageSmall")
         XCTAssertEqual(bird?.imageLarge, "tuftedTitmouseImageLarge")
@@ -53,5 +50,20 @@ class WordOfTheBirdTests: XCTestCase {
         XCTAssertEqual(bird?.mapLink, "https://upload.wikimedia.org/wikipedia/commons/3/39/Tufted_Titmouse-rangemap.gif")
     }
     
+    func testPinLocationButtonStartsHidden() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let pinLocationVC = storyboard.instantiateViewController(withIdentifier: "PinLocationViewController") as! PinLocationViewController
+        pinLocationVC.loadViewIfNeeded()
+        
+        XCTAssertTrue(pinLocationVC.pinLocationButton.isHidden)
+    }
+    
+    func testGetLocationButtonStartsShown() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let pinLocationVC = storyboard.instantiateViewController(withIdentifier: "PinLocationViewController") as! PinLocationViewController
+        pinLocationVC.loadViewIfNeeded()
+        
+        XCTAssertFalse(pinLocationVC.getLocationButton.isHidden)
+    }
     
 }

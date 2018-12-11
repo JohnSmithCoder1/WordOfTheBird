@@ -113,7 +113,7 @@
         <!--Pin Location-->
         <scene sceneID="aj9-TM-neb">
             <objects>
-                <viewController title="Pin Location" id="My2-VN-07b" customClass="PinLocationViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PinLocationViewController" title="Pin Location" id="My2-VN-07b" customClass="PinLocationViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="32u-if-4JU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
