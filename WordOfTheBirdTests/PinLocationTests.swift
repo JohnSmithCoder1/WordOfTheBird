@@ -11,12 +11,18 @@ import XCTest
 
 class PinLocationTests: XCTestCase {
 
+    var storyboard: UIStoryboard!
+    var pinLocationVC: PinLocationViewController!
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        storyboard = UIStoryboard(name: "Main", bundle: nil)
+        pinLocationVC = storyboard.instantiateViewController(withIdentifier: "PinLocationViewController") as? PinLocationViewController
+        pinLocationVC.loadViewIfNeeded()
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        storyboard = nil
+        pinLocationVC = nil
     }
 
     func testExample() {
@@ -32,26 +38,14 @@ class PinLocationTests: XCTestCase {
     }
     
     func testGetLocationButtonStartsShown() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let pinLocationVC = storyboard.instantiateViewController(withIdentifier: "PinLocationViewController") as! PinLocationViewController
-        pinLocationVC.loadViewIfNeeded()
-        
         XCTAssertFalse(pinLocationVC.getLocationButton.isHidden)
     }
     
     func testPinLocationButtonStartsHidden() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let pinLocationVC = storyboard.instantiateViewController(withIdentifier: "PinLocationViewController") as! PinLocationViewController
-        pinLocationVC.loadViewIfNeeded()
-        
         XCTAssertTrue(pinLocationVC.pinLocationButton.isHidden)
     }
     
     func testPinLocationButtonShowsAfterUpdateLabels() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let pinLocationVC = storyboard.instantiateViewController(withIdentifier: "PinLocationViewController") as! PinLocationViewController
-        pinLocationVC.loadViewIfNeeded()
-        
         pinLocationVC.updateLabels()
         pinLocationVC.loadView()
         
@@ -59,14 +53,9 @@ class PinLocationTests: XCTestCase {
     }
     
     func testGetLocationButtonSaysStopWhileUpdating() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let pinLocationVC = storyboard.instantiateViewController(withIdentifier: "PinLocationViewController") as! PinLocationViewController
-        pinLocationVC.loadViewIfNeeded()
-        
         pinLocationVC.updatingLocation = true
         pinLocationVC.configureGetButton()
         
         XCTAssertEqual(pinLocationVC.getLocationButton.titleLabel?.text, "Stop")
     }
-
 }
