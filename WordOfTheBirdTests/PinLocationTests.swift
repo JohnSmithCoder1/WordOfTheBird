@@ -66,9 +66,11 @@ class PinLocationTests: XCTestCase {
         XCTAssertTrue(pinLocationVC.nearestAddressTextLabel.isHidden)
     }
     
+    #warning("getLocation fails, but updateLabels passes")
     func testLatLongAddressLabelsHiddenWhileUpdating() {
         pinLocationVC.updatingLocation = true
-        pinLocationVC.updateLabels()
+        pinLocationVC.getLocation()
+        pinLocationVC.loadView()
         
         XCTAssertTrue(pinLocationVC.latitudeTextLabel.isHidden)
         XCTAssertTrue(pinLocationVC.longitudeTextLabel.isHidden)
@@ -76,7 +78,8 @@ class PinLocationTests: XCTestCase {
     }
     
     func testLatLongAddressLabelsShowAfterUpdateLabels() {
-        pinLocationVC.updateLabels()
+        pinLocationVC.updatingLocation = true
+        pinLocationVC.getLocation()
         pinLocationVC.loadView()
         
         XCTAssertFalse(pinLocationVC.latitudeTextLabel.isHidden)

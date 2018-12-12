@@ -52,8 +52,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             startLocationManager()
         }
         updateLabels()
-        
-        
     }
     
     override func viewDidLoad() {
@@ -257,7 +255,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             }
         }
         
-        #warning("find me a home")
         if let location = location {
             let latitude = String(location.coordinate.latitude)
             let longitude = String(location.coordinate.longitude)
@@ -278,7 +275,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
                 print("Error: \(response.result.error!)")
             }
         }
-        print("weatherStringGWD: \(weatherString)")
     }
     
     //MARK: - JSON Parsing
@@ -287,7 +283,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         weatherData.temperature = Int(9/5 * (tempResult - 273) + 32)
         weatherData.condition = json["weather"][0]["description"].stringValue
         weatherString = String(weatherData.temperature) + "° " + weatherData.condition
-        print("weatherStringUWD: \(weatherString)")
         print(json)
     }
     
@@ -299,7 +294,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             controller.placemark = placemark
             controller.weatherString = weatherString
             controller.managedObjectContext = managedObjectContext
-            print("weatherStringPFS: \(weatherString)")
         }
     }
 }
