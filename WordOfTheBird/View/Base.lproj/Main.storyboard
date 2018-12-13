@@ -249,13 +249,13 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addressLabel" destination="Lau-s0-FzO" id="4pM-Vk-5D6"/>
+                        <outlet property="addressTextLabel" destination="qDP-gQ-fI2" id="LfJ-zL-BH7"/>
                         <outlet property="getLocationButton" destination="7Mv-iS-QAT" id="PFo-n1-l7s"/>
                         <outlet property="latitudeLabel" destination="b9D-Ua-tbx" id="Rde-a2-bzo"/>
                         <outlet property="latitudeTextLabel" destination="FEG-bn-fBQ" id="1tC-tw-HW4"/>
                         <outlet property="longitudeLabel" destination="HD4-aK-Ywb" id="JIB-3u-1Fp"/>
                         <outlet property="longitudeTextLabel" destination="iWX-E5-veY" id="TyL-59-QhY"/>
                         <outlet property="messageLabel" destination="xvu-uZ-FqN" id="4Wm-mK-giI"/>
-                        <outlet property="nearestAddressTextLabel" destination="qDP-gQ-fI2" id="LfJ-zL-BH7"/>
                         <outlet property="pinLocationButton" destination="hwN-DG-GE5" id="UzN-4o-1yX"/>
                     </connections>
                 </viewController>
@@ -820,7 +820,7 @@
                                 <rect key="frame" x="20" y="0.0" width="280" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="30" maxY="0.0"/>
-                                <mutableString key="text">Programming by:
+                                <string key="text">Programming by:
 Derek Little and John Smith
 
 Design by:
@@ -852,7 +852,7 @@ Bob McGuire/Macaulay Library at the Cornell Lab of Ornithology (pileated woodpec
 
 Gregory F. Budney/Macaulay Library at the Cornell Lab of Ornithology (red bellied woodpecker)
 
-David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed hawk)</mutableString>
+David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed hawk)</string>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -885,7 +885,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
             <objects>
                 <tableViewController id="4ux-Z1-eqg" customClass="BirdDetailDataViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="14" sectionFooterHeight="14" contentViewInsetsToSafeArea="NO" id="cDr-C9-lSz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="269"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="285"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -900,7 +900,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llq-9U-GCL">
-                                                    <rect key="frame" x="20" y="11.5" width="247" height="20.5"/>
+                                                    <rect key="frame" x="20" y="11.5" width="527" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20.5" id="pDs-K8-R7i"/>
                                                     </constraints>
@@ -909,7 +909,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="musicNote" translatesAutoresizingMaskIntoConstraints="NO" id="OWt-wp-Jbu">
-                                                    <rect key="frame" x="287" y="9.5" width="25" height="25"/>
+                                                    <rect key="frame" x="567" y="9.5" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="OV2-uI-gow"/>
                                                         <constraint firstAttribute="width" constant="25" id="eJp-HD-YRH"/>
@@ -935,7 +935,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGe-do-ZUK" userLabel="Call 2">
-                                                    <rect key="frame" x="20" y="11.5" width="247" height="20.5"/>
+                                                    <rect key="frame" x="20" y="11.5" width="527" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20.5" id="bPX-HX-jRs"/>
                                                     </constraints>
@@ -944,7 +944,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="musicNote" translatesAutoresizingMaskIntoConstraints="NO" id="sVR-xH-XVZ">
-                                                    <rect key="frame" x="287" y="9.5" width="25" height="25"/>
+                                                    <rect key="frame" x="567" y="9.5" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="ONi-Dx-bGM"/>
                                                         <constraint firstAttribute="width" constant="25" id="fga-9O-WXE"/>
@@ -970,7 +970,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfB-fp-JHk" userLabel="Call 3">
-                                                    <rect key="frame" x="20" y="11.5" width="247" height="20.5"/>
+                                                    <rect key="frame" x="20" y="11.5" width="527" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20.5" id="m1D-gg-6Go"/>
                                                     </constraints>
@@ -979,7 +979,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="musicNote" translatesAutoresizingMaskIntoConstraints="NO" id="FQm-Ay-oJ4">
-                                                    <rect key="frame" x="287" y="9.5" width="25" height="25"/>
+                                                    <rect key="frame" x="567" y="9.5" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="HQl-4f-90j"/>
                                                         <constraint firstAttribute="width" constant="25" id="MEh-fQ-TkP"/>
@@ -1009,7 +1009,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ecology" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMP-Qh-oby">
-                                                    <rect key="frame" x="20" y="11.5" width="246" height="20.5"/>
+                                                    <rect key="frame" x="20" y="11.5" width="522" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20.5" id="5f0-Rt-2aE"/>
                                                     </constraints>
@@ -1034,11 +1034,11 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                         <rect key="frame" x="0.0" y="283.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1F6-0f-kii" id="WsW-rX-LDr">
-                                            <rect key="frame" x="0.0" y="0.0" width="294" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="574" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Range Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAV-cs-Djm">
-                                                    <rect key="frame" x="20" y="11.5" width="254" height="20.5"/>
+                                                    <rect key="frame" x="20" y="11.5" width="522" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20.5" id="bOT-s9-0oR"/>
                                                     </constraints>

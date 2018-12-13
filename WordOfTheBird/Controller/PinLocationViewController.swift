@@ -34,7 +34,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var latitudeTextLabel: UILabel!
     @IBOutlet weak var longitudeTextLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var nearestAddressTextLabel: UILabel!
+    @IBOutlet weak var addressTextLabel: UILabel!
     @IBOutlet weak var getLocationButton: UIButton!
     @IBOutlet weak var pinLocationButton: UIButton!
     
@@ -123,7 +123,9 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         if let location = location {
             latitudeLabel.text = String(format: "%.8f", location.coordinate.latitude)
             longitudeLabel.text = String(format: "%.8f", location.coordinate.longitude)
-            nearestAddressTextLabel.isHidden = false
+            addressTextLabel.isHidden = false
+            latitudeTextLabel.isHidden = false
+            longitudeTextLabel.isHidden = false
             pinLocationButton.isHidden = false
             messageLabel.text = ""
             if let placemark = placemark {
@@ -135,13 +137,12 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             } else {
                 addressLabel.text = "No Address Found"
             }
-            latitudeTextLabel.isHidden = false
-            longitudeTextLabel.isHidden = false
+            
         } else {
             latitudeLabel.text = ""
             longitudeLabel.text = ""
             addressLabel.text = ""
-            nearestAddressTextLabel.isHidden = true
+            addressTextLabel.isHidden = true
             pinLocationButton.isHidden = true
             let statusMessage: String
             if lastLocationError as NSError? != nil {
