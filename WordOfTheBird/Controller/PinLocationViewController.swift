@@ -28,7 +28,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     let weatherData = WeatherData()
     var weatherString = "No weather data"
     
-    
     //MARK: - IBOutlets
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var latitudeLabel: UILabel!
@@ -141,7 +140,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             } else {
                 addressLabel.text = "No Address Found"
             }
-            
         } else {
             latitudeLabel.text = ""
             longitudeLabel.text = ""

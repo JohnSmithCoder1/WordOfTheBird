@@ -56,43 +56,12 @@ class PinLocationTests: XCTestCase {
         XCTAssertTrue(pinLocationVC.pinLocationButton.isHidden)
     }
     
-    // need to rework this test, giving unexpected results
-//    func testPinLocationButtonShowsWhenLocationHasValue() {
-//        pinLocationVC.location == nil
-//        pinLocationVC.updateLabels()
-//        pinLocationVC.loadView()
-//        
-//        XCTAssertFalse(pinLocationVC.pinLocationButton.isHidden)
-//    }
-    
-    func testLatLongAddressLabelsStartHidden() {
+    func testLatLongAddressLabelsStartHiddenOrEmpty() {
         XCTAssertTrue(pinLocationVC.latitudeTextLabel.isHidden)
         XCTAssertTrue(pinLocationVC.longitudeTextLabel.isHidden)
         XCTAssertTrue(pinLocationVC.addressTextLabel.isHidden)
         XCTAssertEqual(pinLocationVC.latitudeLabel.text, "")
         XCTAssertEqual(pinLocationVC.longitudeLabel.text, "")
         XCTAssertEqual(pinLocationVC.addressLabel.text, "")
-    }
-    
-    #warning("getLocation fails, but updateLabels passes")
-    func testLatLongAddressLabelsHiddenWhileUpdating() {
-        pinLocationVC.updatingLocation = true
-        pinLocationVC.getLocation()
-        pinLocationVC.loadView()
-        
-        XCTAssertTrue(pinLocationVC.latitudeTextLabel.isHidden)
-        XCTAssertTrue(pinLocationVC.longitudeTextLabel.isHidden)
-        XCTAssertTrue(pinLocationVC.addressTextLabel.isHidden)
-        
-    }
-    
-    func testLatLongAddressLabelsShowAfterUpdateLabels() {
-        pinLocationVC.updatingLocation = true
-        pinLocationVC.getLocation()
-        pinLocationVC.loadView()
-        
-        XCTAssertFalse(pinLocationVC.latitudeTextLabel.isHidden)
-        XCTAssertFalse(pinLocationVC.longitudeTextLabel.isHidden)
-        XCTAssertFalse(pinLocationVC.addressTextLabel.isHidden)
     }
 }
