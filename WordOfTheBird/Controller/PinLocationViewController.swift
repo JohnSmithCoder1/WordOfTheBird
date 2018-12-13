@@ -28,6 +28,8 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     let weatherData = WeatherData()
     var weatherString = "No weather data"
     
+    
+    //MARK: - IBOutlets
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
@@ -38,6 +40,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var getLocationButton: UIButton!
     @IBOutlet weak var pinLocationButton: UIButton!
     
+    //MARK: - IBActions
     @IBAction func getLocation() {
         if CLLocationManager.authorizationStatus() != .authorizedWhenInUse {
             showLocationServicesDeniedAlert()
@@ -54,6 +57,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         updateLabels()
     }
     
+    //MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         let buttons = [getLocationButton, pinLocationButton]
@@ -141,9 +145,12 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         } else {
             latitudeLabel.text = ""
             longitudeLabel.text = ""
+            latitudeTextLabel.isHidden = true
+            longitudeTextLabel.isHidden = true
             addressLabel.text = ""
             addressTextLabel.isHidden = true
             pinLocationButton.isHidden = true
+            
             let statusMessage: String
             if lastLocationError as NSError? != nil {
                 statusMessage = "Error Getting Location"
@@ -153,8 +160,6 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
                 statusMessage = ""
             }
             messageLabel.text = statusMessage
-            latitudeTextLabel.isHidden = true
-            longitudeTextLabel.isHidden = true
         }
         configureGetButton()
     }
