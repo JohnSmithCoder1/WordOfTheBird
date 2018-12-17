@@ -1,6 +1,14 @@
 # Word of the Bird
 
-Word of the Bird lets you talk to birds! Including calls for 18 different species of common North American birds, use the intuitive interface to quickly access bird calls, ecology, and range maps. Whether you are a beginner, a hobbyist, or active birder, Word of the Bird will help you interact with birds directly or use the catalogue of calls to help identify birds in the wild.
+Word of the Bird's intuitive interface helps you find, tag, and interact with birds.
+
+Features include:
+* calls for 18 different species of common North American birds
+* easily accessible bird ecology and range map links
+* tag GPS coordinates and nearest address of birds you find
+* tagged location details include date, time, and weather conditions
+* use your camera or photo library to add pictures to birds you tag
+* view pins of tagged birds on a satellite map
 
 ## Built With
 
