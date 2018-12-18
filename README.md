@@ -1,5 +1,7 @@
 # Word of the Bird
 
+<img src="Resources/iPhone%208%2B%20image%201.png" width="200"> <img src="Resources/iPhone%208%2B%20image%202.png" width="200"> <img src="Resources/iPhone%208%2B%20image%203.png" width="200"> <img src="Resources/iPhone%208%2B%20image%204.png" width="200">
+
 Word of the Bird's intuitive interface helps you find, tag, and interact with birds.
 
 Features include:
@@ -29,6 +31,10 @@ Features include:
 ## Art
 
 * **Jessica Little**
+
+## Weather Data
+
+* **OpenWeatherMap**
 
 ## Bird Call Recordings
 
