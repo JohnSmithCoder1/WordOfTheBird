@@ -19,22 +19,22 @@ Features include:
 
 ## Authors
 
-* **Derek Little**
-* **John Smith**
+* Derek Little
+* John Smith
 
 ## Design
 
-* **Derek Little**
-* **Jessica Little**
-* **John Smith**
+* Derek Little
+* Jessica Little
+* John Smith
 
 ## Art
 
-* **Jessica Little**
+* Jessica Little
 
 ## Weather Data
 
-* **OpenWeatherMap**
+* OpenWeatherMap
 
 ## Bird Call Recordings
 
