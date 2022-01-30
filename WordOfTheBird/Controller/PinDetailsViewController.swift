@@ -81,7 +81,7 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
             if !location.hasPhoto {
                 location.photoID = Location.nextPhotoID() as NSNumber
             }
-            if let data = UIImageJPEGRepresentation(image, 0.5) {
+            if let data = image.jpegData(compressionQuality: 0.5) {
                 do {
                     try data.write(to: location.photoURL, options: .atomic)
                 } catch {
@@ -220,7 +220,7 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
     }
     
     func listenForBackgroundNotification() {
-        observer = NotificationCenter.default.addObserver(forName: Notification.Name.UIApplicationDidEnterBackground,
+        observer = NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification,
                                                           object: nil, queue: OperationQueue.main) { [weak self] _ in
             if let weakSelf = self {
                 if weakSelf.presentedViewController != nil {
@@ -276,8 +276,11 @@ extension PinDetailsViewController: UIImagePickerControllerDelegate, UINavigatio
         present(imagePicker, animated: true, completion: nil)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        image = info[UIImagePickerControllerEditedImage] as? UIImage
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+// Local variable inserted by Swift 4.2 migrator.
+let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
+        image = infoconvertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.editedImage) as? UIImage
         if let theImage = image {
             show(image: theImage)
         }
@@ -322,4 +325,14 @@ extension PinDetailsViewController: UIImagePickerControllerDelegate, UINavigatio
         
         present(alert, animated: true, completion: nil)
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
 }

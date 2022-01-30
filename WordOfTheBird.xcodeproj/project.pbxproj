@@ -347,10 +347,12 @@
 				TargetAttributes = {
 					0527B83B21C0431F00B37F5D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1320;
 						TestTargetID = 05CB8F6F2091165100AB7E13;
 					};
 					05CB8F6F2091165100AB7E13 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1320;
 						SystemCapabilities = {
 							com.apple.iCloud = {
 								enabled = 0;
@@ -518,7 +520,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bananaviking.WordOfTheBirdTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordOfTheBird.app/WordOfTheBird";
 			};
@@ -540,7 +542,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bananaviking.WordOfTheBirdTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordOfTheBird.app/WordOfTheBird";
 			};
@@ -675,7 +677,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bananaviking.wordofthebird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -693,7 +695,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bananaviking.wordofthebird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

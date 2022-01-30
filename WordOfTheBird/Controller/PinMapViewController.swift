@@ -28,7 +28,7 @@ class PinMapViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     @IBAction func showUser() {
-        let region = MKCoordinateRegionMakeWithDistance(mapView.userLocation.coordinate, 1000, 1000)
+        let region = MKCoordinateRegion.init(center: mapView.userLocation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
         mapView.setRegion(mapView.regionThatFits(region), animated: true)
     }
     
@@ -88,10 +88,10 @@ class PinMapViewController: UIViewController {
         
         switch annotations.count {
         case 0:
-            region = MKCoordinateRegionMakeWithDistance(mapView.userLocation.coordinate, 1000, 1000)
+            region = MKCoordinateRegion.init(center: mapView.userLocation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
         case 1:
             let annotation = annotations[annotations.count - 1]
-            region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, 1000, 1000)
+            region = MKCoordinateRegion.init(center: annotation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
         default:
             var topLeft = CLLocationCoordinate2D(latitude: -90, longitude: 180)
             var bottomRight = CLLocationCoordinate2D(latitude: 90, longitude: -180)
@@ -162,7 +162,7 @@ extension PinMapViewController: MKMapViewDelegate {
         if let annotationView = annotationView {
             annotationView.annotation = annotation
             let button = annotationView.rightCalloutAccessoryView as! UIButton
-            if let index = locations.index(of: annotation as! Location) {
+            if let index = locations.firstIndex(of: annotation as! Location) {
                 button.tag = index
             }
         }

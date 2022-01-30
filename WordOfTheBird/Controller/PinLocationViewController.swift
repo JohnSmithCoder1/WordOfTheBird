@@ -184,7 +184,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             getLocationButton.setTitle("Stop", for: .normal)
             
             if view.viewWithTag(spinnerTag) == nil {
-                let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+                let spinner = UIActivityIndicatorView(style: .whiteLarge)
                 spinner.center = messageLabel.center
                 spinner.center.y = messageLabel.center.y + 40
                 spinner.startAnimating()
