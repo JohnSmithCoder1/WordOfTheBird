@@ -277,10 +277,7 @@ extension PinDetailsViewController: UIImagePickerControllerDelegate, UINavigatio
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-// Local variable inserted by Swift 4.2 migrator.
-let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
-
-        image = infoconvertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.editedImage) as? UIImage
+        image = info[.editedImage] as? UIImage
         if let theImage = image {
             show(image: theImage)
         }
