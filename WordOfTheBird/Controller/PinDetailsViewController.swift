@@ -221,7 +221,8 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
     
     func listenForBackgroundNotification() {
         observer = NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification,
-                                                          object: nil, queue: OperationQueue.main) { [weak self] _ in
+                                                          object: nil,
+                                                          queue: OperationQueue.main) { [weak self] _ in
             if let weakSelf = self {
                 if weakSelf.presentedViewController != nil {
                     weakSelf.dismiss(animated: false, completion: nil)
@@ -232,7 +233,7 @@ class PinDetailsViewController: UITableViewController, UITextViewDelegate {
     }
     
     deinit {
-        NotificationCenter.default.removeObserver(observer)
+        NotificationCenter.default.removeObserver(observer!)
     }
     
     func string(from placemark: CLPlacemark) -> String {
