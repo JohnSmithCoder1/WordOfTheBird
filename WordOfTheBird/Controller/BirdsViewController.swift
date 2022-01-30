@@ -46,7 +46,7 @@ class BirdsViewController: UITableViewController, UISearchResultsUpdating {
         searchController.searchBar.barStyle = .black
         searchController.searchResultsUpdater = self
         searchController.hidesNavigationBarDuringPresentation = false
-        searchController.dimsBackgroundDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.returnKeyType = .done
         searchController.searchBar.enablesReturnKeyAutomatically = false
     }
