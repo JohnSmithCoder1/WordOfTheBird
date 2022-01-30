@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DSj-do-r7g">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DSj-do-r7g">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,21 +21,21 @@
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="64" id="xbA-s8-iin" userLabel="birdCell" customClass="BirdTableViewCell" customModule="WordOfTheBird" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="64"/>
+                                <rect key="frame" x="0.0" y="44.5" width="320" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xbA-s8-iin" id="ogG-Ad-caH">
-                                    <rect key="frame" x="0.0" y="0.0" width="286" height="63.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="295.5" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="4Zj-3W-FaN" userLabel="birdImage">
-                                            <rect key="frame" x="0.0" y="0.0" width="63.5" height="63.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                             <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="4Zj-3W-FaN" secondAttribute="height" multiplier="1:1" id="fNd-X1-3V8"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1F-5N-eTh" userLabel="birdLabel">
-                                            <rect key="frame" x="71.5" y="21.5" width="204.5" height="21"/>
+                                            <rect key="frame" x="72" y="21.5" width="213.5" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="0a1-XM-RBs"/>
                                             </constraints>
@@ -72,7 +70,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Birds" id="Chc-1y-m3P">
-                        <barButtonItem key="rightBarButtonItem" title="About" id="W5k-Or-WoH">
+                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="W5k-Or-WoH">
                             <connections>
                                 <segue destination="q8p-VQ-YJM" kind="show" id="ood-Z1-XL7"/>
                             </connections>
@@ -93,7 +91,7 @@
                     <tabBarItem key="tabBarItem" title="Birds" image="birdsTabBarButton32" selectedImage="birdsTabBarButton32" id="V5t-Zu-zHt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XMk-iI-Kf0">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -123,7 +121,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="jcr-Lf-fua" userLabel="LatLonLabelStackView">
-                                <rect key="frame" x="10" y="185" width="300" height="21"/>
+                                <rect key="frame" x="10" y="165" width="300" height="21"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEG-bn-fBQ" userLabel="Latitude:">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="21"/>
@@ -143,7 +141,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Message Label)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvu-uZ-FqN" userLabel="(Message Label)">
-                                <rect key="frame" x="10" y="84" width="300" height="21"/>
+                                <rect key="frame" x="10" y="64" width="300" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Qmy-h9-Qse"/>
                                 </constraints>
@@ -151,7 +149,7 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwN-DG-GE5" userLabel="Pin Location Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwN-DG-GE5" userLabel="Pin Location Button">
                                 <rect key="frame" x="106" y="431" width="108" height="38"/>
                                 <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -169,7 +167,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDP-gQ-fI2" userLabel="AddressLabel">
-                                <rect key="frame" x="10" y="257" width="300" height="21"/>
+                                <rect key="frame" x="10" y="237" width="300" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="gt5-n8-xOT"/>
                                 </constraints>
@@ -177,7 +175,7 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Mv-iS-QAT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Mv-iS-QAT">
                                 <rect key="frame" x="106" y="363" width="108" height="38"/>
                                 <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -191,7 +189,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CIg-qV-wWg" userLabel="LatLonValueStackView">
-                                <rect key="frame" x="10" y="216" width="300" height="21"/>
+                                <rect key="frame" x="10" y="196" width="300" height="21"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(latitude)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9D-Ua-tbx" userLabel="Latitude Value">
                                         <rect key="frame" x="0.0" y="0.0" width="140" height="21"/>
@@ -211,7 +209,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lau-s0-FzO" userLabel="AddressValue">
-                                <rect key="frame" x="10" y="283" width="300" height="44"/>
+                                <rect key="frame" x="10" y="263" width="300" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Ypy-YB-DkV"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="zZL-om-7fu"/>
@@ -221,6 +219,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZnH-sa-QOi"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CIg-qV-wWg" firstAttribute="top" secondItem="jcr-Lf-fua" secondAttribute="bottom" constant="10" id="8Dv-gC-YW8"/>
@@ -243,7 +242,6 @@
                             <constraint firstItem="jcr-Lf-fua" firstAttribute="top" secondItem="xvu-uZ-FqN" secondAttribute="bottom" constant="80" id="pIM-TT-ced"/>
                             <constraint firstItem="ZnH-sa-QOi" firstAttribute="trailing" secondItem="qDP-gQ-fI2" secondAttribute="trailing" constant="10" id="vYp-DR-dpQ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ZnH-sa-QOi"/>
                     </view>
                     <navigationItem key="navigationItem" title="Pin Location" id="TEn-zu-M4x"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -270,17 +268,17 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="PYo-ay-Qee">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Description" id="83H-Fr-aF4">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="88" id="Uub-Ir-Aep">
-                                        <rect key="frame" x="0.0" y="55.5" width="320" height="88"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="320" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uub-Ir-Aep" id="WUY-rZ-KgQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="87.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" text="(Description goes here)" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="koa-Is-K3Z">
@@ -297,10 +295,10 @@
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="t8u-WE-KPx" detailTextLabel="kad-t7-bL5" style="IBUITableViewCellStyleValue1" id="b0x-De-hXE">
-                                        <rect key="frame" x="0.0" y="143.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="137.5" width="320" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b0x-De-hXE" id="sie-n4-XkL">
-                                            <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="295.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="t8u-WE-KPx">
@@ -311,7 +309,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kad-t7-bL5">
-                                                    <rect key="frame" x="241" y="12" width="44" height="20.5"/>
+                                                    <rect key="frame" x="243.5" y="12" width="44" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -330,14 +328,14 @@
                             <tableViewSection id="Rmj-Cb-PFy">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="kwW-X7-uqu">
-                                        <rect key="frame" x="0.0" y="223.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="217" width="320" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kwW-X7-uqu" id="8v5-nX-U5P">
-                                            <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="295.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Photo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6d-L8-q8k">
-                                                    <rect key="frame" x="16" y="12.5" width="250" height="21"/>
+                                                    <rect key="frame" x="16" y="12.5" width="259.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -362,14 +360,14 @@
                             <tableViewSection id="vpD-T3-XDW">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="Gdr-zX-6F4" detailTextLabel="06Z-8h-Vdy" style="IBUITableViewCellStyleValue1" id="Pzu-uM-Hxc" userLabel="Latitude Cell">
-                                        <rect key="frame" x="0.0" y="303.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="296.5" width="320" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pzu-uM-Hxc" id="HtU-Rl-NRr">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gdr-zX-6F4">
-                                                    <rect key="frame" x="16" y="12" width="63" height="20.5"/>
+                                                    <rect key="frame" x="16" y="12" width="62.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -388,7 +386,7 @@
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="sot-5c-pgf" detailTextLabel="qK2-X5-dgb" style="IBUITableViewCellStyleValue1" id="bzR-jy-Erq" userLabel="Longitude Cell">
-                                        <rect key="frame" x="0.0" y="347.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="340" width="320" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bzR-jy-Erq" id="Z0I-4f-4Nh">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -414,10 +412,10 @@
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="nxu-uB-Etw" userLabel="Address Cell">
-                                        <rect key="frame" x="0.0" y="391.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="383.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nxu-uB-Etw" id="nVj-cT-Ybk">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOb-fV-Xkc">
@@ -449,7 +447,7 @@
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="xUV-v2-8w6" detailTextLabel="iAS-7O-Ic9" style="IBUITableViewCellStyleValue1" id="oXI-q5-Q8C" userLabel="Date Cell">
-                                        <rect key="frame" x="0.0" y="435.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="427.5" width="320" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oXI-q5-Q8C" id="A4M-3N-dyv">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -475,7 +473,7 @@
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="zhX-Gb-uY3" detailTextLabel="CXl-Pm-lhR" style="IBUITableViewCellStyleValue1" id="SRc-ml-BFl" userLabel="Weather Cell">
-                                        <rect key="frame" x="0.0" y="479.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="471" width="320" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SRc-ml-BFl" id="oka-Sl-UUU">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -489,7 +487,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="No weather data" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CXl-Pm-lhR" userLabel="Weather Label">
-                                                    <rect key="frame" x="177.5" y="12" width="126.5" height="20.5"/>
+                                                    <rect key="frame" x="178.5" y="12" width="125.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -546,7 +544,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="MWE-T8-uoD" style="IBUITableViewCellStyleDefault" id="mSc-nv-Zq9">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="44.5" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mSc-nv-Zq9" id="iGn-oY-xVE">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -592,14 +590,14 @@
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="57" id="Bi3-tK-bCg" customClass="LocationCell" customModule="WordOfTheBird" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="57"/>
+                                <rect key="frame" x="0.0" y="44.5" width="320" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bi3-tK-bCg" id="POm-ix-LAQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="56.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="SyE-wP-28E">
-                                            <rect key="frame" x="70" y="7.5" width="230" height="41.5"/>
+                                            <rect key="frame" x="70.5" y="8" width="230" height="41.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skg-Ii-I56">
                                                     <rect key="frame" x="0.0" y="0.0" width="230" height="20.5"/>
@@ -616,13 +614,13 @@
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="6ZA-Fw-qau"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                    <color key="textColor" systemColor="lightTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hXh-U7-bfR">
-                                            <rect key="frame" x="10" y="2" width="52" height="52"/>
+                                            <rect key="frame" x="10" y="2" width="52.5" height="52.5"/>
                                             <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="hXh-U7-bfR" secondAttribute="height" multiplier="1:1" id="LiZ-GV-Pch"/>
@@ -673,7 +671,7 @@
                                 </connections>
                             </mapView>
                             <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Q9b-SW-fvh">
-                                <rect key="frame" x="54" y="64" width="212" height="29"/>
+                                <rect key="frame" x="46.5" y="44" width="227" height="32"/>
                                 <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
                                     <segment title="Standard"/>
@@ -686,12 +684,12 @@
                                 </connections>
                             </segmentedControl>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="WJd-Ln-mJe"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Q9b-SW-fvh" firstAttribute="centerX" secondItem="7iv-DL-Fif" secondAttribute="centerX" id="gGL-LQ-K2Y"/>
                             <constraint firstItem="Q9b-SW-fvh" firstAttribute="top" secondItem="WJd-Ln-mJe" secondAttribute="top" id="m4V-af-DPG"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="WJd-Ln-mJe"/>
                     </view>
                     <navigationItem key="navigationItem" title="Pin Map" id="r8z-zn-zt1">
                         <barButtonItem key="leftBarButtonItem" title="All Pins" id="5lJ-tZ-jZF">
@@ -721,7 +719,7 @@
                 <navigationController title="Locations Navigation" id="x0t-N7-jnq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Pin List" image="pinListTabBarButton32" selectedImage="pinListTabBarButton32" id="PDV-2Q-n6Z"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hmG-ju-zUv">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -749,20 +747,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSC-hl-8Pn" userLabel="Bottom Container View">
-                                <rect key="frame" x="0.0" y="299" width="320" height="269"/>
+                                <rect key="frame" x="0.0" y="289" width="320" height="279"/>
                                 <connections>
                                     <segue destination="4ux-Z1-eqg" kind="embed" identifier="embedSegue" id="WAc-Va-UDu"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KBQ-ka-MKa" userLabel="Top Container View">
-                                <rect key="frame" x="0.0" y="64" width="320" height="235"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="245"/>
                             </containerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uzX-sc-jey" userLabel="backgroundTopWhite">
-                                <rect key="frame" x="0.0" y="64" width="320" height="235"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="245"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="400" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Y6x-FZ-1M8">
-                                <rect key="frame" x="42.5" y="64" width="235" height="235"/>
+                                <rect key="frame" x="37.5" y="44" width="245" height="245"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Y6x-FZ-1M8" secondAttribute="height" multiplier="1:1" id="e13-lo-8Vs"/>
@@ -770,6 +768,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="3XM-eA-f6x"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Y6x-FZ-1M8" firstAttribute="centerX" secondItem="28h-fy-3eS" secondAttribute="centerX" id="1Be-9H-vtd"/>
@@ -792,7 +791,6 @@
                             <constraint firstItem="WSC-hl-8Pn" firstAttribute="bottom" secondItem="28h-fy-3eS" secondAttribute="bottom" id="rq3-RL-tQR"/>
                             <constraint firstItem="Y6x-FZ-1M8" firstAttribute="top" secondItem="3XM-eA-f6x" secondAttribute="top" id="txR-BF-6Nj"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="3XM-eA-f6x"/>
                     </view>
                     <navigationItem key="navigationItem" title="Bird Detail" id="ckF-gx-Ytg">
                         <barButtonItem key="backBarButtonItem" title="Back" id="EJ7-2k-U3G"/>
@@ -810,14 +808,14 @@
             <objects>
                 <viewController autoresizesArchivedViewToFullSize="NO" title="About" automaticallyAdjustsScrollViewInsets="NO" id="q8p-VQ-YJM" customClass="AboutViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dWZ-3a-uu2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="475"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="vNO-63-PwR">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="475"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pT1-ag-77Y">
-                                <rect key="frame" x="20" y="0.0" width="280" height="455"/>
+                                <rect key="frame" x="20" y="0.0" width="280" height="475"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="30" maxY="0.0"/>
                                 <string key="text">Programming by:
@@ -858,6 +856,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="5eC-oT-1BN"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pT1-ag-77Y" firstAttribute="leading" secondItem="5eC-oT-1BN" secondAttribute="leading" constant="20" id="0rg-Pq-aab"/>
@@ -869,7 +868,6 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                             <constraint firstItem="vNO-63-PwR" firstAttribute="bottom" secondItem="dWZ-3a-uu2" secondAttribute="bottom" id="bsc-ac-KfC"/>
                             <constraint firstItem="vNO-63-PwR" firstAttribute="top" secondItem="5eC-oT-1BN" secondAttribute="top" id="sOi-d1-DQ1"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="5eC-oT-1BN"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
@@ -885,7 +883,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
             <objects>
                 <tableViewController id="4ux-Z1-eqg" customClass="BirdDetailDataViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="14" sectionFooterHeight="14" contentViewInsetsToSafeArea="NO" id="cDr-C9-lSz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="285"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="279"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -893,14 +891,14 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                             <tableViewSection headerTitle="  Bird Calls" id="ULX-do-OL9" userLabel="Bird Calls">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Y1G-0h-ikF" userLabel="Call 1">
-                                        <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y1G-0h-ikF" id="7RS-Dv-UmF">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llq-9U-GCL">
-                                                    <rect key="frame" x="20" y="11.5" width="527" height="20.5"/>
+                                                    <rect key="frame" x="20" y="12" width="247" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20.5" id="pDs-K8-R7i"/>
                                                     </constraints>
@@ -909,7 +907,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="musicNote" translatesAutoresizingMaskIntoConstraints="NO" id="OWt-wp-Jbu">
-                                                    <rect key="frame" x="567" y="9.5" width="25" height="25"/>
+                                                    <rect key="frame" x="287" y="9.5" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="OV2-uI-gow"/>
                                                         <constraint firstAttribute="width" constant="25" id="eJp-HD-YRH"/>
@@ -928,14 +926,14 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="kbN-gr-d2X" userLabel="Call 2">
-                                        <rect key="frame" x="0.0" y="99.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="93.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kbN-gr-d2X" id="y1v-9r-m7q">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGe-do-ZUK" userLabel="Call 2">
-                                                    <rect key="frame" x="20" y="11.5" width="527" height="20.5"/>
+                                                    <rect key="frame" x="20" y="12" width="247" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20.5" id="bPX-HX-jRs"/>
                                                     </constraints>
@@ -944,7 +942,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="musicNote" translatesAutoresizingMaskIntoConstraints="NO" id="sVR-xH-XVZ">
-                                                    <rect key="frame" x="567" y="9.5" width="25" height="25"/>
+                                                    <rect key="frame" x="287" y="9.5" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="ONi-Dx-bGM"/>
                                                         <constraint firstAttribute="width" constant="25" id="fga-9O-WXE"/>
@@ -963,14 +961,14 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="thc-Jb-55d" userLabel="Call 3">
-                                        <rect key="frame" x="0.0" y="143.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="137.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="thc-Jb-55d" id="KWl-9e-cF7">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfB-fp-JHk" userLabel="Call 3">
-                                                    <rect key="frame" x="20" y="11.5" width="527" height="20.5"/>
+                                                    <rect key="frame" x="20" y="12" width="247" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20.5" id="m1D-gg-6Go"/>
                                                     </constraints>
@@ -979,7 +977,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="musicNote" translatesAutoresizingMaskIntoConstraints="NO" id="FQm-Ay-oJ4">
-                                                    <rect key="frame" x="567" y="9.5" width="25" height="25"/>
+                                                    <rect key="frame" x="287" y="9.5" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="HQl-4f-90j"/>
                                                         <constraint firstAttribute="width" constant="25" id="MEh-fQ-TkP"/>
@@ -1002,14 +1000,14 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                             <tableViewSection headerTitle="  Bird Data" id="A3w-Il-Cxg" userLabel="Bird Data">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="44" id="HaO-qO-xr7" userLabel="Ecology">
-                                        <rect key="frame" x="0.0" y="239.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="227.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HaO-qO-xr7" id="DG4-I9-M6N">
-                                            <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="295.5" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ecology" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMP-Qh-oby">
-                                                    <rect key="frame" x="20" y="11.5" width="522" height="20.5"/>
+                                                    <rect key="frame" x="20" y="12" width="255.5" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20.5" id="5f0-Rt-2aE"/>
                                                     </constraints>
@@ -1031,14 +1029,14 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="44" id="1F6-0f-kii" userLabel="Range Map">
-                                        <rect key="frame" x="0.0" y="283.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="271.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1F6-0f-kii" id="WsW-rX-LDr">
-                                            <rect key="frame" x="0.0" y="0.0" width="574" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="295.5" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Range Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAV-cs-Djm">
-                                                    <rect key="frame" x="20" y="11.5" width="522" height="20.5"/>
+                                                    <rect key="frame" x="20" y="12" width="255.5" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20.5" id="bOT-s9-0oR"/>
                                                     </constraints>
@@ -1077,10 +1075,10 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
             <objects>
                 <viewController id="QXM-7V-Hht" customClass="WebViewController" customModule="WordOfTheBird" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="riy-5G-Tzo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="269"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="279"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="h0k-oa-Kic"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NAt-Au-vOP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1094,7 +1092,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                     <tabBarItem key="tabBarItem" title="Pin Location" image="pinLocationTabBarButton32" selectedImage="pinLocationTabBarButton32" id="vUy-t0-Mus"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K14-1L-IoM">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1118,7 +1116,7 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
                     <tabBarItem key="tabBarItem" title="Pin Map" image="pinMapTabBarButton32" selectedImage="pinMapTabBarButton32" id="72t-bb-ZAV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yez-EI-KgU">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1160,16 +1158,23 @@ David A. McCartt/Macaulay Library at the Cornell Lab of Ornithology (red tailed 
             <point key="canvasLocation" x="728.79999999999995" y="1108.6956521739132"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="background" width="270" height="480"/>
-        <image name="birdsTabBarButton32" width="32" height="32"/>
-        <image name="musicNote" width="32" height="32"/>
-        <image name="pinListTabBarButton32" width="32" height="32"/>
-        <image name="pinLocationTabBarButton32" width="32" height="32"/>
-        <image name="pinMapTabBarButton32" width="32" height="32"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DeQ-I1-5gW"/>
         <segue reference="KWq-gh-aGh"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="background" width="270" height="480"/>
+        <image name="birdsTabBarButton32" width="32" height="32"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="musicNote" width="32" height="32"/>
+        <image name="pinListTabBarButton32" width="32" height="32"/>
+        <image name="pinLocationTabBarButton32" width="32" height="32"/>
+        <image name="pinMapTabBarButton32" width="32" height="32"/>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="lightTextColor">
+            <color white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
