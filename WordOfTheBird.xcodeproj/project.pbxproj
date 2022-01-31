@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0103A8BF9AF2D0BC6B1F086E /* Pods_WordOfTheBird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5B6EEA551D38F864CE07FE /* Pods_WordOfTheBird.framework */; };
 		0527B83F21C0431F00B37F5D /* WordOfTheBirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0527B83E21C0431F00B37F5D /* WordOfTheBirdTests.swift */; };
 		0527B84721C065E100B37F5D /* PinLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0527B84621C065E100B37F5D /* PinLocationTests.swift */; };
 		0546C67F212FA42300F6126A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546C67E212FA42300F6126A /* AboutViewController.swift */; };
@@ -28,6 +27,8 @@
 		05D12336214064900036D19D /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D12334214064900036D19D /* Location+CoreDataClass.swift */; };
 		05D12337214064900036D19D /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D12335214064900036D19D /* Location+CoreDataProperties.swift */; };
 		05F029EA215975780081E2AC /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F029E9215975780081E2AC /* WebViewController.swift */; };
+		4B96D6A127A7391D00BE893C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4B96D6A027A7391D00BE893C /* Alamofire */; };
+		4B96D6A427A7395000BE893C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 4B96D6A327A7395000BE893C /* SwiftyJSON */; };
 		B02FA39820D4477400172A65 /* BirdDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02FA39720D4477400172A65 /* BirdDetailViewController.swift */; };
 		B02FA39A20D4477E00172A65 /* BirdDetailDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02FA39920D4477E00172A65 /* BirdDetailDataViewController.swift */; };
 		B03A9F30212F1C3100CA84E6 /* northernFlickerCall1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B03A9F13212F1C2F00CA84E6 /* northernFlickerCall1.wav */; };
@@ -102,9 +103,6 @@
 		05D12334214064900036D19D /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
 		05D12335214064900036D19D /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		05F029E9215975780081E2AC /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		122FDFB4A27BC25AF547B5E8 /* Pods-WordOfTheBird.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordOfTheBird.release.xcconfig"; path = "Pods/Target Support Files/Pods-WordOfTheBird/Pods-WordOfTheBird.release.xcconfig"; sourceTree = "<group>"; };
-		20F38E92734CB33C3DCFE93A /* Pods-WordOfTheBird.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordOfTheBird.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WordOfTheBird/Pods-WordOfTheBird.debug.xcconfig"; sourceTree = "<group>"; };
-		9E5B6EEA551D38F864CE07FE /* Pods_WordOfTheBird.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordOfTheBird.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B02FA39720D4477400172A65 /* BirdDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdDetailViewController.swift; sourceTree = "<group>"; };
 		B02FA39920D4477E00172A65 /* BirdDetailDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdDetailDataViewController.swift; sourceTree = "<group>"; };
 		B03A9F13212F1C2F00CA84E6 /* northernFlickerCall1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = northernFlickerCall1.wav; sourceTree = "<group>"; };
@@ -156,7 +154,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0103A8BF9AF2D0BC6B1F086E /* Pods_WordOfTheBird.framework in Frameworks */,
+				4B96D6A427A7395000BE893C /* SwiftyJSON in Frameworks */,
+				4B96D6A127A7391D00BE893C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,7 +188,6 @@
 				05CB8F722091165100AB7E13 /* WordOfTheBird */,
 				0527B83D21C0431F00B37F5D /* WordOfTheBirdTests */,
 				05CB8F712091165100AB7E13 /* Products */,
-				6D3E08E261F9E78DE1ED664B /* Pods */,
 				EDA220DD17FE24118B53F37C /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -231,15 +229,6 @@
 				05F029E9215975780081E2AC /* WebViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		6D3E08E261F9E78DE1ED664B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				20F38E92734CB33C3DCFE93A /* Pods-WordOfTheBird.debug.xcconfig */,
-				122FDFB4A27BC25AF547B5E8 /* Pods-WordOfTheBird.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		B0C48D2920925D8700A655AB /* Sounds */ = {
@@ -300,7 +289,6 @@
 		EDA220DD17FE24118B53F37C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9E5B6EEA551D38F864CE07FE /* Pods_WordOfTheBird.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -330,17 +318,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05CB8F822091165200AB7E13 /* Build configuration list for PBXNativeTarget "WordOfTheBird" */;
 			buildPhases = (
-				7471BB97AAED3E60A3B2B5A8 /* [CP] Check Pods Manifest.lock */,
 				05CB8F6C2091165100AB7E13 /* Sources */,
 				05CB8F6D2091165100AB7E13 /* Frameworks */,
 				05CB8F6E2091165100AB7E13 /* Resources */,
-				89DF5715F78E719889CCCCE8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = WordOfTheBird;
+			packageProductDependencies = (
+				4B96D6A027A7391D00BE893C /* Alamofire */,
+				4B96D6A327A7395000BE893C /* SwiftyJSON */,
+			);
 			productName = WordOfTheBird;
 			productReference = 05CB8F702091165100AB7E13 /* WordOfTheBird.app */;
 			productType = "com.apple.product-type.application";
@@ -352,15 +342,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = "Banana Viking";
 				TargetAttributes = {
 					0527B83B21C0431F00B37F5D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1320;
 						TestTargetID = 05CB8F6F2091165100AB7E13;
 					};
 					05CB8F6F2091165100AB7E13 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1320;
 						SystemCapabilities = {
 							com.apple.iCloud = {
 								enabled = 0;
@@ -378,6 +370,10 @@
 				Base,
 			);
 			mainGroup = 05CB8F672091165100AB7E13;
+			packageReferences = (
+				4B96D69F27A7391D00BE893C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				4B96D6A227A7395000BE893C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 05CB8F712091165100AB7E13 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -436,47 +432,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		7471BB97AAED3E60A3B2B5A8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WordOfTheBird-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		89DF5715F78E719889CCCCE8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WordOfTheBird/Pods-WordOfTheBird-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WordOfTheBird/Pods-WordOfTheBird-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0527B83821C0431F00B37F5D /* Sources */ = {
@@ -565,7 +520,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bananaviking.WordOfTheBirdTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordOfTheBird.app/WordOfTheBird";
 			};
@@ -587,7 +542,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bananaviking.WordOfTheBirdTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordOfTheBird.app/WordOfTheBird";
 			};
@@ -619,6 +574,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -644,7 +600,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -679,6 +635,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -698,7 +655,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -709,7 +666,6 @@
 		};
 		05CB8F832091165200AB7E13 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20F38E92734CB33C3DCFE93A /* Pods-WordOfTheBird.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -721,14 +677,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bananaviking.wordofthebird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		05CB8F842091165200AB7E13 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 122FDFB4A27BC25AF547B5E8 /* Pods-WordOfTheBird.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -740,7 +695,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bananaviking.wordofthebird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -776,6 +731,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4B96D69F27A7391D00BE893C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		4B96D6A227A7395000BE893C /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4B96D6A027A7391D00BE893C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B96D69F27A7391D00BE893C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		4B96D6A327A7395000BE893C /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B96D6A227A7395000BE893C /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		05D12331214063580036D19D /* DataModel.xcdatamodeld */ = {

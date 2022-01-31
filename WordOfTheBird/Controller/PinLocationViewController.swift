@@ -184,7 +184,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             getLocationButton.setTitle("Stop", for: .normal)
             
             if view.viewWithTag(spinnerTag) == nil {
-                let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+                let spinner = UIActivityIndicatorView(style: .large)
                 spinner.center = messageLabel.center
                 spinner.center.y = messageLabel.center.y + 40
                 spinner.startAnimating()
@@ -270,13 +270,13 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
     
     //MARK: - Networking
     func getWeatherData(url: String, parameters: [String: String]) {
-        Alamofire.request(url, method: .get, parameters: parameters).responseJSON { response in
-            if response.result.isSuccess {
+        AF.request(url, method: .get, parameters: parameters).responseJSON { response in
+          if case .success(let value) = response.result {
                 print("Success! Got the weather data.")
-                let weatherJSON = JSON(response.result.value!)
+              let weatherJSON = JSON(value)
                 self.updateWeatherData(json: weatherJSON)
             } else {
-                print("Error: \(response.result.error!)")
+              print("Error: \(response.error!)")
             }
         }
     }
