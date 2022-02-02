@@ -59,6 +59,17 @@ class PinMapViewController: UIViewController {
             showLocations()
         }
     }
+  
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if locations.isEmpty {
+            let alert = UIAlertController(title: "Pin Locations",
+                                          message: "Add locations from the Pin Location tab to see them on the map!",
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)

@@ -33,6 +33,17 @@ class PinListViewController: UITableViewController {
         tableView.backgroundView = UIImageView(image: UIImage(named: "background.png"))
         performFetch()
     }
+  
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if fetchedResultsController.sections!.count == 0 {
+            let alert = UIAlertController(title: "Pin Locations",
+                                          message: "Add locations from the Pin Location tab to see and edit them here!",
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
     
     //MARK: - TableView Delegates
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
