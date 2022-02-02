@@ -328,14 +328,14 @@
                             <tableViewSection id="Rmj-Cb-PFy">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="kwW-X7-uqu">
-                                        <rect key="frame" x="0.0" y="217" width="320" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="217" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kwW-X7-uqu" id="8v5-nX-U5P">
-                                            <rect key="frame" x="0.0" y="0.0" width="295.5" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="295.5" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Photo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6d-L8-q8k">
-                                                    <rect key="frame" x="16" y="12.5" width="259.5" height="21"/>
+                                                    <rect key="frame" x="16" y="12.5" width="259.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -360,7 +360,7 @@
                             <tableViewSection id="vpD-T3-XDW">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="Gdr-zX-6F4" detailTextLabel="06Z-8h-Vdy" style="IBUITableViewCellStyleValue1" id="Pzu-uM-Hxc" userLabel="Latitude Cell">
-                                        <rect key="frame" x="0.0" y="296.5" width="320" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="297" width="320" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pzu-uM-Hxc" id="HtU-Rl-NRr">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -386,7 +386,7 @@
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="sot-5c-pgf" detailTextLabel="qK2-X5-dgb" style="IBUITableViewCellStyleValue1" id="bzR-jy-Erq" userLabel="Longitude Cell">
-                                        <rect key="frame" x="0.0" y="340" width="320" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="340.5" width="320" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bzR-jy-Erq" id="Z0I-4f-4Nh">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -412,7 +412,7 @@
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="nxu-uB-Etw" userLabel="Address Cell">
-                                        <rect key="frame" x="0.0" y="383.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="384" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nxu-uB-Etw" id="nVj-cT-Ybk">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -447,7 +447,7 @@
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="xUV-v2-8w6" detailTextLabel="iAS-7O-Ic9" style="IBUITableViewCellStyleValue1" id="oXI-q5-Q8C" userLabel="Date Cell">
-                                        <rect key="frame" x="0.0" y="427.5" width="320" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="428" width="320" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oXI-q5-Q8C" id="A4M-3N-dyv">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -473,7 +473,7 @@
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="zhX-Gb-uY3" detailTextLabel="CXl-Pm-lhR" style="IBUITableViewCellStyleValue1" id="SRc-ml-BFl" userLabel="Weather Cell">
-                                        <rect key="frame" x="0.0" y="471" width="320" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="471.5" width="320" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SRc-ml-BFl" id="oka-Sl-UUU">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -599,7 +599,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="SyE-wP-28E">
                                             <rect key="frame" x="70.5" y="8" width="230" height="41.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skg-Ii-I56">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" ambiguous="YES" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skg-Ii-I56">
                                                     <rect key="frame" x="0.0" y="0.0" width="230" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="zRM-GR-jip"/>
@@ -608,7 +608,7 @@
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wd5-1h-dkF">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" ambiguous="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wd5-1h-dkF">
                                                     <rect key="frame" x="0.0" y="24.5" width="230" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="6ZA-Fw-qau"/>

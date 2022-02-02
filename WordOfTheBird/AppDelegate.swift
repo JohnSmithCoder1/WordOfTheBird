@@ -45,6 +45,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             print(applicationDocumentsDirectory)
         }
+      
+        if #available(iOS 15, *) {
+            let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithOpaqueBackground()
+            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navBarAppearance.backgroundColor = UIColor(red: 79.0/255.0, green: 143/255.0, blue: 0.0/255.0, alpha: 1.0)
+            UINavigationBar.appearance().standardAppearance = navBarAppearance
+            UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+          
+            let tabBarAppearance = UITabBarAppearance()
+            tabBarAppearance.configureWithOpaqueBackground()
+            tabBarAppearance.backgroundColor = UIColor(red: 79.0/255.0, green: 143/255.0, blue: 0.0/255.0, alpha: 1.0)
+            UITabBar.appearance().standardAppearance = tabBarAppearance
+            UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+        }
+      
         listenForFatalCoreDataNotifications()
         return true
     }
