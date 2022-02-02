@@ -145,7 +145,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
             longitudeLabel.text = ""
             latitudeTextLabel.isHidden = true
             longitudeTextLabel.isHidden = true
-            addressLabel.text = ""
+            addressLabel.text = "Tap the button below to get the nearest address and location details!"
             addressTextLabel.isHidden = true
             pinLocationButton.isHidden = true
             
@@ -180,6 +180,7 @@ class PinLocationViewController: UIViewController, CLLocationManagerDelegate {
         let spinnerTag = 1000
         
         if updatingLocation {
+            addressLabel.text = ""
             messageLabel.text = "Calculating nearest location..."
             getLocationButton.setTitle("Stop", for: .normal)
             
