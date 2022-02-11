@@ -18,8 +18,11 @@ Features include:
 
 ## Built With
 
-* XCode 9.4.1
-* Swift 4.1
+* XCode 13.2.1
+* Swift 5
+
+## Requires
+* iOS 13
 
 ## Authors
 
