@@ -14,12 +14,17 @@ Features include:
 
 ## Apple App Store ID
 
-* 1434585857
+* [1434585857](https://apps.apple.com/us/app/word-of-the-bird/id1434585857)
 
 ## Built With
 
 * XCode 13.2.1
 * Swift 5
+
+## Built For
+
+* iPhone
+* iPad
 
 ## Requires
 * iOS 13
