@@ -23,11 +23,9 @@ Features include:
 
 ## Built For
 
-* iPhone
-* iPad
-
-## Requires
-* iOS 13
+* iPhone (requires iOS 13.0 or later)
+* iPad (requires iPadOS 13.0 or later)
+* Mac (requires macOS 11.0 or later and a Mac with Apple M1 chip or later)
 
 ## Authors
 
