@@ -7,4 +7,4 @@ Word of the Bird is committed to respecting and protecting individuals' privacy 
 * Word of the Bird does not incorporate social media software.
 * Word of the Bird does not include any third-party analytics software.
 
-If you have any questions or concerns regarding privacy, please contact bananavikingcoder@gmail.com
+If you have any questions or concerns regarding privacy, please contact johnsmithcoder1@gmail.com
